@@ -1,0 +1,104 @@
+<!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            
+            <li class=" treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Home</span> 
+              </a>
+            </li>
+            
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-android"></i> <span>Costumer</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i>Data Costumer</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i>ADD Costumer</a></li>
+                </ul>
+            </li>
+            
+            
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-edit"></i> <span>Penjamin</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i>Data Penjamin</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i>ADD Penjamin</a></li>
+                </ul>
+            </li>
+            
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-car"></i> <span>Kendaraan</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i>Data Kendaraan</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i>ADD Kendaraan</a></li>
+                </ul>
+            </li>
+            
+            <?php if($_SESSION['level']==='superadmin' || $_SESSION['level']==='admin') : ?>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-envelope"></i> <span>Pinjaman</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i>Data Pinjaman</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i>ADD Pinjaman</a></li>
+                </ul>
+            </li>
+            <?php endif;?>
+            
+            <?php if($_SESSION['level']==='superadmin'): ?>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-user-plus"></i> <span>User</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo URL?>user"><i class="fa fa-circle-o"></i>Data USER</a></li>
+                    <li><a href="<?php echo URL?>user/index/add"><i class="fa fa-circle-o"></i>ADD USER</a></li>
+                </ul>
+            </li>
+            <?php endif;?>
+            
+            <?php if($_SESSION['level']==='superadmin' || $_SESSION['level']==='kasir') : ?>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa  fa-cart-arrow-down"></i> <span>Pembayaran</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i>Data Pembayaran</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i>ADD Pembayaran</a></li>
+                </ul>
+            </li>
+                
+            <?php endif;?>
+            <?php if($_SESSION['level']==='superadmin'): ?>
+            <li class=" treeview">
+                <a href="#">
+                <i class="fa fa-xing-square"></i> <span>Cabang</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo URL?>cabang"><i class="fa fa-circle-o"></i>Data Cabang</a></li>
+                    <li><a href="<?php echo URL?>cabang/index/add"><i class="fa fa-circle-o"></i>ADD Cabang</a></li>
+
+                </ul>
+            </li>
+            <?php endif;?>
+        </section>
+        <!-- /.sidebar -->
+      </aside>

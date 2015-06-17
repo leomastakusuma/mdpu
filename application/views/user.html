@@ -1,0 +1,31 @@
+<input id="test" max-size='4'>
+<script type="text/javascript">
+function insertTextAtCursor(el, text) {
+    var val = el.value, endIndex, range;
+    if (typeof el.selectionStart != "undefined" && typeof el.selectionEnd != "undefined") {
+        endIndex = el.selectionEnd;
+        el.value = val.slice(0, endIndex) + text + val.slice(endIndex);
+        el.selectionStart = el.selectionEnd = endIndex + text.length;
+    } else if (typeof document.selection != "undefined" && typeof document.selection.createRange != "undefined") {
+        el.focus();
+        range = document.selection.createRange();
+        range.collapse(false);
+        range.text = text;
+        range.select();
+    }
+}
+
+document.getElementById("test").onkeypress = function(evt) {
+
+   evt = evt || window.event;
+    var charCode = typeof evt.which == "number" ? evt.which : evt.keyCode;
+    if (String.fromCharCode(charCode) == ",") {
+        insertTextAtCursor(this, ", ");
+        return false;
+    }
+
+    var cc = 
+
+};
+
+</script>

@@ -1,0 +1,37 @@
+{
+    "database" : {      
+        "default" : {
+           "default" : {
+               "adapter" : "PDO_MYSQL",
+               "params" : {
+                   "host" : "localhost",
+                   "username" : "root",
+                   "password" : "root",
+                   "dbname" : "mdpu_finance",
+                   "profiler" : {
+                       "enabled" : true,
+                       "class" : "Mydb_Db_Profiler_Log"
+                   }
+               },
+               "isDefaultTableAdapter" : true
+           },
+           "select" : {
+               "adapter" : "PDO_MYSQL",
+               "params" : {
+                   "host" : "localhost",
+                   "username" : "root",
+                   "password" : "root",
+                   "dbname" : "mdpu_finance",
+                   "profiler" : {
+                       "enabled" : true,
+                       "class" : "Mydb_Db_Profiler_Log"
+                   }
+               },
+               "isDefaultTableAdapter" : false
+           }
+       }
+    },
+    "time":{
+        "maksLogin" : "+30 minutes"
+    }
+}

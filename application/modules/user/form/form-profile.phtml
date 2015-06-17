@@ -1,0 +1,84 @@
+<?php
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    User
+ * @subpackage Form
+ * @filesource form-profile.php
+ */
+?>
+
+
+
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    Profile User
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Profile User</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label for="Realname" class="col-sm-2 control-label">Realname</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="username" placeholder="Username" name="Username" 
+                                       value="<?php echo $data['realname'];?>"  required readonly="">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="password" class="col-sm-2 control-label">Cabang</label>
+                            <div class="col-sm-5">
+                                <textarea class="form-control" cols="100" rows="2" readonly=""><?php echo $data['alamat'].' ,'.$data['kecamatan'].' , '.$data['kota']. ', Kode Pos '.$data['kode_pos'];?> </textarea>
+                            </div>
+                        </div>    
+
+                        <div class="form-group">
+                            <label for="level" class="col-sm-2 control-label">Level</label>    
+                            <div class="col-sm-3">
+                               <input type="text" class="form-control" id="password" placeholder="Level" name="level" 
+                                      value="<?php echo strtoupper($data['level']);?>"  required readonly="">
+                            </div>
+                        </div>    
+
+                        <div class="form-group">
+                            <label for="nama" class="col-sm-2 control-label">Username</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="judul" placeholder="Username" name="Password" 
+                                       value ="<?php echo strtoupper($data['username'])?>"required readonly="">
+                               
+                            </div>
+                        </div>    
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <a href="<?php echo URL?>/user/index/changepassword" class="btn btn-primary">Change</a>
+                            </div>
+                        </div>                               
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

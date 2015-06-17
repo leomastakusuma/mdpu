@@ -1,0 +1,73 @@
+<?php
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    User
+ * @subpackage User
+ * @filesource datauser.php
+ */
+?>
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa fa-edit active"></i> <a href="<?php echo URL ?>user/index/add">Input User</a>
+                </li>
+                <li>
+                    <i class="fa fa-table active"></i> Data User   
+                </li>
+
+            </ol>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data User</h3>
+        </div>
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-sm-1">No</th>
+                        <th class="col-lg-3">Username</th>
+                        <th class="col-lg-3">Password</th>
+                        <th class="col-lg-1">Level</th>
+                        <th class="col-sm-2" >Action</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                    <?php $i = 0; ?>  
+                    <?php if (!empty($data))  ?>  
+                    <?php foreach ($data as $val):$i++; ?>
+                        <tr>
+                            <td><?php echo $i; ?></td>
+                            <td><?php echo $val['username'] ?></td>
+                            <td><?php echo $val['password'] ?></td>
+                            <td><?php echo $val['level'] ?></td>
+                            <td align="center">
+                                <a href="<?php echo URL . 'user/index/edit/' . $val['id_user']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
+                                &nbsp;|| &nbsp; 
+                                <a href="<?php echo URL . 'user/index/delete/' . $val['id_user']; ?>"> <i class="fa fa-trash-o"></i>DELETE </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>  
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th class="col-lg-3">Username</th>
+                        <th class="col-lg-3">Password</th>
+                        <th class="col-lg-1">Level</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
