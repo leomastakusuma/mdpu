@@ -18,7 +18,7 @@
                     <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
                 </li>
                 <li>
-                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>kendaraan">Data Costumer</a>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Costumer</a>
                 </li>
                 <li>
                     Input Costumer
@@ -34,12 +34,12 @@
                     <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Costumer</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" action="<?php echo URL ?>kendaraan/index/save" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/save" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <label for="NIK Costumer" class="col-sm-2 control-label">NIK Costumer</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" required="true" readonly="">
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" required="true" >
                             </div>
                         </div>
 
@@ -55,12 +55,12 @@
                         <div class="form-group">
                             <label for="Alamat" class="col-sm-2 control-label">Alamat</label>
                             <div class="col-sm-5">
-                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat"></textarea>
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat" required="true"></textarea>
                             </div>
                         </div>   
 
                         <div class="form-group">
-                            <label for="Merk / Type" class="col-sm-2 control-label">Tempat Lahir</label>
+                            <label for="Tempat Lahir" class="col-sm-2 control-label">Tempat Lahir</label>
                             <div class="col-sm-3">
                                 <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" 
                                        required="true">
@@ -68,52 +68,86 @@
                         </div>    
                         
                         <div class="form-group">
-                            <label for="No Mesin" class="col-sm-2 control-label">No Mesin</label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" id="no_mesin" placeholder="No Mesin" name="no_mesin" 
+                            <label for="Tanggal Lahir" class="col-sm-2 control-label">Tanggal Lahir</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="tanggal_lahir" placeholder="Tanggal Lahir" name="tanggal_lahir" 
                                         required="true">
                             </div>
                         </div>    
                         
+                         <div class="form-group">
+                            <label for="Jenis Kelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
+                            <div class="radio  col-sm-2">
+                                <label>
+                                    <input type="radio" name="jenis_kelamin" id="status" value="pria" required="true"> Laki-Laki                       
+                                </label>
+                                <label>
+                                  <input type="radio" name="jenis_kelamin" id="status" value="wanita" required="true" >Wanita                       
+                                </label>
+                            </div>
+                        </div>   
+                        
                         <div class="form-group">
-                            <label for="No Rangka" class="col-sm-2 control-label">No Rangka</label>
+                            <label for="Nama Ibu" class="col-sm-2 control-label">Nama Ibu</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="no_rangka" placeholder="No Rangka" name="no_rangka" 
+                                <input type="text" class="form-control" id="nama_ibu" placeholder="Nama Ibu" name="nama_ibu" 
                                         required="true">
                             </div>
                         </div>   
                         
                         <div class="form-group">
-                            <label for="Warna" class="col-sm-2 control-label">Warna</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="warna" placeholder="Warna" name="warna" 
-                                        required="true">
+                            <label for="Agama" class="col-sm-2 control-label">Agama</label>
+                            <div class="col-sm-3">
+                                <select name="agama" class="form-control" required="true" id="agama">
+                                    <option value="">PILIH</option>
+                                    <option value="islam">ISLAM</option>
+                                    <option value="kristen">Kristen</option>
+                                    <option value="katolik">Katolik</option>
+                                    <option value="hindu">Hindu</option>
+                                    <option value="budha">Budha</option>
+                                </select>
                             </div>
                         </div>   
                         
                         <div class="form-group">
-                            <label for="Tahun Pembuatan" class="col-sm-2 control-label">Tahun Pembuatan</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="tahun_pembuatan" placeholder="Tahun Pembuatan" name="tahun_pembuatan" 
-                                        required="true">
+                            <label for="status
+                                   " class="col-sm-2 control-label">Status</label>
+                            <div class="radio  col-sm-2">
+                                <label>
+                                    <input type="radio" name="status" id="status" value="menikah" required="true"> Menikah                       
+                                </label>
+                                <label>
+                                  <input type="radio" name="status" id="status" value="lajang" required="true" >Lajang                       
+                                </label>
                             </div>
                         </div>   
                         
                         <div class="form-group">
-                            <label for="Isi Silinder" class="col-sm-2 control-label">Isi Silinder</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="isi_silinder" placeholder="Isi Silinder" name="isi_silinder" 
-                                        required="true">
+                            <label for="Isi Silinder" class="col-sm-2 control-label">Pekerjaan</label>
+                               <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan" name="pekerjaan"  required="true">
+                                </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Tanggal STNK" class="col-sm-2 control-label">Alamat Tempat Kerja</label>
+                            <div class="col-sm-5">
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat Tempat Kerja" name="alamat_tempat_kerja" required="true" ></textarea>
                             </div>
                         </div>   
                         
                         <div class="form-group">
-                            <label for="Tanggal STNK" class="col-sm-2 control-label">Tanggal STNK</label>
-                            <div class="col-sm-2" id="sd">
-                                <input type="text" class="datepicker form-control input-append date" id="tgl_stnk" data-date-format="yyyy/mm/dd" placeholder="Tanggal STNK" name="tgl_stnk" 
-                                       required="true">
-                                <span class="add-on"><i class="icon-th"></i></span>
-                            </div>
+                            <label for="Isi Silinder" class="col-sm-2 control-label">No HP</label>
+                               <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="hp" placeholder="No HP" name="hp"  required="true">
+                               </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Isi Silinder" class="col-sm-2 control-label">No Telepon</label>
+                               <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="hp" placeholder="No Telepon" name="telpon"  >
+                               </div>
                         </div>   
                         
                         

@@ -18,18 +18,29 @@ class indexcontroller extends Controller {
     }
 
     public function index() {
+        if(($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] !='admin')){
+            $this->redirect('error/index/notAllowed');
+        }
+        
         require UD . 'header.html';
         require  APP_MODUL.'/kendaraan/form/form-add-kendaraan.phtml';
         require UD . 'footer.html';
     }
     
     public function add() {
+        if(($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] !='admin')){
+            $this->redirect('error/index/notAllowed');
+        }
+       
         require UD . 'header.html';
         require  APP_MODUL.'/kendaraan/form/form-add-kendaraan.phtml';
         require UD . 'footer.html';
     }
     
     public function save(){
+        if($_SESSION['level']!='superadmin' || $_SESSION['level']!='admin'){
+            $this->redirect('error/index/notAllowed');
+        }
         $form = $this->getPost();
         try{
            $this->_modelKendaraan->insert($form); 

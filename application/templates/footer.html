@@ -182,11 +182,14 @@
     <script>
     $.widget.bridge('uibutton', $.ui.button);  
     $(document).ready(function () {
-                
+        $('#agama').select2();        
         $('#tgl_stnk').datepicker({
             format: "yyyy-mm-dd"
         }); 
         $('#tahun_pembuatan').datepicker({
+            format: "yyyy-mm-dd"
+        }); 
+        $('#tanggal_lahir').datepicker({
             format: "yyyy-mm-dd"
         }); 
             

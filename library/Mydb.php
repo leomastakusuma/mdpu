@@ -338,4 +338,16 @@ final class Mydb
         }
         return self::registry($key);
     }
+    
+    /**
+     * @access  model untuk memanggil Mydb_Db_Costumer yang digunakan untuk memanage table Users
+     * @return Mydb_Db_Costumer
+     */
+    public static function getModelCostumer() {
+        $key = 'Mydb_Db_Costumer';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_Costumer());
+        }
+        return self::registry($key);
+    }
 }
