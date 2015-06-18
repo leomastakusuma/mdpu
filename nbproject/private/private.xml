@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/gateway/application/templates/menu.html</file>
-            <file>file:/var/www/html/gateway/application/modules/login/controller/indexcontroller.php</file>
-            <file>file:/var/www/html/gateway/application/modules/error/controller/indexcontroller.php</file>
-            <file>file:/var/www/html/gateway/application/modules/user/controller/indexcontroller.php</file>
+            <file>file:/var/www/html/mdpu/application/modules/kendaraan/form/form-add-kendaraan.phtml</file>
+            <file>file:/var/www/html/mdpu/application/modules/costumer/controller/indexcontroller.php</file>
+            <file>file:/var/www/html/mdpu/application/modules/kendaraan/controller/indexcontroller.php</file>
+            <file>file:/var/www/html/mdpu/application/modules/costumer/form/form-add-costumer.phtml</file>
         </group>
     </open-files>
 </project-private>

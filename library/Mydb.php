@@ -350,4 +350,16 @@ final class Mydb
         }
         return self::registry($key);
     }
+    
+    /**
+     * @access  model untuk memanggil Mydb_Db_Penjamin yang digunakan untuk memanage table Users
+     * @return Mydb_Db_Penjamin
+     */
+    public static function getModelPenjamin() {
+        $key = 'Mydb_Db_Penjamin';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_Penjamin());
+        }
+        return self::registry($key);
+    }
 }

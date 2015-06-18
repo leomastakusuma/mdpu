@@ -22,9 +22,12 @@ class indexcontroller extends Controller {
         if(($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] !='admin')){
             $this->redirect('error/index/notAllowed');
         }
-        require UD . 'header.html';
-        require APP_MODUL . '/costumer/form/form-add-costumer.phtml';
-        require UD . 'footer.html';
+
+        require UD . 'headerDataTables.phtml';
+        $id=$_SESSION['dataLogin']['id_user'];
+        $data = $this->_modelCostumer->getAllCostumerByCabang($id);
+        require APP_MODUL . '/costumer/view/dataCostumer.phtml';
+        require UD . 'footerDataTables.phtml';
     }
     
     
@@ -55,4 +58,18 @@ class indexcontroller extends Controller {
         }
     }
 
+    public function detail($id){
+        if(($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] !='admin')){
+            $this->redirect('error/index/notAllowed');
+        }
+        if(!isset($id)){
+            $this->redirect('error');
+        }
+        $data = $this->_modelCostumer->getCostumer($id);
+        $cekPenjamin = $this->_modelCostumer->getPenjaminCostumer($id);
+        require UD . 'header.html';
+        require APP_MODUL . '/costumer/form/form-detail-costumer.phtml';
+        require UD . 'footer.html';
+    }
+    
 }

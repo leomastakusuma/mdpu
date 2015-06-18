@@ -18,10 +18,10 @@
                     <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
                 </li>
                 <li>
-                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Costumer</a>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Penjamin</a>
                 </li>
                 <li>
-                    Input Costumer
+                    Input Penjamin
                 </li>
             </ol>
         </div>
@@ -31,18 +31,24 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Costumer</h3>
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Penjamin</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/save" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>penjamin/index/save" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <label for="NIK Costumer" class="col-sm-2 control-label">NIK Costumer</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" required="true" >
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" value="<?php echo $id?>" required="true" readonly="true" >
                             </div>
                         </div>
-
+                        
+                        <div class="form-group">
+                            <label for="NIK Costumer" class="col-sm-2 control-label">NIK Penjamin</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_penjamin" required="true" >
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <label for="Nama" class="col-sm-2 control-label">Nama</label>
@@ -112,12 +118,12 @@
                         <div class="form-group">
                             <label for="status
                                    " class="col-sm-2 control-label">Status</label>
-                            <div class="radio  col-sm-2">
+                            <div class="radio  col-sm-4">
                                 <label>
                                     <input type="radio" name="status" id="status" value="menikah" required="true"> Menikah                       
                                 </label>
                                 <label>
-                                  <input type="radio" name="status" id="status" value="lajang" required="true" >Lajang                       
+                                  <input type="radio" name="status" id="status" value="lajang" required="true" >Belum Menikah                       
                                 </label>
                             </div>
                         </div>   

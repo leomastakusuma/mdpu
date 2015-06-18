@@ -21,7 +21,7 @@
                     <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Costumer</a>
                 </li>
                 <li>
-                    Input Costumer
+                    Detail Costumer
                 </li>
             </ol>
         </div>
@@ -31,7 +31,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Costumer</h3>
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Detail Costumer</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/save" method="post" enctype="multipart/form-data">
@@ -39,7 +39,8 @@
                         <div class="form-group">
                             <label for="NIK Costumer" class="col-sm-2 control-label">NIK Costumer</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" required="true" >
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer"     
+                                       value="<?php echo (!empty($data['nik_costumer']) ? $data['nik_costumer'] : null );?>" readonly="true" name="nik_costumer" required="true" >
                             </div>
                         </div>
 
@@ -47,7 +48,10 @@
                         <div class="form-group">
                             <label for="Nama" class="col-sm-2 control-label">Nama</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" required="true">
+                                <input type="text" class="form-control" id="nama" placeholder="Nama" 
+                                       name="nama" required="true" readonly="true"
+                                       value="<?php echo (!empty($data['nama']) ? $data['nama'] : null );?>"
+                                       >
                             </div>
                         </div>   
                                                
@@ -55,7 +59,7 @@
                         <div class="form-group">
                             <label for="Alamat" class="col-sm-2 control-label">Alamat</label>
                             <div class="col-sm-5">
-                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat" required="true"></textarea>
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat" required="true" readonly="true"> <?php echo (!empty($data['alamat']) ? $data['alamat'] : null );?></textarea>
                             </div>
                         </div>   
 
@@ -63,7 +67,7 @@
                             <label for="Tempat Lahir" class="col-sm-2 control-label">Tempat Lahir</label>
                             <div class="col-sm-3">
                                 <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" 
-                                       required="true">
+                                       required="true" value="<?php echo (!empty($data['tempat_lahir']) ? $data['tempat_lahir'] : null );?>" readonly="true">
                             </div>
                         </div>    
                         
@@ -71,7 +75,7 @@
                             <label for="Tanggal Lahir" class="col-sm-2 control-label">Tanggal Lahir</label>
                             <div class="col-sm-3">
                                 <input type="text" class="form-control" id="tanggal_lahir" placeholder="Tanggal Lahir" name="tanggal_lahir" 
-                                        required="true">
+                                        required="true" value="<?php echo (!empty($data['tanggal_lahir']) ? $data['tanggal_lahir'] : null );?>" readonly="true">
                             </div>
                         </div>    
                         
@@ -79,10 +83,11 @@
                             <label for="Jenis Kelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
                             <div class="radio  col-sm-2">
                                 <label>
-                                    <input type="radio" name="jenis_kelamin" id="status" value="pria" required="true"> Laki-Laki                       
-                                </label>
-                                <label>
-                                  <input type="radio" name="jenis_kelamin" id="status" value="wanita" required="true" >Wanita                       
+                                    <?php if($data['jenis_kelamin']==='pria'):?>
+                                    <input type="radio" name="jenis_kelamin" id="status" value="pria" required="true" checked="true"> Laki-Laki   
+                                    <?php else :?>
+                                    <input type="radio" name="jenis_kelamin" id="status" value="wanita" required="true" checked="true"> Perempuan 
+                                    <?php endif;?>
                                 </label>
                             </div>
                         </div>   
@@ -91,21 +96,17 @@
                             <label for="Nama Ibu" class="col-sm-2 control-label">Nama Ibu</label>
                             <div class="col-sm-5">
                                 <input type="text" class="form-control" id="nama_ibu" placeholder="Nama Ibu" name="nama_ibu" 
-                                        required="true">
+                                       required="true" value="<?php echo (!empty($data['nama_ibu']) ? $data['nama_ibu'] : null );?>" readonly="true">
                             </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Agama" class="col-sm-2 control-label">Agama</label>
                             <div class="col-sm-3">
-                                <select name="agama" class="form-control" required="true" id="agama">
-                                    <option value="">PILIH</option>
-                                    <option value="islam">ISLAM</option>
-                                    <option value="kristen">KRISTEN</option>
-                                    <option value="katolik">KATOLIK</option>
-                                    <option value="hindu">HINDU</option>
-                                    <option value="budha">BUDHA</option>
-                                </select>
+                                <input type="text" class="form-control" id="nama" placeholder="Nama" 
+                                       name="nama" required="true" readonly="true"
+                                       value="<?php echo (!empty($data['agama']) ? strtoupper($data['agama']) : null );?>"
+                                       >
                             </div>
                         </div>   
                         
@@ -114,39 +115,40 @@
                                    " class="col-sm-2 control-label">Status</label>
                             <div class="radio  col-sm-2">
                                 <label>
-                                    <input type="radio" name="status" id="status" value="menikah" required="true"> Menikah                       
+                                    <input type="radio" name="status" id="status" value="menikah" required="true" checked="true"> <?php echo (!empty($data['status']) ? strtoupper($data['status']) : null ) ?>                       
                                 </label>
-                                <label>
-                                  <input type="radio" name="status" id="status" value="lajang" required="true" >Lajang                       
-                                </label>
+                                
                             </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Isi Silinder" class="col-sm-2 control-label">Pekerjaan</label>
                                <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan" name="pekerjaan"  required="true">
+                                    <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan" name="pekerjaan"  
+                                           value="<?php echo (!empty($data['pekerjaan']) ? $data['pekerjaan'] : null );?>"
+                                           readonly="true">
                                 </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Tanggal STNK" class="col-sm-2 control-label">Alamat Tempat Kerja</label>
                             <div class="col-sm-5">
-                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat Tempat Kerja" name="alamat_tempat_kerja" required="true" ></textarea>
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat Tempat Kerja" name="alamat_tempat_kerja" required="true" readonly="true"><?php echo (!empty($data['alamat_tempat_kerja']) ? $data['alamat_tempat_kerja'] : null );?>
+                                </textarea>
                             </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Isi Silinder" class="col-sm-2 control-label">No HP</label>
                                <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="hp" placeholder="No HP" name="hp"  required="true">
+                                   <input type="text" class="form-control" id="hp" placeholder="No HP" name="hp"  required="true" value="<?php echo (!empty($data['hp']) ? $data['hp'] : null );?>" readonly="">
                                </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Isi Silinder" class="col-sm-2 control-label">No Telepon</label>
                                <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="hp" placeholder="No Telepon" name="telpon"  >
+                                    <input type="text" class="form-control" id="hp" placeholder="No Telepon" name="telpon" value="<?php echo (!empty($data['telpon']) ? $data['telpon'] : null );?>" readonly="" >
                                </div>
                         </div>   
                         
@@ -154,8 +156,12 @@
                   
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Save</button>
-                                <button type="reset" class="btn btn-default">Cancel</button>
+                                    <a href="<?php echo URL . 'kendaraan/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Kendaraan</a>
+                                <?php if(empty($cekPenjamin)) :?>
+                                    <a href="<?php echo URL . 'penjamin/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Penjamin</a>
+                                <?php elseif(!empty($cekPenjamin)) :?>
+                                    <a href="<?php echo URL . 'penjamin/index/detail/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Detail Penjamin</a>
+                                <?php endif;?>
                             </div>
                         </div>                               
                     </form>
