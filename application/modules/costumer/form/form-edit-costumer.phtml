@@ -3,9 +3,9 @@
 /**
  * MDPU Finance
  * @category   Modules
- * @package    Penjamin
- * @subpackage Form
- * @filesource form-add-penjamin.phtml
+ * @package    Costumer
+ * @subpackage form
+ * @filesource form-edit-costumer.phtml
  */
 
 ?>
@@ -21,7 +21,7 @@
                     <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Costumer</a>
                 </li>
                 <li>
-                    Input Penjamin
+                    Edit Costumer
                 </li>
             </ol>
         </div>
@@ -31,24 +31,18 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Penjamin</h3>
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Edit Costumer</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" action="<?php echo URL ?>penjamin/index/save" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/edit" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <label for="NIK Costumer" class="col-sm-2 control-label">NIK Costumer</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" value="<?php echo $id?>" required="true" readonly="true" >
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" required="true" >
                             </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="NIK Costumer" class="col-sm-2 control-label">NIK Penjamin</label>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_penjamin" required="true" >
-                            </div>
-                        </div>
+
 
                         <div class="form-group">
                             <label for="Nama" class="col-sm-2 control-label">Nama</label>
@@ -85,10 +79,10 @@
                             <label for="Jenis Kelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
                             <div class="radio  col-sm-2">
                                 <label>
-                                    <input type="radio" name="jenis_kelamin" id="status" value="Laki-Laki" required="true"> Laki-Laki                       
+                                    <input type="radio" name="jenis_kelamin" id="status" value="pria" required="true"> Laki-Laki                       
                                 </label>
                                 <label>
-                                  <input type="radio" name="jenis_kelamin" id="status" value="Peremuan" required="true" >Perempuan                       
+                                  <input type="radio" name="jenis_kelamin" id="status" value="wanita" required="true" >Wanita                       
                                 </label>
                             </div>
                         </div>   
@@ -118,12 +112,12 @@
                         <div class="form-group">
                             <label for="status
                                    " class="col-sm-2 control-label">Status</label>
-                            <div class="radio  col-sm-4">
+                            <div class="radio  col-sm-2">
                                 <label>
-                                    <input type="radio" name="status" id="status" value="Menikah" required="true"> Menikah                       
+                                    <input type="radio" name="status" id="status" value="menikah" required="true"> Menikah                       
                                 </label>
                                 <label>
-                                  <input type="radio" name="status" id="status" value="Belum Menikah" required="true" >Belum Menikah                       
+                                  <input type="radio" name="status" id="status" value="lajang" required="true" >Lajang                       
                                 </label>
                             </div>
                         </div>   

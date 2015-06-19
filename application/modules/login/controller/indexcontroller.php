@@ -39,8 +39,37 @@ class indexcontroller extends Controller {
                 /* For Check User Login or Not */
                 $cekStatus = $this->_modelUser->ceklogin($login['id_user']);
                 if (!empty($cekStatus['status'] == 1)) {
-                    $message = 'USER IS Login On IP ' . $cekStatus['ip_login'] . '<br/> Time ' . $cekStatus['last_login'];
-                    include APP_MODUL . '/login/form/login.html';
+                    /*Start Cek For If Login Up Maksimal From Login Time Limit, Is Can Login Againt*/
+                    $time = $cekStatus['login_time']; 
+                    $Config = Mydb::getConfig();
+                    $maksTime = $Config->time->maksLogin;
+                    $endTime = strtotime($maksTime, strtotime($time));
+                    if(time() > $endTime ){
+                            $data = array(
+                                'last_login' => $cekStatus['login_time'],
+                                'login_time' => new Zend_Db_Expr('NOW()'),
+                                'ip_login' => $this->get_client_ip(),
+                                'status' => 1
+                            );
+                            $where = $this->_modelUserLogin->getAdapter()->quoteInto('id_user = ?',$cekStatus['id_user']);
+                            try{
+                                $this->_modelUserLogin->update($data, $where);
+                                $login = $this->_modelUser->ceklogin($cekStatus['id_user']);
+                                Session::set('logged', true);
+                                Session::set('level', $login['level']);
+                                Session::set('dataLogin', $login);
+                                Mydb::log($login,6,'infologin.log');
+                                $this->redirect('home');
+                            } catch (Exception $ex) {
+                                $message = $ex->getMessage();
+                                include APP_MODUL . '/login/form/login.html';
+                            }
+                    }else{
+                        $message = 'USER IS Login On IP ' . $cekStatus['ip_login'] . '<br/> Time ' . $cekStatus['last_login'];
+                        include APP_MODUL . '/login/form/login.html';
+                    }
+                     /*Start Cek For If Login Up Maksimal From Login Time Limit, Is Can Login Againt*/                   
+
                 }
 
                 if (empty($cekStatus)) {
@@ -61,7 +90,8 @@ class indexcontroller extends Controller {
                             $this->redirect('home');
                         }
                     } catch (Exception $exc) {
-                        echo $exc->getMessage();
+                        $message = $ex->getMessage();
+                        include APP_MODUL . '/login/form/login.html';;
                     }
                 }
                 if (isset($cekStatus['status']) && $cekStatus['status'] == 0) {
@@ -81,7 +111,8 @@ class indexcontroller extends Controller {
                         Session::set('dataLogin', $cekStatus);
                         $this->redirect('home');
                     } catch (Exception $ex) {
-                        echo $ex->getMessage();
+                        $message = $ex->getMessage();
+                        include APP_MODUL . '/login/form/login.html';
                     }
                 }
 

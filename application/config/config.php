@@ -31,7 +31,7 @@ define('APP_DIR', getcwd());
 define('APP_MODUL',getcwd().'/application/modules');
 define('DS',DIRECTORY_SEPARATOR );
 define ('PS',PATH_SEPARATOR);
-
+define('APPLICATION_DATA_PATH' , '/var/www/html/mdpu/log/');
 
 $includePath = array(
         get_include_path (),

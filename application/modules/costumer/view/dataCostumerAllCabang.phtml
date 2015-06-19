@@ -18,21 +18,21 @@
                 <li>
                     <i class="fa fa-edit active"></i> <a href="<?php echo URL ?>costumer/index/add">Input Costumer</a>
                 </li>
-                <?php if($_SESSION['level']==='superadmin'):?>
+                <li>
+                    <i class="fa fa-table active"></i> <a href="<?php echo URL ?>costumer">Data Costumer  </a> 
+                </li>
+                  <?php if($_SESSION['level']==='superadmin'):?>
                     <li>
-                        <i class="fa fa-table active"></i><a href="<?php echo URL ?>costumer/index/all"> Data All Costumer</a>   
+                        <i class="fa fa-table active"></i> Data All Costumer  
                     </li>
                 <?php endif;?>
-                <li>
-                    <i class="fa fa-table active"></i> Data Costumer   
-                </li>
-
+    
             </ol>
         </div>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Costumer Cabang , &nbsp;<strong> <?php echo (!empty($data[0]['cabang']) ? $data[0]['cabang'] : null);?></strong></h3>
+            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Costumer Cabang All Cabang
         </div>
         <div class="box-body" > 
             <table id="example1" class="table table-bordered table-striped" style="overflow-x: scroll;overflow-y: scroll">
@@ -42,8 +42,8 @@
                         <th class="col-sm-2">Nik Costumer</th>
                         <th class="col-sm-2">Nama</th>
                         <th class="col-sm-2">Alamat</th>
-                        <th class="col-sm-1">Jenis Kelamin</th>
                         <th class="col-sm-1">Pekerjaan</th>
+                        <th class="col-sm-1">Cabang</th>
                         <th class="col-sm-3" align="center"><p class="text-justify">Action</p></th>
                     </tr>
                 </thead>
@@ -56,8 +56,7 @@
                             <td><?php echo $val['nik_costumer'] ?></td>
                             <td><?php echo $val['nama'] ?></td>
                             <td><?php echo $val['alamat'] ?></td>
-                            <td><?php echo $val['jenis_kelamin'] ?></td>
-                            
+                            <td><?php echo $val['cabang'] ?></td>                           
                             <td><?php echo $val['pekerjaan'] ?></td>
 
                             <td align="center">
@@ -80,8 +79,9 @@
                         <th class="col-sm-2">Nik Costumer</th>
                         <th class="col-sm-2">Nama</th>
                         <th class="col-sm-2">Alamat</th>
-                        <th class="col-sm-1">Jenis Kelamin</th>
+                        
                         <th class="col-sm-1">Pekerjaan</th>
+                        <th class="col-sm-1">Cabang</th>
                         <th class="col-sm-3">Action</th>
                     </tr>
                 </tfoot>
