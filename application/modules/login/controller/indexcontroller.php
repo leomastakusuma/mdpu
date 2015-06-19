@@ -58,7 +58,7 @@ class indexcontroller extends Controller {
                                 Session::set('logged', true);
                                 Session::set('level', $login['level']);
                                 Session::set('dataLogin', $login);
-                                Mydb::log($login,6,'infologin.log');
+                                Mydb::log($login,6,'loginAfterTimeLimit.log');
                                 $this->redirect('home');
                             } catch (Exception $ex) {
                                 $message = $ex->getMessage();
@@ -82,11 +82,12 @@ class indexcontroller extends Controller {
                     );
                     try {
                         $this->_modelUserLogin->insert($data);
-                        
+                        $cekStatus = $this->_modelUser->ceklogin($login['id_user']);
                         if (count($login > 0)) {
                             Session::set('logged', true);
-                            Session::set('level', $login['level']);
+                            Session::set('level', $cekStatus['level']);
                             Session::set('dataLogin', $cekStatus);
+                            Mydb::log($cekStatus,6,'FirstLogin.log');
                             $this->redirect('home');
                         }
                     } catch (Exception $exc) {

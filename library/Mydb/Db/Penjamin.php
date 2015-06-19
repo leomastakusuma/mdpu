@@ -27,4 +27,15 @@ class Mydb_Db_Penjamin extends Mydb_Db_Abstract{
         
     }
     
+     public function getAllPenjamin(){
+        $select = $this->select();
+        $select->from(array('pe'=>'penjamin'),array('*'));
+        $select->setIntegrityCheck(FALSE);
+        $select->join(array('cos'=>'costumer'), 'pe.nik_costumer = cos.nik_costumer',array('id_cabang','id_user'));
+        $select->join(array('us'=>'user'), 'us.id_user = cos.id_user',array());
+        $select->join(array('cb'=>'cabang'),'cb.id_cabang = cos.id_cabang',array('cabang'));
+        return $this->getAdapterSelect()->fetchAll($select);
+        
+    }
+    
 }

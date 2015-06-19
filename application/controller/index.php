@@ -2,8 +2,8 @@
 
 class Index extends Controller{
     public function index(){     
-        
-        $this->redirect('login');
+        Auth::handleLogin();
+        $this->redirect('home');
     }
 }
  

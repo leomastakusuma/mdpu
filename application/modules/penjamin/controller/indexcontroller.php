@@ -30,6 +30,18 @@ class indexcontroller extends Controller {
         require UD . 'footerDataTables.phtml';
     }
 
+    public function all() {
+        if (($_SESSION['level'] != 'superadmin')) {
+            $this->redirect('error/index/notAllowed');
+        }
+        $id_user=$_SESSION['dataLogin']['id_user'];
+        $id_cabang=$_SESSION['dataLogin']['id_cabang'];
+        $data = $this->_modelPenjamin->getAllPenjamin();
+        require UD . 'headerDataTables.phtml';
+        require APP_MODUL . '/penjamin/view/dataPenjaminAll.phtml';
+        require UD . 'footerDataTables.phtml';
+    }
+    
     public function detail($id) {
         if (!isset($id)) {
             $this->redirect('error');
