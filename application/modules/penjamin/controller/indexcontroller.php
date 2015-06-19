@@ -23,10 +23,10 @@ class indexcontroller extends Controller {
         if(($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] !='admin')){
             $this->redirect('error/index/notAllowed');
         }
-        $id=$_SESSION['dataLogin']['id_user'];
-        $this->_modelCostumer->getAllCostumerByCabang($id);
+//        $id=$_SESSION['dataLogin']['id_user'];
+//        $this->_modelCostumer->getAllCostumerByCabang($id);
         require UD . 'header.html';
-        require APP_MODUL . '/penjamin/form/form-add-penjamin.phtml';
+//        require APP_MODUL . '/penjamin/form/form-add-penjamin.phtml';
         require UD . 'footer.html';
     }
     

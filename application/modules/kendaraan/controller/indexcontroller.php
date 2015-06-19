@@ -24,7 +24,7 @@ class indexcontroller extends Controller {
         }
         
         require UD . 'header.html';
-        require  APP_MODUL.'/kendaraan/form/form-add-kendaraan.phtml';
+//        require  APP_MODUL.'/kendaraan/form/form-add-kendaraan.phtml';
         require UD . 'footer.html';
     }
     

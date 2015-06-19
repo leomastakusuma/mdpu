@@ -5,7 +5,7 @@
  * @category   Modules
  * @package    error
  * @subpackage Controller
- * @filesource Index.php
+ * @filesource IndexController.php
  */
 
 

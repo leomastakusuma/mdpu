@@ -31,8 +31,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i>Data Penjamin</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>ADD Penjamin</a></li>
+                    <li><a href="<?php echo URL?>penjamin"><i class="fa fa-circle-o"></i>Data Penjamin</a></li>
+                    <!--<li><a href="#"><i class="fa fa-circle-o"></i>ADD Penjamin</a></li>-->
                 </ul>
             </li>
             <?php if($_SESSION['level']==='superadmin' || $_SESSION['level']==='admin'): ?>
@@ -42,8 +42,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i>Data Kendaraan</a></li>
-                    <li><a href="<?php echo URL?>kendaraan/index/add"><i class="fa fa-circle-o"></i>ADD Kendaraan</a></li>
+                    <li><a href="<?php echo URL?>kendaraan"><i class="fa fa-circle-o"></i>Data Kendaraan</a></li>
+                    <!--<li><a href="<?php echo URL?>kendaraan/index/add"><i class="fa fa-circle-o"></i>ADD Kendaraan</a></li>-->
                 </ul>
             </li>
             <?php endif;?>
