@@ -19,7 +19,10 @@ class Mydb_Db_User extends Mydb_Db_Abstract {
     public function getAllUser() {
         $select = $this->select();
         $select->from($this->_name, array('*'));
-        $select->where('level != ?', 'admin');
+        $select->setIntegrityCheck(false);
+        $select->join(array('cb'=>'cabang'), 'cb.id_cabang =user.id_cabang ');
+        $select->columns(array('cabang'),'cb');
+        $select->where('level != ?', 'superadmin');
         $select->order('id_user desc');
         return $this->getAdapterSelect()->fetchAll($select);
     }

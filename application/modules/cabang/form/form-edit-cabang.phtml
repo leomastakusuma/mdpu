@@ -49,7 +49,23 @@
                             </div>
                         </div>     
 
-
+                        
+                        <div class="form-group">
+                            <label for="cabang" class="col-sm-2 control-label">Cabang</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="judul" placeholder="Cabang" name="cabang" 
+                                       value ="<?php echo!empty($dataCabang['cabang']) ? $dataCabang['cabang'] : null; ?>" required>
+                            </div>
+                        </div>
+                        
+                         <div class="form-group">
+                            <label for="Kepala Cabang" class="col-sm-2 control-label">Kepala Cabang</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="judul" placeholder=" Kepala Cabang" name="kepala_cabang" 
+                                       value ="<?php echo!empty($dataCabang['kepala_cabang']) ? $dataCabang['kepala_cabang'] : null; ?>" required>
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
                             <label for="Provinsi" class="col-sm-2 control-label">Provinsi</label>
                             <div class="col-sm-5">
@@ -57,8 +73,7 @@
                                        value ="<?php echo!empty($dataCabang['provinsi']) ? $dataCabang['provinsi'] : null; ?>" required>
                             </div>
                         </div>
-
-
+                        
                         <div class="form-group">
                             <label for="Kota" class="col-sm-2 control-label">Kota</label>
                             <div class="col-sm-5">

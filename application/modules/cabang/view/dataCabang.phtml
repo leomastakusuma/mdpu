@@ -39,11 +39,11 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-
-                        <th class="col-sm-1">No</th>
-                        <th class="col-lg-3">Provinsi</th>
-                        <th class="col-lg-3">Kota</th>
-                        <th class="col-lg-2">Kode Post</th>
+                        <th class="col-lg-1">No</th>
+                        <th class="col-lg-2">Cabang</th>
+                        <th class="col-lg-2">Kepala Cabang</th>
+                        <th class="col-lg-2">Provinsi</th>
+                        <th class="col-lg-2">Kota</th>
                         <th class="col-sm-2" >Action</th>
                     </tr>
                 </thead>
@@ -53,9 +53,11 @@
                     <?php foreach ($data as $val):$i++; ?>
                         <tr>
                             <td><?php echo $i; ?></td>
+                            <td><?php echo $val['cabang'] ?></td>
+                            <td><?php echo $val['kepala_cabang'] ?></td>
                             <td><?php echo $val['provinsi'] ?></td>
                             <td><?php echo $val['kota'] ?></td>
-                            <td><?php echo $val['kode_pos'] ?></td>
+                     
                             <td align="center">
                                 <a href="<?php echo URL . 'cabang/index/edit/' . $val['id_cabang']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
                                 &nbsp;|| &nbsp; 
@@ -67,11 +69,12 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>ID</th>
-                        <th>Provinsi</th>
-                        <th>Kota</th>
-                        <th>KodePost</th>
-                        <th>Action</th>
+                        <th class="col-lg-1">No</th>
+                        <th class="col-lg-2">Cabang</th>
+                        <th class="col-lg-2">Kepala Cabang</th>
+                        <th class="col-lg-2">Provinsi</th>
+                        <th class="col-lg-2">Kota</th>
+                        <th class="col-sm-2" >Action</th>
                     </tr>
                 </tfoot>
             </table>

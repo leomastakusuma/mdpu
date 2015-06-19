@@ -29,6 +29,9 @@ class Indexcontroller extends Controller {
     }
 
     public function add() {
+        if($_SESSION['level']!='superadmin'){
+            $this->redirect('error/index/notAllowed');
+        }
         require_once UD . 'header.html';
         $data = $this->_modelCabang->getAllCabang();
         include APP_MODUL . '/user/form/form-user.phtml';
@@ -36,9 +39,12 @@ class Indexcontroller extends Controller {
     }
 
     public function save() {
+        if($_SESSION['level']!='superadmin'){
+            $this->redirect('error/index/notAllowed');
+        }
         $form = $this->getPost();
         $form['Password']=  sha1($form['Password']);
-        
+        $form['create_at'] = date('Y-m-d');
         try {
             $this->_modelUser->insert($form);
             $this->redirect('user');
@@ -52,7 +58,9 @@ class Indexcontroller extends Controller {
     }
 
     public function edit($id) {
-        pr($_SESSION);
+        if($_SESSION['level']!='superadmin'){
+            $this->redirect('error/index/notAllowed');
+        }
         if (!is_numeric($id)) {
             $this->redirect('error');
         }
