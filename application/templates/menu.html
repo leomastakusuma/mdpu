@@ -8,11 +8,11 @@
             <li class="header">MAIN NAVIGATION</li>
             
             <li class=" treeview">
-              <a href="#">
+                <a href="<?php echo URL?>home">
                 <i class="fa fa-dashboard"></i> <span>Home</span> 
               </a>
             </li>
-            
+            <?php if($_SESSION['level']==='superadmin' || $_SESSION['level']==='admin') : ?>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-android"></i> <span>Costumer</span>
@@ -35,7 +35,8 @@
                     <!--<li><a href="#"><i class="fa fa-circle-o"></i>ADD Penjamin</a></li>-->
                 </ul>
             </li>
-            <?php if($_SESSION['level']==='superadmin' || $_SESSION['level']==='admin'): ?>
+            
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-car"></i> <span>Kendaraan</span>
@@ -73,7 +74,7 @@
             </li>
             <?php endif;?>
             
-            <?php if($_SESSION['level']==='superadmin' || $_SESSION['level']==='kasir') : ?>
+            <?php if($_SESSION['level']==='kasir') : ?>
             <li class="treeview">
               <a href="#">
                 <i class="fa  fa-cart-arrow-down"></i> <span>Pembayaran</span>

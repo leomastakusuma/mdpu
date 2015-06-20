@@ -65,7 +65,7 @@ class indexcontroller extends Controller {
                                 include APP_MODUL . '/login/form/login.html';
                             }
                     }else{
-                        $message = 'USER IS Login On IP ' . $cekStatus['ip_login'] . '<br/> Time ' . $cekStatus['last_login'];
+                        $message = 'USER IS Login On IP ' . $cekStatus['ip_login'] . '<br/> Time ' . $cekStatus['login_time'];
                         include APP_MODUL . '/login/form/login.html';
                     }
                      /*Start Cek For If Login Up Maksimal From Login Time Limit, Is Can Login Againt*/                   

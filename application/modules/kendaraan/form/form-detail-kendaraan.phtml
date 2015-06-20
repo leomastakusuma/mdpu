@@ -5,7 +5,7 @@
  * @category   Modules
  * @package    Kendaraan
  * @subpackage Form
- * @filesource form-add-kendaraan.phtml
+ * @filesource form-detail-kendaraan.phtml
  */
 
 ?>
@@ -18,10 +18,10 @@
                     <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
                 </li>
                 <li>
-                    <i class="fa  fa-table"></i> <a href="<?php echo URL.'costumer/index/detail/'.$id?>">Detail Costumer</a>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>kendaraan">Data Kendaraan</a>
                 </li>
                 <li>
-                    Input Kendaraan
+                    Detail Kendaraan
                 </li>
             </ol>
         </div>
@@ -31,7 +31,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Kendaraan</h3>
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Detail  Kendaraan</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="<?php echo URL ?>kendaraan/index/save" method="post" enctype="multipart/form-data">
@@ -39,14 +39,14 @@
                         <div class="form-group">
                             <label for="nopolisi" class="col-sm-2 control-label">NIK Costumer</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="no_polisi" placeholder="NIK Costumer" name="nik_costumer" required="true" readonly="true" value="<?php echo $nik?>">
+                                <input type="text" class="form-control" id="no_polisi" placeholder="NIK Costumer" name="nik_costumer" required="true" readonly="true" value="<?php echo (!empty($data->nik_costumer) ? $data->nik_costumer : null)?>">
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label for="nopolisi" class="col-sm-2 control-label">No Polisi</label>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" id="no_polisi" placeholder="No Polisi" name="no_polisi" required="true">
+                                <input type="text" class="form-control" id="no_polisi" placeholder="No Polisi" name="no_polisi" required="true" readonly="true" value="<?php echo (!empty($data->no_polisi) ? $data->no_polisi : null)?>">
                             </div>
                         </div>
 
@@ -54,14 +54,14 @@
                         <div class="form-group">
                             <label for="No BPKB" class="col-sm-2 control-label">No BPKB</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="no_bpkb" placeholder="No BPKB" name="no_bpkb" required="true">
+                                <input type="text" class="form-control" id="no_bpkb" placeholder="No BPKB" name="no_bpkb" required="true" readonly="true" value="<?php echo (!empty($data->no_bpkb) ? $data->no_bpkb : null)?>">
                             </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Nama BPKB" class="col-sm-2 control-label">Nama BPKB</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="nama_bpkb" placeholder="Nama BPKB" name="nama_bpkb"   required="true">
+                                <input type="text" class="form-control" id="nama_bpkb" placeholder="Nama BPKB" name="nama_bpkb"   required="true" readonly="true" value="<?php echo (!empty($data->nama_bpkb) ? $data->nama_bpkb : null)?>">
                             </div>
                         </div>   
                         
@@ -69,15 +69,15 @@
                         <div class="form-group">
                             <label for="Alamat" class="col-sm-2 control-label">Alamat</label>
                             <div class="col-sm-5">
-                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat"></textarea>
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat" readonly="true"><?php echo (!empty($data->alamat) ? $data->alamat : null)?></textarea>
                             </div>
                         </div>   
 
                         <div class="form-group">
                             <label for="Merk / Type" class="col-sm-2 control-label">Merk / Type</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="merk/type" placeholder="Merk / Type" name="merk" 
-                                       required="true">
+                                <input type="text" class="form-control" id="merk/type" placeholder="Merk / Type" name="merk/type" 
+                                       required="true" readonly="true" value="<?php echo (!empty($data->merk) ? $data->merk : null)?>">
                             </div>
                         </div>    
                         
@@ -85,7 +85,7 @@
                             <label for="No Mesin" class="col-sm-2 control-label">No Mesin</label>
                             <div class="col-sm-5">
                                 <input type="text" class="form-control" id="no_mesin" placeholder="No Mesin" name="no_mesin" 
-                                        required="true">
+                                       required="true" readonly="true" value="<?php echo (!empty($data->no_mesin) ? $data->no_mesin : null)?>">
                             </div>
                         </div>    
                         
@@ -93,7 +93,7 @@
                             <label for="No Rangka" class="col-sm-2 control-label">No Rangka</label>
                             <div class="col-sm-5">
                                 <input type="text" class="form-control" id="no_rangka" placeholder="No Rangka" name="no_rangka" 
-                                        required="true">
+                                        required="true" readonly="true" value="<?php echo (!empty($data->no_rangka) ? $data->no_rangka : null)?>">
                             </div>
                         </div>   
                         
@@ -101,7 +101,7 @@
                             <label for="Warna" class="col-sm-2 control-label">Warna</label>
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" id="warna" placeholder="Warna" name="warna" 
-                                        required="true">
+                                        required="true" readonly="true" value="<?php echo (!empty($data->warna) ? $data->warna : null)?>">
                             </div>
                         </div>   
                         
@@ -109,7 +109,7 @@
                             <label for="Tahun Pembuatan" class="col-sm-2 control-label">Tahun Pembuatan</label>
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" id="tahun_pembuatan" placeholder="Tahun Pembuatan" name="tahun_pembuatan" 
-                                        required="true">
+                                        required="true"readonly="true" value="<?php echo (!empty($data->tahun_pembuatan) ? $data->tahun_pembuatan : null)?>" >
                             </div>
                         </div>   
                         
@@ -117,7 +117,7 @@
                             <label for="Isi Silinder" class="col-sm-2 control-label">Isi Silinder</label>
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" id="isi_silinder" placeholder="Isi Silinder" name="isi_silinder" 
-                                        required="true">
+                                        required="true" readonly="true" value="<?php echo (!empty($data->isi_silinder) ? $data->isi_silinder : null)?>" >
                             </div>
                         </div>   
                         
@@ -125,7 +125,7 @@
                             <label for="Tanggal STNK" class="col-sm-2 control-label">Tanggal STNK</label>
                             <div class="col-sm-2" id="sd">
                                 <input type="text" class="datepicker form-control input-append date" id="tgl_stnk" data-date-format="yyyy/mm/dd" placeholder="Tanggal STNK" name="tgl_stnk" 
-                                       required="true">
+                                       required="true" readonly="true" value="<?php echo (!empty($data->tgl_stnk) ? $data->tgl_stnk : null)?>" >
                                 <span class="add-on"><i class="icon-th"></i></span>
                             </div>
                         </div>   
@@ -134,8 +134,8 @@
                   
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Save</button>
-                                <button type="reset" class="btn btn-default">Cancel</button>
+                                <a href="<?php echo URL?>kendaraan" class="btn btn-primary" role="button">Data Kendaraan</a>               
+                                <a href="<?php echo URL.'kendaraan/index/edit/'.$data->no_polisi ?>" class="btn btn-primary" role="button">Edit Kendaraan</a>               
                             </div>
                         </div>                               
                     </form>

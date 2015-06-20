@@ -9,7 +9,10 @@ class Auth
     
 
     public static function handleLogin()
-    {
+    {   $Config = Mydb::getConfig();
+        $maksTime = $Config->time->maksLogin;
+        session_cache_expire(strtotime($maksTime));
+        
         @session_start();
         $logged = $_SESSION['logged'];
         $level  = $_SESSION['level'];
@@ -20,7 +23,7 @@ class Auth
         } 
 
         Auth::TimeLimit($_SESSION);
-        
+
     }
     
     protected static function TimeLimit($data){
@@ -28,7 +31,7 @@ class Auth
        $Config = Mydb::getConfig();
        $maksTime = $Config->time->maksLogin;
        $endTime = strtotime($maksTime, strtotime($time));
-
+     
        if(time() > $endTime ){
            $modelUserLogin = Mydb::getModelUserLogin();         
            $where = array();
