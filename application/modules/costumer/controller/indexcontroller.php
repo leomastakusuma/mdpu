@@ -109,10 +109,31 @@ class indexcontroller extends Controller {
         if(empty($data)){
            $this->redirect('error');
         }
+        $config = Mydb::getConfig();
+        $agama = $config->agama;
         require UD . 'header.html';
         require APP_MODUL . '/costumer/form/form-edit-costumer.phtml';
         require UD . 'footer.html';
         
     }
-
+    
+    public function saveedit(){
+        if ($_SESSION['level'] != 'superadmin') {
+            $this->redirect('error/index/notAllowed');
+        }
+        $form = $this->getPost();
+        $where = $this->_modelCostumer->getAdapter()->quoteInto('id_costumer = ?', $form['id_costumer']);
+        try{
+            $this->_modelCostumer->update($form, $where);
+            $this->redirect('costumer');
+        } catch (Exception $ex) {
+            $config = Mydb::getConfig();
+            $agama = $config->agama;
+            require UD . 'header.html';
+            echo $ex->getMessage();
+            require APP_MODUL . '/costumer/form/form-edit-costumer.phtml';
+            require UD . 'footer.html';
+        }
+        
+    }
 }

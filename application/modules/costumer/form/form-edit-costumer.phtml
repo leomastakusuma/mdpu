@@ -1,5 +1,4 @@
 <?php
-
 /**
  * MDPU Finance
  * @category   Modules
@@ -18,7 +17,7 @@
                     <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
                 </li>
                 <li>
-                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Costumer</a>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>costumer">Data Costumer</a>
                 </li>
                 <li>
                     Edit Costumer
@@ -34,12 +33,17 @@
                     <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Edit Costumer</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/edit" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/saveedit" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="id_costumer" placeholder="ID Costumer" name="id_costumer" required="true" value="<?php echo (!empty($data->id_costumer) ? $data->id_costumer : $form['id_costumer']) ?>">
+                        </div>
 
                         <div class="form-group">
                             <label for="NIK Costumer" class="col-sm-2 control-label">NIK Costumer</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" required="true" >
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" required="true" 
+                                       value="<?php echo (!empty($data->nik_costumer) ? $data->nik_costumer : $form['nik_costumer']);?>">
                             </div>
                         </div>
 
@@ -47,15 +51,15 @@
                         <div class="form-group">
                             <label for="Nama" class="col-sm-2 control-label">Nama</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" required="true">
+                                <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" required="true" value="<?php echo (!empty($data->nama) ? $data->nama : $form['nama']) ;?>">
                             </div>
                         </div>   
-                                               
-                        
+
+
                         <div class="form-group">
                             <label for="Alamat" class="col-sm-2 control-label">Alamat</label>
                             <div class="col-sm-5">
-                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat" required="true"></textarea>
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat" required="true"><?php echo (!empty($data->alamat) ? $data->alamat : $form['alamat']); ?></textarea>
                             </div>
                         </div>   
 
@@ -63,99 +67,119 @@
                             <label for="Tempat Lahir" class="col-sm-2 control-label">Tempat Lahir</label>
                             <div class="col-sm-3">
                                 <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" 
-                                       required="true">
+                                       required="true" value="<?php echo (!empty($data->tempat_lahir) ? $data->tempat_lahir : $form['tempat_lahir']) ?>">
                             </div>
                         </div>    
-                        
+
                         <div class="form-group">
                             <label for="Tanggal Lahir" class="col-sm-2 control-label">Tanggal Lahir</label>
                             <div class="col-sm-3">
                                 <input type="text" class="form-control" id="tanggal_lahir" placeholder="Tanggal Lahir" name="tanggal_lahir" 
-                                        required="true">
+                                       required="true" value="<?php echo (!empty($data->tanggal_lahir )  ? $data->tanggal_lahir : $form['tanggal_lahir'])?>">
                             </div>
                         </div>    
-                        
-                         <div class="form-group">
+
+                        <div class="form-group">
                             <label for="Jenis Kelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
                             <div class="radio  col-sm-2">
-                                <label>
-                                    <input type="radio" name="jenis_kelamin" id="status" value="pria" required="true"> Laki-Laki                       
-                                </label>
-                                <label>
-                                  <input type="radio" name="jenis_kelamin" id="status" value="wanita" required="true" >Wanita                       
-                                </label>
+                                <?php $jk = !empty($data->jenis_kelamin) ? $data->jenis_kelamin : $form['jenis_kelamin'];?>
+                                
+                                <?php if($jk == 'laki-laki'):?>
+                                    <label>
+                                        <input type="radio" name="jenis_kelamin" id="status" value="laki-laki" required="true" checked=""> Laki-Laki                   
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="jenis_kelamin" id="status" value="perempuan" required="true" >Perempuan                       
+                                    </label>
+                                <?php elseif($jk == 'perempuan'):?>
+                                    <label>
+                                        <input type="radio" name="jenis_kelamin" id="status" value="laki-laki" required="true" > Laki-Laki                   
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="jenis_kelamin" id="status" value="perempuan" required="true" checked="">Perempuan                       
+                                    </label>
+                                <?php endif;?>
+                                
                             </div>
                         </div>   
-                        
+
                         <div class="form-group">
                             <label for="Nama Ibu" class="col-sm-2 control-label">Nama Ibu</label>
-                            <div class="col-sm-5">
+                            <div class="col-sm-3">
                                 <input type="text" class="form-control" id="nama_ibu" placeholder="Nama Ibu" name="nama_ibu" 
-                                        required="true">
+                                       required="true" value="<?php echo (!empty($data->nama_ibu) ? $data->nama_ibu : $form['nama_ibu'] ) ?>">
                             </div>
                         </div>   
-                        
+
                         <div class="form-group">
                             <label for="Agama" class="col-sm-2 control-label">Agama</label>
                             <div class="col-sm-3">
                                 <select name="agama" class="form-control" required="true" id="agama">
-                                    <option value="">PILIH</option>
-                                    <option value="islam">ISLAM</option>
-                                    <option value="kristen">KRISTEN</option>
-                                    <option value="katolik">KATOLIK</option>
-                                    <option value="hindu">HINDU</option>
-                                    <option value="budha">BUDHA</option>
+                                    <option value="ISLAM">ISLAM</option>
+                                    <?php foreach ($agama as $key => $val): ?>
+                                        <option value="<?php echo $key ?>"><?php echo $val ?></option>
+                                    <?php endforeach; ?>
+
                                 </select>
                             </div>
                         </div>   
-                        
+
                         <div class="form-group">
-                            <label for="status
-                                   " class="col-sm-2 control-label">Status</label>
-                            <div class="radio  col-sm-2">
-                                <label>
-                                    <input type="radio" name="status" id="status" value="menikah" required="true"> Menikah                       
-                                </label>
-                                <label>
-                                  <input type="radio" name="status" id="status" value="lajang" required="true" >Lajang                       
-                                </label>
+                            <label for="status" class="col-sm-2 control-label">Status</label>
+                            <div class="radio  col-sm-3">
+                                <?php $status = (!empty($data->status) ? $data->status : $form['status']);?>
+                                <?php if($status ==='menikah'):?>
+                                    <label>
+                                        <input type="radio" name="status" id="status" value="menikah" required="true" checked=""> Menikah                       
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="status" id="status" value="belumenikah" required="true" >Belum Menikah                       
+                                    </label>
+                                <?php elseif($status ==='belumenikah'):?>
+                                    <label>
+                                       <input type="radio" name="status" id="status" value="menikah" required="true" > Menikah                       
+                                   </label>
+                                   <label>
+                                       <input type="radio" name="status" id="status" value="belumenikah" required="true" checked="">Belum Menikah                           
+                                   </label>
+                                <?php endif;?>
                             </div>
                         </div>   
-                        
+
                         <div class="form-group">
                             <label for="Isi Silinder" class="col-sm-2 control-label">Pekerjaan</label>
-                               <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan" name="pekerjaan"  required="true">
-                                </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan" name="pekerjaan"  required="true" value="<?php echo (!empty($data->pekerjaan) ? $data->pekerjaan : $form['pekerjaan']);?>">
+                            </div>
                         </div>   
-                        
+
                         <div class="form-group">
                             <label for="Tanggal STNK" class="col-sm-2 control-label">Alamat Tempat Kerja</label>
                             <div class="col-sm-5">
-                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat Tempat Kerja" name="alamat_tempat_kerja" required="true" ></textarea>
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat Tempat Kerja" name="alamat_tempat_kerja" required="true" ><?php echo (!empty($data->alamat_tempat_kerja) ? $data->alamat_tempat_kerja : $form['alamat_tempat_kerja']); ?></textarea>
                             </div>
                         </div>   
-                        
+
                         <div class="form-group">
                             <label for="Isi Silinder" class="col-sm-2 control-label">No HP</label>
-                               <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="hp" placeholder="No HP" name="hp"  required="true">
-                               </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="hp" placeholder="No HP" name="hp"  required="true" value="<?php echo (!empty($data->hp) ? $data->hp : $form['hp']) ?>">
+                            </div>
                         </div>   
-                        
+
                         <div class="form-group">
                             <label for="Isi Silinder" class="col-sm-2 control-label">No Telepon</label>
-                               <div class="col-sm-3">
-                                    <input type="text" class="form-control" id="hp" placeholder="No Telepon" name="telpon"  >
-                               </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="hp" placeholder="No Telepon" name="telpon" value="<?php echo (!empty($data->telpon) ? $data->telpon : $form['telpon']) ?>" >
+                            </div>
                         </div>   
-                        
-                        
-                  
+
+
+
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary">Save</button>
-                                <button type="reset" class="btn btn-default">Cancel</button>
+                                <a href="<?php echo URL.'costumer'?>" class="btn btn-default" role="button">Cancel</a>
                             </div>
                         </div>                               
                     </form>
@@ -167,4 +191,3 @@
     </div>
 </div>
 
-    
