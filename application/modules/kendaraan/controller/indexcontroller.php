@@ -24,7 +24,6 @@ class indexcontroller extends Controller {
         if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
             $this->redirect('error/index/notAllowed');
         }
-        $this->title('testing');
         require UD . 'headerDataTables.phtml';
         $id_costumer = $_SESSION['dataLogin']['id_user'];
         $id_cabang = $_SESSION['dataLogin']['id_cabang'];
@@ -106,5 +105,40 @@ class indexcontroller extends Controller {
             require UD . 'footer.html';
         }
     }
-
+    
+     public function edit($id) {
+        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
+            $this->redirect('error/index/notAllowed');
+        }
+        if (!isset($id)) {
+            $this->redirect('error');
+        }
+        $where = $this->_modelKendaraan->getAdapter()->quoteInto('no_polisi = ?', $id);
+        $data = $this->_modelKendaraan->fetchRow($where);
+        if (!isset($data)) {
+            $this->redirect('error');
+        }
+          
+        require UD . 'header.html';
+        require APP_MODUL . '/kendaraan/form/form-edit-kendaraan.phtml';
+        require UD . 'footer.html';
+    }
+    
+    public function saveedit(){
+        $form = $this->getPost();
+        try {
+            $where = array();
+            $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $form['nik_costumer']);
+            $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('no_polisi = ?', $form['no_polisi']);
+            
+            $this->_modelKendaraan->update($form, $where);
+            $this->redirect('kendaraan');
+            
+        } catch (Exception $ex) {
+            require UD . 'header.html';
+            echo $ex->getMessage();
+            require APP_MODUL . '/kendaraan/form/form-edit-kendaraan.phtml';
+            require UD . 'footer.html';
+        }
+    }
 }
