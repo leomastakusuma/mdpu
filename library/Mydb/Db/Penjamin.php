@@ -38,4 +38,12 @@ class Mydb_Db_Penjamin extends Mydb_Db_Abstract{
         
     }
     
+    public function getPenjaminByID($id_penjamin){
+        $select = $this->select();
+        $select->from(array('pe'=>'penjamin'),array('*'));
+        $select->setIntegrityCheck(false);
+        $select->join(array('cos'=>'costumer'),'pe.nik_costumer = cos.nik_costumer',array() );
+        $select->where('pe.id_penjamin = ?',$id_penjamin);
+        return $this->getAdapter()->fetchRow($select);
+    }
 }
