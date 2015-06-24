@@ -1,0 +1,196 @@
+<?php
+
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    Penjamin
+ * @subpackage Form
+ * @filesource form-edit-penjamin.phtml
+ */
+
+?>
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Costumer</a>
+                </li>
+                <li>
+                    Input Penjamin
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Penjamin</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>penjamin/index/saveedit" method="post" enctype="multipart/form-data">
+                         
+                        <div class="form-group">
+                            <label for="NIK Costumer" class="col-sm-2 control-label">NIK Costumer</label>
+                            <div class="col-sm-4">
+                                <input type="hidden" class="form-control" id="id_penjamin"  name="id_penjamin" value="<?php echo $data['id_penjamin'];?>"  readonly="true" >
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_costumer" value="<?php echo $data['nik_costumer'];?>" required="true" readonly="true" >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="NIK Penjamin" class="col-sm-2 control-label">NIK Penjamin</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="nik_costumer" placeholder="Nik Costumer" name="nik_penjamin" required="true" value="<?php echo $data['nik_penjamin'];?>">
+                                
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Nama" class="col-sm-2 control-label">Nama</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" required="true" value="<?php echo $data['nama']?>">
+                            </div>
+                        </div>   
+                                               
+                        
+                        <div class="form-group">
+                            <label for="Alamat" class="col-sm-2 control-label">Alamat</label>
+                            <div class="col-sm-5">
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat" name="alamat" required="true"><?php echo $data['alamat'];?></textarea>
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Tempat Lahir" class="col-sm-2 control-label">Tempat Lahir</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" 
+                                       required="true" value="<?php echo $data['tempat_lahir'];?>">
+                            </div>
+                        </div>    
+                        
+                        <div class="form-group">
+                            <label for="Tanggal Lahir" class="col-sm-2 control-label">Tanggal Lahir</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="tanggal_lahir" placeholder="Tanggal Lahir" name="tanggal_lahir" 
+                                       required="true" value="<?php echo $data['tanggal_lahir'];?>">
+                            </div>
+                        </div>    
+                        
+                         <div class="form-group">
+                            <label for="Jenis Kelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
+                            <div class="radio  col-sm-2">
+                                <?php if($data['jenis_kelamin']==='Laki-Laki'):?>
+                                    <label>
+                                        <input type="radio" name="jenis_kelamin" id="status" value="Laki-Laki" required="true" checked> Laki-Laki                       
+                                    </label>
+                                    <label>
+                                      <input type="radio" name="jenis_kelamin" id="status" value="Peremuan" required="true" >Perempuan                       
+                                    </label>
+                                <?php elseif($data['jenis_kelamin']==='Perempuan'):?>
+                                    <label>
+                                        <input type="radio" name="jenis_kelamin" id="status" value="Laki-Laki" required="true" checked> Laki-Laki                       
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="jenis_kelamin" id="status" value="Peremuan" required="true" checked>Perempuan                       
+                                    </label>
+                                <?php endif;?>
+                            </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Nama Ibu" class="col-sm-2 control-label">Nama Ibu</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="nama_ibu" placeholder="Nama Ibu" name="nama_ibu" 
+                                       required="true" value="<?php echo $data['nama_ibu'];?>">
+                            </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Agama" class="col-sm-2 control-label">Agama</label>
+                            <div class="col-sm-3">
+                                <select name="agama" class="form-control" required="true" id="agama">
+                                    <?php foreach ($agama as $key=>$val):?>
+                                          <?php if($val===$data['agama']):?>
+                                                <option value="<?php echo $val?>"><?php echo $val;?></option>
+                                          <?php else :?>
+                                                 <option value="<?php echo $val?>"><?php echo $val;?></option>
+                                          <?php endif;?>
+                                    <?php endforeach;?>
+                                </select>
+                            </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="status" class="col-sm-2 control-label">Status</label>
+                            <div class="radio  col-sm-4">
+                                <?php if($data['status']==='Menikah'):?>
+                                    <label>
+                                        <input type="radio" name="status" id="status" value="Menikah" required="true" checked> Menikah                       
+                                    </label>
+                                    <label>
+                                      <input type="radio" name="status" id="status" value="Belum Menikah" required="true" >Belum Menikah                       
+                                    </label>
+                                <?php elseif($data['status']==='Belum Menikah'):?>
+                                    <label>
+                                        <input type="radio" name="status" id="status" value="Menikah" required="true" checked> Menikah                       
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="status" id="status" value="Belum Menikah" required="true"  checked>Belum Menikah                       
+                                    </label>
+                                <?php endif;?>
+                            </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Isi Silinder" class="col-sm-2 control-label">Pekerjaan</label>
+                               <div class="col-sm-3">
+                                   <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan" name="pekerjaan"  required="true" value="<?php echo $data['pekerjaan'];?>">
+                                </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Tanggal STNK" class="col-sm-2 control-label">Alamat Tempat Kerja</label>
+                            <div class="col-sm-5">
+                                <textarea class="form-control" cols="100" rows="2" placeholder="Alamat Tempat Kerja" name="alamat_tempat_kerja" required="true" ><?php echo $data['alamat_tempat_kerja'];?></textarea>
+                            </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Isi Silinder" class="col-sm-2 control-label">No HP</label>
+                               <div class="col-sm-3">
+                                   <input type="text" class="form-control" id="hp" placeholder="No HP" name="hp"  required="true" value="<?php echo $data['hp'];?>">
+                               </div>
+                        </div>   
+                        
+                        <div class="form-group">
+                            <label for="Isi Silinder" class="col-sm-2 control-label">No Telepon</label>
+                               <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="hp" placeholder="No Telepon" name="telpon" value="<?php echo $data['telpon'];?>" >
+                               </div>
+                        </div>   
+                        
+                        
+                  
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <a href="<?php echo URL.'penjamin'?>" class="btn btn-default" role="button">Cancel</a>
+                            </div>
+                        </div>                               
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    

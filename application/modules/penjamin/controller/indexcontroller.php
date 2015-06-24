@@ -42,6 +42,29 @@ class indexcontroller extends Controller {
         require UD . 'footerDataTables.phtml';
     }
     
+    public function edit($id){
+        if (!isset($id)) {
+            $this->redirect('error');
+        }
+        if ($_SESSION['level'] != 'superadmin') {
+            $this->redirect('error/index/notAllowed');
+        }
+        $id_penjamin = $id;
+        $data = $this->_modelPenjamin->getPenjaminByID($id_penjamin);
+        if (empty($data)) {
+            $this->redirect('error');
+        }
+        $config = Mydb::getConfig();
+        $agama = $config->agama;       
+      
+        require UD . 'header.html';
+        require APP_MODUL . '/penjamin/form/form-edit-penjamin.phtml';
+        require UD . 'footer.html';
+        
+    }
+
+    
+
     public function detail($id) {
         if (!isset($id)) {
             $this->redirect('error');
@@ -90,5 +113,24 @@ class indexcontroller extends Controller {
             require UD . 'footer.html';
         }
     }
-
+    
+    public function saveedit(){
+        if ($_SESSION['level'] != 'superadmin') {
+            $this->redirect('error/index/notAllowed');
+        }
+        $form = $this->getPost();
+        $where = $this->_modelPenjamin->getAdapter()->quoteInto('id_penjamin = ?', $form['id_penjamin']);
+        try {
+            unset($form['id_penjamin']);
+            $this->_modelPenjamin->update($form, $where);
+            $this->redirect('penjamin');
+        } catch (Exception $ex) {
+            $config = Mydb::getConfig();
+            $agama = $config->agama;
+            require UD . 'header.html';
+            $error = $ex->getMessage();
+            require APP_MODUL . '/penjamin/form/form-edit-penjamin.phtml';
+            require UD . 'footer.html';
+        }
+    }
 }

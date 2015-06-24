@@ -59,9 +59,9 @@
                                     <a href="<?php echo URL . 'penjamin/index/detail/' . $val['nik_costumer']; ?>"> <i class="fa fa-edit"></i>DETAIL </a>                              
                                 <?php if($_SESSION['level']==='superadmin'):?>
                                     &nbsp;|| &nbsp; 
-                                   <a href="<?php echo URL . 'penjamin/index/edit/' . $val['nik_costumer']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
+                                   <a href="<?php echo URL . 'penjamin/index/edit/' . $val['id_penjamin']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
                                     &nbsp;&nbsp;|| &nbsp; 
-                                   <a href="<?php echo URL . 'penjamin/index/delete/' . $val['nik_costumer']; ?>"> <i class="fa fa-trash-o"></i>DELETE </a>
+                                   <a href="<?php echo URL . 'penjamin/index/delete/' . $val['id_penjamin']; ?>"> <i class="fa fa-trash-o"></i>DELETE </a>
                                 <?php endif;?>
                             </td>
                         </tr>
