@@ -120,10 +120,10 @@ class Indexcontroller extends Controller {
             $where = $this->_modelUser->getAdapter()->quoteInto('id_user = ?', $data['id_user']);
             try {
                 $this->_modelUser->update($setData, $where);
-                $this->redirect('user/index/profile/'.$data['id_user']);
+                $this->redirect('login/index/logout?status=redirect');
             } catch (Exception $ex) {
                 require UD . 'header.html';
-                $msg = $ex->getMessage();
+//                $msg = $ex->getMessage();
                 require APP_MODUL .'/user/form/form-changepassword.phtml';
                 require UD . 'footer.html';
             }

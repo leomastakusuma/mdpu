@@ -129,7 +129,12 @@ class indexcontroller extends Controller {
         try {
             $this->_modelUserLogin->update(array('status' => 0), $where);
             Session::destroy();
-            $this->redirect('login');
+            if(empty($_GET['status'])) {
+                $this->redirect('login');
+            }
+            else{
+                $this->redirect('login?status='.$_GET['status']);
+            }
         } catch (Exception $ex) {
             echo $ex->getMessage();
         }

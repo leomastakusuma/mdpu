@@ -21,7 +21,13 @@
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg text-red"><?php echo (!empty($message)) ? $message : 'Sign in to start '?></p>
-
+                <?php if(!empty($_GET['status'])):?>
+                <div class="alert alert-info alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong><i class="icon fa fa-warning"></i>Auto Logout</strong><br/>
+                    berhasil mengubah password. untuk keamanan, setelah mengubah password anda diharapkan login kembali dengan password baru.
+                </div>
+                <?php endif;?>
                 <form action="<?php echo URL?>login/index/login" method="post">
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="Username" name="username" required=""/>
