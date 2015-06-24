@@ -8,7 +8,6 @@
  * @filesource Indexcontroller.php
  */
 class indexcontroller extends Controller {
-
     protected $_modelUser;
     protected $_modelUserLogin;
 
