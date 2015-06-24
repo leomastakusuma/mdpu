@@ -130,7 +130,7 @@ class indexcontroller extends Controller {
             $config = Mydb::getConfig();
             $agama = $config->agama;
             require UD . 'header.html';
-            echo $ex->getMessage();
+            $error = $ex->getMessage();
             require APP_MODUL . '/costumer/form/form-edit-costumer.phtml';
             require UD . 'footer.html';
         }
