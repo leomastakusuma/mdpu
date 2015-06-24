@@ -122,9 +122,12 @@
                             <label for="Agama" class="col-sm-2 control-label">Agama</label>
                             <div class="col-sm-3">
                                 <select name="agama" class="form-control" required="true" id="agama">
-                                    <option value="ISLAM">ISLAM</option>
                                     <?php foreach ($agama as $key => $val): ?>
-                                        <option value="<?php echo $key ?>"><?php echo $val ?></option>
+                                        <?php if($val===$data['agama']):?>
+                                            <option value="<?php echo $key ?>"><?php echo $val ?></option>
+                                        <?php else : ?>
+                                             <option value="<?php echo $key ?>"><?php echo $val ?></option>
+                                        <?php endif;?>
                                     <?php endforeach; ?>
 
                                 </select>
