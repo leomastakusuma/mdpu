@@ -27,8 +27,8 @@ class indexcontroller extends Controller {
         require UD . 'footerDataTables.phtml';
     }
 
-    public function all(){
-        if (($_SESSION['level'] != 'superadmin')){
+    public function all() {
+        if (($_SESSION['level'] != 'superadmin')) {
             $this->redirect('error/index/notAllowed');
         }
 
@@ -37,8 +37,6 @@ class indexcontroller extends Controller {
         require APP_MODUL . '/costumer/view/dataCostumerAllCabang.phtml';
         require UD . 'footerDataTables.phtml';
     }
-
-    
 
     public function add() {
         if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
@@ -106,24 +104,23 @@ class indexcontroller extends Controller {
         }
         $where = $this->_modelCostumer->getAdapter()->quoteInto('nik_costumer = ?', $id);
         $data = $this->_modelCostumer->fetchRow($where);
-        if(empty($data)){
-           $this->redirect('error');
+        if (empty($data)) {
+            $this->redirect('error');
         }
         $config = Mydb::getConfig();
         $agama = $config->agama;
         require UD . 'header.html';
         require APP_MODUL . '/costumer/form/form-edit-costumer.phtml';
         require UD . 'footer.html';
-        
     }
-    
-    public function saveedit(){
+
+    public function saveedit() {
         if ($_SESSION['level'] != 'superadmin') {
             $this->redirect('error/index/notAllowed');
         }
         $form = $this->getPost();
         $where = $this->_modelCostumer->getAdapter()->quoteInto('id_costumer = ?', $form['id_costumer']);
-        try{
+        try {
             $this->_modelCostumer->update($form, $where);
             $this->redirect('costumer');
         } catch (Exception $ex) {
@@ -134,6 +131,6 @@ class indexcontroller extends Controller {
             require APP_MODUL . '/costumer/form/form-edit-costumer.phtml';
             require UD . 'footer.html';
         }
-        
     }
+
 }
