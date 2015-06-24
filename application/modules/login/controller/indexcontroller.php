@@ -25,7 +25,7 @@ class indexcontroller extends Controller {
     public function login() {   
         $form = $this->getPost();
 
-        if (empty($form['username']) || empty(sha1($form['password']))) {
+        if (empty($form['username'])) {
             $message = 'USERNAME OR Password is Empty ';
             include APP_MODUL . '/login/form/login.html';
         } else {
@@ -38,7 +38,7 @@ class indexcontroller extends Controller {
             } else {
                 /* For Check User Login or Not */
                 $cekStatus = $this->_modelUser->ceklogin($login['id_user']);
-                if (!empty($cekStatus['status'] == 1)) {
+                if (!empty($cekStatus['status'])) {
                     /*Start Cek For If Login Up Maksimal From Login Time Limit, Is Can Login Againt*/
                     $time = $cekStatus['login_time']; 
                     $Config = Mydb::getConfig();
