@@ -33,6 +33,13 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Costumer</h3>
                 </div>
+                <?php if(!empty($error)):?>
+                   <div class="alert alert-error alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
+                    <?php echo $error;?>
+                  </div>
+                <?php endif;?>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/save" method="post" enctype="multipart/form-data">
 

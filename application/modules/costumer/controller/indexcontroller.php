@@ -61,7 +61,7 @@ class indexcontroller extends Controller {
             $this->redirect('costumer');
         } catch (Exception $ex) {
             require UD . 'header.html';
-            echo $ex->getMessage();
+            $error = $ex->getMessage();
             require APP_MODUL . '/costumer/form/form-add-costumer.phtml';
             require UD . 'footer.html';
         }
