@@ -84,7 +84,7 @@ class indexcontroller extends Controller {
         require UD . 'footer.html';
     }
 
-    public function save() {
+    public function save($id) {
         if ($_SESSION['level'] != 'superadmin' && $_SESSION['level'] != 'admin') {
             $this->redirect('error/index/notAllowed');
         }
@@ -96,11 +96,15 @@ class indexcontroller extends Controller {
         }
         try {
             $this->_modelKendaraan->insert($form);
-            $this->redirect('costumer/index/detail/' . $form['nik_costumer']);
+            require UD . 'header.html';
+            $msg    = "Berhasil Menambah kendaraaan untuk Costumer ".$id ;
+            require APP_MODUL . '/kendaraan/form/form-add-kendaraan.phtml';
+            require UD . 'footer.html';
+
         } catch (Exception $ex) {
             require UD . 'header.html';
-            echo $ex->getMessage();
-            $nik = $form['nik_costumer'];
+            $error  = $ex->getMessage();
+            $nik    = $form['nik_costumer'];
             require APP_MODUL . '/kendaraan/form/form-add-kendaraan.phtml';
             require UD . 'footer.html';
         }
@@ -141,4 +145,23 @@ class indexcontroller extends Controller {
             require UD . 'footer.html';
         }
     }
+
+//    public function saveAdd($id){
+//
+//        $form   = $this->getPost();
+//        pr($form);
+//        try{
+//
+//            require UD . 'header.html';
+//            $msg    = "Berhasil Menambah kendaraaan untuk Costumer ".$id ;
+//            require APP_MODUL . '/kendaraan/form/form-add-kendaraan.phtml';
+//            require UD . 'footer.html';
+//        }
+//        catch(PDOException $ex){
+//            require UD . 'header.html';
+//            $error  = $ex->getMessage();
+//            require APP_MODUL . '/kendaraan/form/form-add-kendaraan.phtml';
+//            require UD . 'footer.html';
+//        }
+//    }
 }
