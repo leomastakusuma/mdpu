@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    pinjaman
+ * @subpackage Form
+ * @filesource form-add-pinjaman.phtml
+ */
+
+?>
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>costumer">Data Pinjaman</a>
+                </li>
+                <li>
+                    Input Pinjaman
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Pinjaman</h3>
+                </div>
+                <?php if(!empty($error)):?>
+                   <div class="alert alert-error alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
+                    <?php echo $error;?>
+                  </div>
+                <?php endif;?>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>pinjaman/index/save" method="post" enctype="multipart/form-data">
+                        
+                        <div class="form-group">
+                            <label for="No Kontrak" class="col-sm-2 control-label">No Kontrak</label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" class="form-control" id="nama" placeholder="No Kontrak" name="no_kontrak" readonly="true" required="true" value="<?php echo (!empty($no_kontrak)? $no_kontrak : $form['no_kontrak']);?>">
+                            </div>
+                        </div>   
+                        <div class="form-group ">
+                            <label for="NIK Costumer" class="col-sm-2 control-label">NIK Costumer</label>
+                            <div class="input-group col-sm-5">
+                                <select name="nik_costumer" id="agama" class="col-sm-7"  required="true">
+                                    <option value="<?php echo (!empty($form['nik_costumer']) ? $form['nik_costumer']: '');?>"><?php echo (!empty($form['nik_costumer']) ? $form['nik_costumer']: 'NIK Costumer');?></option>
+                                    <?php foreach ($nik_costumer as $key=>$val):?>
+                                        <option value="<?php echo $val['nik_costumer']?>"><?php echo $val['nik_costumer'];?></option>
+                                    <?php endforeach;?>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="Nilai Pinjaman" class="col-sm-2 control-label">Nilai Pinjaman</label>
+                           <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="nilai_pinjaman" required="true" id="currency">
+                                <span class="input-group-addon">.00</span>
+                            </div>
+                        </div>   
+                                               
+                        
+                        <div class="form-group">
+                            <label for="Alamat" class="col-sm-2 control-label">Angsuran Perbulan</label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="angsuran_perbulan"  required="true">
+                                <span class="input-group-addon">.00</span>
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Lama Angsuran" class="col-sm-2 control-label">Lama Angsuran</label>
+                            <div class="input-group col-sm-1">
+                                <input type="text" class="form-control" name="lama_angsuran"  required="true">
+                                 <span class="input-group-addon">X</span>
+                            </div>
+                            
+                        </div>    
+                        <div class="form-group">
+                        </div>    
+ 
+                        <div class="form-group">
+                            <div class="input-group col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <a href="" class="btn btn-default" role="button">Cancel</a>
+                            </div>
+                        </div>                               
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
