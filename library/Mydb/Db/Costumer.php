@@ -103,4 +103,10 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         
     }
     
+    public function getNoKontrak(){
+        $select = $this->select();
+        $select->from($this->_name,array('nik_costumer'));
+        return $this->getAdapterSelect()->fetchAll($select);
+    }
+    
 }
