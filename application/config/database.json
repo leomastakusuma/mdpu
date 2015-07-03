@@ -35,6 +35,14 @@
         "maksLogin" : "+60 minutes"
     },
     "logs":{
-        "active" :true
+        "active" :true,
+        "file" :"mdpu-log"
+    },
+    "agama":{
+        "ISLAM" : "ISLAM",
+        "KRISTEN" : "KRISTEN",
+        "KATOLIK" : "KATOLIK",
+        "HINDU" : "HINDU",
+        "BUDHA" : "BUDHA"
     }
 }
