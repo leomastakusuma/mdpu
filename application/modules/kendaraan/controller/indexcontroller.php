@@ -96,10 +96,7 @@ class indexcontroller extends Controller {
         }
         try {
             $this->_modelKendaraan->insert($form);
-            require UD . 'header.html';
-            $msg    = "Berhasil Menambah kendaraaan untuk Costumer ".$id ;
-            require APP_MODUL . '/kendaraan/form/form-add-kendaraan.phtml';
-            require UD . 'footer.html';
+            $this->redirect('kendaraan');
 
         } catch (Exception $ex) {
             require UD . 'header.html';
