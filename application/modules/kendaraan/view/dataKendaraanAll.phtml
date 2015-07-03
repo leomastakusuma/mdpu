@@ -44,7 +44,6 @@
                         <th class="col-sm-1">No Polisi</th>
                         <th class="col-sm-2">No BPKB</th>
                         <th class="col-sm-1">Merek /Type</th>
-                        <th class="col-sm-2">Tahun Pembuatan</th>
                         <th class="col-sm-1">Cabang</th>
                         <th class="col-sm-2" align="center"><p class="text-justify">Action</p></th>
                     </tr>
@@ -54,21 +53,20 @@
                     <?php if (!empty($data))  ?>  
                     <?php foreach ($data as $val):$i++; ?>
                         <tr>
-                            <td><?php echo $i; ?></td>
-                            <td><?php echo $val['nik_costumer'] ?></td>
-                            <td><?php echo $val['no_polisi'] ?></td>
-                            <td><?php echo $val['no_bpkb'] ?></td>
-                            <td><?php echo $val['merk'] ?></td>
-                            <td><?php echo $val['tahun_pembuatan'] ?></td>
-                            <td><?php echo $val['cabang'] ?></td>
-                            <td align="center">
+                            <td class="col-sm-1"><?php echo $i; ?></td>
+                            <td class="col-sm-2"><?php echo $val['nik_costumer'] ?></td>
+                            <td class="col-sm-1"><?php echo $val['no_polisi'] ?></td>
+                            <td class="col-sm-2"><?php echo $val['no_bpkb'] ?></td>
+                            <td class="col-sm-1"><?php echo $val['merk'] ?></td>
+                            <td class="col-sm-1"><?php echo $val['cabang'] ?></td>
+                            <td align="center" class="small small col-sm-2">
 
-                                    <a href="<?php echo URL . 'kendaraan/index/detail/' . $val['no_polisi']; ?>"> <i class="fa fa-edit"></i>DETAIL </a>                              
+                                    <a href="<?php echo URL . 'kendaraan/index/detail/' . $val['no_polisi']; ?>"> <i class="fa fa-newspaper-o"></i>&nbsp;Detail </a>
                                 <?php if($_SESSION['level']==='superadmin'):?>
-                                    &nbsp;|| &nbsp; 
-                                   <a href="<?php echo URL . 'kendaraan/index/edit/' . $val['no_polisi']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
-                                    &nbsp;&nbsp;|| &nbsp; 
-                                   <a href="<?php echo URL . 'kendaraan/index/delete/' . $val['no_polisi']; ?>"> <i class="fa fa-trash-o"></i>DELETE </a>
+                                    &nbsp;|&nbsp;
+                                   <a href="<?php echo URL . 'kendaraan/index/edit/' . $val['no_polisi']; ?>"> <i class="fa fa-edit"></i>&nbsp;Edit </a>
+                                    &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                                   <a href="<?php echo URL . 'kendaraan/index/delete/' . $val['no_polisi']; ?>"> <i class="fa fa-trash-o"></i>&nbsp;Delete </a>
                                 <?php endif;?>
                             </td>
                         </tr>
