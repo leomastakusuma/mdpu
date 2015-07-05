@@ -19,31 +19,33 @@
                 <li>
                     <i class="fa fa-table active"></i> <a href="<?php echo URL ?>costumer">Data Costumer</a>
                 </li>
+                <li>
+                    <i class="fa fa-table active"></i><a href="<?php echo URL?>/pinjaman">  Data Pinjaman </a>  
+                </li>
                 <?php if($_SESSION['level']==='superadmin'):?>
                     <li>
-                        <i class="fa fa-table active"></i><a href="<?php echo URL ?>pinjaman/index/all"> Data All Pinjaman</a>   
+                        <i class="fa fa-table active"></i>&nbsp;Data All Pinjaman
                     </li>
                 <?php endif;?>
-                <li>
-                    <i class="fa fa-table active"></i> Data Pinjaman   
-                </li>
 
             </ol>
         </div>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Pinjaman Cabang , &nbsp;<strong> <?php echo $cabang->cabang;?></strong></h3>
+            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Pinjaman All Cabang</h3>
         </div>
         <div class="box-body" > 
             <table id="example1" class="table table-bordered table-striped" style="overflow-x: scroll;overflow-y: scroll">
                 <thead>
                     <tr>
                         <th class="col-sm-1">No Contract</th>
-                        <th class="col-sm-2">Nik Costumer</th>
+                        <th class="col-sm-1">Nik Costumer</th>
                         <th class="col-sm-2">Nama</th>
                         <th class="col-sm-1">Nilai Pinjaman</th>
                         <th class="col-sm-1">Angsuran / Bulan</th>
+                        <th class="col-sm-1">Cabang</th>
+                        
                         <th class="col-sm-1">Lama Angsuran</th>
                         <th class="col-sm-3" align="center"><p class="text-justify">Action</p></th>
                     </tr>
@@ -53,15 +55,17 @@
                     <?php if (!empty($data))  ?>  
                     <?php foreach ($data as $val):$i++; ?>
                         <tr>
+                            
                             <td><?php echo $val['no_kontrak'] ?></td>
                             <td><?php echo $val['nik_costumer'] ?></td>
                             <td><?php echo $val['nama'] ?></td>
                             <td><?php echo 'Rp.'. rupiah($val['nilai_pinjaman']); ?></td>
                             <td><?php echo 'Rp.'. rupiah($val['angsuran_perbulan']) ?></td>
+                            <td><?php echo $val['cabang'] ?></td>
                             <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
                             <td align="center">
-                                <?php if(empty($spb)):?>
+                                <?php if(!empty($spb)):?>
                                     <a href="<?php echo URL . 'pinjaman/index/cetakSPB/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>Cetak SPB </a>
                                     &nbsp;|| &nbsp; 
                                 <?php endif;?>
@@ -75,6 +79,7 @@
                     <?php endforeach; ?>  
 
                 </tbody>
+
             </table>
         </div>
     </div>

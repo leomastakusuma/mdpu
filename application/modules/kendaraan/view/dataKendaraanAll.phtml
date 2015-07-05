@@ -39,7 +39,6 @@
             <table id="example1" class="table table-bordered table-striped" style="overflow-x: scroll;overflow-y: scroll">
                 <thead>
                     <tr>
-                        <th class="col-sm-1">No</th>
                         <th class="col-sm-2">Nik Costumer</th>
                         <th class="col-sm-1">No Polisi</th>
                         <th class="col-sm-2">No BPKB</th>
@@ -53,7 +52,6 @@
                     <?php if (!empty($data))  ?>  
                     <?php foreach ($data as $val):$i++; ?>
                         <tr>
-                            <td class="col-sm-1"><?php echo $i; ?></td>
                             <td class="col-sm-2"><?php echo $val['nik_costumer'] ?></td>
                             <td class="col-sm-1"><?php echo $val['no_polisi'] ?></td>
                             <td class="col-sm-2"><?php echo $val['no_bpkb'] ?></td>
@@ -73,17 +71,6 @@
                     <?php endforeach; ?>  
 
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th class="col-sm-1">No</th>
-                        <th class="col-sm-2">Nik Costumer</th>
-                        <th class="col-sm-1">No Polisi</th>
-                        <th class="col-sm-2">No BPKB</th>
-                        <th class="col-sm-1">Merek /Type</th>
-                        <th class="col-sm-1">Cabang</th>
-                        <th class="col-sm-2" align="center"><p class="text-justify">Action</p></th>
-                    </tr>
-                </tfoot>
             </table>
         </div>
     </div>

@@ -116,5 +116,26 @@ class IndexController extends Controller {
         }
 
     }
+    
+    public function all() {
+        if (($_SESSION['level'] != 'superadmin')) {
+            $this->redirect('error/index/notAllowed');
+        }
+        require UD . 'headerDataTables.phtml';
+        $where = $this->_modelCabang->getAdapter()->quoteInto('id_cabang = ? ', $this->id_cabang);
+        $cabang = $this->_modelCabang->fetchRow($where);
+        if (!$cabang) {
+            $this->redirect('error');
+        }
+        $data = $this->_modelPinjaman->getDataPinjamanAllCabang();
+        foreach ($data as $key => $val) {
+            $no_spb = $val['no_kontrak'];
+            $where = $this->_modelSPB->getAdapter()->quoteInto('no_kontrak = ?', $no_spb);
+            $spb = $this->_modelSPB->fetchRow($where);
+            $data[$key]['spb'] = $spb->no_spb;
+        }
+        require APP_MODUL . '/pinjaman/view/dataPinjamanAll.phtml';
+        require UD . 'footerDataTables.phtml';
+    }
 
 }
