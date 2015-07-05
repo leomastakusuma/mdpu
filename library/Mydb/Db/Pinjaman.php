@@ -26,7 +26,7 @@ class Mydb_Db_Pinjaman extends Mydb_Db_Abstract{
         $query->join(array('us'=>'user'), 'cos.id_user = us.id_user',array());
         $query->join(array('cb'=>'cabang'), 'us.id_cabang = cb.id_cabang',array());
         $query->where('us.id_user = ?',$id_user);
-        $query->where('cb.id_cabang = ?',$id_cabang);
+        $query->orwhere('cb.id_cabang = ?',$id_cabang);
         return $this->getAdapter()->fetchAll($query);
     }
     
