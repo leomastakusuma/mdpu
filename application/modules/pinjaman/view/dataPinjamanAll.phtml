@@ -16,9 +16,7 @@
                 <li class="active">
                     <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
                 </li>
-                <li>
-                    <i class="fa fa-table active"></i> <a href="<?php echo URL ?>costumer">Data Costumer</a>
-                </li>
+           
                 <li>
                     <i class="fa fa-table active"></i><a href="<?php echo URL?>/pinjaman">  Data Pinjaman </a>  
                 </li>
@@ -65,10 +63,10 @@
                             <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
                             <td align="center">
-                                <?php if(empty($spb)):?>
+                                <?php //if(empty($spb)):?>
                                     <a href="<?php echo URL . 'pinjaman/index/cetakSPB/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>Cetak SPB </a>
                                     &nbsp;|| &nbsp; 
-                                <?php endif;?>
+                                <?php //endif;?>
                                 <?php if($_SESSION['level']==='superadmin'):?>
                                    <a href="<?php echo URL . 'pinjaman/index/edit/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
                                     &nbsp;&nbsp;|| &nbsp; 

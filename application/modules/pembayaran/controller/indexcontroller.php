@@ -3,7 +3,7 @@
 /**
  * MDPU Finance
  * @category   Modules
- * @package    Pinjamin
+ * @package    Pembayaran
  * @subpackage Controller
  * @filesource IndexController
  */
@@ -31,7 +31,7 @@ class IndexController extends Controller {
     }
 
     public function index() {
-        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
+        if (($_SESSION['level'] != 'kasir')) {
             $this->redirect('error/index/notAllowed');
         }
         require UD . 'headerDataTables.phtml';
@@ -47,12 +47,12 @@ class IndexController extends Controller {
             $spb = $this->_modelSPB->fetchRow($where);
             $data[$key]['spb'] = (!empty($spb->no_spb)?$spb->no_spb:'');
         }
-        require APP_MODUL . '/pinjaman/view/dataPinjaman.phtml';
+        require APP_MODUL . '/pembayaran/view/dataPembayaran.phtml';
         require UD . 'footerDataTables.phtml';
     }
 
     public function add($nopos = null) {
-        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
+        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'kasir')) {
             $this->redirect('error/index/notAllowed');
         }
 
@@ -70,12 +70,12 @@ class IndexController extends Controller {
         }
 
         require UD . 'header.html';
-        require APP_MODUL . '/pinjaman/form/form-add-pinjaman.phtml';
+        require APP_MODUL . '/pembayaran/form/form-pembayaran.phtml';
         require UD . 'footer.html';
     }
 
     public function save() {
-        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
+        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'kasir')) {
             $this->redirect('error/index/notAllowed');
         }
         $form = $this->getPost();
@@ -96,40 +96,6 @@ class IndexController extends Controller {
             require APP_MODUL . '/pinjaman/form/form-add-pinjaman.phtml';
             require UD . 'footer.html';
         }
-    }
-
-    public function cetakSPB($id) {
-        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
-            $this->redirect('error/index/notAllowed');
-        }
-        if (empty($id)) {
-            $this->redirect('error');
-        }
-        $where = $this->_modelPinjaman->getAdapterSelect()->quoteInto('id_pinjaman =?', $id);
-        $data = $this->_modelPinjaman->fetchRow($where)->toArray();
-        if (empty($data)) {
-            $this->redirect('error');
-        }
-        $id_pinjaman = $data['id_pinjaman'];
-        unset($data['id_pinjaman']);
-        unset($data['nilai_pinjaman']);
-        unset($data['lama_angsuran']);
-        unset($data['angsuran_perbulan']);
-        unset($data['tanggal_jatuh_tempo']);
-        try {
-            $this->_modelSPB->insert($data);
-           
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
-        }
-        require UD . 'header.html';
-        $id_cabang = $_SESSION['dataLogin']['id_cabang'];
-        $kasirname = $this->_modelUser->getKasirName($id_cabang);
-        $data = $this->_modelPinjaman->cetakSPB($id_pinjaman);
-        $data['kepala_cabang']=$_SESSION['dataLogin']['kepala_cabang'];
-        $data['realname']=$kasirname['realname'];
-        require APP_MODUL . '/pinjaman/view/spb.phtml';
-        require UD . 'footer.html';
     }
     
     public function all() {
@@ -153,28 +119,15 @@ class IndexController extends Controller {
         require UD . 'footerDataTables.phtml';
     }
     
-    public function spb($id_pinjaman){
-         if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
-            $this->redirect('error/index/notAllowed');
-         }
-         if(empty($id_pinjaman)){
-             $this->redirect('error');
-         }
-         $data = $this->_modelPinjaman->cetakSPB($id_pinjaman);
-         $id_cabang = $_SESSION['dataLogin']['id_cabang'];
-         $kasirname = $this->_modelUser->getKasirName($id_cabang);
-         $data['kepala_cabang']=$_SESSION['dataLogin']['kepala_cabang'];
-         $data['realname']=$kasirname['realname'];
 
-
-         require APP_MODUL . '/pinjaman/view/spb-cetak.phtml';
-    }
-    
     public function delete($id_pinjaman){
         echo $id_pinjaman;
     }
     
     public function edit($id_pinjaman){
         echo $id_pinjaman;
+    }
+    public function detail($no_kontrak){
+        echo $no_kontrak;
     }
 }

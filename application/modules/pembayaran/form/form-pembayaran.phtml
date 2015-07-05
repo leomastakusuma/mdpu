@@ -1,0 +1,135 @@
+<?php
+
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    pinjaman
+ * @subpackage Form
+ * @filesource form-add-pinjaman.phtml
+ */
+
+?>
+<script type="text/javascript">
+    
+  function MM_jumpMenu(targ,selObj){
+     eval(targ+".location='"+document.getElementById("no_polisi").value+"'" );
+  }
+  var halaman = function (val){
+      var url = '<?php echo URL?>/pinjaman/index/add/';
+      document.location.href=url+val;
+  }
+</script>
+
+
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>pinjaman">Data Pinjaman</a>
+                </li>
+                <li>
+                    Input Pinjaman
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Pinjaman</h3>
+                </div>
+                <?php if(!empty($error)):?>
+                   <div class="alert alert-error alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
+                    <?php echo $error;?>
+                  </div>
+                <?php endif;?>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>pinjaman/index/save" method="post" enctype="multipart/form-data">
+                        
+                        <div class="form-group ">
+                            <label for="No Kotrak" class="col-sm-3 control-label">No Kotrak</label>
+                            <div class="input-group col-sm-5">
+                                <select name="no_kontrak" id="agama" class="col-sm-5"  required="true"  onchange="halaman(this.value)">
+                                    <option value="<?php echo (!empty($form['no_polisi']) ? $form['no_polisi']: (!empty($nopos) ? $nopos : ''));?>"><?php echo (!empty($form['no_polisi']) ? $form['no_polisi']: (!empty($nopos) ? $nopos : 'No Kontrak'));?></option>
+                                    <?php foreach ($no_polisi as $key=>$val):?>
+                                        <?php if($val['no_polisi']!=$nopos):?>
+                                            <option value="<?php echo $val['no_polisi'];?>"><?php echo $val['no_polisi'];?></option>
+                                        <?php endif;?>    
+                                    <?php endforeach;?>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Nama" class="col-sm-3 control-label">Nama</label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" class="form-control" id="nama" placeholder="Nama Kreditur" name="nama" readonly="true" required="true" value="<?php echo (!empty($no_kontrak)? $no_kontrak : (!empty($form['no_kontrak'] ) ? $form['no_kontrak'] : ''));?>">
+                            </div>
+                        </div>   
+                                              
+                        <div class="form-group">
+                            <label for="nik_costumer" class="col-sm-3 control-label">No Polisi</label>
+                           <div class="input-group col-sm-3">
+                               <input type="text" placeholder="No Polisi" class="form-control" name="no_polisi" required="true" id="nopolisi" readonly="true" value="<?php echo (!empty($data['no_polisi']) ? $data['no_polisi'] : '');?>">                             
+                            </div>
+                        </div>   
+                        
+                        
+                        <div class="form-group">
+                            <label for="Nilai Pinjaman" class="col-sm-3 control-label">Nilai Pinjaman</label>
+                           <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="nilai_pinjaman" required="true" id="currency">
+                                <span class="input-group-addon">.00</span>
+                            </div>
+                        </div>   
+                                               
+                        
+                        <div class="form-group">
+                            <label for="Alamat" class="col-sm-3 control-label">Angsuran Perbulan</label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="angsuran_perbulan"  required="true">
+                                <span class="input-group-addon">.00</span>
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Lama Angsuran" class="col-sm-3 control-label">Lama Angsuran</label>
+                            <div class="input-group col-sm-1">
+                                <input type="text" class="form-control" name="lama_angsuran"  required="true">
+                                 <span class="input-group-addon">X</span>
+                            </div>
+                            
+                        </div>    
+                        <div class="form-group">
+                        </div>    
+ 
+                        <div class="form-group">
+                            <div class="input-group col-sm-offset-3 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Save</button> &nbsp;
+                                <a href="" class="btn btn-default" role="button">Cancel</a>
+                            </div>
+                        </div>                               
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.ready({
+        
+    });
+    </script>
