@@ -55,5 +55,12 @@ class Mydb_Db_User extends Mydb_Db_Abstract {
         $select->where($this->_name.'.id_user = ?',$id);
         return $this->getAdapterSelect()->fetchRow($select);
     }
-
+    
+    public function getKasirName($id_cabang){
+        $select = $this->select();
+        $select->from($this->_name,array('realname'));
+        $select->where("level = 'kasir'");
+        $select->where($this->_name.'.id_cabang = ?',$id_cabang);
+        return $this->getAdapter()->fetchRow($select);
+    }
 }

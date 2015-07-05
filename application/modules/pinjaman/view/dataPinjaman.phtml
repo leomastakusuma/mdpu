@@ -61,7 +61,7 @@
                             <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
                             <td align="center">
-                                <?php if(empty($spb)):?>
+                                <?php if(!empty($spb)):?>
                                     <a href="<?php echo URL . 'pinjaman/index/cetakSPB/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>Cetak SPB </a>
                                     
                                 <?php endif;?>

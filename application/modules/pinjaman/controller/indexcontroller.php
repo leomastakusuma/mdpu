@@ -14,6 +14,7 @@ class IndexController extends Controller {
     protected $_modelPinjaman;
     protected $_modelSPB;
     protected $_modelCabang;
+    protected $_modelUser;
     public $id_user;
     public $id_cabang;
 
@@ -23,6 +24,7 @@ class IndexController extends Controller {
         $this->_modelPinjaman = Mydb::getModelPinjaman();
         $this->_modelCabang = Mydb::getModelCabang();
         $this->_modelSPB = Mydb::getModelSPB();
+        $this->_modelUser = Mydb::getModelUser();
         $this->_modelKendaraan = Mydb::getModelKendaraan();
         $this->id_user = $_SESSION['dataLogin']['id_user'];
         $this->id_cabang = $_SESSION['dataLogin']['id_cabang'];
@@ -120,9 +122,11 @@ class IndexController extends Controller {
             echo $ex->getMessage();
         }
         require UD . 'header.html';
+        $id_cabang = $_SESSION['dataLogin']['id_cabang'];
+        $kasirname = $this->_modelUser->getKasirName($id_cabang);
         $data = $this->_modelPinjaman->cetakSPB($id_pinjaman);
         $data['kepala_cabang']=$_SESSION['dataLogin']['kepala_cabang'];
-        $data['realname']=$_SESSION['dataLogin']['realname'];
+        $data['realname']=$kasirname['realname'];
         require APP_MODUL . '/pinjaman/view/spb.phtml';
         require UD . 'footer.html';
     }
@@ -153,8 +157,12 @@ class IndexController extends Controller {
              $this->redirect('error');
          }
          $data = $this->_modelPinjaman->cetakSPB($id_pinjaman);
+         $id_cabang = $_SESSION['dataLogin']['id_cabang'];
+         $kasirname = $this->_modelUser->getKasirName($id_cabang);
          $data['kepala_cabang']=$_SESSION['dataLogin']['kepala_cabang'];
-         $data['realname']=$_SESSION['dataLogin']['realname'];
+         $data['realname']=$kasirname['realname'];
+
+
          require APP_MODUL . '/pinjaman/view/spb-cetak.phtml';
     }
     
