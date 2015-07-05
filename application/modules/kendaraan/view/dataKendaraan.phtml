@@ -64,7 +64,7 @@
                                     <a href="<?php echo URL . 'kendaraan/index/detail/' . $val['no_polisi']; ?>" title="Detail"> <i class="fa fa-newspaper-o"></i>&nbsp;Detail</a>
                                 <?php if($_SESSION['level']==='superadmin'):?>
                                     &nbsp;|&nbsp;
-                                   <a href="<?php echo URL . 'kendaraan/index/edit/' . $val['no_polisi']; ?>"> <i class="fa fa-edit"></i>&nbsp;Edit</a>
+                                   <a href="<?php echo URL . 'kendaraan/index/edit/' . $val['id_kendaraan']; ?>"> <i class="fa fa-edit"></i>&nbsp;Edit</a>
                                     &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                    <a href="<?php echo URL . 'kendaraan/index/delete/' . $val['no_polisi']; ?>"> <i class="fa fa-trash-o"></i>&nbsp;Delete </a>
                                 <?php endif;?>
@@ -77,11 +77,11 @@
                     <tr>
                         <th class="col-sm-1">No</th>
                         <th class="col-sm-2">Nik Costumer</th>
-                        <th class="col-sm-2">No Polisi</th>
+                        <th class="col-sm-1">No Polisi</th>
                         <th class="col-sm-2">No BPKB</th>
-                        <th class="col-sm-1">Merek /Type</th>
-                        <th class="col-sm-2">Tahun Pembuatan</th>
-                        <th class="col-sm-3">Action</th>
+                        <th class="col-sm-2">Merek /Type</th>
+<!--                        <th class="col-sm-2">Tahun Pembuatan</th>-->
+                        <th class="col-sm-3" align="center"><p class="text-justify">Action</p></th>
                     </tr>
                 </tfoot>
             </table>

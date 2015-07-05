@@ -64,7 +64,7 @@
                                     <a href="<?php echo URL . 'costumer/index/detail/' . $val['nik_costumer']; ?>"> <i class="fa fa-newspaper-o"></i>&nbsp;Detail </a>
                                 <?php if($_SESSION['level']==='superadmin'):?>
                                     &nbsp;|&nbsp;
-                                   <a href="<?php echo URL . 'costumer/index/edit/' . $val['nik_costumer']; ?>"> <i class="fa fa-edit"></i>&nbsp;Edit </a>
+                                   <a href="<?php echo URL . 'costumer/index/edit/' . $val['id_costumer']; ?>"> <i class="fa fa-edit"></i>&nbsp;Edit </a>
                                     &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                    <a href="<?php echo URL . 'costumer/index/delete/' . $val['nik_costumer']; ?>"> <i class="fa fa-trash-o"></i>&nbsp;Delete </a>
                                 <?php endif;?>
