@@ -36,11 +36,15 @@ class Mydb_Db_Kendaraan extends Mydb_Db_Abstract {
         return $this->getAdapterSelect()->fetchAll($select);
     }
     
-    public function getNoPolisi(){
+    public function getNoPolisi($id_user){
         $select = $this->select();
         $select->from(array('ken' => 'kendaraan'),array('no_polisi','nik_costumer'));
         $select->setIntegrityCheck(false);
         $select->join(array('cos'=>'costumer'),'cos.nik_costumer = ken.nik_costumer',array());
+        $select->join(array('pen'=>'penjamin'),'cos.nik_costumer = pen.nik_costumer',array());
+        $select->join(array('us'=>'user'),'cos.id_user = us.id_user',array());
+        $select->join(array('cb'=>'cabang'),'cb.id_cabang = us.id_cabang');
+        $select->where('us.id_user = ?',$id_user);
         $select->where("ken.status != 'kredit'");
         return $this->getAdapterSelect()->fetchAll($select);
     }

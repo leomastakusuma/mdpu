@@ -33,7 +33,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         $select->columns(array('telpon'),'cos');      
         
         $select->join(array('us'=>'user'), 'cos.id_user=us.id_user',array('realname'));
-        $select->join(array('cb'=>'cabang'), 'us.id_cabang = cb.id_cabang',array('cabang'));
+        $select->join(array('cb'=>'cabang'), 'us.id_cabang = cb.id_cabang',array());
         
         $select->where('cos.id_user = ?',$id);
         return $this->getAdapter()->fetchAll($select);
