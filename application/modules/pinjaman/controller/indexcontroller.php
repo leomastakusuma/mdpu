@@ -43,7 +43,7 @@ class IndexController extends Controller {
             $no_spb = $val['no_kontrak'];
             $where = $this->_modelSPB->getAdapter()->quoteInto('no_kontrak = ?', $no_spb);
             $spb = $this->_modelSPB->fetchRow($where);
-            $data[$key]['spb'] = $spb->no_spb;
+            $data[$key]['spb'] = (!empty($spb->no_spb)?$spb->no_spb:'');
         }
         require APP_MODUL . '/pinjaman/view/dataPinjaman.phtml';
         require UD . 'footerDataTables.phtml';
@@ -55,7 +55,8 @@ class IndexController extends Controller {
         }
 
         $nik_costumer = $this->_modelCostumer->getNoKontrak();
-        $no_polisi = $this->_modelKendaraan->getNoPolisi();
+        $this->id_user=$_SESSION['dataLogin']['id_user'];
+        $no_polisi = $this->_modelKendaraan->getNoPolisi($this->id_user);
         if (!empty($nopos)) {
             $data = $this->_modelKendaraan->getKenCostum($nopos);
             $where = $this->_modelPinjaman->getAdapter()->quoteInto('nik_costumer =?', $data['nik_costumer']);
@@ -78,6 +79,7 @@ class IndexController extends Controller {
         $form = $this->getPost();
         unset($form['nama']);
         try {
+            $form['tanggal_jatuh_tempo'] = date('m');
             $this->_modelPinjaman->insert($form);
             /* Start Update status kendaraan */
             $where = $this->_modelKendaraan->getAdapter()->quoteInto('no_polisi = ?', $form['no_polisi']);
@@ -105,16 +107,24 @@ class IndexController extends Controller {
         if (empty($data)) {
             $this->redirect('error');
         }
+        $id_pinjaman = $data['id_pinjaman'];
         unset($data['id_pinjaman']);
         unset($data['nilai_pinjaman']);
         unset($data['lama_angsuran']);
         unset($data['angsuran_perbulan']);
+        unset($data['tanggal_jatuh_tempo']);
         try {
             $this->_modelSPB->insert($data);
+           
         } catch (Exception $ex) {
             echo $ex->getMessage();
         }
-
+        require UD . 'header.html';
+        $data = $this->_modelPinjaman->cetakSPB($id_pinjaman);
+        $data['kepala_cabang']=$_SESSION['dataLogin']['kepala_cabang'];
+        $data['realname']=$_SESSION['dataLogin']['realname'];
+        require APP_MODUL . '/pinjaman/view/spb.phtml';
+        require UD . 'footer.html';
     }
     
     public function all() {
@@ -137,5 +147,22 @@ class IndexController extends Controller {
         require APP_MODUL . '/pinjaman/view/dataPinjamanAll.phtml';
         require UD . 'footerDataTables.phtml';
     }
-
+    
+    public function spb($id_pinjaman){
+         if(empty($id_pinjaman)){
+             $this->redirect('error');
+         }
+         $data = $this->_modelPinjaman->cetakSPB($id_pinjaman);
+         $data['kepala_cabang']=$_SESSION['dataLogin']['kepala_cabang'];
+         $data['realname']=$_SESSION['dataLogin']['realname'];
+         require APP_MODUL . '/pinjaman/view/spb-cetak.phtml';
+    }
+    
+    public function delete($id_pinjaman){
+        echo $id_pinjaman;
+    }
+    
+    public function edit($id_pinjaman){
+        echo $id_pinjaman;
+    }
 }

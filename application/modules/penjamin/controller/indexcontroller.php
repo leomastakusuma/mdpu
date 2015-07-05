@@ -22,8 +22,8 @@ class indexcontroller extends Controller {
         if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
             $this->redirect('error/index/notAllowed');
         }
-        $id_user=$_SESSION['dataLogin']['id_user'];
-        $id_cabang=$_SESSION['dataLogin']['id_cabang'];
+        $id_user = $_SESSION['dataLogin']['id_user'];
+        $id_cabang = $_SESSION['dataLogin']['id_cabang'];
         $data = $this->_modelPenjamin->getPenjaminByCabang($id_user, $id_cabang);
         require UD . 'headerDataTables.phtml';
         require APP_MODUL . '/penjamin/view/dataPenjamin.phtml';
@@ -34,15 +34,15 @@ class indexcontroller extends Controller {
         if (($_SESSION['level'] != 'superadmin')) {
             $this->redirect('error/index/notAllowed');
         }
-        $id_user=$_SESSION['dataLogin']['id_user'];
-        $id_cabang=$_SESSION['dataLogin']['id_cabang'];
+        $id_user = $_SESSION['dataLogin']['id_user'];
+        $id_cabang = $_SESSION['dataLogin']['id_cabang'];
         $data = $this->_modelPenjamin->getAllPenjamin();
         require UD . 'headerDataTables.phtml';
         require APP_MODUL . '/penjamin/view/dataPenjaminAll.phtml';
         require UD . 'footerDataTables.phtml';
     }
-    
-    public function edit($id){
+
+    public function edit($id) {
         if (!isset($id)) {
             $this->redirect('error');
         }
@@ -55,15 +55,12 @@ class indexcontroller extends Controller {
             $this->redirect('error');
         }
         $config = Mydb::getConfig();
-        $agama = $config->agama;       
-      
+        $agama = $config->agama;
+
         require UD . 'header.html';
         require APP_MODUL . '/penjamin/form/form-edit-penjamin.phtml';
         require UD . 'footer.html';
-        
     }
-
-    
 
     public function detail($id) {
         if (!isset($id)) {
@@ -113,8 +110,8 @@ class indexcontroller extends Controller {
             require UD . 'footer.html';
         }
     }
-    
-    public function saveedit(){
+
+    public function saveedit() {
         if ($_SESSION['level'] != 'superadmin') {
             $this->redirect('error/index/notAllowed');
         }
@@ -133,4 +130,21 @@ class indexcontroller extends Controller {
             require UD . 'footer.html';
         }
     }
+    
+    public function delete($id){
+        if ($_SESSION['level'] != 'superadmin') {
+            $this->redirect('error/index/notAllowed');
+        }
+        if (!isset($id)) {
+            $this->redirect('error');
+        }
+        $where = $this->_modelPenjamin->getAdapter()->quoteInto('id_penjamin = ?', $id);
+        try {
+            $this->_modelPenjamin->delete($where);
+            $this->redirect('penjamin');
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+        }
+    }
+ 
 }

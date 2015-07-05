@@ -1,0 +1,98 @@
+<script>
+    window.print();
+    window.onfocus = function(){
+        var count =3;
+        if(count > 3){
+            window.close();
+        }
+        
+    };
+</script>
+                    <br/>
+                    <table width="100%" align="center" >
+                        <thead>
+                             <tr>
+                                <td rowspan="1" align="center" width="20%">
+                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                </td>
+                                <td  align="left" colspan="2"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Surat Perintah Bayar</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><hr></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Kontrak </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['no_kontrak'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nama </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['nama'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Polisi </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['no_polisi'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Merk/Type </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['merk'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Tahun / Warna </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['tahun_pembuatan'] . '&nbsp/&nbsp' . $data['warna']; ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nama BPKB   </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['nama_bpkb'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nilai Pinjaman  </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah($data['nilai_pinjaman']) ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Angsuran/Bulan  </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah($data['angsuran_perbulan']) ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Lama Angsuran  </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['lama_angsuran'] ?> &nbsp; Bulan</td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Tanggal Jatuh Tempo  </td>
+                                <td>&nbsp; : &nbsp;Setiap Tanggal <?php echo $data['tanggal_jatuh_tempo'] ?> &nbsp;</td>
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><hr></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="3">
+                                    <table width="100%">
+                                        <tr>
+                                            <td colspan="3">Bandar Lampung , <?php echo date('d') . ' / ' . date('M') . ' / ' . date('Y'); ?></td>
+                                        </tr>
+                                        <tr align="left">
+                                            <td>Pimpinan</td>
+                                            <td>Kasir</td>
+                                            <td>Costumer</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" height="90">&nbsp;</td>
+                                        </tr>
+                                        <tr align="left" class="small">
+                                            <td><?php echo $data['kepala_cabang']; ?></td>
+                                            <td><?php echo $data['realname']; ?></td>
+                                            <td><?php echo $data['nama']; ?></td>
+                                        </tr >
+                                    </table>
+                                </td>
+                            </tr>                       
+                        </tfoot>
+                    </table>
+                    
+                    
+

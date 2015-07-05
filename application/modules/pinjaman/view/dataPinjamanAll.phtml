@@ -47,7 +47,7 @@
                         <th class="col-sm-1">Cabang</th>
                         
                         <th class="col-sm-1">Lama Angsuran</th>
-                        <th class="col-sm-3" align="center"><p class="text-justify">Action</p></th>
+                        <th class="col-sm-2" align="center"><p class="text-justify">Action</p></th>
                     </tr>
                 </thead>
                 <tbody> 
@@ -65,7 +65,7 @@
                             <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
                             <td align="center">
-                                <?php if(!empty($spb)):?>
+                                <?php if(empty($spb)):?>
                                     <a href="<?php echo URL . 'pinjaman/index/cetakSPB/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>Cetak SPB </a>
                                     &nbsp;|| &nbsp; 
                                 <?php endif;?>

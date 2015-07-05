@@ -1,0 +1,135 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>pinjaman">Data Pinjaman</a>
+                </li>
+                <li>
+                    From Cetak SPB
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Cetak SPB</h3>
+                </div>
+                
+                <div class="panel-body">
+                    <br/>
+                    <table width="70%" align="center" >
+                        <thead>
+                            <tr>
+                                <td rowspan="1" align="center" width="20%">
+                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                </td>
+                                <td  align="left" colspan="2"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Surat Perintah Bayar</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><hr></td>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Kontrak </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['no_kontrak'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nama </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['nama'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Polisi </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['no_polisi'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Merk/Type </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['merk'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Tahun / Warna </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['tahun_pembuatan'] . '&nbsp/&nbsp' . $data['warna']; ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nama BPKB   </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['nama_bpkb'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nilai Pinjaman  </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah($data['nilai_pinjaman']) ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Angsuran/Bulan  </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah($data['angsuran_perbulan']) ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Lama Angsuran  </td>
+                                <td>&nbsp; : &nbsp;<?php echo $data['lama_angsuran'] ?> &nbsp; Bulan</td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Tanggal Jatuh Tempo  </td>
+                                <td>&nbsp; : &nbsp;Setiap Tanggal <?php echo $data['tanggal_jatuh_tempo'] ?> &nbsp;</td>
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><hr></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="3">
+                                    <table width="100%">
+                                        <tr>
+                                            <td colspan="3">Bandar Lampung , <?php echo date('d') . ' / ' . date('M') . ' / ' . date('Y'); ?></td>
+                                        </tr>
+                                        <tr align="left">
+                                            <td>Pimpinan</td>
+                                            <td>Kasir</td>
+                                            <td>Costumer</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" height="90">&nbsp;</td>
+                                        </tr>
+                                        <tr align="left">
+                                            <td><?php echo $data['kepala_cabang']; ?></td>
+                                            <td><?php echo $data['realname']; ?></td>
+                                            <td><?php echo $data['nama']; ?></td>
+                                        </tr >
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr valign="bottom">
+                                <td colspan="3" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
+                            </tr>
+                        
+                        </tfoot>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var cetak = function(){
+        var params = [
+                        'height='+screen.height,
+                        'width='+screen.width/2,
+                        'fullscreen=yes' // only works in IE, but here for completeness
+                    ].join(',');
+        window.open('<?php echo URL.'pinjaman/index/spb/'.$id_pinjaman?>','',params);// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
+    };
+</script>
