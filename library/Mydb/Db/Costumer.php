@@ -43,6 +43,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         $select = $this->select();
         $select->from(array('cos'=>$this->_name),array());
         $select->setIntegrityCheck(false);
+        $select->columns(array('id_costumer'),'cos');
         $select->columns(array('nik_costumer'),'cos');
         $select->columns(array('nama'),'cos');
         $select->columns(array('alamat'),'cos');

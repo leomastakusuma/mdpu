@@ -89,6 +89,7 @@ class indexcontroller extends Controller {
             $this->redirect('error/index/notAllowed');
         }
         $form = $this->getPost();
+        $form['status'] = 'new';
         $nik = $form['nik_costumer'];
         $where = $this->_modelCostumer->getAdapter()->quoteInto('nik_costumer =?', $nik);
         if (empty($this->_modelCostumer->fetchRow($where))) {
@@ -114,7 +115,7 @@ class indexcontroller extends Controller {
         if (!isset($id)) {
             $this->redirect('error');
         }
-        $where = $this->_modelKendaraan->getAdapter()->quoteInto('no_polisi = ?', $id);
+        $where = $this->_modelKendaraan->getAdapter()->quoteInto('id_kendaraan = ?', $id);
         $data = $this->_modelKendaraan->fetchRow($where);
         if (!isset($data)) {
             $this->redirect('error');
@@ -130,14 +131,14 @@ class indexcontroller extends Controller {
         try {
             $where = array();
             $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $form['nik_costumer']);
-            $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('no_polisi = ?', $form['no_polisi']);
+            $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('id_kendaraan = ?', $form['id_kendaraan']);
             
             $this->_modelKendaraan->update($form, $where);
             $this->redirect('kendaraan');
             
         } catch (Exception $ex) {
             require UD . 'header.html';
-            echo $ex->getMessage();
+            $error = $ex->getMessage();
             require APP_MODUL . '/kendaraan/form/form-edit-kendaraan.phtml';
             require UD . 'footer.html';
         }

@@ -304,7 +304,7 @@ final class Mydb
     
     
     /**
-     * @access  model untuk memanggil Mydb_Db_Cabang yang digunakan untuk memanage table Users
+     * @access  model untuk memanggil Mydb_Db_Cabang yang digunakan untuk memanage table Cabang
      * @return Mydb_Db_Cabang
      */
     public static function getModelCabang() {
@@ -316,7 +316,7 @@ final class Mydb
     }
     
     /**
-     * @access  model untuk memanggil Mydb_Db_UserLogin yang digunakan untuk memanage table Users
+     * @access  model untuk memanggil Mydb_Db_UserLogin yang digunakan untuk memanage table UserLogin
      * @return Mydb_Db_UserLogin
      */
     public static function getModelUserLogin() {
@@ -328,7 +328,7 @@ final class Mydb
     }
     
     /**
-     * @access  model untuk memanggil Mydb_Db_Kendaraan yang digunakan untuk memanage table Users
+     * @access  model untuk memanggil Mydb_Db_Kendaraan yang digunakan untuk memanage table Kendaraan
      * @return Mydb_Db_Kendaraan
      */
     public static function getModelKendaraan() {
@@ -340,7 +340,7 @@ final class Mydb
     }
     
     /**
-     * @access  model untuk memanggil Mydb_Db_Costumer yang digunakan untuk memanage table Users
+     * @access  model untuk memanggil Mydb_Db_Costumer yang digunakan untuk memanage table Costumer
      * @return Mydb_Db_Costumer
      */
     public static function getModelCostumer() {
@@ -352,7 +352,7 @@ final class Mydb
     }
     
     /**
-     * @access  model untuk memanggil Mydb_Db_Penjamin yang digunakan untuk memanage table Users
+     * @access  model untuk memanggil Mydb_Db_Penjamin yang digunakan untuk memanage table Penjamin
      * @return Mydb_Db_Penjamin
      */
     public static function getModelPenjamin() {
@@ -364,13 +364,25 @@ final class Mydb
     }
     
     /**
-     * @access  model untuk memanggil Mydb_Db_Pinjaman yang digunakan untuk memanage table Users
+     * @access  model untuk memanggil Mydb_Db_Pinjaman yang digunakan untuk memanage table Pinjaman
      * @return Mydb_Db_Pinjaman
      */
     public static function getModelPinjaman() {
         $key = 'Mydb_Db_Penjamin';
         if (self::registry($key) === null) {
             self::register($key, new Mydb_Db_Pinjaman());
+        }
+        return self::registry($key);
+    }
+    
+    /**
+     * @access  model untuk memanggil getModelSPB yang digunakan untuk memanage table SPB
+     * @return Mydb_Db_Spb
+     */
+    public static function getModelSpb() {
+        $key = 'Mydb_Db_Spb';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_Spb());
         }
         return self::registry($key);
     }

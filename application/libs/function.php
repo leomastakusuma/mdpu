@@ -23,13 +23,17 @@ function rupiah($angka) {
  * @param type $length
  * @return string
  */
-function generateNoKontrak($cabang, $length = 5) {
-    $characters = '123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
+function generateNoKontrak($cabang,$last, $length = 5) {
+    $characters =(!empty($last)? $last : 1);
+    
+    $charLength     = $length - strlen($characters);
+    $nol            = '';
+    if($charLength>=0){
+        for($i=0;$i<$charLength;$i++){
+           $nol .='0';
+        }    
+    };
     $randomString = $cabang;
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    $randomString .='-' . date('d');
+    $randomString .=$nol.$characters.'/' . date('y');
     return $randomString;
 }

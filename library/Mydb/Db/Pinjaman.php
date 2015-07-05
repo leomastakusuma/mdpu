@@ -30,4 +30,11 @@ class Mydb_Db_Pinjaman extends Mydb_Db_Abstract{
         return $this->getAdapter()->fetchAll($query);
     }
     
+    public function getLastId(){
+        $query = $this->select();
+        $query->from($this->_name,array('id_pinjaman'));
+        $query->order('id_pinjaman desc');
+        return $this->getAdapter()->fetchOne($query);
+    }
+    
 }

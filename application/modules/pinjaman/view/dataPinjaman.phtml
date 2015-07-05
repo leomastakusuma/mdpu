@@ -40,7 +40,7 @@
                 <thead>
                     <tr>
                         <th class="col-sm-1">No</th>
-                        <th class="col-sm-2">No Contract</th>
+                        <th class="col-sm-1">No Contract</th>
                         <th class="col-sm-2">Nik Costumer</th>
                         <th class="col-sm-2">Nama</th>
                         <th class="col-sm-1">Nilai Pinjaman</th>
@@ -63,13 +63,14 @@
                             <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
                             <td align="center">
-
-                                    <a href="<?php echo URL . 'kendaraan/index/detail/' . $val['no_polisi']; ?>"> <i class="fa fa-edit"></i>DETAIL </a>                              
-                                <?php if($_SESSION['level']==='superadmin'):?>
+                                <?php if(empty($spb)):?>
+                                    <a href="<?php echo URL . 'pinjaman/index/cetakSPB/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>Cetak SPB </a>
                                     &nbsp;|| &nbsp; 
-                                   <a href="<?php echo URL . 'kendaraan/index/edit/' . $val['no_polisi']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
+                                <?php endif;?>
+                                <?php if($_SESSION['level']==='superadmin'):?>
+                                   <a href="<?php echo URL . 'pinjaman/index/edit/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
                                     &nbsp;&nbsp;|| &nbsp; 
-                                   <a href="<?php echo URL . 'kendaraan/index/delete/' . $val['no_polisi']; ?>"> <i class="fa fa-trash-o"></i>DELETE </a>
+                                   <a href="<?php echo URL . 'pinjaman/index/delete/' . $val['id_pinjaman']; ?>"> <i class="fa fa-trash-o"></i>DELETE </a>
                                 <?php endif;?>
                             </td>
                         </tr>

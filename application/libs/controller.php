@@ -22,9 +22,7 @@ class Controller {
         if (!empty($data)) {
             $this->array = $data;
         }
-//        $titlee  = '<title>$title</title>';
         require 'application/views/' . $controller . '/' . $action . '.html';
-//        $this->load->view =$data;
     }
 
     protected function getRequest() {
@@ -94,14 +92,17 @@ class Controller {
         return $ipaddress;
     }
 
-    protected function generateNoKontrak($cabang,$length = 5) {
-        $characters = '123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
+    protected function generateNoKontrak($cabang, $last, $length = 5) {
+        $characters = $last;
+        $charLength = $length - strlen($characters);
+        $nol = '';
+        if ($charLength >= 0) {
+            for ($i = 0; $i < $charLength; $i++) {
+                $nol .='0';
+            }
+        };
         $randomString = $cabang;
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        $randomString .='-'.date('d');
+        $randomString .=$nol . $characters . '/' . date('y');
         return $randomString;
     }
 
