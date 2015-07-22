@@ -1,0 +1,121 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>pembayaran">Data Pembayaran</a>
+                </li>
+                <li>
+                    From Cetak Kwitansi
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Cetak Kwitansi</h3>
+                </div>
+                
+                <div class="panel-body">
+                    <br/>
+                    <table width="70%" align="center"  >
+                        <thead>
+                            <tr>
+                                <td rowspan="1" align="center" width="20%">
+                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                </td>
+                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Kwitansi Pembayaran</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Kwitansi </td>
+                                <td>&nbsp; : &nbsp;<?php echo  $dataCetak['no_kwitansi'] ?></td>
+                                <td>Bandar Lampung,<?php echo date('Y/m/d');?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Kontrak </td>
+                                <td>&nbsp; : &nbsp;<?php echo  $dataCetak['no_kontrak'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nama </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['nama'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Polisi </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['no_polisi'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Jumlah Angsuran </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['jumlah_angsuran'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Angsuran Ke </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['angsuran_ke'].' x' ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Denda   </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda'] ?></td>
+                            </tr>
+                            
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="4">
+                                    <table width="100%">
+                                        
+                                        <tr align="center">
+                                            <td width="30%">Kasir</td>
+                                            <td>Costumer</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" height="90">&nbsp;</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><?php echo $data['realname']; ?></td>
+                                            <td><?php echo $dataCetak['nama']; ?></td>
+                                        </tr >
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr valign="bottom">
+                                <td colspan="4" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
+                            </tr>
+                        
+                        </tfoot>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var cetak = function(){
+        var params = [
+                        'height='+screen.height,
+                        'width='+screen.width/2,
+                        'fullscreen=yes' // only works in IE, but here for completeness
+                    ].join(',');
+        window.open('<?php echo URL.'pembayaran/index/cetakKwitansi/'.$dataCetak['no_kwitansi'];?>','',params);// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
+    };
+</script>

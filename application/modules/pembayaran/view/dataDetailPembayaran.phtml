@@ -1,0 +1,101 @@
+<?php
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    Costumer
+ * @subpackage View
+ * @filesource dataCostumer.phtml
+ */
+?>
+
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+              
+                <?php if($_SESSION['level']==='superadmin'):?>
+                    <li>
+                        <i class="fa fa-table active"></i><a href="<?php echo URL ?>pinjaman/index/all"> Data All Pinjaman</a>   
+                    </li>
+                <?php endif;?>
+                <li>
+                    <i class="fa fa-table active"></i> <a href="<?php echo URL?>pembayaran">Data Pembayaran </a>  
+                </li>
+                <li>
+                    <i class="fa fa-table active"></i> Detail Data Pembayaran   
+                </li>
+
+            </ol>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Pembayaran Cabang , &nbsp;<strong> <?php echo $cabang->cabang;?></strong></h3>
+        </div>
+        <div class="box-body" > 
+            <form class="form-horizontal" role="form" >
+                    <div class="form-group">
+                        <label for="No Kontrak" class="col-sm-2 control-label">No Kontrak</label>
+                        <div class="input-group col-sm-2">
+                            <input type="text" class="form-control" id="nama" placeholder="Nama Kreditur" name="nama" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['nama'])? $detailCostumer['no_kontrak'] : '');?>">
+                        </div>
+                        
+                    </div>   
+                    <div class="form-group">
+                        <label for="Nama" class="col-sm-2 control-label">Nama</label>
+                        <div class="input-group col-sm-3">
+                            <input type="text" class="form-control" id="nama" placeholder="Nama Kreditur" name="nama" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['nama'])? $detailCostumer['nama'] : '');?>">
+                        </div>
+                    </div>   
+                 <div class="form-group">
+                        <label for="Sisa Angsuran" class="col-sm-2 control-label">Sisa Angsuran</label>
+                        <div class="input-group col-sm-1">
+                            <input type="text" class="form-control" id="nama" placeholder="Sisa Angsuran" name="Sisa Angsuran" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_angsuran'])? $detailCostumer['sisa_angsuran'] : '');?>">
+                             <span class="input-group-addon">X</span>
+                        </div>
+                    </div>   
+                 <div class="form-group">
+                        <label for="Nama" class="col-sm-2 control-label">Sisa Pinjaman</label>
+                        <div class="input-group col-sm-2">
+                            <input type="text" class="form-control" id="nama" placeholder="Sisa Pinjaman" name="Sisa Pinjaman" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_pinjaman'])? 'Rp.'.rupiah($detailCostumer['sisa_pinjaman']) : '');?>">
+                        </div>
+                    </div>   
+            </form>
+            <table id="example1" class="table table-bordered table-striped" style="overflow-x: scroll;overflow-y: scroll">
+                <thead>
+                    <tr>
+                        <th class="col-lg-1">No Kwitansi</th>
+                        <th class="col-sm-2">Tanggal Pembayaran</th>
+                        <th class="col-sm-1">Angsuran Ke</th>
+                        <th class="col-sm-2">Angsuran Perbulan</th>
+                        <th class="col-sm-1">Denda</th>
+                        <th class="col-sm-1">Potongan</th>
+                        <th class="col-sm-1">Total Bayar</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                    <?php $i = 0; ?>  
+                    <?php if (!empty($data))  ?>  
+                    <?php foreach ($data as $val):$i++; ?>
+                        <tr>
+                            <td><?php echo $val['no_kwitansi'] ?></td>
+                            <td><?php echo $val['tanggal_pembayaran'] ?></td>
+                            <td><?php echo $val['angsuran_ke'] ?></td>
+                            <td><?php echo 'Rp.'.$val['angsuran_perbulan'] ?></td>
+                            <td><?php echo 'Rp.'.$val['denda']; ?></td>
+                            <td><?php echo 'Rp.'.$val['potongan']; ?></td>
+                            <td><?php echo 'Rp.'.$val['total_bayar']; ?></td>
+                            
+
+                        </tr>
+                    <?php endforeach; ?>  
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

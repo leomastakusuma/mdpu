@@ -23,7 +23,7 @@
                     </li>
                 <?php endif;?>
                 <li>
-                    <i class="fa fa-table active"></i> Data Pinjaman   
+                    <i class="fa fa-table active"></i> Data Pembayaran   
                 </li>
 
             </ol>
@@ -31,7 +31,7 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Pinjaman Cabang , &nbsp;<strong> <?php echo $cabang->cabang;?></strong></h3>
+            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Pembayaran Cabang , &nbsp;<strong> <?php echo $cabang->cabang;?></strong></h3>
         </div>
         <div class="box-body" > 
             <table id="example1" class="table table-bordered table-striped" style="overflow-x: scroll;overflow-y: scroll">
@@ -39,9 +39,9 @@
                     <tr>
                         <th class="col-sm-1">No Contract</th>
                         <th class="col-sm-2">Nik Costumer</th>
+                        <th class="col-sm-1">No Polisi</th>
                         <th class="col-sm-2">Nama</th>
                         <th class="col-sm-2">Nilai Pinjaman</th>
-                        <th class="col-sm-2">Angsuran / Bulan</th>
                         <th class="col-sm-1">Lama Angsuran</th>
                         <th class="col-sm-1" align="center"><p class="text-justify">Action</p></th>
                     </tr>
@@ -53,9 +53,9 @@
                         <tr>
                             <td><?php echo $val['no_kontrak'] ?></td>
                             <td><?php echo $val['nik_costumer'] ?></td>
+                            <td><?php echo $val['no_polisi'] ?></td>
                             <td><?php echo $val['nama'] ?></td>
                             <td><?php echo 'Rp.'. rupiah($val['nilai_pinjaman']); ?></td>
-                            <td><?php echo 'Rp.'. rupiah($val['angsuran_perbulan']) ?></td>
                             <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
                             <td align="center">
