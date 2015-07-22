@@ -34,6 +34,27 @@ function generateNoKontrak($cabang,$last, $length = 5) {
         }    
     };
     $randomString = $cabang;
-    $randomString .=$nol.$characters.'/' . date('y');
+    $randomString .=$nol.$characters.'-' . date('y');
+    return $randomString;
+}
+
+/**
+ * 
+ * @param type $cabang
+ * @param type $length
+ * @return string
+ */
+function generateKwintansi($last, $length = 5) {
+    $characters =(!empty($last)? $last : 1);
+    
+    $charLength     = $length - strlen($characters);
+    $nol            = '';
+    if($charLength>=0){
+        for($i=0;$i<$charLength;$i++){
+           $nol .='0';
+        }    
+    };
+    $randomString = 'KW-';
+    $randomString .=$nol.$characters.'-' . date('m').'-'.date('y');
     return $randomString;
 }
