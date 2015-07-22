@@ -1,0 +1,4825 @@
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00169
+Query: connect
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:01:23+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00074
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:03:05+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00145
+Query: connect
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:03:25+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00151
+Query: connect
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00058
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:03:34+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:03:44+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00141
+Query: connect
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:05:24+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:05:32+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.00177
+Query: connect
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:05:48+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.0011
+Query: connect
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:06:02+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00165
+Query: connect
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00058
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:08:25+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:08:27+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00174
+Query: connect
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00063
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:08:57+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:09:46+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: connect
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:10:25+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:10:29+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:10:29+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:10:29+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:10:29+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:10:29+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:10:29+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:11:18+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:11:18+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:11:18+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T16:11:18+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:11:18+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:11:18+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:11:20+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:11:26+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:11:35+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:11:35+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:11:35+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:11:35+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:11:35+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:12:54+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:12:54+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:12:54+07:00 INFO (6): 
+Elapsed Secs: 0.0465
+Query: INSERT INTO `pinjaman` (`no_polisi`, `no_kontrak`, `nik_costumer`, `nilai_pinjaman`, `angsuran_perbulan`, `lama_angsuran`) VALUES (?, ?, ?, ?, ?, ?)
+Params: {"1":"BE85","2":"29\/MF\/00151\/15","3":"41112121111","4":"12222","5":"12","6":"12"}
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:12:55+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: connect
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:13:03+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:13:31+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T16:13:31+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:13:31+07:00 INFO (6): 
+Elapsed Secs: 0.06344
+Query: INSERT INTO `pinjaman` (`no_polisi`, `no_kontrak`, `nik_costumer`, `nilai_pinjaman`, `angsuran_perbulan`, `lama_angsuran`) VALUES (?, ?, ?, ?, ?, ?)
+Params: {"1":"Plat","2":"29\/MF\/00152\/15","3":"1234-111-23-90","4":"123","5":"4","6":"4"}
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: connect
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:14:26+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:14:30+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T16:14:30+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:14:30+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T16:14:30+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:14:30+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:14:30+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:14:33+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:14:37+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:15:06+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:15:12+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:15:14+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:15:15+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00198
+Query: connect
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00076
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:15:25+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00073
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:15:54+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:15:59+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:16:01+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:16:03+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:16:05+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:16:20+07:00 INFO (6): 
+Elapsed Secs: 7.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:16:24+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:16:34+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: connect
+Params: []
+
+2015-07-05T16:16:34+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:34+07:00 INFO (6): 
+Elapsed Secs: 0.08767
+Query: INSERT INTO `pinjaman` (`no_polisi`, `no_kontrak`, `nik_costumer`, `nilai_pinjaman`, `angsuran_perbulan`, `lama_angsuran`) VALUES (?, ?, ?, ?, ?, ?)
+Params: {"1":"Plat","2":"29\/MF\/00001\/15","3":"1234-111-23-90","4":"20000000","5":"1901222","6":"12"}
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:16:37+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:16:40+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: connect
+Params: []
+
+2015-07-05T16:16:40+07:00 INFO (6): 
+Elapsed Secs: 0.00121
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:16:40+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:16:40+07:00 INFO (6): 
+Elapsed Secs: 0.00099
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:40+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:16:40+07:00 INFO (6): 
+Elapsed Secs: 0.00076
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:16:40+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:16:51+07:00 INFO (6): 
+Elapsed Secs: 0.00162
+Query: connect
+Params: []
+
+2015-07-05T16:16:51+07:00 INFO (6): 
+Elapsed Secs: 0.00057
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:16:51+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:16:51+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:16:51+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:16:51+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:16:51+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:16:53+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:16:53+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:16:53+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:16:53+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:16:53+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:16:53+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: connect
+Params: []
+
+2015-07-05T16:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:17:50+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:17:50+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:17:50+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:17:50+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:17:50+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:17:50+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer != ken.nik_costumer
+Params: []
+
+2015-07-05T16:18:01+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: connect
+Params: []
+
+2015-07-05T16:18:01+07:00 INFO (6): 
+Elapsed Secs: 0.00098
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:18:01+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:18:01+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:18:01+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:18:01+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:18:04+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:18:05+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='1234-111-23-90') LIMIT 1
+Params: []
+
+2015-07-05T16:18:07+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:24:34+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: connect
+Params: []
+
+2015-07-05T16:24:34+07:00 INFO (6): 
+Elapsed Secs: 0.0013
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:24:34+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: connect
+Params: []
+
+2015-07-05T16:24:34+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:24:34+07:00 INFO (6): 
+Elapsed Secs: 0.0011
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:24:48+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:24:48+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:24:48+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: connect
+Params: []
+
+2015-07-05T16:24:48+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:24:48+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:24:59+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:24:59+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:24:59+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: connect
+Params: []
+
+2015-07-05T16:24:59+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:24:59+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:25:04+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:25:04+07:00 INFO (6): 
+Elapsed Secs: 0.08544
+Query: UPDATE `user_login` SET `status` = ?, `last_login` = ? WHERE (status = 1)
+Params: {"1":0,"2":"2015-07-05 15:25:01"}
+
+2015-07-05T16:25:04+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:25:04+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:25:04+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:25:04+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:25:21+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T16:25:21+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-05T16:25:21+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:25:21+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-07-05T16:25:21+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-05T16:25:22+07:00 INFO (6): 
+Elapsed Secs: 0.08405
+Query: UPDATE `user_login` SET `status` = ?, `login_time` = NOW(), `ip_login` = ?, `last_login` = ? WHERE (id_user = '16')
+Params: {"1":1,"2":"127.0.0.1","3":"2015-07-05 15:25:01"}
+
+2015-07-05T16:25:22+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-05T16:25:25+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:25:25+07:00 INFO (6): 
+Elapsed Secs: 0.00063
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:25:25+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:25:25+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:25:25+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:25:56+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:25:56+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:25:56+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T16:25:56+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:25:56+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:26:22+07:00 INFO (6): 
+Elapsed Secs: 0.00192
+Query: connect
+Params: []
+
+2015-07-05T16:26:22+07:00 INFO (6): 
+Elapsed Secs: 0.00062
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:26:22+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:26:22+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:26:22+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:26:43+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T16:26:43+07:00 INFO (6): 
+Elapsed Secs: 0.00062
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:26:43+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T16:26:43+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:26:43+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:26:43+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:26:45+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:27:21+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:28:01+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:30:38+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:31:01+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: connect
+Params: []
+
+2015-07-05T16:31:01+07:00 INFO (6): 
+Elapsed Secs: 0.00063
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:31:01+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:31:01+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:31:01+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:31:01+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:31:27+07:00 INFO (6): 
+Elapsed Secs: 0.00188
+Query: connect
+Params: []
+
+2015-07-05T16:31:27+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:31:27+07:00 INFO (6): 
+Elapsed Secs: 0.11438
+Query: INSERT INTO `pinjaman` (`no_polisi`, `no_kontrak`, `nik_costumer`, `nilai_pinjaman`, `angsuran_perbulan`, `lama_angsuran`) VALUES (?, ?, ?, ?, ?, ?)
+Params: {"1":"BE85","2":"29\/MF\/00154\/15","3":"41112121111","4":"123","5":"12","6":"12"}
+
+2015-07-05T16:31:27+07:00 INFO (6): 
+Elapsed Secs: 0.08915
+Query: UPDATE `kendaraan` SET `status` = ? WHERE (no_polisi = 'BE85')
+Params: {"1":"kredit"}
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00115
+Query: connect
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (nik_costumer ='41112121111') LIMIT 1
+Params: []
+
+2015-07-05T16:31:38+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pinjaman`.`id_pinjaman` FROM `pinjaman` ORDER BY `id_pinjaman` desc
+Params: []
+
+2015-07-05T16:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T16:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: connect
+Params: []
+
+2015-07-05T16:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:32:50+07:00 INFO (6): 
+Elapsed Secs: 7.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:32:53+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-05T16:32:53+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:32:53+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:32:53+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:32:53+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:32:53+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:32:53+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T16:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:33:21+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:33:21+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:33:21+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:33:21+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:33:21+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:33:21+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:33:58+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: connect
+Params: []
+
+2015-07-05T16:33:58+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:33:58+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:33:58+07:00 INFO (6): 
+Elapsed Secs: 0.00057
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:33:58+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:33:58+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:33:58+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:34:00+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:34:00+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:34:00+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:34:00+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:34:00+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:34:00+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:34:00+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:34:01+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:34:01+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:34:01+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:34:01+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:34:01+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:34:01+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:34:01+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:34:26+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:34:32+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:34:32+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T16:34:32+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:34:32+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (no_kontrak ='29') LIMIT 1
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:34:34+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:35:46+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:35:47+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: connect
+Params: []
+
+2015-07-05T16:35:47+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: connect
+Params: []
+
+2015-07-05T16:35:47+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:35:47+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (no_kontrak ='154') LIMIT 1
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:35:49+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:35:52+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T16:35:52+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:35:52+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:35:52+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (no_kontrak ='154') LIMIT 1
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:36:23+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:36:25+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:36:25+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: connect
+Params: []
+
+2015-07-05T16:36:25+07:00 INFO (6): 
+Elapsed Secs: 0.00116
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:36:25+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:36:44+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:36:44+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:36:44+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:36:44+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:37:00+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:37:00+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:37:00+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:37:00+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:37:19+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: connect
+Params: []
+
+2015-07-05T16:37:19+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: connect
+Params: []
+
+2015-07-05T16:37:19+07:00 INFO (6): 
+Elapsed Secs: 0.00119
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:37:19+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:37:25+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:37:25+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T16:37:25+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:37:25+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:37:36+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:37:36+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:37:36+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:37:36+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:38:17+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:38:19+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:38:19+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:38:19+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:38:19+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:38:41+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:38:41+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T16:38:41+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:38:41+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:38:41+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00057
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:08+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T16:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T16:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='155') LIMIT 1
+Params: []
+
+2015-07-05T16:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.07823
+Query: INSERT INTO `spb` (`nik_costumer`, `no_kontrak`, `no_polisi`) VALUES (?, ?, ?)
+Params: {"1":"41112121111","2":"29\/MF\/00154\/15","3":"BE85"}
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:15+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:49+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:50+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: connect
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:51+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:52+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='154') LIMIT 1
+Params: []
+
+2015-07-05T16:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.065
+Query: INSERT INTO `spb` (`nik_costumer`, `no_kontrak`, `no_polisi`) VALUES (?, ?, ?)
+Params: {"1":"1234-111-23-90","2":"29\/MF\/00001\/15","3":"Plat"}
+
+2015-07-05T16:40:09+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T16:40:09+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T16:40:09+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:40:09+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pinjaman`.* FROM `pinjaman` WHERE (id_pinjaman ='154') LIMIT 1
+Params: []
+
+2015-07-05T16:40:09+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:40:09+07:00 INFO (6): 
+Elapsed Secs: 0.07051
+Query: INSERT INTO `spb` (`nik_costumer`, `no_kontrak`, `no_polisi`) VALUES (?, ?, ?)
+Params: {"1":"1234-111-23-90","2":"29\/MF\/00001\/15","3":"Plat"}
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:41:34+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.00146
+Query: connect
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:42:10+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:42:51+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:42:51+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:42:51+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:42:51+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:42:51+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:43:07+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T16:43:32+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T16:43:32+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:43:32+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:43:32+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:43:32+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:43:49+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T16:43:49+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:43:49+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:43:49+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:43:49+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:43:56+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: connect
+Params: []
+
+2015-07-05T16:43:56+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:43:56+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:43:56+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:43:56+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:44:26+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.00085
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.00097
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:44:38+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:45:07+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:45:08+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:45:57+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00144
+Query: connect
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:46:20+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:47:05+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+
+2015-07-05T16:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T16:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T16:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T16:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T16:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T16:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.status != 'kredit')
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00001/15') LIMIT 1
+Params: []
+
+2015-07-05T16:47:14+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak = '29/MF/00154/15') LIMIT 1
+Params: []
+

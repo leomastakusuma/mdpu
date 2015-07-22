@@ -1,0 +1,1980 @@
+2015-07-16T03:00:56+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: connect
+Params: []
+
+2015-07-16T03:00:56+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:00:56+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:00:56+07:00 INFO (6): 
+Elapsed Secs: 0.00102
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-16T03:00:56+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `pin`.*, `pin`.`no_kontrak`, `cos`.`nama`, `ken`.`no_polisi`, `ken`.`merk`, `ken`.`tahun_pembuatan`, `ken`.`warna`, `ken`.`nama_bpkb`, `pin`.`nilai_pinjaman`, `pin`.`angsuran_perbulan`, `pin`.`lama_angsuran`, `pin`.`tanggal_jatuh_tempo` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `kendaraan` AS `ken` ON ken.no_polisi = pin.no_polisi WHERE (pin.id_pinjaman = 156)
+Params: []
+
+2015-07-16T03:01:37+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:01:37+07:00 INFO (6): 
+Elapsed Secs: 0.00152
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:01:37+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:01:37+07:00 INFO (6): 
+Elapsed Secs: 0.0013
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-16T03:01:37+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `pin`.*, `pin`.`no_kontrak`, `cos`.`nama`, `ken`.`no_polisi`, `ken`.`merk`, `ken`.`tahun_pembuatan`, `ken`.`warna`, `ken`.`nama_bpkb`, `pin`.`nilai_pinjaman`, `pin`.`angsuran_perbulan`, `pin`.`lama_angsuran`, `pin`.`tanggal_jatuh_tempo` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `kendaraan` AS `ken` ON ken.no_polisi = pin.no_polisi WHERE (pin.id_pinjaman = 156)
+Params: []
+
+2015-07-16T03:08:31+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:08:31+07:00 INFO (6): 
+Elapsed Secs: 0.00151
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:08:31+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:08:31+07:00 INFO (6): 
+Elapsed Secs: 0.00156
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-16T03:08:31+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `pin`.*, `pin`.`no_kontrak`, `cos`.`nama`, `ken`.`no_polisi`, `ken`.`merk`, `ken`.`tahun_pembuatan`, `ken`.`warna`, `ken`.`nama_bpkb`, `pin`.`nilai_pinjaman`, `pin`.`angsuran_perbulan`, `pin`.`lama_angsuran`, `pin`.`tanggal_jatuh_tempo` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `kendaraan` AS `ken` ON ken.no_polisi = pin.no_polisi WHERE (pin.id_pinjaman = 156)
+Params: []
+
+2015-07-16T03:09:12+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: connect
+Params: []
+
+2015-07-16T03:09:12+07:00 INFO (6): 
+Elapsed Secs: 0.00127
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:09:12+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:09:13+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-16T03:09:13+07:00 INFO (6): 
+Elapsed Secs: 0.0012
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:09:43+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:09:43+07:00 INFO (6): 
+Elapsed Secs: 0.00149
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:09:43+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-16T03:09:44+07:00 INFO (6): 
+Elapsed Secs: 0.00165
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:10:11+07:00 INFO (6): 
+Elapsed Secs: 0.00123
+Query: connect
+Params: []
+
+2015-07-16T03:10:11+07:00 INFO (6): 
+Elapsed Secs: 0.00115
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:10:11+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:10:12+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: connect
+Params: []
+
+2015-07-16T03:10:12+07:00 INFO (6): 
+Elapsed Secs: 0.0013
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:10:12+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00004-07-15')
+Params: []
+
+2015-07-16T03:10:12+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:10:12+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.00116
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '30-MD-00156-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.0012
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '30-MD-00156-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:11:14+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:11:16+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-16T03:11:16+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:11:16+07:00 INFO (6): 
+Elapsed Secs: 0.09289
+Query: INSERT INTO `pembayaran` (`no_kontrak`, `no_kwitansi`, `angsuran_ke`, `angsuran_perbulan`, `denda`, `total_bayar`, `tanggal_pembayaran`) VALUES (?, ?, ?, ?, ?, ?, ?)
+Params: {"1":"30-MD-00156-15","2":"KW-00004-07-15","3":"2","4":"33.333,00","5":"90.000,00","6":"123.333,00","7":"2015-07-16"}
+
+2015-07-16T03:11:16+07:00 INFO (6): 
+Elapsed Secs: 0.00129
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:11:16+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:11:25+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:11:25+07:00 INFO (6): 
+Elapsed Secs: 0.00156
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:11:25+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00004-07-15')
+Params: []
+
+2015-07-16T03:11:25+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:11:25+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:11:51+07:00 INFO (6): 
+Elapsed Secs: 0.00124
+Query: connect
+Params: []
+
+2015-07-16T03:11:51+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:11:51+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00004-07-15')
+Params: []
+
+2015-07-16T03:11:51+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:11:51+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:12:43+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: connect
+Params: []
+
+2015-07-16T03:12:43+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: connect
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.00273
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: connect
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '30-MD-00156-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.00238
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '30-MD-00156-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:12:47+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:12:50+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-16T03:12:50+07:00 INFO (6): 
+Elapsed Secs: 0.00112
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:12:50+07:00 INFO (6): 
+Elapsed Secs: 0.12319
+Query: INSERT INTO `pembayaran` (`no_kontrak`, `no_kwitansi`, `angsuran_ke`, `angsuran_perbulan`, `denda`, `total_bayar`, `tanggal_pembayaran`) VALUES (?, ?, ?, ?, ?, ?, ?)
+Params: {"1":"30-MD-00156-15","2":"KW-00005-07-15","3":"3","4":"33.333,00","5":"90.000,00","6":"123.333,00","7":"2015-07-16"}
+
+2015-07-16T03:12:50+07:00 INFO (6): 
+Elapsed Secs: 0.00207
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:12:50+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:12:52+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-16T03:12:52+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:12:52+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:12:52+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:12:52+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:13:14+07:00 INFO (6): 
+Elapsed Secs: 0.00138
+Query: connect
+Params: []
+
+2015-07-16T03:13:14+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:13:14+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:13:14+07:00 INFO (6): 
+Elapsed Secs: 0.00101
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:13:14+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:14:07+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-16T03:14:07+07:00 INFO (6): 
+Elapsed Secs: 0.00118
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:14:07+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:14:07+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:14:07+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:14:53+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-16T03:14:53+07:00 INFO (6): 
+Elapsed Secs: 0.00127
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:14:53+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:14:53+07:00 INFO (6): 
+Elapsed Secs: 0.00115
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:14:53+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:15:41+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-16T03:15:41+07:00 INFO (6): 
+Elapsed Secs: 0.00116
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:15:41+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:15:41+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:15:41+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:16:08+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-16T03:16:08+07:00 INFO (6): 
+Elapsed Secs: 0.00139
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:16:08+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:16:08+07:00 INFO (6): 
+Elapsed Secs: 0.00124
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:16:08+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:16:16+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-16T03:16:16+07:00 INFO (6): 
+Elapsed Secs: 0.00121
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:16:16+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:16:16+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:16:16+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:16:39+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-16T03:16:39+07:00 INFO (6): 
+Elapsed Secs: 0.00134
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:16:39+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00005-07-15')
+Params: []
+
+2015-07-16T03:16:39+07:00 INFO (6): 
+Elapsed Secs: 0.00096
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:16:39+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:17:06+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-16T03:17:06+07:00 INFO (6): 
+Elapsed Secs: 0.00166
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00128
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '30-MD-00156-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00119
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '30-MD-00156-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:17:08+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MF-00154-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.00087
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MF-00154-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:17:09+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:17:10+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-16T03:17:10+07:00 INFO (6): 
+Elapsed Secs: 0.00164
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:17:11+07:00 INFO (6): 
+Elapsed Secs: 0.13975
+Query: INSERT INTO `pembayaran` (`no_kontrak`, `no_kwitansi`, `angsuran_ke`, `angsuran_perbulan`, `denda`, `total_bayar`, `tanggal_pembayaran`) VALUES (?, ?, ?, ?, ?, ?, ?)
+Params: {"1":"29-MF-00154-15","2":"KW-00007-07-15","3":"3","4":"12,00","5":"00","6":"00","7":"2015-07-16"}
+
+2015-07-16T03:17:11+07:00 INFO (6): 
+Elapsed Secs: 0.00133
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:17:11+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:17:12+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-16T03:17:12+07:00 INFO (6): 
+Elapsed Secs: 0.00125
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:17:12+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00007-07-15')
+Params: []
+
+2015-07-16T03:17:12+07:00 INFO (6): 
+Elapsed Secs: 0.00101
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:17:12+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:17:41+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-16T03:17:41+07:00 INFO (6): 
+Elapsed Secs: 0.00144
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:17:41+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:17:41+07:00 INFO (6): 
+Elapsed Secs: 0.00119
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:17:41+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:17:43+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: connect
+Params: []
+
+2015-07-16T03:17:43+07:00 INFO (6): 
+Elapsed Secs: 0.00355
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:17:43+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:17:43+07:00 INFO (6): 
+Elapsed Secs: 0.00141
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:17:43+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pemb`.* FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:17:43+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pemb`.`angsuran_ke`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`angsuran_perbulan`, `pinj`.`lama_angsuran` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:18:42+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: connect
+Params: []
+
+2015-07-16T03:18:42+07:00 INFO (6): 
+Elapsed Secs: 0.00226
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:18:42+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:18:42+07:00 INFO (6): 
+Elapsed Secs: 0.00197
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:18:42+07:00 INFO (6): 
+Elapsed Secs: 0.0007
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:18:46+07:00 INFO (6): 
+Elapsed Secs: 0.00062
+Query: connect
+Params: []
+
+2015-07-16T03:18:46+07:00 INFO (6): 
+Elapsed Secs: 0.00355
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:18:46+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:18:46+07:00 INFO (6): 
+Elapsed Secs: 0.00161
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:18:46+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `pemb`.* FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak WHERE (pinj.id_pinjaman = '154') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:18:46+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pemb`.`angsuran_ke`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`angsuran_perbulan`, `pinj`.`lama_angsuran` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pinj.id_pinjaman = '154') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:18:49+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-16T03:18:49+07:00 INFO (6): 
+Elapsed Secs: 0.00186
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:18:49+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:18:49+07:00 INFO (6): 
+Elapsed Secs: 0.00162
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:18:49+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:18:51+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-16T03:18:51+07:00 INFO (6): 
+Elapsed Secs: 0.00111
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:18:51+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:18:51+07:00 INFO (6): 
+Elapsed Secs: 0.00097
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:18:51+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pemb`.* FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:18:51+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pemb`.`angsuran_ke`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`angsuran_perbulan`, `pinj`.`lama_angsuran` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:18:57+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-16T03:18:57+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:18:57+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:18:57+07:00 INFO (6): 
+Elapsed Secs: 0.00098
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:18:57+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: connect
+Params: []
+
+2015-07-16T03:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00238
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00211
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: SELECT `pemb`.* FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00125
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pemb`.`angsuran_ke`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`angsuran_perbulan`, `pinj`.`lama_angsuran` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:19:31+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: connect
+Params: []
+
+2015-07-16T03:19:31+07:00 INFO (6): 
+Elapsed Secs: 0.00249
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:19:31+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:19:31+07:00 INFO (6): 
+Elapsed Secs: 0.00219
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:19:31+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: SELECT `pemb`.* FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:19:31+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pemb`.`angsuran_ke`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`angsuran_perbulan`, `pinj`.`lama_angsuran` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:19:37+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-16T03:19:37+07:00 INFO (6): 
+Elapsed Secs: 0.00138
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:19:37+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:19:37+07:00 INFO (6): 
+Elapsed Secs: 0.0011
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:19:37+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pemb`.* FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:19:37+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pemb`.`angsuran_ke`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`angsuran_perbulan`, `pinj`.`lama_angsuran` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:19:40+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-16T03:19:40+07:00 INFO (6): 
+Elapsed Secs: 0.00116
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:19:40+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:19:40+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:19:40+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:20:01+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-16T03:20:01+07:00 INFO (6): 
+Elapsed Secs: 0.00115
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:20:01+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:20:01+07:00 INFO (6): 
+Elapsed Secs: 0.00118
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:20:01+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:20:05+07:00 INFO (6): 
+Elapsed Secs: 0.00144
+Query: connect
+Params: []
+
+2015-07-16T03:20:05+07:00 INFO (6): 
+Elapsed Secs: 0.00144
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:20:05+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:20:05+07:00 INFO (6): 
+Elapsed Secs: 0.00121
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:20:05+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:20:06+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-16T03:20:06+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:20:06+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:20:06+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:20:06+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:20:09+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-16T03:20:09+07:00 INFO (6): 
+Elapsed Secs: 0.00135
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:20:09+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:20:09+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:20:09+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:24:53+07:00 INFO (6): 
+Elapsed Secs: 0.00124
+Query: connect
+Params: []
+
+2015-07-16T03:24:53+07:00 INFO (6): 
+Elapsed Secs: 0.0011
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:24:53+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:24:53+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:24:53+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pemb`.* FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:24:53+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pemb`.`angsuran_ke`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`angsuran_perbulan`, `pinj`.`lama_angsuran` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pinj.id_pinjaman = '155') ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:27:10+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: connect
+Params: []
+
+2015-07-16T03:27:10+07:00 INFO (6): 
+Elapsed Secs: 0.00141
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-16T03:27:10+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-16T03:27:10+07:00 INFO (6): 
+Elapsed Secs: 0.00125
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:27:10+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: SELECT `cos`.`nama`, `cos`.`nik_costumer`, `pinj`.`id_pinjaman`, `pinj`.`no_kontrak`, `pinj`.`nilai_pinjaman`, `pinj`.`lama_angsuran`, `kend`.`no_polisi` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer =  pinj.nik_costumer
+ INNER JOIN `cabang` AS `cab` ON cos.id_cabang = cab.id_cabang
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi WHERE (cab.id_cabang = '29') GROUP BY `pemb`.`no_kontrak` ORDER BY `pemb`.`angsuran_ke` desc
+Params: []
+
+2015-07-16T03:27:13+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-16T03:27:13+07:00 INFO (6): 
+Elapsed Secs: 0.00154
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:27:13+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-16T03:27:13+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00112
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: connect
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MF-00001-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MF-00001-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:27:17+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 0.00133
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MD-00160-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 0.0011
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MD-00160-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:27:20+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: connect
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.00132
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MD-00160-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.0013
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MD-00160-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:27:51+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 0.00136
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MD-00160-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 0.00093
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MD-00160-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:28:08+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.00128
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MD-00160-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.00115
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MD-00160-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:22+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MF-00154-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.00095
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MF-00154-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:26+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MD-00160-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MD-00160-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:30+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.0015
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '30-MF-00155-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.00122
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '30-MF-00155-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:30:32+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.00122
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '30-MF-00155-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.0009
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '30-MF-00155-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:02+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: connect
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00127
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MF-00001-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00089
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MF-00001-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:05+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: connect
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00198
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '30-MD-00156-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00146
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '30-MD-00156-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:07+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MF-00157-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MF-00157-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:09+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 0.0012
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `pinj`.`no_kontrak` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pinj`.`angsuran_perbulan`, `pinj`.`tanggal_jatuh_tempo` FROM `costumer` AS `cos`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.nik_costumer =  cos.nik_costumer
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi = pinj.no_polisi WHERE (pinj.no_kontrak = '29-MD-00160-15') GROUP BY `pinj`.`no_kontrak`
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 0.00092
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `pemb`.`angsuran_ke` FROM `pembayaran` AS `pemb` WHERE (no_kontrak = '29-MD-00160-15' ) ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:11+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `pembayaran`.`id_pembayaran` FROM `pembayaran` ORDER BY `id_pembayaran` desc
+Params: []
+
+2015-07-16T03:31:12+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-16T03:31:12+07:00 INFO (6): 
+Elapsed Secs: 0.00116
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:31:13+07:00 INFO (6): 
+Elapsed Secs: 0.15908
+Query: INSERT INTO `pembayaran` (`no_kontrak`, `no_kwitansi`, `angsuran_ke`, `angsuran_perbulan`, `denda`, `total_bayar`, `tanggal_pembayaran`) VALUES (?, ?, ?, ?, ?, ?, ?)
+Params: {"1":"29-MD-00160-15","2":"KW-00009-07-15","3":"2","4":"2.222.220.000,00","5":"00","6":"2.222.220.000,00","7":"2015-07-16"}
+
+2015-07-16T03:31:13+07:00 INFO (6): 
+Elapsed Secs: 0.00133
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:31:13+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:31:15+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-16T03:31:15+07:00 INFO (6): 
+Elapsed Secs: 0.00122
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:31:15+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00009-07-15')
+Params: []
+
+2015-07-16T03:31:15+07:00 INFO (6): 
+Elapsed Secs: 0.00102
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:31:15+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:32:19+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-16T03:32:19+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:32:19+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00009-07-15')
+Params: []
+
+2015-07-16T03:32:19+07:00 INFO (6): 
+Elapsed Secs: 0.00115
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:32:19+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+
+2015-07-16T03:33:04+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-16T03:33:04+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: DESCRIBE `pembayaran`
+Params: []
+
+2015-07-16T03:33:04+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: SELECT `pemb`.`no_kwitansi`, `pinj`.`no_kontrak`, `cos`.`nama`, `kend`.`no_polisi`, `pemb`.`angsuran_perbulan`, `pemb`.`angsuran_ke`, `pemb`.`denda` FROM `pembayaran` AS `pemb`
+ INNER JOIN `pinjaman` AS `pinj` ON pinj.no_kontrak = pemb.no_kontrak
+ INNER JOIN `kendaraan` AS `kend` ON kend.no_polisi= pinj.no_polisi
+ INNER JOIN `costumer` AS `cos` ON pinj.nik_costumer = cos.nik_costumer WHERE (pemb.no_kwitansi = 'KW-00009-07-15')
+Params: []
+
+2015-07-16T03:33:04+07:00 INFO (6): 
+Elapsed Secs: 0.00125
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-16T03:33:04+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `user`.`realname` FROM `user` WHERE (level = 'kasir') AND (user.id_cabang = '29')
+Params: []
+

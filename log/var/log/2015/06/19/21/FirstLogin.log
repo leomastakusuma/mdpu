@@ -1,0 +1,24 @@
+2015-06-19T21:05:38+07:00 INFO (6): 
+2015-06-19T21:08:29+07:00 INFO (6): Array
+(
+    [id_user] => 18
+    [id_cabang] => 30
+    [realname] => Kasir Natar
+    [username] => kasir
+    [password] => 8691e4fc53b99da544ce86e22acba62d13352eff
+    [create_at] => 2015-06-19
+    [level] => kasir
+    [id_login] => 10
+    [last_login] => 2015-06-19 21:08:29
+    [login_time] => 2015-06-19 21:08:29
+    [ip_login] => 172.17.3.234
+    [status] => 1
+    [cabang] => Natar
+    [kepala_cabang] => OMMASTA, S.Kom JKT
+    [provinsi] => Lampung
+    [kota] => Lampung Selatan
+    [kecamatan] => Natar
+    [alamat] => Jl Panjang Lampung km 21 
+    [kode_pos] => 23112 
+)
+

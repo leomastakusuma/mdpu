@@ -1,0 +1,1024 @@
+2015-07-03T22:54:43+07:00 INFO (6): 
+Elapsed Secs: 0.09735
+Query: connect
+Params: []
+
+2015-07-03T22:54:43+07:00 INFO (6): 
+Elapsed Secs: 0.00083
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-03T22:54:43+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-03T22:54:43+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-07-03T22:54:43+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-03T22:54:43+07:00 INFO (6): 
+Elapsed Secs: 0.09974
+Query: UPDATE `user_login` SET `last_login` = ?, `login_time` = NOW(), `ip_login` = ?, `status` = ? WHERE (id_user = '16')
+Params: {"1":"2015-07-03 10:40:44","2":"172.17.3.234","3":1}
+
+2015-07-03T22:54:43+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-03T22:54:56+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-03T22:54:56+07:00 INFO (6): 
+Elapsed Secs: 0.00083
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:54:56+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_user = '16')
+Params: []
+
+2015-07-03T22:55:02+07:00 INFO (6): 
+Elapsed Secs: 0.00119
+Query: connect
+Params: []
+
+2015-07-03T22:55:02+07:00 INFO (6): 
+Elapsed Secs: 0.00066
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:55:02+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:55:02+07:00 INFO (6): 
+Elapsed Secs: 0.00071
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-03T22:55:02+07:00 INFO (6): 
+Elapsed Secs: 0.10822
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:55:42+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: connect
+Params: []
+
+2015-07-03T22:55:42+07:00 INFO (6): 
+Elapsed Secs: 0.0007
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:55:42+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:55:42+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-03T22:55:42+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:55:44+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-03T22:55:44+07:00 INFO (6): 
+Elapsed Secs: 0.00077
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:55:44+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:55:44+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-03T22:56:13+07:00 INFO (6): 
+Elapsed Secs: 0.00103
+Query: connect
+Params: []
+
+2015-07-03T22:56:13+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:56:13+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:56:13+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-03T22:56:13+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:56:15+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:56:15+07:00 INFO (6): 
+Elapsed Secs: 0.00069
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:56:15+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:56:15+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-03T22:56:15+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:56:27+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: connect
+Params: []
+
+2015-07-03T22:56:27+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:56:27+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:56:27+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-03T22:56:27+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:57:00+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: connect
+Params: []
+
+2015-07-03T22:57:00+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:57:00+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:57:00+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-03T22:57:00+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:57:07+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-03T22:57:07+07:00 INFO (6): 
+Elapsed Secs: 0.00076
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:57:07+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:57:07+07:00 INFO (6): 
+Elapsed Secs: 0.00062
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-03T22:57:07+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:57:35+07:00 INFO (6): 
+Elapsed Secs: 0.00119
+Query: connect
+Params: []
+
+2015-07-03T22:57:35+07:00 INFO (6): 
+Elapsed Secs: 0.00063
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:57:35+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-03T22:57:35+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:57:38+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-03T22:57:38+07:00 INFO (6): 
+Elapsed Secs: 0.00066
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:57:38+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_user = '16')
+Params: []
+
+2015-07-03T22:57:44+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-03T22:57:44+07:00 INFO (6): 
+Elapsed Secs: 0.00082
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:57:44+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-03T22:57:44+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: connect
+Params: []
+
+2015-07-03T22:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00077
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-03T22:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-03T22:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-03T22:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-03T22:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:58:00+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:58:00+07:00 INFO (6): 
+Elapsed Secs: 0.00099
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:58:00+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:58:00+07:00 INFO (6): 
+Elapsed Secs: 0.00076
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-03T22:58:00+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-03T22:58:00+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:58:22+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: connect
+Params: []
+
+2015-07-03T22:58:22+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:58:22+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:58:22+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-03T22:58:22+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-03T22:58:22+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-03T22:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-03T22:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-03T22:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:58:47+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-03T22:58:47+07:00 INFO (6): 
+Elapsed Secs: 0.00071
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:58:47+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_user = '16')
+Params: []
+
+2015-07-03T22:58:49+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:58:49+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:58:49+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.nik_costumer = '11-212-31231211')
+Params: []
+
+2015-07-03T22:58:49+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-03T22:58:49+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `penj`.* FROM `costumer` AS `cos`
+ INNER JOIN `penjamin` AS `penj` ON penj.nik_costumer = cos.nik_costumer WHERE (cos.nik_costumer = '11-212-31231211')
+Params: []
+
+2015-07-03T22:58:51+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:58:51+07:00 INFO (6): 
+Elapsed Secs: 0.00072
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:58:51+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.* FROM `costumer` WHERE (nik_costumer ='11-212-31231211') LIMIT 1
+Params: []
+
+2015-07-03T22:59:04+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-03T22:59:04+07:00 INFO (6): 
+Elapsed Secs: 0.00075
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:59:04+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.* FROM `costumer` WHERE (nik_costumer ='') LIMIT 1
+Params: []
+
+2015-07-03T22:59:21+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-03T22:59:21+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-03T22:59:21+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-03T22:59:21+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-03T22:59:21+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-03T22:59:21+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:24+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-03T22:59:24+07:00 INFO (6): 
+Elapsed Secs: 0.00074
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-03T22:59:24+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-03T22:59:24+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang
+Params: []
+
+2015-07-03T22:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-03T22:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_user = '16')
+Params: []
+
+2015-07-03T22:59:27+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-03T22:59:27+07:00 INFO (6): 
+Elapsed Secs: 0.00072
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-03T22:59:27+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:29+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-03T22:59:29+07:00 INFO (6): 
+Elapsed Secs: 0.00075
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:29+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-03T22:59:29+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00079
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-03T22:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-03T22:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00066
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-03T22:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:33+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-03T22:59:33+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:33+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: connect
+Params: []
+
+2015-07-03T22:59:33+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:35+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-03T22:59:35+07:00 INFO (6): 
+Elapsed Secs: 0.00069
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:35+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-03T22:59:35+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:36+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-03T22:59:36+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:36+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-03T22:59:36+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:37+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-03T22:59:37+07:00 INFO (6): 
+Elapsed Secs: 0.00071
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:37+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-03T22:59:37+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:39+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-03T22:59:39+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:39+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-03T22:59:39+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:40+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-03T22:59:40+07:00 INFO (6): 
+Elapsed Secs: 0.00072
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:40+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-03T22:59:40+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.00073
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: connect
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: connect
+Params: []
+
+2015-07-03T22:59:42+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:44+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-03T22:59:44+07:00 INFO (6): 
+Elapsed Secs: 0.00069
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:44+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-03T22:59:44+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:45+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-03T22:59:45+07:00 INFO (6): 
+Elapsed Secs: 0.0007
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:45+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:59:45+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:46+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-07-03T22:59:46+07:00 INFO (6): 
+Elapsed Secs: 0.00071
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:46+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-03T22:59:46+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+
+2015-07-03T22:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-03T22:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00083
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-03T22:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang WHERE (us.id_user= '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-03T22:59:56+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-03T22:59:56+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: DESCRIBE `penjamin`
+Params: []
+
+2015-07-03T22:59:56+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-03T22:59:56+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `pe`.*, `cos`.`id_cabang`, `cos`.`id_user`, `cb`.`cabang` FROM `penjamin` AS `pe`
+ INNER JOIN `costumer` AS `cos` ON pe.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cb.id_cabang = cos.id_cabang
+Params: []
+

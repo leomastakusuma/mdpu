@@ -1,0 +1,46 @@
+2015-06-24T16:02:20+07:00 INFO (6): Array
+(
+    [id_user] => 16
+    [id_cabang] => 29
+    [realname] => Leo Masta Kusuma
+    [username] => admin
+    [password] => 38f078a81a2b033d197497af5b77f95b50bfcfb8
+    [create_at] => 2015-06-19
+    [level] => superadmin
+    [id_login] => 5
+    [last_login] => 2015-06-24 14:00:56
+    [login_time] => 2015-06-24 16:02:20
+    [ip_login] => 172.17.3.234
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => SRI ROHAYATI, S.Kom, Mp.di
+    [provinsi] => Lampung
+    [kota] => Antasari
+    [kecamatan] => Waru
+    [alamat] => Jl Pangen Antasari No 20
+    [kode_pos] => 12310 
+)
+
+2015-06-24T16:59:56+07:00 INFO (6): Array
+(
+    [id_user] => 17
+    [id_cabang] => 30
+    [realname] => Rendi Proyoga
+    [username] => rendi
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => admin
+    [id_login] => 7
+    [last_login] => 2015-06-24 11:46:31
+    [login_time] => 2015-06-24 16:59:56
+    [ip_login] => 172.17.3.234
+    [status] => 1
+    [cabang] => Natar
+    [kepala_cabang] => OMMASTA, S.Kom JKT
+    [provinsi] => Lampung
+    [kota] => Lampung Selatan
+    [kecamatan] => Natar
+    [alamat] => Jl Panjang Lampung km 21 
+    [kode_pos] => 23112 
+)
+

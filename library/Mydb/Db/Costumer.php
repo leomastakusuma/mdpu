@@ -104,10 +104,38 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         
     }
     
-    public function getNoKontrak(){
+   /* public function getNoKontrak(){
         $select = $this->select();
         $select->from($this->_name,array('nik_costumer'));
         return $this->getAdapterSelect()->fetchAll($select);
     }
+    */
     
+    public function getNoKontrak(){
+        $select = $this->select();
+        $select->from(array('cos'=>$this->_name),array());
+        $select->setIntegrityCheck(false);
+        $select->join(array('pinj'=>'pinjaman'), 'pinj.nik_costumer =  cos.nik_costumer',array());
+        $select->join(array('kend'=>'kendaraan'),'kend.no_polisi = pinj.no_polisi',array());
+        $select->columns(array('no_kontrak'),'pinj');
+        return $this->getAdapterSelect()->fetchAll($select);
+    }
+    
+    public function getDetailPembayaran($no_kontrak){
+        $select = $this->select();
+        $select->from(array('cos'=>$this->_name),array());
+        $select->setIntegrityCheck(false);
+        $select->join(array('pinj'=>'pinjaman'), 'pinj.nik_costumer =  cos.nik_costumer',array());
+        $select->join(array('kend'=>'kendaraan'),'kend.no_polisi = pinj.no_polisi',array());
+        $select->columns(array('no_kontrak'),'pinj');
+        $select->columns(array('nama'),'cos');
+        $select->columns(array('no_polisi'),'kend');
+        $select->columns(array('angsuran_perbulan'),'pinj');
+        $select->columns(array('tanggal_jatuh_tempo'),'pinj');
+        $select->where('pinj.no_kontrak = ?',$no_kontrak);
+        $select->group('pinj.no_kontrak');
+        return $this->getAdapterSelect()->fetchRow($select);
+    }
+    
+
 }

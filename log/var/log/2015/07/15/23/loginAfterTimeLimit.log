@@ -1,0 +1,23 @@
+2015-07-15T23:48:50+07:00 INFO (6): Array
+(
+    [id_user] => 18
+    [id_cabang] => 30
+    [realname] => Kasir Natar
+    [username] => kasir
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => kasir
+    [id_login] => 10
+    [last_login] => 2015-07-15 14:17:45
+    [login_time] => 2015-07-15 23:48:50
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Natar
+    [kepala_cabang] => Raka
+    [provinsi] => Lampung
+    [kota] => Lampung Selatan
+    [kecamatan] => Natar
+    [alamat] => Jl Panjang Lampung km 21 
+    [kode_pos] => 23112  
+)
+

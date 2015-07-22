@@ -1,0 +1,146 @@
+2015-06-26T11:12:30+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-06-26T11:12:30+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: DESCRIBE `user`
+Params: []
+
+2015-06-26T11:12:30+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T11:12:30+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-06-26T11:12:30+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-06-26T11:12:30+07:00 INFO (6): 
+Elapsed Secs: 0.03688
+Query: UPDATE `user_login` SET `status` = ?, `login_time` = NOW(), `ip_login` = ?, `last_login` = ? WHERE (id_user = '16')
+Params: {"1":1,"2":"172.17.3.234","3":"2015-06-26 09:37:04"}
+
+2015-06-26T11:12:30+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-06-26T11:12:37+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T11:12:37+07:00 INFO (6): 
+Elapsed Secs: 0.00111
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T11:12:37+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_user = '16')
+Params: []
+
+2015-06-26T11:29:45+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: connect
+Params: []
+
+2015-06-26T11:29:45+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: DESCRIBE `user`
+Params: []
+
+2015-06-26T11:29:45+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T11:29:45+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-06-26T11:29:45+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-06-26T11:29:52+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-06-26T11:29:52+07:00 INFO (6): 
+Elapsed Secs: 0.00143
+Query: DESCRIBE `user`
+Params: []
+
+2015-06-26T11:29:52+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-06-26T11:29:52+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'rendi') AND (user.password = 'e5d674e5870261c79dd496dc14f6b58e99828a7c')
+Params: []
+
+2015-06-26T11:30:00+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T11:30:00+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: DESCRIBE `user`
+Params: []
+
+2015-06-26T11:30:00+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T11:30:00+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'rendi') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-06-26T11:30:00+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '17')
+Params: []
+
+2015-06-26T11:30:00+07:00 INFO (6): 
+Elapsed Secs: 0.06703
+Query: UPDATE `user_login` SET `status` = ?, `login_time` = NOW(), `ip_login` = ?, `last_login` = ? WHERE (id_user = '17')
+Params: {"1":1,"2":"172.17.3.234","3":"2015-06-26 00:20:55"}
+
+2015-06-26T11:30:00+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '17')
+Params: []
+

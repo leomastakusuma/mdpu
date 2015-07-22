@@ -1,0 +1,23 @@
+2015-07-16T04:14:26+07:00 INFO (6): Array
+(
+    [id_user] => 15
+    [id_cabang] => 29
+    [realname] => Riza Masta Saputra 
+    [username] => ommasta
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => kasir
+    [id_login] => 6
+    [last_login] => 2015-07-16 02:43:16
+    [login_time] => 2015-07-16 04:14:26
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => SRI ROHAYATI, S.Kom, Mp.di
+    [provinsi] => Lampung
+    [kota] => Antasari
+    [kecamatan] => Waru
+    [alamat] => Jl Pangen Antasari No 20
+    [kode_pos] => 12310 
+)
+

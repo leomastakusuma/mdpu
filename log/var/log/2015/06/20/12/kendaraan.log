@@ -1,0 +1,239 @@
+2015-06-20T12:15:25+07:00 ALERT (1): Mydb_Db_Kendaraan Object
+(
+    [_name:protected] => kendaraan
+    [_primary:protected] => no_polisi
+    [_dbSelect:protected] => Zend_Db_Adapter_Pdo_Mysql Object
+        (
+            [_pdoType:protected] => mysql
+            [_numericDataTypes:protected] => Array
+                (
+                    [0] => 0
+                    [1] => 1
+                    [2] => 2
+                    [INT] => 0
+                    [INTEGER] => 0
+                    [MEDIUMINT] => 0
+                    [SMALLINT] => 0
+                    [TINYINT] => 0
+                    [BIGINT] => 1
+                    [SERIAL] => 1
+                    [DEC] => 2
+                    [DECIMAL] => 2
+                    [DOUBLE] => 2
+                    [DOUBLE PRECISION] => 2
+                    [FIXED] => 2
+                    [FLOAT] => 2
+                )
+
+            [_defaultStmtClass:protected] => Zend_Db_Statement_Pdo
+            [_config:protected] => Array
+                (
+                    [host] => localhost
+                    [username] => root
+                    [password] => root
+                    [dbname] => mdpu_finance
+                    [charset] => 
+                    [persistent] => 
+                    [options] => Array
+                        (
+                            [caseFolding] => 0
+                            [autoQuoteIdentifiers] => 1
+                            [fetchMode] => 2
+                        )
+
+                    [driver_options] => Array
+                        (
+                        )
+
+                )
+
+            [_fetchMode:protected] => 2
+            [_profiler:protected] => Mydb_Db_Profiler_Log Object
+                (
+                    [_logName:protected] => query
+                    [_log:protected] => 
+                    [_totalElapsedTime:protected] => 
+                    [_queryProfiles:protected] => Array
+                        (
+                        )
+
+                    [_enabled:protected] => 1
+                    [_filterElapsedSecs:protected] => 
+                    [_filterTypes:protected] => 
+                )
+
+            [_defaultProfilerClass:protected] => Zend_Db_Profiler
+            [_connection:protected] => 
+            [_caseFolding:protected] => 0
+            [_autoQuoteIdentifiers:protected] => 1
+            [_allowSerialization:protected] => 1
+            [_autoReconnectOnUnserialize:protected] => 
+        )
+
+    [_dbUpdate:protected] => Zend_Db_Adapter_Pdo_Mysql Object
+        (
+            [_pdoType:protected] => mysql
+            [_numericDataTypes:protected] => Array
+                (
+                    [0] => 0
+                    [1] => 1
+                    [2] => 2
+                    [INT] => 0
+                    [INTEGER] => 0
+                    [MEDIUMINT] => 0
+                    [SMALLINT] => 0
+                    [TINYINT] => 0
+                    [BIGINT] => 1
+                    [SERIAL] => 1
+                    [DEC] => 2
+                    [DECIMAL] => 2
+                    [DOUBLE] => 2
+                    [DOUBLE PRECISION] => 2
+                    [FIXED] => 2
+                    [FLOAT] => 2
+                )
+
+            [_defaultStmtClass:protected] => Zend_Db_Statement_Pdo
+            [_config:protected] => Array
+                (
+                    [host] => localhost
+                    [username] => root
+                    [password] => root
+                    [dbname] => mdpu_finance
+                    [charset] => 
+                    [persistent] => 
+                    [options] => Array
+                        (
+                            [caseFolding] => 0
+                            [autoQuoteIdentifiers] => 1
+                            [fetchMode] => 2
+                        )
+
+                    [driver_options] => Array
+                        (
+                        )
+
+                )
+
+            [_fetchMode:protected] => 2
+            [_profiler:protected] => Mydb_Db_Profiler_Log Object
+                (
+                    [_logName:protected] => query
+                    [_log:protected] => 
+                    [_totalElapsedTime:protected] => 
+                    [_queryProfiles:protected] => Array
+                        (
+                        )
+
+                    [_enabled:protected] => 1
+                    [_filterElapsedSecs:protected] => 
+                    [_filterTypes:protected] => 
+                )
+
+            [_defaultProfilerClass:protected] => Zend_Db_Profiler
+            [_connection:protected] => 
+            [_caseFolding:protected] => 0
+            [_autoQuoteIdentifiers:protected] => 1
+            [_allowSerialization:protected] => 1
+            [_autoReconnectOnUnserialize:protected] => 
+        )
+
+    [_id:protected] => 
+    [_idFieldName:protected] => 
+    [_definition:protected] => 
+    [_definitionConfigName:protected] => 
+    [_db:protected] => Zend_Db_Adapter_Pdo_Mysql Object
+        (
+            [_pdoType:protected] => mysql
+            [_numericDataTypes:protected] => Array
+                (
+                    [0] => 0
+                    [1] => 1
+                    [2] => 2
+                    [INT] => 0
+                    [INTEGER] => 0
+                    [MEDIUMINT] => 0
+                    [SMALLINT] => 0
+                    [TINYINT] => 0
+                    [BIGINT] => 1
+                    [SERIAL] => 1
+                    [DEC] => 2
+                    [DECIMAL] => 2
+                    [DOUBLE] => 2
+                    [DOUBLE PRECISION] => 2
+                    [FIXED] => 2
+                    [FLOAT] => 2
+                )
+
+            [_defaultStmtClass:protected] => Zend_Db_Statement_Pdo
+            [_config:protected] => Array
+                (
+                    [host] => localhost
+                    [username] => root
+                    [password] => root
+                    [dbname] => mdpu_finance
+                    [charset] => 
+                    [persistent] => 
+                    [options] => Array
+                        (
+                            [caseFolding] => 0
+                            [autoQuoteIdentifiers] => 1
+                            [fetchMode] => 2
+                        )
+
+                    [driver_options] => Array
+                        (
+                        )
+
+                )
+
+            [_fetchMode:protected] => 2
+            [_profiler:protected] => Mydb_Db_Profiler_Log Object
+                (
+                    [_logName:protected] => query
+                    [_log:protected] => 
+                    [_totalElapsedTime:protected] => 
+                    [_queryProfiles:protected] => Array
+                        (
+                        )
+
+                    [_enabled:protected] => 1
+                    [_filterElapsedSecs:protected] => 
+                    [_filterTypes:protected] => 
+                )
+
+            [_defaultProfilerClass:protected] => Zend_Db_Profiler
+            [_connection:protected] => 
+            [_caseFolding:protected] => 0
+            [_autoQuoteIdentifiers:protected] => 1
+            [_allowSerialization:protected] => 1
+            [_autoReconnectOnUnserialize:protected] => 
+        )
+
+    [_schema:protected] => 
+    [_cols:protected] => 
+    [_identity:protected] => 1
+    [_sequence:protected] => 1
+    [_metadata:protected] => Array
+        (
+        )
+
+    [_metadataCache:protected] => 
+    [_metadataCacheInClass:protected] => 1
+    [_rowClass:protected] => Zend_Db_Table_Row
+    [_rowsetClass:protected] => Zend_Db_Table_Rowset
+    [_referenceMap:protected] => Array
+        (
+        )
+
+    [_dependentTables:protected] => Array
+        (
+        )
+
+    [_defaultSource:protected] => defaultNone
+    [_defaultValues:protected] => Array
+        (
+        )
+
+)
+

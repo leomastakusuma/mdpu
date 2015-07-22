@@ -386,4 +386,28 @@ final class Mydb
         }
         return self::registry($key);
     }
+    
+    /**
+     * @access  model untuk memanggil getModelPembayaran yang digunakan untuk memanage table Pembayaran
+     * @return Mydb_Db_Pembayaran
+     */
+    public static function getModelPembayaran() {
+        $key = 'Mydb_Db_Pembayaran';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_Pembayaran());
+        }
+        return self::registry($key);
+    }
+    
+    /**
+     * @access  model untuk memanggil getModelKartuPiutang yang digunakan untuk memanage table Kartu Piutang
+     * @return Mydb_Db_KartuPiutang
+     */
+    public static function getModelKartuPiutang() {
+        $key = 'Mydb_Db_KartuPiutang';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_KartuPiutang());
+        }
+        return self::registry($key);
+    }
 }

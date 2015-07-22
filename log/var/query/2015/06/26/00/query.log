@@ -1,0 +1,1086 @@
+2015-06-26T00:11:49+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:11:49+07:00 INFO (6): 
+Elapsed Secs: 0.00089
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:11:49+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:11:49+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:17:27+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: connect
+Params: []
+
+2015-06-26T00:17:27+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:17:27+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:17:27+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:17:42+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: connect
+Params: []
+
+2015-06-26T00:17:42+07:00 INFO (6): 
+Elapsed Secs: 0.0009
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:17:42+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: connect
+Params: []
+
+2015-06-26T00:17:42+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:18:13+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: connect
+Params: []
+
+2015-06-26T00:18:13+07:00 INFO (6): 
+Elapsed Secs: 0.00093
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:18:13+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:18:13+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:18:32+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-06-26T00:18:32+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:18:32+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:18:32+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: connect
+Params: []
+
+2015-06-26T00:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00086
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-06-26T00:19:00+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:19:17+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:19:17+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:19:17+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-06-26T00:19:17+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:20:15+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: connect
+Params: []
+
+2015-06-26T00:20:15+07:00 INFO (6): 
+Elapsed Secs: 0.04061
+Query: UPDATE `user_login` SET `status` = ?, `last_login` = ? WHERE (status = 1)
+Params: {"1":0,"2":"2015-06-25 23:20:07"}
+
+2015-06-26T00:20:15+07:00 INFO (6): 
+Elapsed Secs: 0.00088
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:20:15+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-06-26T00:20:15+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:20:48+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-06-26T00:20:48+07:00 INFO (6): 
+Elapsed Secs: 0.00088
+Query: DESCRIBE `user`
+Params: []
+
+2015-06-26T00:20:48+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-06-26T00:20:48+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = 'f865b53623b121fd34ee5426c792e5c33af8c227')
+Params: []
+
+2015-06-26T00:20:55+07:00 INFO (6): 
+Elapsed Secs: 0.0011
+Query: connect
+Params: []
+
+2015-06-26T00:20:55+07:00 INFO (6): 
+Elapsed Secs: 0.0009
+Query: DESCRIBE `user`
+Params: []
+
+2015-06-26T00:20:55+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:20:55+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'rendi') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-06-26T00:20:55+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '17')
+Params: []
+
+2015-06-26T00:20:55+07:00 INFO (6): 
+Elapsed Secs: 0.07148
+Query: UPDATE `user_login` SET `status` = ?, `login_time` = NOW(), `ip_login` = ?, `last_login` = ? WHERE (id_user = '17')
+Params: {"1":1,"2":"172.17.3.234","3":"2015-06-24 18:57:18"}
+
+2015-06-26T00:20:55+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '17')
+Params: []
+
+2015-06-26T00:20:59+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-06-26T00:20:59+07:00 INFO (6): 
+Elapsed Secs: 0.00118
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:20:59+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_user = '17')
+Params: []
+
+2015-06-26T00:21:02+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:21:02+07:00 INFO (6): 
+Elapsed Secs: 0.0009
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:21:02+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname`, `cb`.`cabang` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.nik_costumer = '41112121111')
+Params: []
+
+2015-06-26T00:21:02+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-06-26T00:21:02+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `penj`.* FROM `costumer` AS `cos`
+ INNER JOIN `penjamin` AS `penj` ON penj.nik_costumer = cos.nik_costumer WHERE (cos.nik_costumer = '41112121111')
+Params: []
+
+2015-06-26T00:21:10+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:21:10+07:00 INFO (6): 
+Elapsed Secs: 0.00093
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:21:10+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.* FROM `costumer` WHERE (nik_costumer = '41112121111') LIMIT 1
+Params: []
+
+2015-06-26T00:22:30+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: connect
+Params: []
+
+2015-06-26T00:22:30+07:00 INFO (6): 
+Elapsed Secs: 0.087
+Query: UPDATE `user_login` SET `status` = ? WHERE (id_user ='17')
+Params: {"1":0}
+
+2015-06-26T00:22:34+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:22:34+07:00 INFO (6): 
+Elapsed Secs: 0.00088
+Query: DESCRIBE `user`
+Params: []
+
+2015-06-26T00:22:34+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:22:34+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = '38f078a81a2b033d197497af5b77f95b50bfcfb8')
+Params: []
+
+2015-06-26T00:22:34+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-06-26T00:22:34+07:00 INFO (6): 
+Elapsed Secs: 0.03524
+Query: UPDATE `user_login` SET `status` = ?, `login_time` = NOW(), `ip_login` = ?, `last_login` = ? WHERE (id_user = '16')
+Params: {"1":1,"2":"172.17.3.234","3":"2015-06-25 23:20:07"}
+
+2015-06-26T00:22:34+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-06-26T00:22:48+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:22:48+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:22:48+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:22:48+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:23:14+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-06-26T00:23:14+07:00 INFO (6): 
+Elapsed Secs: 0.00099
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:23:14+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-06-26T00:23:14+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:23:31+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-06-26T00:23:31+07:00 INFO (6): 
+Elapsed Secs: 0.00103
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:23:31+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-06-26T00:23:31+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:24:21+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-06-26T00:24:21+07:00 INFO (6): 
+Elapsed Secs: 0.00092
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:24:21+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-06-26T00:24:21+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:25:18+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-06-26T00:25:18+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:25:18+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:25:18+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:25:36+07:00 INFO (6): 
+Elapsed Secs: 0.00111
+Query: connect
+Params: []
+
+2015-06-26T00:25:36+07:00 INFO (6): 
+Elapsed Secs: 0.00096
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:25:36+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-06-26T00:25:36+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:25:51+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-06-26T00:25:51+07:00 INFO (6): 
+Elapsed Secs: 0.00098
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:25:51+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-06-26T00:25:51+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:26:21+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-06-26T00:26:21+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:26:21+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-06-26T00:26:21+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:26:32+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: connect
+Params: []
+
+2015-06-26T00:26:32+07:00 INFO (6): 
+Elapsed Secs: 0.00094
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:26:32+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:26:32+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:26:40+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: connect
+Params: []
+
+2015-06-26T00:26:40+07:00 INFO (6): 
+Elapsed Secs: 0.00102
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:26:40+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:26:40+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:27:07+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-06-26T00:27:07+07:00 INFO (6): 
+Elapsed Secs: 0.00092
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:27:07+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-06-26T00:27:07+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:27:29+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: connect
+Params: []
+
+2015-06-26T00:27:29+07:00 INFO (6): 
+Elapsed Secs: 0.0011
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:27:29+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-06-26T00:27:29+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:29:31+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-06-26T00:29:31+07:00 INFO (6): 
+Elapsed Secs: 0.00089
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:31:04+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: connect
+Params: []
+
+2015-06-26T00:31:04+07:00 INFO (6): 
+Elapsed Secs: 0.0009
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:31:04+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-06-26T00:31:04+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:31:08+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:31:08+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:31:08+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:31:08+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00095
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-06-26T00:32:50+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:33:00+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-06-26T00:33:00+07:00 INFO (6): 
+Elapsed Secs: 0.00091
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:33:00+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:33:00+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:33:03+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-06-26T00:33:03+07:00 INFO (6): 
+Elapsed Secs: 0.0014
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:33:03+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-06-26T00:33:03+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00088
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-06-26T00:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:33:14+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: connect
+Params: []
+
+2015-06-26T00:33:14+07:00 INFO (6): 
+Elapsed Secs: 0.00093
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:33:14+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:33:14+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:33:19+07:00 INFO (6): 
+Elapsed Secs: 0.00103
+Query: connect
+Params: []
+
+2015-06-26T00:33:19+07:00 INFO (6): 
+Elapsed Secs: 0.00092
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:33:19+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-06-26T00:33:19+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:38:02+07:00 INFO (6): 
+Elapsed Secs: 0.00154
+Query: connect
+Params: []
+
+2015-06-26T00:38:02+07:00 INFO (6): 
+Elapsed Secs: 0.00096
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:38:02+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-06-26T00:38:02+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:38:25+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:38:25+07:00 INFO (6): 
+Elapsed Secs: 0.00094
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:38:25+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-06-26T00:38:25+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:44:00+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-06-26T00:44:00+07:00 INFO (6): 
+Elapsed Secs: 0.00122
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:44:00+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-06-26T00:44:00+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:47:02+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-06-26T00:47:02+07:00 INFO (6): 
+Elapsed Secs: 0.00117
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:47:02+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:47:02+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.00089
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:47:09+07:00 INFO (6): 
+Elapsed Secs: 0.05288
+Query: INSERT INTO `costumer` () VALUES ()
+Params: []
+
+2015-06-26T00:47:11+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:47:11+07:00 INFO (6): 
+Elapsed Secs: 0.00088
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:47:11+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:47:11+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:47:16+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-06-26T00:47:16+07:00 INFO (6): 
+Elapsed Secs: 0.00129
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:47:16+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-06-26T00:47:16+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:49:52+07:00 INFO (6): 
+Elapsed Secs: 0.00099
+Query: connect
+Params: []
+
+2015-06-26T00:49:52+07:00 INFO (6): 
+Elapsed Secs: 0.00092
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:49:52+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:49:52+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-06-26T00:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00094
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:52:09+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-06-26T00:52:09+07:00 INFO (6): 
+Elapsed Secs: 0.00092
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:52:09+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-06-26T00:52:09+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:52:14+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-06-26T00:52:14+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-06-26T00:52:14+07:00 INFO (6): 
+Elapsed Secs: 0.0744
+Query: INSERT INTO `pinjaman` (`no_kontrak`, `nik_costumer`, `lama_angsuran`) VALUES (?, ?, ?)
+Params: {"1":"AT-ISM4N-26","2":"11-212-31231211","3":""}
+
+2015-06-26T00:52:56+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: connect
+Params: []
+
+2015-06-26T00:52:56+07:00 INFO (6): 
+Elapsed Secs: 0.00107
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:52:56+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:52:56+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:54:41+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-06-26T00:54:41+07:00 INFO (6): 
+Elapsed Secs: 0.0014
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:54:41+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:54:41+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:55:03+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-06-26T00:55:03+07:00 INFO (6): 
+Elapsed Secs: 0.00096
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:55:03+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-06-26T00:55:03+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:55:33+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-06-26T00:55:33+07:00 INFO (6): 
+Elapsed Secs: 0.00123
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-06-26T00:55:33+07:00 INFO (6): 
+Elapsed Secs: 0.05551
+Query: INSERT INTO `pinjaman` (`no_kontrak`, `nik_costumer`, `lama_angsuran`) VALUES (?, ?, ?)
+Params: {"1":"AT-3R44E-26","2":"11-212-31231211","3":"14"}
+
+2015-06-26T00:56:51+07:00 INFO (6): 
+Elapsed Secs: 0.00174
+Query: connect
+Params: []
+
+2015-06-26T00:56:51+07:00 INFO (6): 
+Elapsed Secs: 0.0017
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:56:51+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-06-26T00:56:51+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:57:10+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-06-26T00:57:10+07:00 INFO (6): 
+Elapsed Secs: 0.00092
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-06-26T00:57:10+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-06-26T00:57:10+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-06-26T00:57:24+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-06-26T00:57:24+07:00 INFO (6): 
+Elapsed Secs: 0.00099
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-06-26T00:57:25+07:00 INFO (6): 
+Elapsed Secs: 0.1007
+Query: INSERT INTO `pinjaman` (`no_kontrak`, `nik_costumer`, `nilai_pinjaman`, `angsuran_perbulan`, `lama_angsuran`) VALUES (?, ?, ?, ?, ?)
+Params: {"1":"AT-LKPE9-26","2":"11-212-31231211","3":"1","4":"2","5":"1"}
+

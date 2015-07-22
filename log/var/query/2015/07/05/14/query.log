@@ -1,0 +1,3763 @@
+2015-07-05T14:00:09+07:00 INFO (6): 
+Elapsed Secs: 0.06446
+Query: connect
+Params: []
+
+2015-07-05T14:00:09+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-05T14:00:09+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T14:00:09+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-07-05T14:00:09+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-05T14:00:09+07:00 INFO (6): 
+Elapsed Secs: 0.03883
+Query: UPDATE `user_login` SET `last_login` = ?, `login_time` = NOW(), `ip_login` = ?, `status` = ? WHERE (id_user = '16')
+Params: {"1":"2015-07-04 15:29:39","2":"127.0.0.1","3":1}
+
+2015-07-05T14:00:09+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: connect
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.02
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.00104
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.02107
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T14:00:19+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T14:00:22+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: connect
+Params: []
+
+2015-07-05T14:00:22+07:00 INFO (6): 
+Elapsed Secs: 0.00084
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:00:22+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: connect
+Params: []
+
+2015-07-05T14:00:22+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:00:22+07:00 INFO (6): 
+Elapsed Secs: 0.00074
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:00:22+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `kendaraan`.`no_polisi` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:03:46+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: connect
+Params: []
+
+2015-07-05T14:03:46+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:03:46+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T14:03:46+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:03:46+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:03:46+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:04:04+07:00 INFO (6): 
+Elapsed Secs: 0.00115
+Query: connect
+Params: []
+
+2015-07-05T14:04:04+07:00 INFO (6): 
+Elapsed Secs: 0.00074
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:04:04+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:04:04+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:04:04+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:04:04+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:04:55+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:04:55+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:04:55+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:04:55+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:04:55+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:04:55+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:05:22+07:00 INFO (6): 
+Elapsed Secs: 0.00144
+Query: connect
+Params: []
+
+2015-07-05T14:05:22+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:05:22+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:05:22+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:05:22+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:05:22+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:05:31+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T14:05:31+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:05:31+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:05:31+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:05:31+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:05:31+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:06:29+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:06:29+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:06:29+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T14:06:29+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:06:29+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:06:29+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:06:55+07:00 INFO (6): 
+Elapsed Secs: 0.00111
+Query: connect
+Params: []
+
+2015-07-05T14:06:55+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:06:55+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:06:55+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:06:55+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:06:55+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:07:22+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:07:22+07:00 INFO (6): 
+Elapsed Secs: 0.00058
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:07:22+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T14:07:22+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:07:22+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:07:22+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:07:56+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T14:07:56+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:07:56+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: connect
+Params: []
+
+2015-07-05T14:07:56+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:07:56+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:07:56+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:08:02+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: connect
+Params: []
+
+2015-07-05T14:08:02+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:08:02+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:08:02+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:08:02+07:00 INFO (6): 
+Elapsed Secs: 0.00079
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:08:02+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00106
+Query: connect
+Params: []
+
+2015-07-05T14:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:08:22+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:08:22+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:08:56+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:08:56+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:08:56+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:08:56+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:08:56+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:08:56+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:10:05+07:00 INFO (6): 
+Elapsed Secs: 0.00099
+Query: connect
+Params: []
+
+2015-07-05T14:10:05+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:10:05+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:10:05+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:10:05+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:10:05+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:10:09+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:10:09+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:10:09+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:10:09+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:10:09+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:10:09+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:11:28+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:11:28+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:11:28+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:11:28+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:11:28+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:11:28+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:12:07+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:12:07+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:12:07+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T14:12:07+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:12:07+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:12:07+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:12:20+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:12:20+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:12:20+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: connect
+Params: []
+
+2015-07-05T14:12:20+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:12:20+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:12:20+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:17:17+07:00 INFO (6): 
+Elapsed Secs: 0.00114
+Query: connect
+Params: []
+
+2015-07-05T14:17:17+07:00 INFO (6): 
+Elapsed Secs: 0.00875
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:17:17+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:17:17+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:17:17+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:17:17+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:17:45+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: connect
+Params: []
+
+2015-07-05T14:17:45+07:00 INFO (6): 
+Elapsed Secs: 0.00082
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:17:45+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: connect
+Params: []
+
+2015-07-05T14:17:45+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:17:45+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:17:45+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:23:09+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:23:09+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:23:09+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T14:23:09+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:23:09+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:23:09+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:23:31+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:23:32+07:00 INFO (6): 
+Elapsed Secs: 0.0688
+Query: UPDATE `user_login` SET `status` = ? WHERE (id_user ='16')
+Params: {"1":0}
+
+2015-07-05T14:23:37+07:00 INFO (6): 
+Elapsed Secs: 0.00111
+Query: connect
+Params: []
+
+2015-07-05T14:23:37+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `user`
+Params: []
+
+2015-07-05T14:23:37+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T14:23:37+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'admin') AND (user.password = 'd033e22ae348aeb5660fc2140aec35850c4da997')
+Params: []
+
+2015-07-05T14:23:37+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-05T14:23:37+07:00 INFO (6): 
+Elapsed Secs: 0.09328
+Query: UPDATE `user_login` SET `status` = ?, `login_time` = NOW(), `ip_login` = ?, `last_login` = ? WHERE (id_user = '16')
+Params: {"1":1,"2":"127.0.0.1","3":"2015-07-05 14:00:09"}
+
+2015-07-05T14:23:37+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '16')
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00057
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T14:23:43+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T14:23:45+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:23:45+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:23:45+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:23:45+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:23:45+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:23:45+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:27:41+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:27:41+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:27:41+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:27:41+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:27:41+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:27:41+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:28:16+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:28:16+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:28:16+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:28:16+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:28:16+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:28:16+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:28:48+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:28:48+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:28:48+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: connect
+Params: []
+
+2015-07-05T14:28:48+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:28:48+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:28:48+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:29:00+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:29:00+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:29:00+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:29:00+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:29:00+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:29:00+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:30:35+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:30:35+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:30:35+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T14:30:35+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:30:35+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:30:35+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:30:52+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:30:52+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:30:52+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T14:30:52+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:30:52+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:30:52+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:31:00+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:31:00+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:31:00+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:31:00+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:31:00+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:31:00+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00156
+Query: connect
+Params: []
+
+2015-07-05T14:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00058
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:31:42+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:31:45+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T14:31:45+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:31:45+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T14:31:45+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:31:45+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:31:45+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:31:52+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:31:52+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:31:52+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:31:52+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:31:52+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:31:52+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:32:03+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:32:03+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:32:03+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:32:03+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:32:03+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:32:03+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00078
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00081
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:32:57+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:33:01+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:33:01+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:33:07+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:34:35+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:34:35+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:34:35+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:34:35+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:34:35+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:34:35+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:35:12+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:35:12+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:35:12+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:35:12+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:35:12+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:35:12+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:35:17+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:35:17+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:35:17+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:35:17+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:35:17+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:35:17+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:35:21+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:35:21+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:35:21+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:35:21+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:35:21+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:35:21+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:36:39+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:36:39+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:36:39+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T14:36:39+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:36:39+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:36:39+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:37:32+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:37:32+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:37:32+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-07-05T14:37:32+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:37:32+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:37:32+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:37:38+07:00 INFO (6): 
+Elapsed Secs: 0.00121
+Query: connect
+Params: []
+
+2015-07-05T14:37:38+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:37:38+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:37:38+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:37:38+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:37:38+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:37:57+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:37:57+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:37:57+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:37:57+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:37:57+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:37:57+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T14:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:38:17+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:38:35+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:38:35+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:38:35+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:38:35+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:38:35+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:38:35+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:39:02+07:00 INFO (6): 
+Elapsed Secs: 0.00112
+Query: connect
+Params: []
+
+2015-07-05T14:39:02+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:39:02+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:39:02+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:39:02+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:39:02+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:39:05+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:39:05+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:39:05+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:39:05+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:39:05+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:39:05+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:39:07+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T14:39:07+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:39:07+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:39:07+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:39:07+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:39:07+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:39:10+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:39:23+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:39:23+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:39:23+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T14:39:23+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:39:23+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:39:23+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:40:05+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-05T14:40:05+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:40:05+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:40:05+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:40:05+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:40:05+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:40:31+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:40:31+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:40:31+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:40:31+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:40:31+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:40:31+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:41:45+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: connect
+Params: []
+
+2015-07-05T14:41:45+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:41:45+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:41:45+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:41:45+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:41:45+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:41:55+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:41:55+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:41:55+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:41:55+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:41:55+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:41:55+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:42:16+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:42:16+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:42:16+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:42:16+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:42:16+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:42:16+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:42:23+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:42:23+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:42:23+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:42:23+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:42:23+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:42:23+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:42:25+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:42:25+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:42:25+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T14:42:25+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:42:25+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:42:25+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:42:27+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:42:27+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:42:27+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:42:27+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:42:27+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:42:27+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:43:12+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-07-05T14:43:12+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:43:12+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:43:12+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:43:12+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:43:12+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:43:14+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:43:14+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:43:14+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:43:14+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:43:14+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:43:14+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:44:50+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-07-05T14:44:50+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:44:50+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:44:50+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:44:50+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:44:50+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:44:50+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `kendaraan`.* FROM `kendaraan` WHERE (no_polisi = 'BE85') LIMIT 1
+Params: []
+
+2015-07-05T14:44:59+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:44:59+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:44:59+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:44:59+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:44:59+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:44:59+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:44:59+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `kendaraan`.* FROM `kendaraan` WHERE (no_polisi = 'BE123') LIMIT 1
+Params: []
+
+2015-07-05T14:48:02+07:00 INFO (6): 
+Elapsed Secs: 0.00301
+Query: connect
+Params: []
+
+2015-07-05T14:48:02+07:00 INFO (6): 
+Elapsed Secs: 0.00119
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:48:02+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: connect
+Params: []
+
+2015-07-05T14:48:02+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:48:02+07:00 INFO (6): 
+Elapsed Secs: 0.00113
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:48:02+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:48:02+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: SELECT `kendaraan`.* FROM `kendaraan` WHERE (no_polisi = 'BE123') LIMIT 1
+Params: []
+
+2015-07-05T14:49:16+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:49:16+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:49:16+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T14:49:16+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:49:16+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:49:16+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T14:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:49:54+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:50:34+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:50:34+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:50:34+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: connect
+Params: []
+
+2015-07-05T14:50:34+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:50:34+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:50:34+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00116
+Query: connect
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:51:03+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:51:08+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:51:08+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:51:08+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:51:08+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:51:08+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:51:08+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:51:55+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:51:55+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:51:55+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T14:51:55+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:51:55+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:51:55+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:52:18+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:52:18+07:00 INFO (6): 
+Elapsed Secs: 0.00053
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:52:18+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:52:18+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:52:18+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:52:18+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:52:19+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:52:19+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:52:19+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:52:19+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:52:19+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:52:19+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:52:20+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:52:20+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:52:20+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:52:20+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:52:20+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:52:20+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:52:54+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:52:54+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:52:54+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:52:54+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:52:54+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:52:54+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00062
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:52:55+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:53:15+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: connect
+Params: []
+
+2015-07-05T14:53:15+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:53:15+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:53:15+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:53:15+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:53:15+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:53:48+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:53:48+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:53:48+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T14:53:48+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:53:48+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:53:48+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:54:30+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:54:30+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:54:30+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:54:30+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:54:30+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:54:30+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:55:34+07:00 INFO (6): 
+Elapsed Secs: 0.00058
+Query: connect
+Params: []
+
+2015-07-05T14:55:34+07:00 INFO (6): 
+Elapsed Secs: 0.00167
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:55:34+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: connect
+Params: []
+
+2015-07-05T14:55:34+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:55:34+07:00 INFO (6): 
+Elapsed Secs: 0.00067
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:55:34+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:05+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:56:05+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:05+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:56:05+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:05+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:05+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:32+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:56:32+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:32+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:56:32+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:32+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:32+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:32+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:56:35+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-07-05T14:56:35+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:35+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:56:35+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:35+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:35+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:35+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:56:38+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:56:38+07:00 INFO (6): 
+Elapsed Secs: 0.00044
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:38+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:56:38+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:38+07:00 INFO (6): 
+Elapsed Secs: 0.00037
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:38+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:38+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:56:41+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:56:41+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:41+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:56:41+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:41+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:41+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:41+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'qweq')
+Params: []
+
+2015-07-05T14:56:44+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:56:44+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:44+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:56:44+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:44+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:44+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:44+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T14:56:49+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:56:49+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:49+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:56:49+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:49+07:00 INFO (6): 
+Elapsed Secs: 0.00034
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:49+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:49+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T14:56:52+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:56:52+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:52+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:56:52+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:52+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:52+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:52+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = '51214')
+Params: []
+
+2015-07-05T14:56:56+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:56:56+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:56:56+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T14:56:56+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:56:56+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:56:56+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:56:56+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = '51214')
+Params: []
+
+2015-07-05T14:57:03+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:57:03+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:03+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-07-05T14:57:03+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:03+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:03+07:00 INFO (6): 
+Elapsed Secs: 8.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:57:03+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = '51214')
+Params: []
+
+2015-07-05T14:57:04+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T14:57:04+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:04+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-07-05T14:57:04+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:04+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:04+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:57:04+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = '51214')
+Params: []
+
+2015-07-05T14:57:08+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:57:08+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:08+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T14:57:08+07:00 INFO (6): 
+Elapsed Secs: 0.00011
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:08+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:08+07:00 INFO (6): 
+Elapsed Secs: 9.0E-5
+Query: SELECT `kendaraan`.`no_polisi`, `kendaraan`.`nik_costumer` FROM `kendaraan`
+Params: []
+
+2015-07-05T14:57:08+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = '51214')
+Params: []
+
+2015-07-05T14:57:31+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: connect
+Params: []
+
+2015-07-05T14:57:31+07:00 INFO (6): 
+Elapsed Secs: 0.00074
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:31+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:57:31+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:31+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:47+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:57:47+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:47+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:57:47+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:47+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:47+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:57:47+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = '51214')
+Params: []
+
+2015-07-05T14:57:52+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:57:52+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:52+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:57:52+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:52+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:52+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:57:52+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T14:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:57:54+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:57:57+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:57:59+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:57:59+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:57:59+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: connect
+Params: []
+
+2015-07-05T14:57:59+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:57:59+07:00 INFO (6): 
+Elapsed Secs: 0.00074
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:57:59+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:57:59+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T14:58:03+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: connect
+Params: []
+
+2015-07-05T14:58:03+07:00 INFO (6): 
+Elapsed Secs: 0.0012
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T14:58:03+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T14:58:03+07:00 INFO (6): 
+Elapsed Secs: 0.00109
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:58:03+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: connect
+Params: []
+
+2015-07-05T14:58:03+07:00 INFO (6): 
+Elapsed Secs: 0.00058
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T14:58:06+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: connect
+Params: []
+
+2015-07-05T14:58:06+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:58:06+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-07-05T14:58:06+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: SELECT `ken`.*, `cos`.`id_cabang`, `us`.`id_user`, `cb`.`cabang` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer=ken.nik_costumer
+ INNER JOIN `user` AS `us` ON us.id_user = cos.id_user
+ INNER JOIN `cabang` AS `cb` ON cos.id_cabang = cb.id_cabang
+Params: []
+
+2015-07-05T14:58:13+07:00 INFO (6): 
+Elapsed Secs: 0.00165
+Query: connect
+Params: []
+
+2015-07-05T14:58:13+07:00 INFO (6): 
+Elapsed Secs: 0.00061
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:58:13+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:58:13+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:58:13+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:58:13+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-07-05T14:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:58:45+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:00+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:59:00+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:00+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-07-05T14:59:00+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:00+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:00+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:20+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:59:20+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:20+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-07-05T14:59:20+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:20+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:20+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:22+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:59:22+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:22+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:59:22+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:22+07:00 INFO (6): 
+Elapsed Secs: 0.00059
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:22+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:22+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-07-05T14:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:25+07:00 INFO (6): 
+Elapsed Secs: 0.00013
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00046
+Query: DESCRIBE `cabang`
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `cabang`.* FROM `cabang` WHERE (id_cabang = '29' ) LIMIT 1
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00043
+Query: DESCRIBE `pinjaman`
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `pin`.*, `cos`.`nama` FROM `pinjaman` AS `pin`
+ INNER JOIN `costumer` AS `cos` ON pin.nik_costumer = cos.nik_costumer
+ INNER JOIN `user` AS `us` ON cos.id_user = us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (us.id_user = '16') AND (cb.id_cabang = '29')
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00042
+Query: DESCRIBE `spb`
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T14:59:30+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `spb`.* FROM `spb` WHERE (no_kontrak) LIMIT 1
+Params: []
+
+2015-07-05T14:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-07-05T14:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.0001
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:32+07:00 INFO (6): 
+Elapsed Secs: 0.00012
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:34+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-07-05T14:59:34+07:00 INFO (6): 
+Elapsed Secs: 0.00063
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:34+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-07-05T14:59:34+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:34+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:34+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:34+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:59:48+07:00 INFO (6): 
+Elapsed Secs: 0.00171
+Query: connect
+Params: []
+
+2015-07-05T14:59:48+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:48+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-07-05T14:59:48+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:48+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:48+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:48+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:59:51+07:00 INFO (6): 
+Elapsed Secs: 0.00038
+Query: connect
+Params: []
+
+2015-07-05T14:59:51+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:51+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:59:51+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:51+07:00 INFO (6): 
+Elapsed Secs: 0.00057
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:51+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:51+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'BE85')
+Params: []
+
+2015-07-05T14:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-07-05T14:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00045
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-07-05T14:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-07-05T14:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: SELECT `costumer`.`nik_costumer` FROM `costumer`
+Params: []
+
+2015-07-05T14:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.0004
+Query: DESCRIBE `kendaraan`
+Params: []
+
+2015-07-05T14:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `ken`.`no_polisi`, `ken`.`nik_costumer` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer
+Params: []
+
+2015-07-05T14:59:54+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama` FROM `kendaraan` AS `ken`
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer = ken.nik_costumer WHERE (ken.no_polisi = 'Plat')
+Params: []
+

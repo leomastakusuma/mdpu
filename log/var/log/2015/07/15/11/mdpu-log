@@ -1,0 +1,446 @@
+2015-07-15T11:30:16+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:16+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:17+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:17+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:37+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:37+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:37+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:37+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:51+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:51+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:51+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:51+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:30:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:04+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:16+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:26+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:31:52+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:42+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:46+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:48+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:32:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:36:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:23+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:27+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:27+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:27+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:27+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:38:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:39:56+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:40:50+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:25+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:25+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:25+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:25+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:33+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:38+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:40+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:52+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:52+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:41:59+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:41:59+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:42:08+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:42:08+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:42:12+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:42:12+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:42:14+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:42:14+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:42:14+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:42:14+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:42:14+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:42:14+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:24+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:29+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:43:32+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:19+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:27+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:27+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:27+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:27+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:31+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:53:43+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:05+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:05+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:05+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:05+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:06+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:06+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:06+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:06+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:09+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:09+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:09+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:09+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:12+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:15+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : 
+2015-07-15T11:56:18+07:00 DEBUG (7): connect to adapter : default  for connection : select
