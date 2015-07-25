@@ -69,10 +69,12 @@
                 <thead>
                     <tr>
                         <th class="col-lg-1">No Kwitansi</th>
-                        <th class="col-sm-2">Tanggal Pembayaran</th>
+                        <th class="col-sm-1">Tanggal Pembayaran</th>
                         <th class="col-sm-1">Angsuran Ke</th>
                         <th class="col-sm-2">Angsuran Perbulan</th>
-                        <th class="col-sm-1">Denda</th>
+                        <th class="col-sm-1">Denda Total</th>
+                        <th class="col-sm-1">Denda Dibayar</th>
+                        <!--<th class="col-sm-1">Sisa Denda</th>-->
                         <th class="col-sm-1">Potongan</th>
                         <th class="col-sm-1">Total Bayar</th>
                     </tr>
@@ -86,7 +88,9 @@
                             <td><?php echo $val['tanggal_pembayaran'] ?></td>
                             <td><?php echo $val['angsuran_ke'] ?></td>
                             <td><?php echo 'Rp.'.$val['angsuran_perbulan'] ?></td>
-                            <td><?php echo 'Rp.'.$val['denda']; ?></td>
+                            <td><?php echo 'Rp.'.$val['denda_terhitung']; ?></td>
+                            <td><?php echo 'Rp.'.$val['denda_dibayar']; ?></td>
+                            <!--<td><?php //echo 'Rp.'.$val['sisa_denda']; ?></td>-->
                             <td><?php echo 'Rp.'.$val['potongan']; ?></td>
                             <td><?php echo 'Rp.'.$val['total_bayar']; ?></td>
                             

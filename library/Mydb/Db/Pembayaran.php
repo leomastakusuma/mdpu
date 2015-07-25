@@ -49,11 +49,15 @@ class Mydb_Db_Pembayaran extends Mydb_Db_Abstract {
 
     public function getDetailAngsuran($id_pinjaman) {
         $select = $this->select();
+       
         $select->from(array('pemb' => 'pembayaran'), array('*'));
         $select->setIntegrityCheck(false);
         $select->join(array('pinj' => 'pinjaman'), 'pinj.no_kontrak = pemb.no_kontrak', array());
+        $select->join(array('kp' => 'kartu_piutang'), 'pinj.no_kontrak = kp.no_kontrak', array('*'));
         $select->where('pinj.id_pinjaman = ?', $id_pinjaman);
-        $select->order('id_pembayaran desc');
+        $select->group(array("kp.no_kwitansi"));
+        $select->order('kp.no_kwitansi desc');
+
         return $this->getAdapter()->fetchAll($select);
     }
 

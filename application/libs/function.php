@@ -13,7 +13,7 @@ function pr($var) {
 }
 
 function rupiah($angka) {
-    $rupiah = number_format($angka, 2, ',', '.');
+    $rupiah = number_format($angka, 0, ',', '.');
     return $rupiah;
 }
 
@@ -57,4 +57,13 @@ function generateKwintansi($last, $length = 5) {
     $randomString = 'KW-';
     $randomString .=$nol.$characters.'-' . date('m').'-'.date('y');
     return $randomString;
+}
+
+/**
+ * 
+ * @param type $string_number
+ * @return type Float
+ */
+function isFloatNum($string_number){
+  return  $number = floatval(str_replace(',', '.', str_replace('.', '', $string_number)));
 }

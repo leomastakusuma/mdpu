@@ -1,5 +1,4 @@
 <?php
-
 /**
  * MDPU Finance
  * @category   Modules
@@ -7,17 +6,16 @@
  * @subpackage Form
  * @filesource form-add-pinjaman.phtml
  */
-
 ?>
 <script type="text/javascript">
-    
-  function MM_jumpMenu(targ,selObj){
-     eval(targ+".location='"+document.getElementById("no_kontrak").value+"'" );
-  }
-  var halaman = function (val){
-      var url = '<?php echo URL?>/pembayaran/index/add/';
-      document.location.href=url+val;
-  }
+
+    function MM_jumpMenu(targ, selObj) {
+        eval(targ + ".location='" + document.getElementById("no_kontrak").value + "'");
+    }
+    var halaman = function (val) {
+        var url = '<?php echo URL ?>/pembayaran/index/add/';
+        document.location.href = url + val;
+    }
 </script>
 
 
@@ -30,7 +28,7 @@
                     <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
                 </li>
                 <li>
-                    <i class="fa  fa-table"></i> <a href="<?php echo URL?>pembayaran">Data Pembayaran</a>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>pembayaran">Data Pembayaran</a>
                 </li>
                 <li>
                     Input Pembayaran
@@ -45,102 +43,163 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Pembayaran</h3>
                 </div>
-                <?php if(!empty($error)):?>
-                   <div class="alert alert-error alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
-                    <?php echo $error;?>
-                  </div>
-                <?php endif;?>
+<?php if ( !empty( $error ) ): ?>
+                    <div class="alert alert-error alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
+    <?php echo $error; ?>
+                    </div>
+                    <?php endif; ?>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="<?php echo URL ?>pembayaran/index/save" method="post" enctype="multipart/form-data">
-                        
+
                         <div class="form-group ">
                             <label for="No Kotrak" class="col-sm-3 control-label">No Kotrak</label>
                             <div class="input-group col-sm-5">
                                 <select name="no_kontrak" id="agama" class="col-sm-5"  required="true"  onchange="halaman(this.value)">
-                                    <option value="<?php echo (!empty($form['no_kontrak']) ? $form['no_kontrak']: (!empty($nopos) ? $nopos : ''));?>"><?php echo (!empty($form['no_kontrak']) ? $form['no_kontrak']: (!empty($nopos) ? $nopos : 'No Kontrak'));?></option>
-                                    <?php foreach ($no_kontrak as $key=>$val):?>
-                                        <?php if($val['no_kontrak']!=$nopos):?>
-                                            <option value="<?php echo $val['no_kontrak'];?>"><?php echo $val['no_kontrak'];?></option>
-                                        <?php endif;?>    
-                                    <?php endforeach;?>
+                                    <option value="<?php echo (!empty( $form[ 'no_kontrak' ] ) ? $form[ 'no_kontrak' ] : (!empty( $nopos ) ? $nopos : '')); ?>"><?php echo (!empty( $form[ 'no_kontrak' ] ) ? $form[ 'no_kontrak' ] : (!empty( $nopos ) ? $nopos : 'No Kontrak')); ?></option>
+<?php foreach ( $no_kontrak as $key => $val ): ?>
+                                        <?php if ( $val[ 'no_kontrak' ] != $nopos ): ?>
+                                            <option value="<?php echo $val[ 'no_kontrak' ]; ?>"><?php echo $val[ 'no_kontrak' ]; ?></option>
+                                        <?php endif; ?>    
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="No Kwitansi" class="col-sm-3 control-label">No Kwitansi</label>
                             <div class="input-group col-sm-3">
-                                <input type="text" class="form-control" id="nama" placeholder="No Kwitansi" name="no_kwitansi" readonly="true" required="true" value="<?php echo (!empty($data['no_kwitansi'])? $data['no_kwitansi'] : (!empty($form['no_kwitansi'] ) ? $form['no_kwitansi'] : ''));?>">
-                            </div>
-                        </div>   
-                                              
-                        <div class="form-group">
-                            <label for="Nama" class="col-sm-3 control-label">Nama</label>
-                            <div class="input-group col-sm-3">
-                                <input type="text" class="form-control" id="nama" placeholder="Nama Kreditur" name="nama" readonly="true" required="true" value="<?php echo (!empty($data['nama'])? $data['nama'] : (!empty($form['nama'] ) ? $form['nama'] : ''));?>">
-                            </div>
-                        </div>   
-                                              
-                        <div class="form-group">
-                            <label for="No Polisi" class="col-sm-3 control-label">No Polisi</label>
-                           <div class="input-group col-sm-3">
-                               <input type="text" placeholder="No Polisi" class="form-control" name="no_polisi" required="true" id="nopolisi" readonly="true" value="<?php echo (!empty($data['no_polisi']) ? $data['no_polisi'] : '');?>">                             
-                            </div>
-                        </div>   
-                        
-                        <div class="form-group">
-                            <label for="Angsuran-Ke" class="col-sm-3 control-label">Angsuran-Ke</label>
-                            <div class="input-group col-sm-1">
-                                <?php if(!empty($data['angsuran_ke'])):?>
-                                     <?php  $angsuran =$data['angsuran_ke'];?>
-                               
-                                <?php endif;?>
-                               
-                                <input type="text" class="form-control" name="angsuran_ke"  required="true" readonly="true" value="<?php echo (!empty($angsuran) ? $angsuran : 0);?>">
-                                 <span class="input-group-addon">X</span>
-                            </div>
-                            
-                        </div>    
-                        
-                        <div class="form-group">
-                            <label for="Jumlah Angsuran" class="col-sm-3 control-label">Jumlah Angsuran</label>
-                           <div class="input-group col-sm-3">
-                                <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="angsuran_perbulan" required="true" id="currency" readonly="true" value="<?php echo (!empty($data['angsuran_perbulan']) ? rupiah($data['angsuran_perbulan']): null)?>">
-                                <span class="input-group-addon">.00</span>
-                            </div>
-                        </div>   
-                                               
-                        
-                        <div class="form-group">
-                            <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Denda</label>
-                            <div class="input-group col-sm-3">
-                                <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="denda"  required="true" readonly="true" value="<?php echo (!empty($data['denda']) ? rupiah($data['denda']): '00')?>">
-                                <span class="input-group-addon">.00</span>
-                            </div>
-                        </div>   
-                        
-                        <div class="form-group">
-                            <label for="Jumlah Potongan" class="col-sm-3 control-label">Jumlah Potongan</label>
-                            <div class="input-group col-sm-3">
-                                <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="potongan"  required="true" readonly="true" value="<?php echo (!empty($data['potongan']) ? rupiah($data['potongan']): '00')?>">
-                                <span class="input-group-addon">.00</span>
+                                <input type="text" class="form-control" id="nama" placeholder="No Kwitansi" name="no_kwitansi" readonly="true" required="true" value="<?php echo (!empty( $data[ 'no_kwitansi' ] ) ? $data[ 'no_kwitansi' ] : (!empty( $form[ 'no_kwitansi' ] ) ? $form[ 'no_kwitansi' ] : '')); ?>">
                             </div>
                         </div>   
 
                         <div class="form-group">
+                            <label for="Nama" class="col-sm-3 control-label">Nama</label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" class="form-control" id="nama" placeholder="Nama Kreditur" name="nama" readonly="true" required="true" value="<?php echo (!empty( $data[ 'nama' ] ) ? $data[ 'nama' ] : (!empty( $form[ 'nama' ] ) ? $form[ 'nama' ] : '')); ?>">
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="No Polisi" class="col-sm-3 control-label">No Polisi</label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" placeholder="No Polisi" class="form-control" name="no_polisi" required="true" id="nopolisi" readonly="true" value="<?php echo (!empty( $data[ 'no_polisi' ] ) ? $data[ 'no_polisi' ] : ''); ?>">                             
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Angsuran-Ke" class="col-sm-3 control-label">Angsuran-Ke</label>
+                            <div class="input-group col-sm-1">
+<?php if ( !empty( $data[ 'angsuran_ke' ] ) ): ?>
+                                    <?php $angsuran = $data[ 'angsuran_ke' ]; ?>
+
+                                <?php endif; ?>
+
+                                <input type="text" class="form-control" name="angsuran_ke"  required="true" readonly="true" value="<?php echo (!empty( $angsuran ) ? $angsuran : 0); ?>">
+                                <span class="input-group-addon">X</span>
+                            </div>
+
+                        </div>    
+
+                        <div class="form-group">
+                            <label for="Jumlah Angsuran" class="col-sm-3 control-label">Jumlah Angsuran</label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="angsuran_perbulan" required="true" id="currency" readonly="true" value="<?php echo (!empty( $data[ 'angsuran_perbulan' ] ) ? rupiah( $data[ 'angsuran_perbulan' ] ) : null) ?>">
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Jumlah Potongan" class="col-sm-3 control-label">Jumlah Potongan</label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="potongan"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'potongan' ] ) ? rupiah( $data[ 'potongan' ] ) : '00') ?>">
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Jumlah Denda Sebelumnya" class="col-sm-3 control-label">Jumlah Denda Sebelumnya </label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="denda_sebelumnya"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda_sebelumnya' ] ) ? rupiah( $data[ 'denda_sebelumnya' ] ) : '0,00') ?>">
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Telat Bayar</label>
+                            <div class="input-group col-lg-1">
+                                <input type="text" class="form-control" name="telat_bayar"  required="true" readonly="true" value="<?php echo (!empty( $totaldate ) ? $totaldate : '-') ?>">
+                                <span class="input-group-addon">Hari</span>
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Denda </label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="jumlah_denda"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda' ] ) ? rupiah( $data[ 'denda' ] ) : '0,00') ?>">
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Denda Terhitung </label>
+                            <div class="input-group col-sm-3">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="denda_total"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda_terhitung' ] ) ? rupiah( $data[ 'denda_terhitung' ] ) : '0,00') ?>">
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+
+                        <div class="form-group ">
+                            <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Bayar Denda </label>
+                            <div class="input-group col-sm-3 ">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="denda_dibayar" id="denda"onkeyup="isiDenda()" >
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+
+
+                        <!--                        <div class="form-group">
+                                                    <label class="col-sm-2 control-label">First name</label>
+                                                    <div class="col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="First name" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
+                                                    </div>
+                                                    <label class="col-sm-2 control-label">Last name</label>
+                                                    <div class="col-sm-4">
+                                                            <input type="text" class="form-control" placeholder="Last name" data-toggle="tooltip" data-placement="bottom" title="Tooltip for last name">
+                                                    </div>
+                                                </div>  -->
+                        <div class="form-group">
                             <label for="Total Bayar" class="col-sm-3 control-label">Total Bayar</label>
                             <div class="input-group col-sm-3">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="total_bayar"  required="true" readonly="true" value="<?php echo (!empty($data['total_bayar']) ? rupiah($data['total_bayar']) : '00')?>">
-                                <span class="input-group-addon">.00</span>
+                                <input type="text" class="form-control" name="total_bayar"  id="total_bayar" required="true" readonly="true" value="<?php echo (!empty( $data[ 'total_bayar' ] ) ? rupiah( $data[ 'total_bayar' ] ) : '00') ?>">
+                                <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>  
- 
+                        <div class="form-group ">
+                            <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Uang  Dibayar </label>
+                            <div class="input-group col-sm-3 ">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="bayar" id="bayar" onkeyup="isiBayar()" >
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+                        <div class="form-group ">
+                            <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Kembalian  </label>
+                            <div class="input-group col-sm-3 ">
+                                <span class="input-group-addon">Rp</span>
+                                <input type="text" class="form-control" name="kembalian" id="kembalian"  readonly="true">
+                                <!--<span class="input-group-addon">.00</span>-->
+                            </div>
+                        </div>   
+
                         <div class="form-group">
                             <div class="input-group col-sm-offset-3 col-sm-10">
                                 <button type="submit" class="btn btn-primary">Save</button> &nbsp;
@@ -156,7 +215,41 @@
     </div>
 </div>
 <script type="text/javascript">
-    document.ready({
-        
-    });
-    </script>
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+   var totalBayar=parseFloat(<?php echo $data[ 'total_bayar' ]; ?>),
+           bayarDendaMax = parseFloat(<?php echo $data[ 'denda_terhitung' ]?>),
+           totalBayarAkhir,
+           kembalian;
+           
+    totalBayarAkhir=totalBayar;
+    var isiDenda = function(){
+       var bayarDenda = parseFloat($('#denda').val());
+       if(bayarDenda){
+           if(bayarDenda<=bayarDendaMax){
+               totalBayarAkhir = totalBayar+bayarDenda;               
+           }
+           else{
+               totalBayarAkhir = totalBayar+bayarDendaMax;
+               $('#denda').val(bayarDendaMax);
+           }
+          
+          $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
+       }
+       else{
+           totalBayarAkhir=totalBayar;
+           $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
+       }
+   };
+   
+   var isiBayar = function(){
+       var uangBayar = parseFloat($('#bayar').val());
+       if(uangBayar){
+           $('#kembalian').val(numberWithCommas(uangBayar-totalBayarAkhir));
+       }
+       else{
+           $('#kembalian').val('');
+       }
+   };
+</script>
