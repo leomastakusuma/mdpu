@@ -410,4 +410,27 @@ final class Mydb
         }
         return self::registry($key);
     }
+    /**
+     * @access  model untuk memanggil getModelBBPenerimaanKas yang digunakan untuk memanage table Kartu Piutang
+     * @return Mydb_Db_BBPenerimaanKas
+     */
+    public static function getModelBBPenerimaanKas() {
+        $key = 'Mydb_Db_BBPenerimaanKas';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_BBPenerimaanKas());
+        }
+        return self::registry($key);
+    }
+    
+    /**
+     * @access  model untuk memanggil getModelBBPiutang yang digunakan untuk memanage table Kartu Piutang
+     * @return Mydb_Db_BBPiutang
+     */
+    public static function getModelBBPiutang() {
+        $key = 'Mydb_Db_BBPiutang';
+        if (self::registry($key) === null) {
+            self::register($key, new Mydb_Db_BBPiutang());
+        }
+        return self::registry($key);
+    }
 }

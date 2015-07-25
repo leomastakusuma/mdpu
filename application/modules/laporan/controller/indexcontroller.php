@@ -3,7 +3,7 @@
 /**
  * MDPU Finance
  * @category   Modules
- * @package    Pembayaran
+ * @package    Laporan
  * @subpackage Controller
  * @filesource IndexController
  */
@@ -17,8 +17,6 @@ class IndexController extends Controller {
     protected $_modelUser;
     protected $_modelPembayaran;
     protected $_modelKartuPiutang;
-    protected $_modelBBPenerimaanKas;
-    protected $_modelBBPiutang;
     public $id_user;
     public $id_cabang;
 
@@ -32,14 +30,12 @@ class IndexController extends Controller {
         $this->_modelKendaraan = Mydb::getModelKendaraan();
         $this->_modelPembayaran = Mydb::getModelPembayaran();
         $this->_modelKartuPiutang = Mydb::getModelKartuPiutang();
-        $this->_modelBBPenerimaanKas = Mydb::getModelBBPenerimaanKas();
-        $this->_modelBBPiutang = Mydb::getModelBBPiutang();
         $this->id_user = $_SESSION[ 'dataLogin' ][ 'id_user' ];
         $this->id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
     }
 
     public function index() {
-        if ( ($_SESSION[ 'level' ] != 'kasir' ) ) {
+        if ( ($_SESSION[ 'level' ] != 'akuntan' ) ) {
             $this->redirect( 'error/index/notAllowed' );
         }
         require UD . 'headerDataTables.phtml';
@@ -56,7 +52,7 @@ class IndexController extends Controller {
     }
 
     public function add( $nopos = null ) {
-        if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'kasir') ) {
+        if ( ($_SESSION[ 'level' ] != 'akuntan') && ($_SESSION[ 'level' ] != 'kasir') ) {
             $this->redirect( 'error/index/notAllowed' );
         }
 
@@ -124,7 +120,7 @@ class IndexController extends Controller {
             /* Cek Denda Belum Dibayar */
         }
         require UD . 'header.html';
-        require APP_MODUL . '/pembayaran/form/form-pembayaran.phtml';
+        require APP_MODUL . '/laporan/form/form-kartupiutang.phtml';
         require UD . 'footer.html';
     }
 
@@ -167,29 +163,8 @@ class IndexController extends Controller {
         $dataKP[ 'tanggal_bayar_angsuran' ] = new Zend_Db_Expr( 'NOW()' );
         if ( !empty( $dataKP[ 'denda_dibayar' ] ) ) {
             $dataKP[ 'tanggal_bayar_denda' ] = new Zend_Db_Expr( 'NOW()' );
-        }else{
-            $dataKP['denda_dibayar']=  rupiah(0);
         }
         /* End Field */
-
-
-        /* Field For Insert Into BB Penerimaan kas */
-        $dataBBKas[ 'no_kontrak' ] = $dataKP[ 'no_kontrak' ];
-        $dataBBKas[ 'no_kwitansi' ] = $dataKP[ 'no_kwitansi' ];
-        $dataBBKas[ 'angsuran_ke' ] = $dataKP[ 'angsuran_ke' ];
-        $dataBBKas[ 'angsuran' ] = $dataKP[ 'tagihan' ];
-        $dataBBKas[ 'denda' ] = $dataKP[ 'denda_dibayar' ];
-        $dataBBKas[ 'biaya_tagih' ] = $dataKP[ 'pembayaran' ];
-        $dataBBKas[ 'bo' ] = $dataKP[ 'pembayaran' ];
-        $dataBBKas[ 'discount' ] = $dataKP[ 'pembayaran' ];
-        $dataBBKas[ 'total' ] = $form[ 'total_bayar' ];
-        $dataBBKas[ 'tgl_bayar' ] = new Zend_Db_Expr( 'NOW()' );
-        $dataBBKas[ 'keterangan' ] = 'OKE';
-        /* End Field */
-
-
-
-        $dataBBPiutang['nama']=$form['nama']; #field BB Piutang
         unset( $form[ 'nama' ] );
         unset( $form[ 'no_polisi' ] );
         unset( $form[ 'denda_sebelumnya' ] );
@@ -206,35 +181,6 @@ class IndexController extends Controller {
             $this->_modelPembayaran->insert( $form );
             #Insert Into Table Kartu Piutang
             $this->_modelKartuPiutang->insert( $dataKP );
-            #insert Into Table BB Penerimaan Kas
-            $this->_modelBBPenerimaanKas->insert( $dataBBKas );
-            
-            /* Field For Insert Into BB Piutang */
-            $dataBBPiutang[ 'debit' ] = $this->_modelKartuPiutang->getSumTotalAngsuran( $form[ 'no_kontrak' ] );
-
-            $debit = 0;
-            foreach ( $dataBBPiutang[ 'debit' ] as $k => $v ) {
-                $debit +=isFloatNum( $v[ 'pembayaran' ] );
-            }
-            $where = $this->_modelPinjaman->getAdapter()->quoteInto( 'no_kontrak = ?', $form[ 'no_kontrak' ] );
-            $totalPinjaman = $this->_modelPinjaman->fetchRow( $where );
-            $totalDebit = $totalPinjaman[ 'nilai_pinjaman' ] - $debit;
-
-            $getSaldo = $this->_modelBBPiutang->getSumTotalSaldo( $form[ 'no_kontrak' ] );
-            if ( !empty( $getSaldo ) ) {
-                $totalSaldo = $getSaldo[ 'saldo' ] + $totalDebit;
-            } else {
-                $totalSaldo = $totalDebit;
-            }
-            $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
-            $dataBBPiutang[ 'debit' ] = rupiah( $totalDebit );
-            $dataBBPiutang[ 'saldo' ] = rupiah( $totalSaldo );
-            
-            /* End Field */
-            #Insert Into BB Piutang;
-            $this->_modelBBPiutang->insert($dataBBPiutang);
-
-
 
             require UD . 'header.html';
             $id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
@@ -308,4 +254,35 @@ class IndexController extends Controller {
         require APP_MODUL . '/pembayaran/view/Cetakkwitansi.phtml';
     }
 
+    public function KartuPiutang( $nopos = null ) {
+        if ( ($_SESSION[ 'level' ] != 'akuntan') && ($_SESSION[ 'level' ] != 'kasir') ) {
+            $this->redirect( 'error/index/notAllowed' );
+        }
+
+        $no_kontrak = $this->_modelCostumer->getNoKontrak();
+        $params = $this->getRequest();
+        if ( !empty( $params[ 'params' ] ) ) {
+            $nokontrak = array_shift( $params[ 'params' ] );
+            $data = $this->_modelCostumer->getDetailPembayaran( $nokontrak );
+            $angsuran = $this->_modelPembayaran->getAngsuranKe( $nokontrak );
+            $lastAngsuran = $this->_modelPembayaran->getLastAngsuran( 0, $nokontrak );
+
+            $last = $this->_modelPembayaran->getLastId() + 1;
+            $data[ 'no_kwitansi' ] = generateKwintansi( $last );
+            $data[ 'angsuran_ke' ] = !empty( $angsuran[ 'angsuran_ke' ] ) ? $angsuran[ 'angsuran_ke' ] + 1 : $angsuran[ 'angsuran_ke' ] + 1;
+
+            
+        }
+        require UD . 'header.html';
+        require APP_MODUL . '/laporan/form/form-kartupiutang.phtml';
+        require UD . 'footer.html';
+    }
+    
+    public function cetakKP(){
+        $form = $this->getPost();
+        if(!empty($form['no_kontrak'])){
+            $this->redirect('error');
+        }
+        $data = $this->_modelKartuPiutang;
+    }
 }

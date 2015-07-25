@@ -1,0 +1,137 @@
+<?php
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    pinjaman
+ * @subpackage Form
+ * @filesource form-add-pinjaman.phtml
+ */
+?>
+<script type="text/javascript">
+
+    function MM_jumpMenu(targ, selObj) {
+        eval(targ + ".location='" + document.getElementById("no_kontrak").value + "'");
+    }
+    var halaman = function (val) {
+        var url = '<?php echo URL ?>/laporan/index/kartupiutang/';
+        document.location.href = url + val;
+    }
+</script>
+
+
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>pembayaran">Data Pembayaran</a>
+                </li>
+                <li>
+                    Input Pembayaran
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Pembayaran</h3>
+                </div>
+                <?php if ( !empty( $error ) ): ?>
+                    <div class="alert alert-error alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
+                        <?php echo $error; ?>
+                    </div>
+                <?php endif; ?>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>laporan/index/cetakKP" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group ">
+                            <label for="No Kotrak" class="col-sm-3 control-label">No Kotrak</label>
+                            <div class="input-group col-sm-5">
+                                <select name="no_kontrak" id="agama" class="col-sm-5"  required="true"  onchange="halaman(this.value)">
+                                    <option value="<?php echo (!empty( $form[ 'no_kontrak' ] ) ? $form[ 'no_kontrak' ] : (!empty( $nopos ) ? $nopos : '')); ?>"><?php echo (!empty( $form[ 'no_kontrak' ] ) ? $form[ 'no_kontrak' ] : (!empty( $nopos ) ? $nopos : 'No Kontrak')); ?></option>
+                                    <?php foreach ( $no_kontrak as $key => $val ): ?>
+                                        <?php if ( $val[ 'no_kontrak' ] != $nopos ): ?>
+                                            <option value="<?php echo $val[ 'no_kontrak' ]; ?>"><?php echo $val[ 'no_kontrak' ]; ?></option>
+                                        <?php endif; ?>    
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Nama" class="col-sm-3 control-label">Nama</label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" class="form-control" id="nama" placeholder="Nama Kreditur" name="nama" readonly="true" required="true" value="<?php echo (!empty( $data[ 'nama' ] ) ? $data[ 'nama' ] : (!empty( $form[ 'nama' ] ) ? $form[ 'nama' ] : '')); ?>">
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="No Polisi" class="col-sm-3 control-label">No Polisi</label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" placeholder="No Polisi" class="form-control" name="no_polisi" required="true" id="nopolisi" readonly="true" value="<?php echo (!empty( $data[ 'no_polisi' ] ) ? $data[ 'no_polisi' ] : ''); ?>">                             
+                            </div>
+                        </div>   
+
+
+
+                        <div class="form-group">
+                            <div class="input-group col-sm-offset-3 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Cetak</button> &nbsp;
+                            </div>
+                        </div>                               
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+    var totalBayar = parseFloat(<?php echo $data[ 'total_bayar' ]; ?>),
+            bayarDendaMax = parseFloat(<?php echo $data[ 'denda_terhitung' ] ?>),
+            totalBayarAkhir,
+            kembalian;
+
+    totalBayarAkhir = totalBayar;
+    var isiDenda = function () {
+        var bayarDenda = parseFloat($('#denda').val());
+        if (bayarDenda) {
+            if (bayarDenda <= bayarDendaMax) {
+                totalBayarAkhir = totalBayar + bayarDenda;
+            }
+            else {
+                totalBayarAkhir = totalBayar + bayarDendaMax;
+                $('#denda').val(bayarDendaMax);
+            }
+
+            $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
+        }
+        else {
+            totalBayarAkhir = totalBayar;
+            $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
+        }
+    };
+
+    var isiBayar = function () {
+        var uangBayar = parseFloat($('#bayar').val());
+        if (uangBayar) {
+            $('#kembalian').val(numberWithCommas(uangBayar - totalBayarAkhir));
+        }
+        else {
+            $('#kembalian').val('');
+        }
+    };
+</script>

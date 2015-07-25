@@ -13,14 +13,32 @@ class Mydb_Db_KartuPiutang extends Mydb_Db_Abstract {
     protected $_name = 'kartu_piutang';
     protected $_primary = 'id_piutang';
 
-    
-    public function getLastTotalDenda($no_kontrak){
+    public function getLastTotalDenda( $no_kontrak ) {
         $select = $this->select();
-        $select->from($this->_name,array('sisa_denda'));
-        $select->where('no_kontrak = ?',$no_kontrak);
-        $select->order('id_piutang desc');
-        return $this->getAdapterSelect()->fetchRow($select);
+        $select->from( $this->_name, array( 'sisa_denda' ) );
+        $select->where( 'no_kontrak = ?', $no_kontrak );
+        $select->order( 'id_piutang desc' );
+        return $this->getAdapterSelect()->fetchRow( $select );
     }
-    
-    
+
+    public function getSumTotalAngsuran( $no_kontrak ) {
+        $select = $this->select();
+        $select->from( array( 'kp' => 'kartu_piutang' ), array( 'kp.pembayaran' ) );
+        $select->where( 'kp.no_kontrak = ?', $no_kontrak );
+        return $this->getAdapterSelect()->fetchAll( $select );
+    }
+
+
+    public function getKartuPiutang( $no_kontrak ) {
+        $select = $this->select();
+        $select->from( array( 'kp' => 'kartu_piutang' ), array( '*' ) );
+        $select->setIntegrityCheck( false );
+        $select->join( array( 'pinj' => 'pinjaman' ), 'pinj.no_kontrak = kp.no_kontrak', array( 'lama_angsuran' ) );
+        $select->join( array( 'cos' => 'costumer' ), 'cos.nik_costumer = pinj.nik_costumer', array( '*' ) );
+        $select->join( array( 'penj' => 'penjamin' ), 'cos.nik_costumer = penj.nik_costumer', array( '*' ) );
+        $select->join( array( 'kend' => 'kendaraan' ), 'cos.nik_costumer = kend.nik_costumer', array( '*' ) );
+        $select->where( 'kp.no_kontrak = ?', $no_kontrak );
+        return $this->getAdapterSelect()->fetchAll( $select );
+    }
+
 }
