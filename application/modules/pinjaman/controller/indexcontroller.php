@@ -177,7 +177,46 @@ class IndexController extends Controller {
     }
 
     public function edit( $id_pinjaman ) {
-        echo $id_pinjaman;
+        if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'admin') ) {
+            $this->redirect( 'error/index/notAllowed' );
+        }
+        if ( empty( $id_pinjaman ) ) {
+            $this->redirect( 'error' );
+        }
+        $where = $this->_modelPinjaman->getAdapter()->quoteInto( 'id_pinjaman =?', $id_pinjaman );
+
+        $data = $this->_modelPinjaman->fetchRow( $where )->toArray();
+        $dataKonsumen = $this->_modelKendaraan->getKenCostum($data['no_polisi']);
+
+        require UD . 'header.html';
+        require APP_MODUL . '/pinjaman/form/form-edit-pinjaman.phtml';
+        require UD . 'footer.html';
+
+    }
+    public function saveedit(){
+        $form = $this->getPost();
+        $where = $this->_modelPinjaman->getAdapterSelect()->quoteInto('id_pinjaman = ?', $form['id_pinjaman']);
+        $data = $this->_modelPinjaman->fetchRow($where)->toArray();
+        unset($form['nama']);
+        if($data){
+            $where = $this->_modelPinjaman->getAdapter()->quoteInto('id_pinjaman = ?', $form['id_pinjaman']);
+            try {
+                $this->_modelPinjaman->update($form, $where);
+                require_once UD . 'header.html';
+                include APP_MODUL . '/pinjaman/form/form-edit-pinjaman.phtml';
+                require_once UD . 'footer.html';
+                echo "<script>alert('Berhasil Mengubah data Pinjaman');</script>";
+                echo "<script>window.location.href='".URL."pinjaman';</script>";
+            } catch (Exception $ex) {
+                require UD . 'header.html';
+                $error = $ex->getMessage();
+                include APP_MODUL . '/pinjaman/form/form-edit-pinjaman.phtml';
+                require UD . 'footer.html';
+            }
+        }
+        else{
+            $this->redirect('error');
+        }
     }
 
 }
