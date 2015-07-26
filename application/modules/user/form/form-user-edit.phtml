@@ -1,0 +1,116 @@
+<?php
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    User
+ * @subpackage Form
+ * @filesource form-user.php
+ */
+?>
+
+
+
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>user">Data User</a>
+                </li>
+                <li>
+                    Edit User
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Edit User</h3>
+                </div>
+                <div class="panel-body">
+                    <?php if(!empty($msg)):?>
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <?php echo $msg?>
+                        </div>
+                    <?php endif;?>
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>user/index/saveedit" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label for="realname" class="col-sm-2 control-label">Realname</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="username" placeholder="Realname" name="realname" required value="<?php echo $data['realname']?>">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label">Username</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="username" placeholder="Username" name="Username" required value="<?php echo $data['username']?>">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="password" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-3">
+                                <input type="password" class="form-control" id="password" placeholder="Password" name="password" required value="<?php echo $data['password']?>">
+                                <input type="hidden" class="form-control" id="id_user" placeholder="id_user" name="id_user" required value="<?php echo $data['id_user']?>">
+                            </div>
+                        </div>    
+
+                        <div class="form-group">
+                            <label for="level" class="col-sm-2 control-label">Level</label>    
+                            <div class="col-sm-3">
+                                <select name="level" class="form-control" required="">
+                                    <option value="">PILIH</option>
+                                    <option value="admin" selected="<?php echo $data['level']=='admin'?true:false?>">Administrator</option>
+                                    <option value="kasir" selected="<?php echo $data['level']=='kasir'?true:false?>">Kasir</option>
+                                    <option value="pimpinan" selected="<?php echo $data['level']=='pimpinan'?true:false?>">Pimpinan</option>
+                                    <option value="akuntan" selected="<?php echo $data['level']=='akuntan'?true:false?>">Akuntansi</option>
+                                </select>
+
+                            </div>
+                        </div>    
+
+                        <div class="form-group">
+                            <label for="nama" class="col-sm-2 control-label">Cabang</label>
+                            <div class="col-sm-3">
+                                <!--<input type="text" class="form-control" id="judul" placeholder="Cabang" name="cabang"--> 
+                                <!--value =""required>-->
+                                <select name='id_cabang' id='cabang' class='form-control' required="">
+                                    <option value="">PILIH</option>
+                                    <?php foreach ($dataCabang as $key => $val): ?>
+                                        <option value="<?php echo $val['id_cabang'] ?>" <?php echo $data['id_cabang']==$val['id_cabang']?"selected":""; ?>>
+                                            <?php echo '( ' . $val['provinsi'] . ' ) ' . $val['cabang'] ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+
+                                </select>
+                            </div>
+                        </div>    
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="reset" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>                               
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
