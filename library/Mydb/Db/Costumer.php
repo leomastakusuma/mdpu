@@ -137,5 +137,16 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         return $this->getAdapterSelect()->fetchRow($select);
     }
     
+    public function getCabangCostumer($no_kontrak){
+        $select = $this->select();
+        $select->from(array('cos'=>$this->_name),array());
+        $select->setIntegrityCheck(false);
+        $select->join(array('pinj'=>'pinjaman'), 'pinj.nik_costumer =  cos.nik_costumer',array());
+        $select->join(array('cab'=>'cabang'),'cos.id_cabang = cab.id_cabang');
+        $select->columns(array('id_cabang'),'cab');
+        $select->columns(array('cabang'),'cab');
+        $select->where('pinj.no_kontrak = ?',$no_kontrak);
+        return $this->getAdapterSelect()->fetchRow($select);
+    }
 
 }

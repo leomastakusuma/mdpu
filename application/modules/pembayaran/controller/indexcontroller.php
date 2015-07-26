@@ -160,15 +160,14 @@ class IndexController extends Controller {
         $dataKP[ 'telat' ] = $form[ 'telat_bayar' ];
         $dataKP[ 'denda_terhitung' ] = $form[ 'denda_total' ];
 
-        $dataKP[ 'denda_dibayar' ] = rupiah( $form[ 'denda_dibayar' ] );
+        $dataKP[ 'denda_dibayar' ] = !empty($form[ 'denda_dibayar' ]) ? rupiah( $form[ 'denda_dibayar' ] ) :'0,00';
         $sisaDenda = isFloatNum( $form[ 'denda_total' ] ) - isFloatNum( $form[ 'denda_dibayar' ] );
-
-        $dataKP[ 'sisa_denda' ] = rupiah( $sisaDenda );
+        $dataKP[ 'sisa_denda' ] = (!empty($sisaDenda) ? rupiah( $sisaDenda ) : '0,00');
         $dataKP[ 'tanggal_bayar_angsuran' ] = new Zend_Db_Expr( 'NOW()' );
         if ( !empty( $dataKP[ 'denda_dibayar' ] ) ) {
             $dataKP[ 'tanggal_bayar_denda' ] = new Zend_Db_Expr( 'NOW()' );
         }else{
-            $dataKP['denda_dibayar']=  rupiah(0);
+            $dataKP['denda_dibayar']=  '0,00';
         }
         /* End Field */
 
@@ -184,7 +183,14 @@ class IndexController extends Controller {
         $dataBBKas[ 'discount' ] = $dataKP[ 'pembayaran' ];
         $dataBBKas[ 'total' ] = $form[ 'total_bayar' ];
         $dataBBKas[ 'tgl_bayar' ] = new Zend_Db_Expr( 'NOW()' );
-        $dataBBKas[ 'keterangan' ] = 'OKE';
+        $getKeterangan = $this->_modelCostumer->getCabangCostumer($dataKP[ 'no_kontrak' ]);
+        if(!empty($getKeterangan)){
+            if($getKeterangan['id_cabang']!= $this->id_cabang){
+                 $dataBBKas[ 'keterangan' ] = 'Cabang Lain';
+            }else{
+                 $dataBBKas[ 'keterangan' ] = '-';
+            }
+        }
         /* End Field */
 
 
@@ -199,6 +205,9 @@ class IndexController extends Controller {
         unset( $form[ 'jumlah_denda' ] );
         unset( $form[ 'telat_bayar' ] );
         unset( $form[ 'denda_dibayar' ] );
+
+        
+           
 
 
         try {
@@ -218,23 +227,34 @@ class IndexController extends Controller {
             }
             $where = $this->_modelPinjaman->getAdapter()->quoteInto( 'no_kontrak = ?', $form[ 'no_kontrak' ] );
             $totalPinjaman = $this->_modelPinjaman->fetchRow( $where );
-            $totalDebit = $totalPinjaman[ 'nilai_pinjaman' ] - $debit;
+            $totalDebit = isFloatNum($totalPinjaman[ 'nilai_pinjaman' ]) - $debit;
 
             $getSaldo = $this->_modelBBPiutang->getSumTotalSaldo( $form[ 'no_kontrak' ] );
             if ( !empty( $getSaldo ) ) {
-                $totalSaldo = $getSaldo[ 'saldo' ] + $totalDebit;
+                $totalSaldo = isFloatNum($getSaldo[ 'saldo' ]) + $totalDebit;
             } else {
                 $totalSaldo = $totalDebit;
             }
             $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
             $dataBBPiutang[ 'debit' ] = rupiah( $totalDebit );
             $dataBBPiutang[ 'saldo' ] = rupiah( $totalSaldo );
-            
+            $dataBBPiutang['tanggal'] = new Zend_Db_Expr('NOW()');
             /* End Field */
-            #Insert Into BB Piutang;
-            $this->_modelBBPiutang->insert($dataBBPiutang);
 
-
+            /*Cek Apakah Sudah Terisi Di Bulan Sekarang Jika Sudah Maka Update Selain Itu Maka Insert*/
+            $data = $this->_modelBBPiutang->getSaldoLastYearMonth( $form[ 'no_kontrak' ] );
+            if (!empty($data ) ) {
+                $year = date( 'Y-m' );
+                foreach ( $data as $k => $v ) {
+                    $t[$k] = $v;
+                    $t[$k]['tanggasl'] = date('Y-m',  strtotime($v['tanggal']));
+                }
+                $where = $this->_modelBBPiutang->getAdapter()->quoteInto('no_kontrak = ?', $form['no_kontrak']);
+                unset($dataBBPiutang['no_kontrak']);
+                $this->_modelBBPiutang->update($dataBBPiutang, $where);
+            }else{
+                 $this->_modelBBPiutang->insert($dataBBPiutang);
+            }
 
             require UD . 'header.html';
             $id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
