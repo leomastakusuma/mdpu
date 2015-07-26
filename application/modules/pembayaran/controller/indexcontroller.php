@@ -50,7 +50,7 @@ class IndexController extends Controller {
         }
         $this->id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
         $data = $this->_modelPembayaran->getDataAnsuran( $this->id_cabang );
-
+        
         require APP_MODUL . '/pembayaran/view/dataPembayaran.phtml';
         require UD . 'footerDataTables.phtml';
     }
@@ -71,27 +71,27 @@ class IndexController extends Controller {
             $last = $this->_modelPembayaran->getLastId() + 1;
             $data[ 'no_kwitansi' ] = generateKwintansi( $last );
             $data[ 'angsuran_ke' ] = !empty( $angsuran[ 'angsuran_ke' ] ) ? $angsuran[ 'angsuran_ke' ] + 1 : $angsuran[ 'angsuran_ke' ] + 1;
-
+            $data['angsuran_perbulan']=  isFloatNum($data['angsuran_perbulan']);
             /* Start Cek Tanggal Terakhir Bayar */
             if ( !empty( $lastAngsuran ) ) {
                 $lastAngsuran = date( 'm', strtotime( $lastAngsuran[ 'tanggal_pembayaran' ] ) );
                 if ( date( 'm' ) > $lastAngsuran ) {
                     if ( date( 'd' ) > $data[ 'tanggal_jatuh_tempo' ] ) {
                         $totaldate = date( 'd' ) - $data[ 'tanggal_jatuh_tempo' ];
-                        $data[ 'denda' ] = $totaldate * ($data[ 'angsuran_perbulan' ] * 0.1);
+                        $data[ 'denda' ] = $totaldate * (isFloatNum($data[ 'angsuran_perbulan' ]) * 0.1);
                         $data[ 'potongan' ] = "00";
                         #$data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ] +  $data[ 'denda' ];
-                        $data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ];
+                        $data[ 'total_bayar' ] = isFloatNum($data[ 'angsuran_perbulan' ]);
                     } else {
-                        $data[ 'denda' ] = '0,00';
-                        $data[ 'potongan' ] = "0,00";
-                        $data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ];
+                        $data[ 'denda' ] = 0;
+                        $data[ 'potongan' ] = 0;
+                        $data[ 'total_bayar' ] = isFloatNum($data[ 'angsuran_perbulan' ]);
                     }
                 }if ( date( 'm' ) <= $lastAngsuran ) {
                     $data[ 'bayarTerakhir' ] = $lastAngsuran;
-                    $data[ 'denda' ] = '0';
+                    $data[ 'denda' ] = 0;
                     $data[ 'potongan' ] = 20000;
-                    $data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ] - 20000;
+                    $data[ 'total_bayar' ] = isFloatNum($data[ 'angsuran_perbulan' ]) - 20000;
                 }
             }
             /* End Cek Tanggal Pembayaran */
@@ -101,15 +101,15 @@ class IndexController extends Controller {
             elseif ( date( 'd' ) > $data[ 'tanggal_jatuh_tempo' ] ) {
                 $totaldate = date( 'd' ) - $data[ 'tanggal_jatuh_tempo' ];
                 $data[ 'denda' ] = $totaldate * ($data[ 'angsuran_perbulan' ] * 0.1);
-                $data[ 'potongan' ] = "00";
+                $data[ 'potongan' ] = 0;
                 #$data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ] +  $data[ 'denda' ];
-                $data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ];
+                $data[ 'total_bayar' ] = isFloatNum($data[ 'angsuran_perbulan' ]);
             }
             #Cek Tidak Kena Denda
             else {
-                $data[ 'denda' ] = '00';
-                $data[ 'potongan' ] = "00";
-                $data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ];
+                $data[ 'denda' ] = 0;
+                $data[ 'potongan' ] = 0;
+                $data[ 'total_bayar' ] = isFloatNum($data[ 'angsuran_perbulan' ]);
             }
             /* End Cek Belum Pernah Bayar */
 
@@ -123,12 +123,13 @@ class IndexController extends Controller {
             $data[ 'denda_terhitung' ] = $data[ 'denda' ] + $data[ 'denda_sebelumnya' ];
             /* Cek Denda Belum Dibayar */
         }
+        pr($data);
         require UD . 'header.html';
         require APP_MODUL . '/pembayaran/form/form-pembayaran.phtml';
         require UD . 'footer.html';
     }
 
-    public function save() {
+    public function save() {      
         if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'kasir') ) {
             $this->redirect( 'error/index/notAllowed' );
         }
@@ -149,7 +150,7 @@ class IndexController extends Controller {
         } else {
             
         }
-
+        
         /* Field For Insert Into Kartu Piutang */
         $dataKP[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
         $dataKP[ 'no_kwitansi' ] = $form[ 'no_kwitansi' ];
@@ -164,11 +165,13 @@ class IndexController extends Controller {
         $sisaDenda = isFloatNum( $form[ 'denda_total' ] ) - isFloatNum( $form[ 'denda_dibayar' ] );
         $dataKP[ 'sisa_denda' ] = (!empty($sisaDenda) ? rupiah( $sisaDenda ) : '0,00');
         $dataKP[ 'tanggal_bayar_angsuran' ] = new Zend_Db_Expr( 'NOW()' );
-        if ( !empty( $dataKP[ 'denda_dibayar' ] ) ) {
+        /*Cek Apakah denda dibayar*/
+        if ( !empty( isFloatNum($dataKP[ 'denda_dibayar' ] )) ) {
             $dataKP[ 'tanggal_bayar_denda' ] = new Zend_Db_Expr( 'NOW()' );
         }else{
-            $dataKP['denda_dibayar']=  '0,00';
+            $dataKP['tanggal_bayar_denda']=  '-';
         }
+        /*Cek Apakah denda dibayar*/
         /* End Field */
 
 
@@ -206,10 +209,6 @@ class IndexController extends Controller {
         unset( $form[ 'telat_bayar' ] );
         unset( $form[ 'denda_dibayar' ] );
 
-        
-           
-
-
         try {
             #Insert Into Table Pembayaran
             $this->_modelPembayaran->insert( $form );
@@ -231,9 +230,11 @@ class IndexController extends Controller {
 
             $getSaldo = $this->_modelBBPiutang->getSumTotalSaldo( $form[ 'no_kontrak' ] );
             if ( !empty( $getSaldo ) ) {
-                $totalSaldo = isFloatNum($getSaldo[ 'saldo' ]) + $totalDebit;
+//                $totalSaldo = isFloatNum($getSaldo[ 'saldo' ]) + $totalDebit;
+                $totalSaldo = $debit;
             } else {
-                $totalSaldo = $totalDebit;
+//                $totalSaldo = $totalDebit;
+                $totalSaldo = $debit;
             }
             $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
             $dataBBPiutang[ 'debit' ] = rupiah( $totalDebit );
@@ -241,21 +242,34 @@ class IndexController extends Controller {
             $dataBBPiutang['tanggal'] = new Zend_Db_Expr('NOW()');
             /* End Field */
 
-            /*Cek Apakah Sudah Terisi Di Bulan Sekarang Jika Sudah Maka Update Selain Itu Maka Insert*/
+           /* Cek Apakah Sudah Terisi Di Bulan Sekarang Jika Sudah Maka Update Selain Itu Maka Insert */
             $data = $this->_modelBBPiutang->getSaldoLastYearMonth( $form[ 'no_kontrak' ] );
-            if (!empty($data ) ) {
+            if ( !empty( $data ) ) {
                 $year = date( 'Y-m' );
+                $where=array();
                 foreach ( $data as $k => $v ) {
-                    $t[$k] = $v;
-                    $t[$k]['tanggasl'] = date('Y-m',  strtotime($v['tanggal']));
+                    $t[ $k ] = $v;
+                    $t[ $k ][ 'tanggal' ] = date( 'Y-m', strtotime( $v[ 'tanggal' ] ) );
+                    /* Jika Pembayaran Dibulan Yang Sama Maka Update */
+                    if ( $t[ $k ][ 'tanggal' ] === $year ) {
+                        $where[]= $this->_modelBBPiutang->getAdapter()->quoteInto( 'no_kontrak = ?', $form[ 'no_kontrak' ] );
+                        $where[]= $this->_modelBBPiutang->getAdapter()->quoteInto( 'tanggal = ?', $v[ 'tanggal' ] );
+                        unset( $dataBBPiutang[ 'no_kontrak' ] );
+                        $this->_modelBBPiutang->update( $dataBBPiutang, $where );                      
+                    }else{
+                       $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
+                       $this->_modelBBPiutang->insert( $dataBBPiutang ); 
+                    }
+                        
                 }
-                $where = $this->_modelBBPiutang->getAdapter()->quoteInto('no_kontrak = ?', $form['no_kontrak']);
-                unset($dataBBPiutang['no_kontrak']);
-                $this->_modelBBPiutang->update($dataBBPiutang, $where);
-            }else{
-                 $this->_modelBBPiutang->insert($dataBBPiutang);
+                /* Jika Pembayaran Tidak Dibulan Yang Sama Maka Insert */   
+//                $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
+//                $this->_modelBBPiutang->insert( $dataBBPiutang );
+            } else {
+                $this->_modelBBPiutang->insert( $dataBBPiutang );
             }
-
+           
+            
             require UD . 'header.html';
             $id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
             $kasirname = $this->_modelUser->getKasirName( $id_cabang );
@@ -309,8 +323,9 @@ class IndexController extends Controller {
             $this->redirect( 'error' );
         }
         $detailCostumer = $this->_modelPembayaran->getLastAngsuran( $id_pinjaman, 0 );
-        $detailCostumer[ 'sisa_angsuran' ] = $detailCostumer[ 'lama_angsuran' ] - $detailCostumer[ 'angsuran_ke' ];
-        $detailCostumer[ 'sisa_pinjaman' ] = $detailCostumer[ 'nilai_pinjaman' ] - ($detailCostumer[ 'angsuran_ke' ] * $detailCostumer[ 'angsuran_perbulan' ]);
+        $detailCostumer[ 'sisa_angsuran' ] = isFloatNum($detailCostumer[ 'lama_angsuran' ]) - isFloatNum($detailCostumer[ 'angsuran_ke' ]);
+        $detailCostumer[ 'sisa_pinjaman' ] = isFloatNum($detailCostumer[ 'nilai_pinjaman' ]) - ($detailCostumer[ 'angsuran_ke' ] * isFloatNum($detailCostumer[ 'angsuran_perbulan' ]));
+        
         require APP_MODUL . '/pembayaran/view/dataDetailPembayaran.phtml';
         require UD . 'footerDataTables.phtml';
     }

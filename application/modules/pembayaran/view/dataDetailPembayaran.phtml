@@ -54,14 +54,14 @@
                  <div class="form-group">
                         <label for="Sisa Angsuran" class="col-sm-2 control-label">Sisa Angsuran</label>
                         <div class="input-group col-sm-1">
-                            <input type="text" class="form-control" id="nama" placeholder="Sisa Angsuran" name="Sisa Angsuran" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_angsuran'])? $detailCostumer['sisa_angsuran'] : '');?>">
+                            <input type="text" class="form-control" id="nama" placeholder="Sisa Angsuran" name="Sisa Angsuran" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_angsuran'])? $detailCostumer['sisa_angsuran'] : '0');?>">
                              <span class="input-group-addon">X</span>
                         </div>
                     </div>   
                  <div class="form-group">
                         <label for="Nama" class="col-sm-2 control-label">Sisa Pinjaman</label>
                         <div class="input-group col-sm-2">
-                            <input type="text" class="form-control" id="nama" placeholder="Sisa Pinjaman" name="Sisa Pinjaman" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_pinjaman'])? 'Rp.'.rupiah($detailCostumer['sisa_pinjaman']) : '');?>">
+                            <input type="text" class="form-control" id="nama" placeholder="Sisa Pinjaman" name="Sisa Pinjaman" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_pinjaman'])? 'Rp.'.rupiah($detailCostumer['sisa_pinjaman']) : 'Lunas');?>">
                         </div>
                     </div>   
             </form>
