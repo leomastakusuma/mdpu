@@ -81,7 +81,7 @@ class IndexController extends Controller {
         $form = $this->getPost();
         $form['nilai_pinjaman'] = !empty($form['nilai_pinjaman']) ? rupiah($form['nilai_pinjaman']) : '0,00';
         $form['angsuran_perbulan'] = !empty($form['angsuran_perbulan']) ? rupiah($form['angsuran_perbulan']) : '0,00';
-        pr($form);die;
+
         unset( $form[ 'nama' ] );
         try {
             $form[ 'tanggal_jatuh_tempo' ] = date( 'd' );
