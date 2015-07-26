@@ -154,8 +154,6 @@ class Indexcontroller extends Controller
         $data = $this->_modelUser->fetchRow($where)->toArray();
         $msg = Array();
         if (!empty($data)) {
-            echo "dari Form: ".$form['password'];
-            echo "<br/>dari Databas:".$data['password'];
             $form['password'] != $data['password'] ? $form['password'] = sha1($form['password']) : $form['password'] = $data['password'];
             $where = $this->_modelUser->getAdapter()->quoteInto('id_user = ?', $data['id_user']);
             try {

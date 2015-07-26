@@ -177,7 +177,7 @@ class IndexController extends Controller {
     }
 
     public function edit( $id_pinjaman ) {
-        if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'admin') ) {
+        if ( ($_SESSION[ 'level' ] != 'superadmin') ) {
             $this->redirect( 'error/index/notAllowed' );
         }
         if ( empty( $id_pinjaman ) ) {
@@ -194,6 +194,13 @@ class IndexController extends Controller {
 
     }
     public function saveedit(){
+        if ( ($_SESSION[ 'level' ] != 'superadmin') ) {
+            $this->redirect( 'error/index/notAllowed' );
+        }
+        if ( empty( $id_pinjaman ) ) {
+            $this->redirect( 'error' );
+        }
+
         $form = $this->getPost();
         $where = $this->_modelPinjaman->getAdapterSelect()->quoteInto('id_pinjaman = ?', $form['id_pinjaman']);
         $data = $this->_modelPinjaman->fetchRow($where)->toArray();
