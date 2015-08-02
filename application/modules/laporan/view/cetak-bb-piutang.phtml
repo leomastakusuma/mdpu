@@ -1,0 +1,86 @@
+<?php $id= $awal.'/'.$akhir;?>
+<script>
+    window.print();
+    window.onfocus = function(){
+        
+            window.close();
+        
+        
+    };
+</script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                
+                
+                <div class="panel-body">
+                    <br/>
+                    <table width="80%" align="center"  >
+                        <thead>
+                            <tr>
+                                <td rowspan="1" align="center" width="20%">
+                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                </td>
+                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</strong><br/>Buku Besar Piutang <br/>Pertanggal <?php echo $awal .'/'.$akhir;?></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4">
+                                        <table width="100%">
+                                        <tr>
+                                            <td>No</td>
+                                            <td widht="10%">No Kontrak</td>
+                                            <td widht="15%" >Nama Costumer</td>
+                                            <td widht="20%">Debit</td>
+                                            <td widht="15%">Kredit</td>
+                                            <td widht="20%">Saldo</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                        <?php  $no=0;?>     
+                                        <?php $totalDebit = 0;?>    
+                                        <?php $totalKredit = 0;?>    
+                                         
+                                        <?php foreach ($dataCetak as $key=>$val):$no++?>
+                                            <?php // if($key['lama_angsuran'])?>
+                                            <td><?php echo $no?></td>
+                                            <td><?php echo $val['no_kontrak']?></td>
+                                            <td><?php echo $val['nama']?></td>
+                                            <td><?php echo $val['debit']?></td>
+                                            <td><?php echo $val['kredit']?></td>
+                                            <td><?php echo $val['saldo']?></td>
+                                           
+                                            <?php $totalDebit += isFloatNum($val['debit']);?>
+                                            <?php $totalKredit += isFloatNum($val['saldo']);?>
+                                          
+                                        </tr>
+                                        <?php endforeach;?>
+                                                                            
+                                    </table>
+                                    
+                                </td>
+                            </tr>
+                             <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+                                                        
+                           
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

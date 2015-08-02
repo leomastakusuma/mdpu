@@ -18,6 +18,7 @@ class IndexController extends Controller {
     protected $_modelPembayaran;
     protected $_modelKartuPiutang;
     protected $_modelBBPenerimaanKas;
+    protected $_modelBBPiutang;
     public $id_user;
     public $id_cabang;
 
@@ -32,6 +33,7 @@ class IndexController extends Controller {
         $this->_modelPembayaran = Mydb::getModelPembayaran();
         $this->_modelKartuPiutang = Mydb::getModelKartuPiutang();
         $this->_modelBBPenerimaanKas = Mydb::getModelBBPenerimaanKas();
+        $this->_modelBBPiutang = Mydb::getModelBBPiutang();
         $this->id_user = $_SESSION[ 'dataLogin' ][ 'id_user' ];
         $this->id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
     }
@@ -334,7 +336,34 @@ class IndexController extends Controller {
     }
 
     public function piutang() {
-        echo 'piutang';
+        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
+            $this->redirect( 'error/index/notAllowed' );
+        }
+        require UD . 'header.html';
+        require APP_MODUL . '/laporan/form/form-bb-piutang.phtml';
+        require UD . 'footer.html';
+        
     }
-
+    
+    public function cariPiutang(){
+        $form = $this->getPost();
+        $awal = $form[ 'Tanggal' ];
+        $akhir = $form[ 'Sampai' ];
+        $dataCetak = $this->_modelBBPiutang->getBBPiutang( $awal, $akhir );
+        if ( !empty( $dataCetak ) ) {
+            require UD . 'header.html';
+            require APP_MODUL . '/laporan/view/bb-piutang.phtml';
+            require UD . 'footer.html';
+        } else {
+            $this->redirect( 'error' );
+        }
+    }
+    
+    public function cetakPiutang(){
+        $params = $this->getRequest();
+        $awal = $params['params'][0];
+        $akhir = $params['params'][1];
+        $dataCetak = $this->_modelBBPiutang->getBBPiutang( $awal, $akhir );
+        require APP_MODUL . '/laporan/view/cetak-bb-piutang.phtml';
+    }
 }
