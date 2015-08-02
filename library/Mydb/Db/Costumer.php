@@ -118,6 +118,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         $select->join(array('pinj'=>'pinjaman'), 'pinj.nik_costumer =  cos.nik_costumer',array());
         $select->join(array('kend'=>'kendaraan'),'kend.no_polisi = pinj.no_polisi',array());
         $select->columns(array('no_kontrak'),'pinj');
+        $select->columns(array('lama_angsuran'),'pinj');
         return $this->getAdapterSelect()->fetchAll($select);
     }
     
