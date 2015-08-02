@@ -61,6 +61,29 @@ function generateKwintansi($last, $length = 5) {
 
 /**
  * 
+ * @param type $cabang
+ * @param type $length
+ * @return string
+ */
+function generateID($last, $length = 3) {
+    $randomString = '';
+    $characters =(!empty($last)? $last+1 : 1);
+    
+    $charLength     = $length - strlen($characters);
+    $nol            = '';
+    if($charLength>=0){
+        for($i=0;$i<$charLength;$i++){
+           $nol .='0';
+        }    
+    }
+
+    $randomString .=$nol.$characters;
+    return $randomString;
+}
+
+
+/**
+ * 
  * @param type $string_number
  * @return type Float
  */
