@@ -23,7 +23,14 @@ class Mydb_Db_Cabang extends Mydb_Db_Abstract {
                 
     }
     
-    public function getCabang(){
+    public function getLastCabang(){
+        $select = $this->select();
+        $select->from($this->_name,array('id_cabang'));
+        $select->order('id_cabang asc');
+        return $this->getAdapterSelect()->fetchAll($select);
+    }
+
+        public function getCabang(){
         $select = $this->select();
         $select->from($this->_name,array());
         $select->columns('id_cabang');
