@@ -17,6 +17,7 @@ class IndexController extends Controller {
     protected $_modelUser;
     protected $_modelPembayaran;
     protected $_modelKartuPiutang;
+    protected $_modelBBPenerimaanKas;
     public $id_user;
     public $id_cabang;
 
@@ -30,6 +31,7 @@ class IndexController extends Controller {
         $this->_modelKendaraan = Mydb::getModelKendaraan();
         $this->_modelPembayaran = Mydb::getModelPembayaran();
         $this->_modelKartuPiutang = Mydb::getModelKartuPiutang();
+        $this->_modelBBPenerimaanKas = Mydb::getModelBBPenerimaanKas();
         $this->id_user = $_SESSION[ 'dataLogin' ][ 'id_user' ];
         $this->id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
     }
@@ -255,7 +257,7 @@ class IndexController extends Controller {
     }
 
     public function KartuPiutang( $nopos = null ) {
-        if ($_SESSION[ 'level' ] != 'akuntan'){
+        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
             $this->redirect( 'error/index/notAllowed' );
         }
 
@@ -270,56 +272,69 @@ class IndexController extends Controller {
             $last = $this->_modelPembayaran->getLastId() + 1;
             $data[ 'no_kwitansi' ] = generateKwintansi( $last );
             $data[ 'angsuran_ke' ] = !empty( $angsuran[ 'angsuran_ke' ] ) ? $angsuran[ 'angsuran_ke' ] + 1 : $angsuran[ 'angsuran_ke' ] + 1;
-
-            
         }
         require UD . 'header.html';
         require APP_MODUL . '/laporan/form/form-kartupiutang.phtml';
         require UD . 'footer.html';
     }
-    
-    public function cariKP(){
+
+    public function cariKP() {
         $form = $this->getPost();
-        if(empty($form['no_kontrak'])){
-            $this->redirect('error');
+        if ( empty( $form[ 'no_kontrak' ] ) ) {
+            $this->redirect( 'error' );
         }
-        $no_kontrak = $form['no_kontrak'];
+        $no_kontrak = $form[ 'no_kontrak' ];
         $dataCetak = $this->_modelKartuPiutang->getKartuPiutang( $no_kontrak );
         require UD . 'header.html';
         require APP_MODUL . '/laporan/view/kartupiutang.phtml';
         require UD . 'footer.html';
     }
-    public function cetaKP(){
-      $params = $this->getRequest();
+
+    public function cetaKP() {
+        $params = $this->getRequest();
         if ( !empty( $params[ 'params' ] ) ) {
             $nokontrak = array_shift( $params[ 'params' ] );
             $dataCetak = $this->_modelKartuPiutang->getKartuPiutang( $nokontrak );
             require APP_MODUL . '/laporan/view/cetakkartupiutang.phtml';
         }
-
     }
-    
-    public function kas(){
-        if ($_SESSION[ 'level' ] != 'akuntan'){
+
+    public function kas() {
+        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
             $this->redirect( 'error/index/notAllowed' );
         }
-
-        $no_kontrak = $this->_modelCostumer->getNoKontrak();
-        $params = $this->getRequest();
-        if ( !empty( $params[ 'params' ] ) ) {
-            $nokontrak = array_shift( $params[ 'params' ] );
-            $data = $this->_modelCostumer->getDetailPembayaran( $nokontrak );
-            $angsuran = $this->_modelPembayaran->getAngsuranKe( $nokontrak );
-            $lastAngsuran = $this->_modelPembayaran->getLastAngsuran( 0, $nokontrak );
-
-            $last = $this->_modelPembayaran->getLastId() + 1;
-            $data[ 'no_kwitansi' ] = generateKwintansi( $last );
-            $data[ 'angsuran_ke' ] = !empty( $angsuran[ 'angsuran_ke' ] ) ? $angsuran[ 'angsuran_ke' ] + 1 : $angsuran[ 'angsuran_ke' ] + 1;
-
-            
-        }
         require UD . 'header.html';
-        require APP_MODUL . '/laporan/form/form-kartupiutang.phtml';
+        require APP_MODUL . '/laporan/form/form-penerimaan-kas.phtml';
         require UD . 'footer.html';
     }
+
+    public function cariKas() {
+        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
+            $this->redirect( 'error/index/notAllowed' );
+        }
+        $form = $this->getPost();
+        $awal = $form[ 'Tanggal' ];
+        $akhir = $form[ 'Sampai' ];
+        $dataCetak = $this->_modelBBPenerimaanKas->getPenerimaanKas( $awal, $akhir );
+        if ( !empty( $dataCetak ) ) {
+            require UD . 'header.html';
+            require APP_MODUL . '/laporan/view/penerimaan-kas.phtml';
+            require UD . 'footer.html';
+        } else {
+            $this->redirect( 'error' );
+        }
+    }
+
+    public function cetakKas() {
+        $params = $this->getRequest();
+        $awal = $params['params'][0];
+        $akhir = $params['params'][1];
+        $dataCetak = $this->_modelBBPenerimaanKas->getPenerimaanKas( $awal, $akhir );
+        require APP_MODUL . '/laporan/view/cetak-penerimaan-kas.phtml';
+    }
+
+    public function piutang() {
+        echo 'piutang';
+    }
+
 }

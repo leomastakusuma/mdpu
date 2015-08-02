@@ -188,7 +188,7 @@ class IndexController extends Controller {
         /* Cek Apakah denda dibayar */
         /* End Field */
 
-
+        
         /* Field For Insert Into BB Penerimaan kas */
         $dataBBKas[ 'no_kontrak' ] = $dataKP[ 'no_kontrak' ];
         $dataBBKas[ 'no_kwitansi' ] = $dataKP[ 'no_kwitansi' ];
@@ -196,10 +196,11 @@ class IndexController extends Controller {
         $dataBBKas[ 'angsuran' ] = $dataKP[ 'tagihan' ];
         $dataBBKas[ 'denda' ] = $dataKP[ 'denda_dibayar' ];
         $dataBBKas[ 'biaya_tagih' ] = $dataKP[ 'pembayaran' ];
-        $dataBBKas[ 'bo' ] = $dataKP[ 'pembayaran' ];
-        $dataBBKas[ 'discount' ] = $dataKP[ 'pembayaran' ];
+        $dataBBKas[ 'bo' ] = $form[ 'bo' ];
+        $dataBBKas[ 'discount' ] = $dataKP[ 'potongan' ];
         $dataBBKas[ 'total' ] = $form[ 'total_bayar' ];
         $dataBBKas[ 'tgl_bayar' ] = new Zend_Db_Expr( 'NOW()' );
+
         $getKeterangan = $this->_modelCostumer->getCabangCostumer( $dataKP[ 'no_kontrak' ] );
         if ( !empty( $getKeterangan ) ) {
             if ( $getKeterangan[ 'id_cabang' ] != $this->id_cabang ) {
@@ -214,6 +215,7 @@ class IndexController extends Controller {
 
         $dataBBPiutang[ 'nama' ] = $form[ 'nama' ]; #field BB Piutang
         unset( $form[ 'nama' ] );
+        unset( $form[ 'bo' ] );
         unset( $form[ 'no_polisi' ] );
         unset( $form[ 'denda_sebelumnya' ] );
         unset( $form[ 'denda_total' ] );
