@@ -1,0 +1,187 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>pembayaran">Data Pembayaran</a>
+                </li>
+                <li>
+                    From Cetak Kwitansi
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Cetak Kwitansi</h3>
+                </div>
+                
+                <div class="panel-body">
+                    <br/>
+                    <table width="90%" align="center"  border="0"  >
+                        <thead>
+                            <tr>
+                                <td rowspan="1" align="center" width="20%">
+                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                </td>
+                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</strong><br/>Kartu Piutang <br/>Pertanggal <?php echo date('Y/m/d');?></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="15%" align="left" >No Kontrak </td>
+                                <td width="35%">&nbsp; : &nbsp;<?php echo ($dataCetak[0]['no_kontrak']) ?></td>
+                                
+                            </tr>
+                            <tr>
+                                <td width="15%" align="left" >Nama </td>
+                                <td>&nbsp; : &nbsp;<?php echo  $dataCetak[0]['nama'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="15%" align="left" ">Alamat </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['alamat'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="15%" align="left" >Penjamin </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['nmpenjamin'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="15%" align="left" >Nama Barang </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['merk'] ?></td>
+                                <td width="15%" align="left">No Polisi   </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_polisi'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="15%" align="left" >Tanggal Jual </td>
+                                <td>&nbsp; : &nbsp;Apa ?</td>
+                                <td width="15%" align="left">Warna / Tahun  </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['warna'].'/'.$dataCetak[0]['tahun_pembuatan'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="15%" align="left">Telp/Hp   </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['telpon'] ?></td>
+                                <td width="15%" align="left">Telp/Hp   </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['telpon'] ?></td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="15%" align="left">No Rangka / Mesin  </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak[0]['no_rangka'] ?></td>
+                                <td width="15%" align="left">Tanggal STNK </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['tgl_stnk'] ?></td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="10%" align="left" >Alamat BPKB  </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak[0]['alamatbpkb'] ?></td>
+                                <td width="15%" align="left">No / Nama BPKB </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_bpkb'].'/'.$dataCetak[0]['nama_bpkb'] ?></td>
+                            </tr>
+                            
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <table width="100%">
+                                        <tr>
+                                        <td>Ang KE</td>
+                                        <td>Tgl Jatuh Tempo</td>
+                                        <td>Tagihan</td>
+                                        <td>Pembayaran</td>
+                                        <td>Potongan</td>
+                                        <td>Telat</td>
+                                        <td>Denda Terhitung</td>
+                                        <td>Denda Dibayar</td>
+                                        <td>Tgl Byr Angsuran</td>
+                                        <td>Tgl Byr Denda</td>
+                                        <td>No Kwitansi</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                        <?php $total = 0;?>    
+                                        <?php $pembayaran = 0;?>    
+                                        <?php $potongan = 0;?>    
+                                        <?php $telat = 0;?>    
+                                        <?php $denda = 0;?>    
+                                        <?php $dendadibayar = 0;?>    
+                                        <?php foreach ($dataCetak as $key=>$val):?>
+                                            <?php // if($key['lama_angsuran'])?>
+                                            <td><?php echo $val['angsuran_ke']?></td>
+                                            <td><?php echo $val['tanggal_jatuh_tempo']?></td>
+                                            <td><?php echo $val['tagihan']?></td>
+                                            <td><?php echo $val['pembayaran']?></td>
+                                            <td><?php echo $val['potongan']?></td>
+                                            <td><?php echo $val['telat']?></td>
+                                            <td><?php echo $val['denda_terhitung']?></td>
+                                            <td><?php echo $val['denda_dibayar']?></td>
+                                            <td><?php echo $val['tanggal_bayar_angsuran']?></td>
+                                            <td><?php echo $val['tanggal_bayar_denda']?></td>
+                                            <td><?php echo $val['no_kwitansi']?></td>
+                                            <?php $total += isFloatNum($val['pembayaran']);?>
+                                            <?php $pembayaran += isFloatNum($val['pembayaran']);?>
+                                            <?php $potongan += isFloatNum($val['potongan']);?>
+                                            <?php $telat += isFloatNum($val['telat']);?>
+                                            <?php $denda += isFloatNum($val['denda_terhitung']);?>
+                                            <?php $dendadibayar += isFloatNum($val['denda_dibayar']);?>
+                                        </tr>
+                                        <?php endforeach;?>
+                                        <?php $sisa = 0;?>
+                                        <?php $sisa = isFloatNum($dataCetak[0]['nilai_pinjaman']) - $total  ?>
+                                        <tr>
+                                            <td> Total Bayar &nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td><?php echo  !empty($total) ? rupiah($total) : '0,00'?></td>
+                                            <td><?php echo  !empty($pembayaran) ? rupiah($pembayaran) : '0,00'?></td>
+                                            <td><?php echo  !empty($potongan) ? rupiah($potongan) : '0,00'?></td>
+                                            <td><?php echo $telat?></td>
+                                            <td><?php echo !empty($denda) ? rupiah($denda) : '0,00'?></td>
+                                            <td><?php echo  !empty($dendadibayar) ? rupiah($dendadibayar) : '0,00'?></td>
+                                            <td colspan="2" align="right">Sisa Hutang</td>
+                                            <td>&nbsp;<?php echo  !empty($sisa) ? rupiah($sisa) : '0,00'?></td>
+                                        </tr>                                       
+                                    </table>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+                                                        
+                            <tr valign="bottom">
+                                <td colspan="4" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
+                            </tr>
+                        
+                        </tfoot>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var cetak = function(){
+        var params = [
+                        'height='+screen.height,
+                        'width='+screen.width/2,
+                        'fullscreen=yes' // only works in IE, but here for completeness
+                    ].join(',');
+        window.open('<?php echo URL.'laporan/index/cetaKP/'.$dataCetak[0]['no_kontrak'];?>');// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
+    };
+</script>

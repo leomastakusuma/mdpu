@@ -255,7 +255,7 @@ class IndexController extends Controller {
     }
 
     public function KartuPiutang( $nopos = null ) {
-        if ( ($_SESSION[ 'level' ] != 'akuntan') && ($_SESSION[ 'level' ] != 'kasir') ) {
+        if ($_SESSION[ 'level' ] != 'akuntan'){
             $this->redirect( 'error/index/notAllowed' );
         }
 
@@ -278,11 +278,48 @@ class IndexController extends Controller {
         require UD . 'footer.html';
     }
     
-    public function cetakKP(){
+    public function cariKP(){
         $form = $this->getPost();
-        if(!empty($form['no_kontrak'])){
+        if(empty($form['no_kontrak'])){
             $this->redirect('error');
         }
-        $data = $this->_modelKartuPiutang;
+        $no_kontrak = $form['no_kontrak'];
+        $dataCetak = $this->_modelKartuPiutang->getKartuPiutang( $no_kontrak );
+        require UD . 'header.html';
+        require APP_MODUL . '/laporan/view/kartupiutang.phtml';
+        require UD . 'footer.html';
+    }
+    public function cetaKP(){
+      $params = $this->getRequest();
+        if ( !empty( $params[ 'params' ] ) ) {
+            $nokontrak = array_shift( $params[ 'params' ] );
+            $dataCetak = $this->_modelKartuPiutang->getKartuPiutang( $nokontrak );
+            require APP_MODUL . '/laporan/view/cetakkartupiutang.phtml';
+        }
+
+    }
+    
+    public function kas(){
+        if ($_SESSION[ 'level' ] != 'akuntan'){
+            $this->redirect( 'error/index/notAllowed' );
+        }
+
+        $no_kontrak = $this->_modelCostumer->getNoKontrak();
+        $params = $this->getRequest();
+        if ( !empty( $params[ 'params' ] ) ) {
+            $nokontrak = array_shift( $params[ 'params' ] );
+            $data = $this->_modelCostumer->getDetailPembayaran( $nokontrak );
+            $angsuran = $this->_modelPembayaran->getAngsuranKe( $nokontrak );
+            $lastAngsuran = $this->_modelPembayaran->getLastAngsuran( 0, $nokontrak );
+
+            $last = $this->_modelPembayaran->getLastId() + 1;
+            $data[ 'no_kwitansi' ] = generateKwintansi( $last );
+            $data[ 'angsuran_ke' ] = !empty( $angsuran[ 'angsuran_ke' ] ) ? $angsuran[ 'angsuran_ke' ] + 1 : $angsuran[ 'angsuran_ke' ] + 1;
+
+            
+        }
+        require UD . 'header.html';
+        require APP_MODUL . '/laporan/form/form-kartupiutang.phtml';
+        require UD . 'footer.html';
     }
 }
