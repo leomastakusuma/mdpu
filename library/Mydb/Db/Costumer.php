@@ -128,6 +128,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         $select->setIntegrityCheck(false);
         $select->join(array('pinj'=>'pinjaman'), 'pinj.nik_costumer =  cos.nik_costumer',array());
         $select->join(array('kend'=>'kendaraan'),'kend.no_polisi = pinj.no_polisi',array());
+        $select->join(array('cab'=>'cabang'),'cab.id_cabang = cos.id_cabang',array('cabang'));
         $select->columns(array('no_kontrak'),'pinj');
         $select->columns(array('nama'),'cos');
         $select->columns(array('no_polisi'),'kend');
