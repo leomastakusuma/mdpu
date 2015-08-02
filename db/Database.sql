@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 02, 2015 at 10:37 PM
+-- Generation Time: Aug 02, 2015 at 11:20 PM
 -- Server version: 5.6.19-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.9
 
@@ -78,7 +78,7 @@ INSERT INTO `bb_piutang` (`id_piutang`, `no_kontrak`, `nama`, `debit`, `kredit`,
 --
 
 CREATE TABLE IF NOT EXISTS `cabang` (
-  `id_cabang` int(10) NOT NULL AUTO_INCREMENT,
+  `id_cabang` varchar(10) NOT NULL,
   `cabang` varchar(200) NOT NULL,
   `kepala_cabang` varchar(200) NOT NULL,
   `provinsi` text NOT NULL,
@@ -87,15 +87,16 @@ CREATE TABLE IF NOT EXISTS `cabang` (
   `alamat` text NOT NULL,
   `kode_pos` varchar(7) NOT NULL,
   PRIMARY KEY (`id_cabang`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cabang`
 --
 
 INSERT INTO `cabang` (`id_cabang`, `cabang`, `kepala_cabang`, `provinsi`, `kota`, `kecamatan`, `alamat`, `kode_pos`) VALUES
-(29, 'Antasari', 'SRI ROHAYATI, S.Kom, Mp.di', 'Lampung', 'Antasari', 'Waru', 'Jl Pangen Antasari No 20', '12310 '),
-(30, 'Natar', 'Raka', 'Lampung', 'Lampung Selatan', 'Natar', 'Jl Panjang Lampung km 21 ', '23112  ');
+('031', 'Kota Bumi', 'Kota Bumi', 'Kota Bumi', 'Kota Bumi', 'Kota Bumi', 'Kota Bumi', '1234'),
+('29', 'Antasari', 'SRI ROHAYATI, S.Kom, Mp.di', 'Lampung', 'Antasari', 'Waru', 'Jl Pangen Antasari No 20', '12310 '),
+('30', 'Natar', 'Raka', 'Lampung', 'Lampung Selatan', 'Natar', 'Jl Panjang Lampung km 21 ', '23112  ');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `costumer` (
   `hp` varchar(20) NOT NULL,
   `telpon` varchar(20) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_cabang` int(10) NOT NULL,
+  `id_cabang` varchar(2) NOT NULL,
   PRIMARY KEY (`id_costumer`),
   UNIQUE KEY `nik_costumer` (`nik_costumer`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
@@ -129,12 +130,12 @@ CREATE TABLE IF NOT EXISTS `costumer` (
 --
 
 INSERT INTO `costumer` (`id_costumer`, `nik_costumer`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `nama_ibu`, `jenis_kelamin`, `agama`, `status`, `pekerjaan`, `alamat_tempat_kerja`, `hp`, `telpon`, `id_user`, `id_cabang`) VALUES
-(1, '11-212-312-31211', 'Riza Masta Saputra', 'Jl Waru No 21 Antasari Bandar Lampung', 'Tanjung Raja', '2015-06-17', 'Masjuita', 'laki-laki', 'ISLAM', 'belummenikah', 'PNS', 'Jl Waru No 21 Antasari Bandar Lampung', '8123123123', '123123', 16, 29),
-(2, '112-1-2-3-12312113', 'Leo Masta Kusuma', 'Jl Radio 1 No 21 Kebayoran Baru Jakarta Selatan', 'Tanjung Raja', '1990-06-23', 'Majuita', 'perempuan', 'ISLAM', 'menikah', 'Swasta', 'Jl Radio 1 No 21 Kebayoran Baru Jakarta Selatan', '0812311111', '123', 16, 29),
-(3, '41112121111', 'Aldhonie Saputra', 'Metro', 'Metro', '2015-04-13', 'MARSYA', 'pria', 'islam', 'menikah', 'IT Helpdesk', 'Test Test Test ', '0812312312', '021211111', 15, 29),
-(7, '1234-111-23-90', 'Rendi Prayoga', 'Jl Sri Menanti No 21 Tanjung Raja Lampung Utara', 'Tanjung Raja', '2002-04-14', 'Masjuita', 'pria', 'islam', 'belummenikah', 'Pelajar', 'Jalan Simatupang', '0812311111', '021211111', 15, 29),
-(8, '', '', '', '', '0000-00-00', '', '', '', '', '', '', '', '', 0, 0),
-(9, '18129310112231', 'Iskandar Parta Dinata', 'Lampung', 'Lampung', '2015-07-22', 'Lampung', 'pria', 'islam', 'menikah', 'Lampung', 'Lampung', '1234555', '22121212', 17, 30);
+(1, '11-212-312-31211', 'Riza Masta Saputra', 'Jl Waru No 21 Antasari Bandar Lampung', 'Tanjung Raja', '2015-06-17', 'Masjuita', 'laki-laki', 'ISLAM', 'belummenikah', 'PNS', 'Jl Waru No 21 Antasari Bandar Lampung', '8123123123', '123123', 16, '29'),
+(2, '112-1-2-3-12312113', 'Leo Masta Kusuma', 'Jl Radio 1 No 21 Kebayoran Baru Jakarta Selatan', 'Tanjung Raja', '1990-06-23', 'Majuita', 'perempuan', 'ISLAM', 'menikah', 'Swasta', 'Jl Radio 1 No 21 Kebayoran Baru Jakarta Selatan', '0812311111', '123', 16, '29'),
+(3, '41112121111', 'Aldhonie Saputra', 'Metro', 'Metro', '2015-04-13', 'MARSYA', 'pria', 'islam', 'menikah', 'IT Helpdesk', 'Test Test Test ', '0812312312', '021211111', 15, '29'),
+(7, '1234-111-23-90', 'Rendi Prayoga', 'Jl Sri Menanti No 21 Tanjung Raja Lampung Utara', 'Tanjung Raja', '2002-04-14', 'Masjuita', 'pria', 'islam', 'belummenikah', 'Pelajar', 'Jalan Simatupang', '0812311111', '021211111', 15, '29'),
+(8, '', '', '', '', '0000-00-00', '', '', '', '', '', '', '', '', 0, '0'),
+(9, '18129310112231', 'Iskandar Parta Dinata', 'Lampung', 'Lampung', '2015-07-22', 'Lampung', 'pria', 'islam', 'menikah', 'Lampung', 'Lampung', '1234555', '22121212', 17, '30');
 
 -- --------------------------------------------------------
 
@@ -312,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `spb` (
   `nik_costumer` varchar(50) NOT NULL,
   PRIMARY KEY (`no_spb`),
   UNIQUE KEY `no_kontrak` (`no_kontrak`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=127 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=136 ;
 
 --
 -- Dumping data for table `spb`
@@ -322,7 +323,8 @@ INSERT INTO `spb` (`no_spb`, `no_kontrak`, `no_polisi`, `nik_costumer`) VALUES
 (122, '30/MF/00155/15', 'AD-5064-JI', '18129310112231'),
 (124, '29/MF/00154/15', 'BE85', '41112121111'),
 (125, '30/MD/00156/15', 'AD-5064-JI', '18129310112231'),
-(126, '29-MF-00154-15', 'BE85', '41112121111');
+(126, '29-MF-00154-15', 'BE85', '41112121111'),
+(127, '29-MD-00162-15', 'AD-5064-JI', '18129310112231');
 
 -- --------------------------------------------------------
 
@@ -332,25 +334,27 @@ INSERT INTO `spb` (`no_spb`, `no_kontrak`, `no_polisi`, `nik_costumer`) VALUES
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id_user` int(5) NOT NULL AUTO_INCREMENT,
-  `id_cabang` int(10) NOT NULL,
+  `id_cabang` varchar(10) NOT NULL,
   `realname` varchar(200) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` text NOT NULL,
   `create_at` date NOT NULL,
   `level` varchar(50) NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `id_cabang`, `realname`, `username`, `password`, `create_at`, `level`) VALUES
-(15, 29, 'Riza Masta Saputra ', 'ommasta', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'kasir'),
-(16, 29, 'Leo Masta Kusuma', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'superadmin'),
-(17, 30, 'Rendi Proyoga', 'rendi', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'admin'),
-(18, 29, 'Kasir Natar', 'kasir', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'kasir'),
-(19, 29, 'Sri Rohayati', 'akuntan', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-07-25', 'akuntan');
+(15, '29', 'Riza Masta Saputra ', 'ommasta', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'kasir'),
+(16, '29', 'Leo Masta Kusuma', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'superadmin'),
+(17, '30', 'Rendi Proyoga', 'rendi', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'admin'),
+(18, '29', 'Kasir Natar', 'kasir', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-06-19', 'kasir'),
+(19, '29', 'Sri Rohayati', 'akuntan', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-07-25', 'akuntan'),
+(20, '030', 'Sri Rohayati', 'kotabumi', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2015-08-02', 'admin'),
+(21, '032', 'qwe', 'qwe', '056eafe7cf52220de2df36845b8ed170c67e23e3', '2015-08-02', 'admin');
 
 -- --------------------------------------------------------
 
@@ -366,15 +370,17 @@ CREATE TABLE IF NOT EXISTS `user_login` (
   `ip_login` varchar(20) NOT NULL,
   `status` int(1) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `user_login`
 --
 
 INSERT INTO `user_login` (`id_login`, `id_user`, `last_login`, `login_time`, `ip_login`, `status`) VALUES
-(5, 16, '2015-07-27 13:55:48', '2015-08-02 20:24:46', '127.0.0.1', 0),
+(5, 16, '2015-08-02 23:10:28', '2015-08-02 23:12:31', '127.0.0.1', 0),
 (6, 15, '2015-07-16 04:14:26', '2015-07-16 20:31:31', '127.0.0.1', 0),
 (7, 17, '2015-07-16 21:28:17', '2015-07-25 14:09:46', '127.0.0.1', 0),
 (10, 18, '2015-08-02 19:22:23', '2015-08-02 20:54:21', '127.0.0.1', 0),
-(11, 19, '2015-08-02 21:05:08', '2015-08-02 22:15:43', '127.0.0.1', 1);
+(11, 19, '2015-08-02 21:05:08', '2015-08-02 22:15:43', '127.0.0.1', 0),
+(12, 20, '2015-08-02 22:52:04', '2015-08-02 23:10:56', '127.0.0.1', 0),
+(13, 21, '2015-08-02 23:18:12', '2015-08-02 23:18:12', '127.0.0.1', 0);
