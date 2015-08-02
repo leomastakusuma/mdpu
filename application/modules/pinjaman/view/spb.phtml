@@ -64,7 +64,7 @@
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Nilai Pinjaman  </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah($data['nilai_pinjaman']) ?></td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah(isFloatNum($data['nilai_pinjaman']))  ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Angsuran/Bulan  </td>

@@ -36,12 +36,18 @@ class Indexcontroller extends Controller {
     
     public function add(){
         require_once UD . 'header.html';
-        $this->form();
+        $data = $this->_modelCabang->getLastCabang();
+        pr($data);
+        $lasID = !empty($data['0']['id_cabang']) ? $data['0']['id_cabang'] : 0;
+        $idcabang = generateID($lasID);
+        include APP_MODUL . '/cabang/form/form-add-cabang.phtml';;
+        
         require_once UD . 'footer.html';
     }
     
     public function save() {
         $data = $this->getPost();
+//        pr($data);die;
         try {
             $this->_modelCabang->insert($data);
             $this->redirect('cabang/index');

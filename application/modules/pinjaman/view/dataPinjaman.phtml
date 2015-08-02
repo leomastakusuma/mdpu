@@ -54,14 +54,14 @@
                             <td><?php echo $val['no_kontrak'] ?></td>
                             <td><?php echo $val['nik_costumer'] ?></td>
                             <td><?php echo $val['nama'] ?></td>
-                            <td><?php echo 'Rp.'. rupiah($val['nilai_pinjaman']); ?></td>
+                            <td><?php echo 'Rp.'. rupiah(isFloatNum($val['nilai_pinjaman'])); ?></td>
                             <td><?php echo 'Rp.'. rupiah($val['angsuran_perbulan']) ?></td>
                             <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
                             <td align="center">
-                                <?php //if(empty($spb)):?>
+                                <?php if(empty($spb)):?>
                                     <a href="<?php echo URL . 'pinjaman/index/cetakSPB/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>Cetak SPB </a>
-                                <?php //endif;?>
+                                <?php endif;?>
                                 <?php if($_SESSION['level']==='superadmin'):?>
                                     &nbsp;|| &nbsp; 
                                    <a href="<?php echo URL . 'pinjaman/index/edit/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>EDIT </a>

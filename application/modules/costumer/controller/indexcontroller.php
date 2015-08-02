@@ -23,7 +23,7 @@ class indexcontroller extends Controller {
         require UD . 'headerDataTables.phtml';
         $id = $_SESSION['dataLogin']['id_user'];
         $data = $this->_modelCostumer->getAllCostumerByCabang($id);
-        $data[0]['cabang']=$_SESSION['dataLogin']['cabang'];
+        $cabang=$_SESSION['dataLogin']['cabang'];
         require APP_MODUL . '/costumer/view/dataCostumer.phtml';
         require UD . 'footerDataTables.phtml';
     }

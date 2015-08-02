@@ -40,6 +40,7 @@ class IndexController extends Controller {
         if ( !$cabang ) {
             $this->redirect( 'error' );
         }
+       
         $data = $this->_modelPinjaman->getDataPinjamanByCabang( $this->id_user, $this->id_cabang );
         foreach ( $data as $key => $val ) {
             $no_spb = $val[ 'no_kontrak' ];
