@@ -43,13 +43,22 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Input Pembayaran</h3>
                 </div>
-<?php if ( !empty( $error ) ): ?>
+                <?php if ( !empty( $error ) ): ?>
                     <div class="alert alert-error alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                         <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
-    <?php echo $error; ?>
+                        <?php echo $error; ?>
                     </div>
-                    <?php endif; ?>
+                <?php endif; ?>
+                
+                <?php if ( !empty( $data['msg'] ) ): ?>
+                    <div class="alert alert-info alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><i class="icon fa fa-info-circle"></i> Alert!</strong><br/>
+                        <?php echo $data['msg']; ?>
+                    </div>
+                <?php endif; ?>
+                
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="<?php echo URL ?>pembayaran/index/save" method="post" enctype="multipart/form-data">
 
@@ -58,7 +67,7 @@
                             <div class="input-group col-sm-5">
                                 <select name="no_kontrak" id="agama" class="col-sm-5"  required="true"  onchange="halaman(this.value)">
                                     <option value="<?php echo (!empty( $form[ 'no_kontrak' ] ) ? $form[ 'no_kontrak' ] : (!empty( $nopos ) ? $nopos : '')); ?>"><?php echo (!empty( $form[ 'no_kontrak' ] ) ? $form[ 'no_kontrak' ] : (!empty( $nopos ) ? $nopos : 'No Kontrak')); ?></option>
-<?php foreach ( $no_kontrak as $key => $val ): ?>
+                                    <?php foreach ( $no_kontrak as $key => $val ): ?>
                                         <?php if ( $val[ 'no_kontrak' ] != $nopos ): ?>
                                             <option value="<?php echo $val[ 'no_kontrak' ]; ?>"><?php echo $val[ 'no_kontrak' ]; ?></option>
                                         <?php endif; ?>    
@@ -91,12 +100,11 @@
                         <div class="form-group">
                             <label for="Angsuran-Ke" class="col-sm-3 control-label">Angsuran-Ke</label>
                             <div class="input-group col-sm-1">
-<?php if ( !empty( $data[ 'angsuran_ke' ] ) ): ?>
+                                <?php if ( !empty( $data[ 'angsuran_ke' ] ) ): ?>
                                     <?php $angsuran = $data[ 'angsuran_ke' ]; ?>
 
                                 <?php endif; ?>
-
-                                <input type="text" class="form-control" name="angsuran_ke"  required="true" readonly="true" value="<?php echo (!empty( $angsuran ) ? $angsuran : 0); ?>">
+                                <input type="text" class="form-control" name="angsuran_ke"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'angsuran_ke' ] ) ? $data[ 'angsuran_ke' ] : 0); ?>">
                                 <span class="input-group-addon">X</span>
                             </div>
 
@@ -164,17 +172,6 @@
                             </div>
                         </div>   
 
-
-                        <!--                        <div class="form-group">
-                                                    <label class="col-sm-2 control-label">First name</label>
-                                                    <div class="col-sm-4">
-                                                            <input type="text" class="form-control" placeholder="First name" data-toggle="tooltip" data-placement="bottom" title="Tooltip for name">
-                                                    </div>
-                                                    <label class="col-sm-2 control-label">Last name</label>
-                                                    <div class="col-sm-4">
-                                                            <input type="text" class="form-control" placeholder="Last name" data-toggle="tooltip" data-placement="bottom" title="Tooltip for last name">
-                                                    </div>
-                                                </div>  -->
                         <div class="form-group">
                             <label for="Total Bayar" class="col-sm-3 control-label">Total Bayar</label>
                             <div class="input-group col-sm-3">
@@ -199,11 +196,16 @@
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
-
+                        
                         <div class="form-group">
                             <div class="input-group col-sm-offset-3 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Save</button> &nbsp;
-                                <a href="" class="btn btn-default" role="button">Cancel</a>
+                                <?php if(!empty($data['msg'])):?>
+                                    <a href="<?php echo URL.'pembayaran'?>" class="btn btn-default" role="button">Cancel</a>
+                                <?php else :?>
+                                    <button type="submit" class="btn btn-primary">Save</button> &nbsp;
+                                    <a href="<?php echo URL.'pembayaran'?>" class="btn btn-default" role="button">Cancel</a>
+                                <?php endif;?>
+                               
                             </div>
                         </div>                               
                     </form>
@@ -218,38 +220,38 @@
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
-   var totalBayar=parseFloat(<?php echo $data[ 'total_bayar' ]; ?>),
-           bayarDendaMax = parseFloat(<?php echo $data[ 'denda_terhitung' ]?>),
-           totalBayarAkhir,
-           kembalian;
-           
-    totalBayarAkhir=totalBayar;
-    var isiDenda = function(){
-       var bayarDenda = parseFloat($('#denda').val());
-       if(bayarDenda){
-           if(bayarDenda<=bayarDendaMax){
-               totalBayarAkhir = totalBayar+bayarDenda;               
-           }
-           else{
-               totalBayarAkhir = totalBayar+bayarDendaMax;
-               $('#denda').val(bayarDendaMax);
-           }
-          
-          $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
-       }
-       else{
-           totalBayarAkhir=totalBayar;
-           $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
-       }
-   };
-   
-   var isiBayar = function(){
-       var uangBayar = parseFloat($('#bayar').val());
-       if(uangBayar){
-           $('#kembalian').val(numberWithCommas(uangBayar-totalBayarAkhir));
-       }
-       else{
-           $('#kembalian').val('');
-       }
-   };
+    var totalBayar = parseFloat(<?php echo $data[ 'total_bayar' ]; ?>),
+            bayarDendaMax = parseFloat(<?php echo $data[ 'denda_terhitung' ] ?>),
+            totalBayarAkhir,
+            kembalian;
+
+    totalBayarAkhir = totalBayar;
+    var isiDenda = function () {
+        var bayarDenda = parseFloat($('#denda').val());
+        if (bayarDenda) {
+            if (bayarDenda <= bayarDendaMax) {
+                totalBayarAkhir = totalBayar + bayarDenda;
+            }
+            else {
+                totalBayarAkhir = totalBayar + bayarDendaMax;
+                $('#denda').val(bayarDendaMax);
+            }
+
+            $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
+        }
+        else {
+            totalBayarAkhir = totalBayar;
+            $('#total_bayar').val(numberWithCommas(totalBayarAkhir));
+        }
+    };
+
+    var isiBayar = function () {
+        var uangBayar = parseFloat($('#bayar').val());
+        if (uangBayar) {
+            $('#kembalian').val(numberWithCommas(uangBayar - totalBayarAkhir));
+        }
+        else {
+            $('#kembalian').val('');
+        }
+    };
 </script>

@@ -103,7 +103,7 @@ class indexcontroller extends Controller {
         if (!isset($id)) {
             $this->redirect('error');
         }
-        $where = $this->_modelCostumer->getAdapter()->quoteInto('id_costumer = ?', $id);
+        $where = $this->_modelCostumer->getAdapter()->quoteInto('nik_costumer = ?', $id);
         $data = $this->_modelCostumer->fetchRow($where);
         if (empty($data)) {
             $this->redirect('error');
