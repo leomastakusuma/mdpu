@@ -86,6 +86,7 @@ class IndexController extends Controller {
         unset( $form[ 'nama' ] );
         try {
             $form[ 'tanggal_jatuh_tempo' ] = date( 'd' );
+            $form['tanggal']=date('Y-m-d');
             $this->_modelPinjaman->insert( $form );
             /* Start Update status kendaraan */
             $where = $this->_modelKendaraan->getAdapter()->quoteInto( 'no_polisi = ?', $form[ 'no_polisi' ] );
