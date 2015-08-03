@@ -37,7 +37,6 @@ class Indexcontroller extends Controller {
     public function add(){
         require_once UD . 'header.html';
         $data = $this->_modelCabang->getLastCabang();
-        pr($data);
         $lasID = !empty($data['0']['id_cabang']) ? $data['0']['id_cabang'] : 0;
         $idcabang = generateID($lasID);
         include APP_MODUL . '/cabang/form/form-add-cabang.phtml';;
