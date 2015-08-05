@@ -14,7 +14,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
     protected $_name = 'costumer';
     protected $_primary = 'nik_costumer';
     
-    public function getAllCostumerByCabang($id){
+    public function getAllCostumerByCabang($cabang = null,$id=null){
         $select = $this->select();
         $select->from(array('cos'=>$this->_name),array());
         $select->setIntegrityCheck(false);
@@ -34,8 +34,12 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         
         $select->join(array('us'=>'user'), 'cos.id_user=us.id_user',array('realname'));
         $select->join(array('cb'=>'cabang'), 'us.id_cabang = cb.id_cabang',array());
-        
-        $select->where('cos.id_user = ?',$id);
+        if(!empty($id)){
+            $select->where('cos.id_user = ?',$id);
+        }if(!empty($cabang)){
+            $select->where('cos.id_cabang = ?',$cabang);
+        }
+               
         return $this->getAdapter()->fetchAll($select);
        
     }

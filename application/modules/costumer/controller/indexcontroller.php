@@ -21,8 +21,8 @@ class indexcontroller extends Controller {
             $this->redirect('error/index/notAllowed');
         }
         require UD . 'headerDataTables.phtml';
-        $id = $_SESSION['dataLogin']['id_user'];
-        $data = $this->_modelCostumer->getAllCostumerByCabang($id);
+        $cabang = $_SESSION['dataLogin']['id_cabang'];
+        $data = $this->_modelCostumer->getAllCostumerByCabang($cabang,null);
         $cabang=$_SESSION['dataLogin']['cabang'];
         require APP_MODUL . '/costumer/view/dataCostumer.phtml';
         require UD . 'footerDataTables.phtml';
