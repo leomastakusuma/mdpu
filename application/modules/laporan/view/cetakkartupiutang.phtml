@@ -124,7 +124,6 @@
                                                 <td><?php echo $dataCetak[$i]['tanggal_bayar_angsuran']?></td>
                                                 <td><?php echo $dataCetak[$i]['tanggal_bayar_denda']?></td>
                                                 <td><?php echo $dataCetak[$i]['no_kwitansi']?></td>
-                                                <?php $total += isFloatNum($dataCetak[$i]['pembayaran']);?>
                                                 <?php $pembayaran += isFloatNum($dataCetak[$i]['pembayaran']);?>
                                                 <?php $potongan += isFloatNum($dataCetak[$i]['potongan']);?>
                                                 <?php $telat += isFloatNum($dataCetak[$i]['telat']);?>
@@ -145,6 +144,7 @@
                                             <?php endif;?>
                                                 <tr/>
                                         <?php endfor;?>
+                                        <?php $total = isFloatNum($dataCetak[0]['tagihan']) * $jumlahAngsuran;?>         
                                         <?php $sisa = 0;?>
                                         <?php $sisa = isFloatNum($dataCetak[0]['nilai_pinjaman']) - $total  ?>
                                         <tr><tr>

@@ -63,9 +63,17 @@
                                             <td><?php echo $no?></td>
                                             <td><?php echo $val['no_kontrak']?></td>
                                             <td><?php echo $val['nama']?></td>
+                                            <?php if($key =='0' ) :?>
                                             <td><?php echo $val['debit']?></td>
                                             <td><?php echo $val['kredit']?></td>
-                                            <td><?php echo $val['saldo']?></td>
+                                            <td><?php echo $val['saldo'];?></td>
+                                            <?php endif;?>
+                                            <?php if( $key !='0') :?>
+                                            <td><?php echo $val['debit']?></td>
+                                            <td><?php echo $val['kredit']?></td>
+                                            <td><?php echo rupiah(isFloatNum($val['saldo'])+isFloatNum($val['debit']));?></td>
+                                            <?php endif;?>
+                                            
                                            
                                             <?php $totalDebit += isFloatNum($val['debit']);?>
                                             <?php $totalKredit += isFloatNum($val['saldo']);?>

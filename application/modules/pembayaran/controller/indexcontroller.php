@@ -260,10 +260,11 @@ class IndexController extends Controller {
             }
             $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
             $dataBBPiutang[ 'debit' ] = rupiah( $totalDebit );
-            $dataBBPiutang[ 'saldo' ] = rupiah( $totalSaldo );
+            #$dataBBPiutang[ 'saldo' ] = rupiah( $totalSaldo );
+            $dataBBPiutang[ 'saldo' ] = rupiah( $totalDebit );
             $dataBBPiutang[ 'tanggal' ] = new Zend_Db_Expr( 'NOW()' );
             /* End Field */
-
+            
             /* Cek Apakah Sudah Terisi Di Bulan Sekarang Jika Sudah Maka Update Selain Itu Maka Insert */
             $data = $this->_modelBBPiutang->getSaldoLastYearMonth( $form[ 'no_kontrak' ] );
             if ( !empty( $data ) ) {

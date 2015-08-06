@@ -263,7 +263,7 @@ class IndexController extends Controller {
             $this->redirect( 'error/index/notAllowed' );
         }
 
-        $no_kontrak = $this->_modelCostumer->getNoKontrak();
+        $no_kontrak = $this->_modelCostumer->getNoKontrak(true);
         $params = $this->getRequest();
         if ( !empty( $params[ 'params' ] ) ) {
             $nokontrak = array_shift( $params[ 'params' ] );
