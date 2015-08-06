@@ -35,7 +35,18 @@
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" action="<?php echo URL ?>kendaraan/index/save" method="post" enctype="multipart/form-data">
-
+                         <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <a href="<?php echo URL . 'kendaraan/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Kendaraan</a>
+                                <a href="<?php echo URL . 'kendaraan/index/byid/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Data Kendaraan</a>
+                                <a href="<?php echo URL . 'costumer/index/detail/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Detail Costumer</a>
+                                <?php if(empty($cekPenjamin)) :?>
+                                    <a href="<?php echo URL . 'penjamin/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Penjamin</a>
+                                <?php elseif(!empty($cekPenjamin)) :?>
+                                    <a href="<?php echo URL . 'penjamin/index/detail/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Detail Penjamin</a>
+                                <?php endif;?>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="nopolisi" class="col-sm-2 control-label">NIK Costumer</label>
                             <div class="col-sm-3">
@@ -134,7 +145,7 @@
                   
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <a href="<?php echo URL?>kendaraan" class="btn btn-primary" role="button">Data Kendaraan</a>               
+                                             
                                 <a href="<?php echo URL.'kendaraan/index/edit/'.$data->id_kendaraan ?>" class="btn btn-primary" role="button">Edit Kendaraan</a>               
                             </div>
                         </div>                               

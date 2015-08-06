@@ -40,6 +40,9 @@
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <a href="<?php echo URL . 'kendaraan/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Kendaraan</a>
+                                <?php if(!empty($cekKendaraan)):?>
+                                <a href="<?php echo URL . 'kendaraan/index/byid/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Data Kendaraan</a>
+                                <?php endif;?>
                                 <?php if(empty($cekPenjamin)) :?>
                                     <a href="<?php echo URL . 'penjamin/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Penjamin</a>
                                 <?php elseif(!empty($cekPenjamin)) :?>
@@ -162,16 +165,7 @@
                                     <input type="text" class="form-control" id="hp" placeholder="No Telepon" name="telpon" value="<?php echo (!empty($data['telpon']) ? $data['telpon'] : null );?>" readonly="" >
                                </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                    <a href="<?php echo URL . 'kendaraan/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Kendaraan</a>
-                                <?php if(empty($cekPenjamin)) :?>
-                                    <a href="<?php echo URL . 'penjamin/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Penjamin</a>
-                                <?php elseif(!empty($cekPenjamin)) :?>
-                                    <a href="<?php echo URL . 'penjamin/index/detail/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Detail Penjamin</a>
-                                <?php endif;?>
-                            </div>
-                        </div>                               
+                                              
                     </form>
 
 

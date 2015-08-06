@@ -51,7 +51,18 @@
                             </div>
                         <?php endif;?>
                         <form class="form-horizontal" role="form" action="<?php echo URL ?>kendaraan/index/save/<?php echo $id?>" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <a href="<?php echo URL . 'kendaraan/index/byid/' . $nik ?>" class="btn btn-primary" role="button">Data Kendaraan</a>
+                                    <a href="<?php echo URL . 'costumer/index/detail/' . $nik ?>" class="btn btn-primary" role="button">Detail Costumer</a>
+                                    <?php if ( empty( $cekPenjamin ) ) : ?>
+                                        <a href="<?php echo URL . 'penjamin/index/add/' .$nik?>" class="btn btn-primary" role="button">ADD Penjamin</a>
+                                    <?php elseif ( !empty( $cekPenjamin ) ) : ?>
 
+                                        <a href="<?php echo URL . 'penjamin/index/detail/' . $nik ?>" class="btn btn-primary" role="button">Detail Penjamin</a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="nik_costumer" class="col-sm-2 control-label">NIK Costumer</label>
                                 <div class="col-sm-3">

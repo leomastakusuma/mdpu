@@ -11,11 +11,13 @@ class indexcontroller extends Controller {
 
     protected $_modelCostumer;
     protected $_modelPenjamin;
+    protected $_modelKendaraan;
 
     public function __construct() {
         Auth::handleLogin();
         $this->_modelCostumer = Mydb::getModelCostumer();
         $this->_modelPenjamin = Mydb::getModelPenjamin();
+        $this->_modelKendaraan = Mydb::getModelKendaraan();
     }
 
     public function index() {
@@ -24,7 +26,7 @@ class indexcontroller extends Controller {
         }
         $id_user = $_SESSION['dataLogin']['id_user'];
         $id_cabang = $_SESSION['dataLogin']['id_cabang'];
-        $data = $this->_modelPenjamin->getPenjaminByCabang($id_user, $id_cabang);
+        $data = $this->_modelPenjamin->getPenjaminByCabang(null, $id_cabang);
         require UD . 'headerDataTables.phtml';
         require APP_MODUL . '/penjamin/view/dataPenjamin.phtml';
         require UD . 'footerDataTables.phtml';
@@ -70,6 +72,8 @@ class indexcontroller extends Controller {
             $this->redirect('error/index/notAllowed');
         }
         $where = $this->_modelPenjamin->getAdapter()->quoteInto('nik_costumer =?', $id);
+        $whereKendaraan = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $id);
+        $cekKendaraan = $this->_modelKendaraan->fetchRow($whereKendaraan);
         $data = $this->_modelPenjamin->fetchRow($where);
         if (empty($data)) {
             $this->redirect('error');

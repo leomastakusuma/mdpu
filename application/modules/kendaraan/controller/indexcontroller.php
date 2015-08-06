@@ -32,7 +32,7 @@ class indexcontroller extends Controller {
         if (!$cabang) {
             $this->redirect('error');
         }
-        $data = $this->_modelKendaraan->getAllKendaraanByCabang($id_costumer, $id_cabang);
+        $data = $this->_modelKendaraan->getAllKendaraanByCabang(null, $id_cabang);
         require APP_MODUL . '/kendaraan/view/dataKendaraan.phtml';
         require UD . 'footerDataTables.phtml';
     }
@@ -66,7 +66,25 @@ class indexcontroller extends Controller {
         require APP_MODUL . '/kendaraan/form/form-detail-kendaraan.phtml';
         require UD . 'footer.html';
     }
-
+    
+    public function detailbyid($id) {
+        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
+            $this->redirect('error/index/notAllowed');
+        }
+        if (!isset($id)) {
+            $this->redirect('error');
+        }
+        $where = $this->_modelKendaraan->getAdapter()->quoteInto('no_polisi = ?', $id);
+        $data = $this->_modelKendaraan->fetchRow($where);
+        if (!isset($data)) {
+            $this->redirect('error');
+        }
+        require UD . 'header.html';
+        require APP_MODUL . '/kendaraan/form/form-detail-kendaraan-byid.phtml';
+        require UD . 'footer.html';
+    }
+    
+    
     public function add($id) {
         if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
             $this->redirect('error/index/notAllowed');
@@ -97,7 +115,7 @@ class indexcontroller extends Controller {
         }
         try {
             $this->_modelKendaraan->insert($form);
-            $this->redirect('kendaraan');
+            $this->redirect('kendaraan/index/byid/'.$form['nik_costumer']);
 
         } catch (Exception $ex) {
             require UD . 'header.html';
@@ -142,6 +160,21 @@ class indexcontroller extends Controller {
             require APP_MODUL . '/kendaraan/form/form-edit-kendaraan.phtml';
             require UD . 'footer.html';
         }
+    }
+    
+    public function byid($nik_costumer){
+        if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
+            $this->redirect('error/index/notAllowed');
+        }
+        if (!isset($nik_costumer)) {
+            $this->redirect('error');
+        }
+        require UD . 'headerDataTables.phtml';
+        $data = $this->_modelKendaraan->getByidCostumer($nik_costumer);
+        $cekPenjamin = $this->_modelCostumer->getPenjaminCostumer($nik_costumer);
+        require APP_MODUL . '/kendaraan/view/dataKendaraanbyCostumer.phtml';
+        require UD . 'footerDataTables.phtml';
+        
     }
 
 //    public function saveAdd($id){

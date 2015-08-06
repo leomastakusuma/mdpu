@@ -10,10 +10,12 @@
 class indexcontroller extends Controller {
 
     protected $_modelCostumer;
+    protected $_modelKendaraan;
 
     public function __construct() {
         Auth::handleLogin();
         $this->_modelCostumer = Mydb::getModelCostumer();
+        $this->_modelKendaraan = Mydb::getModelKendaraan();
     }
 
     public function index() {
@@ -75,12 +77,14 @@ class indexcontroller extends Controller {
         }
         $data = $this->_modelCostumer->getCostumer($id);
         $cekPenjamin = $this->_modelCostumer->getPenjaminCostumer($id);
+        $whereKendaraan = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $id);
+        $cekKendaraan = $this->_modelKendaraan->fetchRow($whereKendaraan);
         require UD . 'header.html';
         require APP_MODUL . '/costumer/form/form-detail-costumer.phtml';
         require UD . 'footer.html';
     }
-
-    public function delete($id) {
+    
+     public function delete($id) {
         if ($_SESSION['level'] != 'superadmin') {
             $this->redirect('error/index/notAllowed');
         }
