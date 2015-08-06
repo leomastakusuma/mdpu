@@ -43,6 +43,12 @@
                                 <?php if(!empty($cekKendaraan)):?>
                                 <a href="<?php echo URL . 'kendaraan/index/byid/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Data Kendaraan</a>
                                 <?php endif;?>
+
+                                <?php if(!empty($cekPinjaman)):?>
+                                <a href="<?php echo URL . 'pinjaman/index/detailById/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Data Pinjaman</a>
+                                <?php endif;?>
+                                
+                                
                                 <?php if(empty($cekPenjamin)) :?>
                                     <a href="<?php echo URL . 'penjamin/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Penjamin</a>
                                 <?php elseif(!empty($cekPenjamin)) :?>

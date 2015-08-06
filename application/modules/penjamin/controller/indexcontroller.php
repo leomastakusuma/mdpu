@@ -12,12 +12,13 @@ class indexcontroller extends Controller {
     protected $_modelCostumer;
     protected $_modelPenjamin;
     protected $_modelKendaraan;
-
+    protected $_modelpinjaman;
     public function __construct() {
         Auth::handleLogin();
         $this->_modelCostumer = Mydb::getModelCostumer();
         $this->_modelPenjamin = Mydb::getModelPenjamin();
         $this->_modelKendaraan = Mydb::getModelKendaraan();
+        $this->_modelpinjaman = Mydb::getModelPinjaman();
     }
 
     public function index() {
@@ -71,6 +72,8 @@ class indexcontroller extends Controller {
         if (($_SESSION['level'] != 'superadmin') && ($_SESSION['level'] != 'admin')) {
             $this->redirect('error/index/notAllowed');
         }
+        $where = $this->_modelpinjaman->getAdapter()->quoteInto('nik_costumer = ?', $id);
+        $cekPinjaman = $this->_modelpinjaman->fetchRow($where);
         $where = $this->_modelPenjamin->getAdapter()->quoteInto('nik_costumer =?', $id);
         $whereKendaraan = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $id);
         $cekKendaraan = $this->_modelKendaraan->fetchRow($whereKendaraan);

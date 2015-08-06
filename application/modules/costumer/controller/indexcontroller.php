@@ -11,11 +11,13 @@ class indexcontroller extends Controller {
 
     protected $_modelCostumer;
     protected $_modelKendaraan;
+    protected $_modelPinjaman;
 
     public function __construct() {
         Auth::handleLogin();
         $this->_modelCostumer = Mydb::getModelCostumer();
         $this->_modelKendaraan = Mydb::getModelKendaraan();
+        $this->_modelPinjaman = Mydb::getModelPinjaman();
     }
 
     public function index() {
@@ -79,6 +81,9 @@ class indexcontroller extends Controller {
         $cekPenjamin = $this->_modelCostumer->getPenjaminCostumer($id);
         $whereKendaraan = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $id);
         $cekKendaraan = $this->_modelKendaraan->fetchRow($whereKendaraan);
+        $wherePinjaman = $this->_modelPinjaman->getAdapter()->quoteInto('nik_costumer = ?', $id);
+        $cekPinjaman = $this->_modelPinjaman->fetchRow($wherePinjaman);
+        
         require UD . 'header.html';
         require APP_MODUL . '/costumer/form/form-detail-costumer.phtml';
         require UD . 'footer.html';

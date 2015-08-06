@@ -12,12 +12,14 @@ class indexcontroller extends Controller {
     protected $_modelKendaraan;
     protected $_modelCostumer;
     protected $_modelCabang;
+    protected $_modelpinjaman;
 
     public function __construct() {
         Auth::handleLogin();
         $this->_modelKendaraan = Mydb::getModelKendaraan();
         $this->_modelCostumer = Mydb::getModelCostumer();
         $this->_modelCabang = Mydb::getModelCabang();
+        $this->_modelpinjaman = Mydb::getModelPinjaman();
     }
 
     public function index() {
@@ -170,6 +172,9 @@ class indexcontroller extends Controller {
             $this->redirect('error');
         }
         require UD . 'headerDataTables.phtml';
+        $where = $this->_modelpinjaman->getAdapter()->quoteInto('nik_costumer = ?', $nik_costumer);
+        $cekPinjaman = $this->_modelpinjaman->fetchRow($where);
+        
         $data = $this->_modelKendaraan->getByidCostumer($nik_costumer);
         $cekPenjamin = $this->_modelCostumer->getPenjaminCostumer($nik_costumer);
         require APP_MODUL . '/kendaraan/view/dataKendaraanbyCostumer.phtml';

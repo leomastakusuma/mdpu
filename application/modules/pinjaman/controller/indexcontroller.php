@@ -51,6 +51,33 @@ class IndexController extends Controller {
         require APP_MODUL . '/pinjaman/view/dataPinjaman.phtml';
         require UD . 'footerDataTables.phtml';
     }
+    
+    public function detailById($nik_costumer) {
+        if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'admin') ) {
+            $this->redirect( 'error/index/notAllowed' );
+        }
+        require UD . 'headerDataTables.phtml';
+        $where = $this->_modelCabang->getAdapter()->quoteInto( 'id_cabang = ? ', $this->id_cabang );
+        $cekPenjamin = $this->_modelCostumer->getPenjaminCostumer($nik_costumer);
+        $cabang = $this->_modelCabang->fetchRow( $where );
+        $whereKendaraan = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $nik_costumer);
+        $cekKendaraan = $this->_modelKendaraan->fetchRow($whereKendaraan);
+        if ( !$cabang ) {
+            $this->redirect( 'error' );
+        }
+        $data = $this->_modelPinjaman->getByidCostumer($nik_costumer);
+        if(!$data){
+           $this->redirect( 'error' ); 
+        }
+        foreach ( $data as $key => $val ) {
+            $no_spb = $val[ 'no_kontrak' ];
+            $where = $this->_modelSPB->getAdapter()->quoteInto( 'no_kontrak = ?', $no_spb );
+            $spb = $this->_modelSPB->fetchRow( $where );
+            $data[ $key ][ 'spb' ] = (!empty( $spb->no_spb ) ? $spb->no_spb : '');
+        }
+        require APP_MODUL . '/pinjaman/view/dataPinjaman-byid.phtml';
+        require UD . 'footerDataTables.phtml';
+    }
 
     public function add( $nopos = null ) {
         if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'admin') ) {

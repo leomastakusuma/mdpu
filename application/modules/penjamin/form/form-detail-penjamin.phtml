@@ -39,6 +39,9 @@
                          <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <a href="<?php echo URL . 'kendaraan/index/add/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Kendaraan</a>
+                                 <?php if(!empty($cekPinjaman)):?>
+                                <a href="<?php echo URL . 'pinjaman/index/detailById/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Data Pinjaman</a>
+                                <?php endif;?>
                                 <?php if(!empty($cekKendaraan)):?>
                                 <a href="<?php echo URL . 'kendaraan/index/byid/'.$data['nik_costumer'] ?>" class="btn btn-primary" role="button">Data Kendaraan</a>
                                 <?php endif;?>

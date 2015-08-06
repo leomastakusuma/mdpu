@@ -16,16 +16,17 @@
                 <li class="active">
                     <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
                 </li>
+              
                 <?php if($_SESSION['level']==='superadmin'):?>
                     <li>
-                        <i class="fa fa-table active"></i><a href="<?php echo URL ?>kendaraan/index/all"> Data All Kendaraan</a>   
+                        <i class="fa fa-table active"></i><a href="<?php echo URL ?>pinjaman/index/all"> Data All Pinjaman</a>   
                     </li>
                 <?php endif;?>
-                     <li>
-                        <i class="fa fa-table active"></i><a href="<?php echo URL ?>kendaraan/index"> Data Kendaraan</a>   
-                    </li>
                 <li>
-                    <i class="fa fa-table active"></i> Data Kendaraan By Costumer   
+                    <i class="fa fa-table active"></i><a href="<?php echo URL ?>pinjaman/index">Data Pinjaman </a>  
+                </li>
+                <li>
+                        <i class="fa fa-table active"></i> Data Pinjaman By Costumer 
                 </li>
 
             </ol>
@@ -33,17 +34,16 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Kendaraan Costumer  , &nbsp;<strong> <?php echo $data[0]['nama'];?></strong></h3>
+            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Pinjaman Costumer , &nbsp;<strong> <?php echo $data[0]['nama'];?></strong></h3>
         </div>
         <div class="box-body" > 
              <div class="form-group">
                 <div class="col-sm-10">
                     <a href="<?php echo URL . 'kendaraan/index/add/'.$data[0]['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Kendaraan</a>
+                    <?php if(!empty($cekKendaraan)):?>
+                                <a href="<?php echo URL . 'kendaraan/index/byid/'.$data[0]['nik_costumer'] ?>" class="btn btn-primary" role="button">Data Kendaraan</a>
+                    <?php endif;?>
                     <a href="<?php echo URL . 'costumer/index/detail/'.$data[0]['nik_costumer'] ?>" class="btn btn-primary" role="button">Detail Costumer</a>
-                      <?php if ( !empty( $cekPinjaman ) ): ?>
-                        <a href="<?php echo URL . 'pinjaman/index/detailById/' . $data[ 'nik_costumer' ] ?>" class="btn btn-primary" role="button">Data Pinjaman</a>
-                    <?php endif; ?>
-                                
                     <?php if(empty($cekPenjamin)) :?>
                         <a href="<?php echo URL . 'penjamin/index/add/'.$data[0]['nik_costumer'] ?>" class="btn btn-primary" role="button">ADD Penjamin</a>
                     <?php elseif(!empty($cekPenjamin)) :?>
@@ -56,12 +56,13 @@
             <table id="example1" class="table table-bordered table-striped" style="overflow-x: scroll;overflow-y: scroll">
                 <thead>
                     <tr>
+                        <th class="col-sm-1">No Contract</th>
                         <th class="col-sm-2">Nik Costumer</th>
-                        <th class="col-sm-1">No Polisi</th>
-                        <th class="col-sm-2">No BPKB</th>
-                        <th class="col-sm-2">Merek /Type</th>
-<!--                        <th class="col-sm-2">Tahun Pembuatan</th>-->
-                        <th class="col-sm-3" align="center"><p class="text-justify">Action</p></th>
+                        <th class="col-sm-2">Nama</th>
+                        <th class="col-sm-2">Nilai Pinjaman</th>
+                        <th class="col-sm-2">Angsuran / Bulan</th>
+                        <th class="col-sm-1">Lama Angsuran</th>
+                        <th class="col-sm-1" align="center"><p class="text-justify">Action</p></th>
                     </tr>
                 </thead>
                 <tbody> 
@@ -69,20 +70,22 @@
                     <?php if (!empty($data))  ?>  
                     <?php foreach ($data as $val):$i++; ?>
                         <tr>
-                            
-                            <td class="col-sm-2"><?php echo $val['nik_costumer'] ?></td>
-                            <td class="col-sm-1"><?php echo $val['no_polisi'] ?></td>
-                            <td class="col-sm-2"><?php echo $val['no_bpkb'] ?></td>
-                            <td class="col-sm-2"><?php echo $val['merk'] ?></td>
+                            <td><?php echo $val['no_kontrak'] ?></td>
+                            <td><?php echo $val['nik_costumer'] ?></td>
+                            <td><?php echo $val['nama'] ?></td>
+                            <td><?php echo 'Rp.'. rupiah(isFloatNum($val['nilai_pinjaman'])); ?></td>
+                            <td><?php echo 'Rp.'. rupiah(isFloatNum($val['angsuran_perbulan'])); ?></td>
+                            <td><?php echo $val['lama_angsuran'] ?>&nbsp;X</td>
 
-                            <td align="center" class="col-sm-3 small">
-
-                                    <a href="<?php echo URL . 'kendaraan/index/detailbyid/' . $val['no_polisi']; ?>" title="Detail"> <i class="fa fa-newspaper-o"></i>&nbsp;Detail</a>
+                            <td align="center">
+                                <?php if(empty($spb)):?>
+                                    <a href="<?php echo URL . 'pinjaman/index/cetakSPB/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>Cetak SPB </a>
+                                <?php endif;?>
                                 <?php if($_SESSION['level']==='superadmin'):?>
-                                    &nbsp;|&nbsp;
-                                   <a href="<?php echo URL . 'kendaraan/index/edit/' . $val['id_kendaraan']; ?>"> <i class="fa fa-edit"></i>&nbsp;Edit</a>
-                                    &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                                   <a href="<?php echo URL . 'kendaraan/index/delete/' . $val['no_polisi']; ?>"> <i class="fa fa-trash-o"></i>&nbsp;Delete </a>
+                                    &nbsp;|| &nbsp; 
+                                   <a href="<?php echo URL . 'pinjaman/index/edit/' . $val['id_pinjaman']; ?>"> <i class="fa fa-edit"></i>EDIT </a>
+                                    &nbsp;&nbsp;|| &nbsp; 
+                                   <a href="<?php echo URL . 'pinjaman/index/delete/' . $val['id_pinjaman']; ?>"> <i class="fa fa-trash-o"></i>DELETE </a>
                                 <?php endif;?>
                             </td>
                         </tr>
