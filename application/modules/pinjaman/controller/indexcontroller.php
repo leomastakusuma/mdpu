@@ -121,8 +121,21 @@ class IndexController extends Controller {
         unset( $data[ 'lama_angsuran' ] );
         unset( $data[ 'angsuran_perbulan' ] );
         unset( $data[ 'tanggal_jatuh_tempo' ] );
+        unset( $data['tanggal']);
         try {
-            $this->_modelSPB->insert( $data );
+              $where = $this->_modelSPB->getAdapter()->quoteInto('no_kontrak = ?', $data['no_kontrak']);
+              $find = $this->_modelSPB->fetchRow($where);
+              if($find){
+                  $modified_at = new Zend_Db_Expr('NOW()') ;
+                  $updateSpb= array(
+                      'modified_at'=>$modified_at
+                  );
+                  $this->_modelSPB->update($updateSpb, $where);
+              }else{
+                  $data['create_at'] = new Zend_Db_Expr('NOW()');
+                  $this->_modelSPB->insert( $data );
+              }
+             
         } catch ( Exception $ex ) {
             echo $ex->getMessage();
         }
