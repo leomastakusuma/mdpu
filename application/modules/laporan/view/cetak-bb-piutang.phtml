@@ -32,7 +32,7 @@
                         <tbody>
                             <tr>
                                 <td colspan="4">
-                                         <table width="100%" border='1'  cellspacing='0' cellpading='0'>
+                                         <table width="100%"   border='1' cellpading='0' cellspacing='0'>
                                         <tr>
                                             <td>No</td>
                                             <td widht="10%">No Kontrak</td>
@@ -41,38 +41,49 @@
                                             <td widht="15%">Kredit</td>
                                             <td widht="20%">Saldo</td>
                                         </tr>
-                                        
+
                                         <tr>
-                                        <?php  $no=0;?>     
-                                        <?php $totalDebit = 0;?>    
-                                        <?php $totalKredit = 0;?>    
-                                         
-                                        <?php foreach ($dataCetak as $key=>$val):$no++?>
-                                            <?php // if($key['lama_angsuran'])?>
-                                            <td><?php echo $no?></td>
-                                            <td><?php echo $val['no_kontrak']?></td>
-                                            <td><?php echo $val['nama']?></td>
-                                            <td><?php echo $val['debit']?></td>
-                                            <td><?php echo $val['kredit']?></td>
-                                            <td><?php echo $val['saldo']?></td>
-                                           
-                                            <?php $totalDebit += isFloatNum($val['debit']);?>
-                                            <?php $totalKredit += isFloatNum($val['saldo']);?>
-                                          
+                                            <?php $saldo = 0; ?>    
+                                            <?php $no = 0; ?>     
+                                            <?php $totalDebit = 0; ?>    
+                                            <?php $totalKredit = 0; ?>   
+                                            <?php $ic = 0; ?>
+                                            <?php foreach ( $dataCetak as $key => $val ):$no++ ?>
+                                                <?php $i = $key - 1; ?>
+                                                <?php $saldo +=isFloatNum( $dataCetak[ $key ][ 'debit' ] ); ?>
+                                                <td><?php echo $no ?></td>
+                                                <td><?php echo $val[ 'no_kontrak' ] ?></td>
+                                                <td><?php echo $val[ 'nama' ] ?></td>
+                                                <td><?php echo $val[ 'debit' ] ?></td>
+                                                <td><?php echo $val[ 'kredit' ] ?></td>
+                                                <?php if ( $key == '0' ): ?>
+                                                    <td><?php echo $val[ 'saldo' ] ?></td>
+                                                <?php else : ?>
+                                                    <td><?php echo rupiah( $saldo ) ?></td>
+                                                <?php endif; ?>
+                                                <?php $totalDebit += isFloatNum( $val[ 'debit' ] ); ?>
+                                                <?php $totalKredit += isFloatNum( $val[ 'saldo' ] ); ?>
+
+                                            </tr>
+                                        <?php endforeach; ?>
                                         </tr>
-                                        <?php endforeach;?>
-                                                                            
+                                        <?php /*
+                                        <tr>
+                                            <td colspan="5" align='right'> Total Saldo &nbsp;</td>
+                                            <td><?php echo $saldo;?></td>
+                                        </tr>   
+                                         * 
+                                         */?> 
                                     </table>
-                                    
                                 </td>
-                            </tr>
-                             <tr>
-                                <td colspan="4"><hr></td>
-                            </tr>
-                            <tr>
+                            </tr>                          
+                           
+                        </tbody>
+                        <tfoot>
+                               <tr>
                                 <td colspan="4">
                                     <table width="100%">
-                                        
+
                                         <tr align="center">
                                             <td width="50%">Akuntasi</td>
                                             <td widht='50%'>Pimpinan</td>
@@ -81,15 +92,12 @@
                                             <td colspan="3" height="90">&nbsp;</td>
                                         </tr>
                                         <tr align="center">
-                                            <td><?php echo $_SESSION['dataLogin']['realname']; ?></td>
-                                            <td><?php echo $_SESSION['dataLogin']['kepala_cabang']; ?></td>
+                                            <td><?php echo $_SESSION[ 'dataLogin' ][ 'realname' ]; ?></td>
+                                            <td><?php echo $_SESSION[ 'dataLogin' ][ 'kepala_cabang' ]; ?></td>
                                         </tr >
                                     </table>
                                 </td>
-                            </tr>                          
-                           
-                        </tbody>
-                        <tfoot>
+                            </tr>
                         </tfoot>
                     </table>
                     <br>

@@ -1,4 +1,4 @@
-<?php $id= $awal.'/'.$akhir;?>
+<?php $id = $awal . '/' . $akhir; ?>
 <div class="container-fluid">
     <br/>
     <div class="row">
@@ -25,16 +25,16 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i>Cetak Buku Besar Perimaan Piutang</h3>
                 </div>
-                
+
                 <div class="panel-body">
                     <br/>
                     <table width="80%" align="center"  >
                         <thead>
                             <tr>
                                 <td rowspan="1" align="center" width="20%">
-                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                    <img src="<?php echo URL ?>public/images/logo.png" height="80">
                                 </td>
-                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</strong><br/>Buku Besar Piutang <br/>Pertanggal <?php echo $awal .'/'.$akhir;?></td>
+                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</strong><br/>Buku Besar Piutang <br/>Pertanggal <?php echo $awal . '/' . $akhir; ?></td>
                             </tr>
                             <tr>
                                 <td colspan="4"><hr></td>
@@ -53,46 +53,50 @@
                                             <td widht="15%">Kredit</td>
                                             <td widht="20%">Saldo</td>
                                         </tr>
-                                        
+
                                         <tr>
-                                        <?php $no=0;?>     
-                                        <?php $totalDebit = 0;?>    
-                                        <?php $totalKredit = 0;?>    
-                                         
-                                        <?php foreach ($dataCetak as $key=>$val):$no++?>
-                                            <td><?php echo $no?></td>
-                                            <td><?php echo $val['no_kontrak']?></td>
-                                            <td><?php echo $val['nama']?></td>
-                                            <?php if($key =='0' ) :?>
-                                            <td><?php echo $val['debit']?></td>
-                                            <td><?php echo $val['kredit']?></td>
-                                            <td><?php echo $val['saldo'];?></td>
-                                            <?php endif;?>
-                                            <?php if( $key !='0') :?>
-                                            <td><?php echo $val['debit']?></td>
-                                            <td><?php echo $val['kredit']?></td>
-                                            <td><?php echo rupiah(isFloatNum($val['saldo'])+isFloatNum($val['debit']));?></td>
-                                            <?php endif;?>
-                                            
-                                           
-                                            <?php $totalDebit += isFloatNum($val['debit']);?>
-                                            <?php $totalKredit += isFloatNum($val['saldo']);?>
-                                          
+                                            <?php $saldo = 0; ?>    
+                                            <?php $no = 0; ?>     
+                                            <?php $totalDebit = 0; ?>    
+                                            <?php $totalKredit = 0; ?>   
+                                            <?php $ic = 0; ?>
+                                            <?php foreach ( $dataCetak as $key => $val ):$no++ ?>
+                                                <?php $i = $key - 1; ?>
+                                                <?php $saldo +=isFloatNum( $dataCetak[ $key ][ 'debit' ] ); ?>
+                                                <td><?php echo $no ?></td>
+                                                <td><?php echo $val[ 'no_kontrak' ] ?></td>
+                                                <td><?php echo $val[ 'nama' ] ?></td>
+                                                <td><?php echo $val[ 'debit' ] ?></td>
+                                                <td><?php echo $val[ 'kredit' ] ?></td>
+                                                <?php if ( $key == '0' ): ?>
+                                                    <td><?php echo $val[ 'saldo' ] ?></td>
+                                                <?php else : ?>
+                                                    <td><?php echo rupiah( $saldo ) ?></td>
+                                                <?php endif; ?>
+                                                <?php $totalDebit += isFloatNum( $val[ 'debit' ] ); ?>
+                                                <?php $totalKredit += isFloatNum( $val[ 'saldo' ] ); ?>
+
+                                            </tr>
+                                        <?php endforeach; ?>
                                         </tr>
-                                        <?php endforeach;?>
-                                                                            
+                                        <?php /*
+                                        <tr>
+                                            <td colspan="5" align='right'> Total Saldo &nbsp;</td>
+                                            <td><?php echo $saldo;?></td>
+                                        </tr>   
+                                         * 
+                                         */?> 
                                     </table>
-                                    
+
                                 </td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td colspan="4"><hr></td>
                             </tr>
-                                        
-                             <tr>
+                            <tr>
                                 <td colspan="4">
                                     <table width="100%">
-                                        
+
                                         <tr align="center">
                                             <td width="50%">Akuntasi</td>
                                             <td widht='50%'>Pimpinan</td>
@@ -101,8 +105,8 @@
                                             <td colspan="3" height="90">&nbsp;</td>
                                         </tr>
                                         <tr align="center">
-                                            <td><?php echo $_SESSION['dataLogin']['realname']; ?></td>
-                                            <td><?php echo $_SESSION['dataLogin']['kepala_cabang']; ?></td>
+                                            <td><?php echo $_SESSION[ 'dataLogin' ][ 'realname' ]; ?></td>
+                                            <td><?php echo $_SESSION[ 'dataLogin' ][ 'kepala_cabang' ]; ?></td>
                                         </tr >
                                     </table>
                                 </td>
@@ -124,12 +128,12 @@
     </div>
 </div>
 <script type="text/javascript">
-    var cetak = function(){
+    var cetak = function () {
         var params = [
-                        'height='+screen.height,
-                        'width='+screen.width/2,
-                        'fullscreen=yes' // only works in IE, but here for completeness
-                    ].join(',');
-        window.open('<?php echo URL.'laporan/index/cetakPiutang/'.$id;?>');// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
+            'height=' + screen.height,
+            'width=' + screen.width / 2,
+            'fullscreen=yes' // only works in IE, but here for completeness
+        ].join(',');
+        window.open('<?php echo URL . 'laporan/index/cetakPiutang/' . $id; ?>');// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
     };
 </script>
