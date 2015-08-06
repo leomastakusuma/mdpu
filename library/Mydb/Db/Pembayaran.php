@@ -104,9 +104,11 @@ class Mydb_Db_Pembayaran extends Mydb_Db_Abstract {
         $select->columns(array('no_kontrak'),'pinj');
         $select->columns(array('nama'),'cos');
         $select->columns(array('no_polisi'),'kend');
-        $select->columns(array('angsuran_perbulan'),'pemb');
+        $select->columns(array('jumlah_angsuran'=>'angsuran_perbulan'),'pemb');
         $select->columns(array('angsuran_ke'),'pemb');
         $select->columns(array('denda'),'pemb');
+        $select->columns(array('total_bayar'),'pemb');
+        $select->columns(array('potongan'),'pemb');
         
         $select->where('pemb.no_kwitansi = ?',$no_kwitansi);
         return $this->getAdapter()->fetchRow($select);
