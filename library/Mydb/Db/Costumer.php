@@ -115,12 +115,15 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
     }
     */
     
-    public function getNoKontrak(){
+    public function getNoKontrak($laporan = false){
         $select = $this->select();
         $select->from(array('cos'=>$this->_name),array());
         $select->setIntegrityCheck(false);
         $select->join(array('pinj'=>'pinjaman'), 'pinj.nik_costumer =  cos.nik_costumer',array());
         $select->join(array('kend'=>'kendaraan'),'kend.no_polisi = pinj.no_polisi',array());
+        if($laporan){
+            $select->join(array('pem'=>'pembayaran'),'pinj.no_kontrak = pem.no_kontrak',array());
+        }
         $select->columns(array('no_kontrak'),'pinj');
         $select->columns(array('lama_angsuran'),'pinj');
         return $this->getAdapterSelect()->fetchAll($select);
