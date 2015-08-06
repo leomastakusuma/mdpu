@@ -31,8 +31,8 @@ class Mydb_Db_BBPiutang extends Mydb_Db_Abstract {
     public function getBBPiutang($awal,$akhir){
        $select = $this->select();
        $select->from(array('bbp'=>$this->_name),array('*'));
-       $select->where('bbp.tanggal > ?',$awal);
-       $select->where('bbp.tanggal < ?',$akhir);
+       $select->where('bbp.tanggal >= ?',$awal);
+       $select->where('bbp.tanggal <= ?',$akhir);
        return $this->getAdapterSelect()->fetchAll( $select);
     
     }
