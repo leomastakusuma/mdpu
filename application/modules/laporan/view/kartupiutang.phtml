@@ -72,23 +72,22 @@
                             </tr>
                             <tr>
                                 <td width="15%" align="left">Telp/Hp   </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['telpon'] ?></td>
-                                <td width="15%" align="left">Telp/Hp   </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['telpon'] ?></td>
-                            </tr>
-                            
-                            <tr>
-                                <td width="15%" align="left">No Rangka / Mesin  </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_rangka'] ?></td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['hp']; echo !empty($dataCetak[0]['telpon']) ? $dataCetak[0]['telpon'].'/' : null?></td>
                                 <td width="15%" align="left">Tanggal STNK </td>
                                 <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['tgl_stnk'] ?></td>
                             </tr>
                             
                             <tr>
-                                <td width="10%" align="left" >Alamat BPKB  </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['alamatbpkb'] ?></td>
+                                <td width="15%" align="left">No Rangka / Mesin  </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_rangka'] ?></td>
                                 <td width="15%" align="left">No / Nama BPKB </td>
                                 <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_bpkb'].'/'.$dataCetak[0]['nama_bpkb'] ?></td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="10%" align="left" >Alamat BPKB  </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['alamatbpkb'] ?></td>
+                                
                             </tr>
                             
 
@@ -115,33 +114,51 @@
                                         </tr>
                                         
                                         <tr>
+                                        <?php $i=0;?>    
                                         <?php $total = 0;?>    
                                         <?php $pembayaran = 0;?>    
                                         <?php $potongan = 0;?>    
                                         <?php $telat = 0;?>    
                                         <?php $denda = 0;?>    
                                         <?php $dendadibayar = 0;?>    
-                                        <?php foreach ($dataCetak as $key=>$val):?>
-                                            <?php // if($key['lama_angsuran'])?>
-                                            <td><?php echo $val['angsuran_ke']?></td>
-                                            <td><?php echo $val['tanggal_jatuh_tempo']?></td>
-                                            <td><?php echo $val['tagihan']?></td>
-                                            <td><?php echo $val['pembayaran']?></td>
-                                            <td><?php echo $val['potongan']?></td>
-                                            <td><?php echo $val['telat']?></td>
-                                            <td><?php echo $val['denda_terhitung']?></td>
-                                            <td><?php echo $val['denda_dibayar']?></td>
-                                            <td><?php echo $val['tanggal_bayar_angsuran']?></td>
-                                            <td><?php echo $val['tanggal_bayar_denda']?></td>
-                                            <td><?php echo $val['no_kwitansi']?></td>
-                                            <?php $total += isFloatNum($val['pembayaran']);?>
-                                            <?php $pembayaran += isFloatNum($val['pembayaran']);?>
-                                            <?php $potongan += isFloatNum($val['potongan']);?>
-                                            <?php $telat += isFloatNum($val['telat']);?>
-                                            <?php $denda += isFloatNum($val['denda_terhitung']);?>
-                                            <?php $dendadibayar += isFloatNum($val['denda_dibayar']);?>
-                                        </tr>
-                                        <?php endforeach;?>
+                                            
+                                        <?php  $jumlahAngsuran=$dataCetak[0]['lama_angsuran'];?>
+                                        <?php  for($i=0;$i<=$jumlahAngsuran;$i++):?>
+                                            <?php $month = date('y-m-d',  strtotime($dataCetak[0]['tanggal_bayar_angsuran']));?>
+                                            <?php $tgl2 = date('F', strtotime("+".$i."month", strtotime($month)))?> 
+                                            <?php if(!empty($dataCetak[$i])): ?>
+                                                <td><?php echo $dataCetak[$i]['angsuran_ke']?></td>
+                                                <td><?php echo $dataCetak[$i]['tanggal_jatuh_tempo'].'-'.$tgl2;?></td>
+                                                <td><?php echo $dataCetak[$i]['tagihan']?></td>
+                                                <td><?php echo $dataCetak[$i]['pembayaran']?></td>
+                                                <td><?php echo $dataCetak[$i]['potongan']?></td>
+                                                <td><?php echo $dataCetak[$i]['telat']?></td>
+                                                <td><?php echo $dataCetak[$i]['denda_terhitung']?></td>
+                                                <td><?php echo $dataCetak[$i]['denda_dibayar']?></td>
+                                                <td><?php echo $dataCetak[$i]['tanggal_bayar_angsuran']?></td>
+                                                <td><?php echo $dataCetak[$i]['tanggal_bayar_denda']?></td>
+                                                <td><?php echo $dataCetak[$i]['no_kwitansi']?></td>
+                                                <?php $total += isFloatNum($dataCetak[$i]['pembayaran']);?>
+                                                <?php $pembayaran += isFloatNum($dataCetak[$i]['pembayaran']);?>
+                                                <?php $potongan += isFloatNum($dataCetak[$i]['potongan']);?>
+                                                <?php $telat += isFloatNum($dataCetak[$i]['telat']);?>
+                                                <?php $denda += isFloatNum($dataCetak[$i]['denda_terhitung']);?>
+                                                <?php $dendadibayar += isFloatNum($dataCetak[$i]['denda_dibayar']);?>
+                                            <?php else :?>
+                                                <td><?php echo $i;?></td>
+                                                <td><?php echo $dataCetak[0]['tanggal_jatuh_tempo'].'-'.$tgl2;?></td>
+                                                <td><?php echo $dataCetak[0]['tagihan']?></td>
+                                                <td>0,00</td>
+                                                <td>0,00</td>
+                                                <td>-</td>
+                                                <td>0,00</td>
+                                                <td>0,00</td>
+                                                <td>-/-/-</td>
+                                                <td>-/-/-</td>
+                                                <td>-</td>
+                                            <?php endif;?>
+                                                <tr/>
+                                        <?php endfor;?>
                                         <?php $sisa = 0;?>
                                         <?php $sisa = isFloatNum($dataCetak[0]['nilai_pinjaman']) - $total  ?>
                                         <tr>
