@@ -158,7 +158,13 @@ class IndexController extends Controller {
         $dataCetak[ 'jumlah_angsuran' ] = $form[ 'angsuran_perbulan' ];
         $dataCetak[ 'angsuran_ke' ] = $form[ 'angsuran_ke' ];
         $dataCetak[ 'denda' ] = $form[ 'denda' ];
-
+        $dataCetak[ 'denda_total' ] = $form[ 'denda_total' ];
+        $dataCetak[ 'denda_sebelumnya' ] = $form[ 'denda_sebelumnya' ];
+        $dataCetak[ 'denda_dibayar' ] = !empty($form[ 'denda_dibayar' ]) ? $form[ 'denda_dibayar' ] : '0,00';
+        $dataCetak[ 'potongan' ] = $form[ 'potongan' ];
+        $dataCetak[ 'total_bayar' ] = $form[ 'total_bayar' ];
+        $dataCetak['id_user']= $_SESSION['dataLogin']['id_user'];
+        $_SESSION['DataCetak'] = $dataCetak;
         if ( !empty( $form[ 'denda_sebelumnya' ] ) ) {
             $dataKp[ 'denda_terhitung' ] = isFloatNum( $form[ 'denda_sebelumnya' ] ) - $form[ 'denda' ];
         } else {
@@ -200,7 +206,7 @@ class IndexController extends Controller {
         $dataBBKas[ 'discount' ] = $dataKP[ 'potongan' ];
         $dataBBKas[ 'total' ] = $form[ 'total_bayar' ];
         $dataBBKas[ 'tgl_bayar' ] = new Zend_Db_Expr( 'NOW()' );
-
+        
         $getKeterangan = $this->_modelCostumer->getCabangCostumer( $dataKP[ 'no_kontrak' ] );
         if ( !empty( $getKeterangan ) ) {
             if ( $getKeterangan[ 'id_cabang' ] != $this->id_cabang ) {
@@ -351,10 +357,15 @@ class IndexController extends Controller {
         if ( empty( $no_kwitansi ) ) {
             $this->redirect( 'error/index/error' );
         }
-        $dataCetak = $this->_modelPembayaran->cetakKW( $no_kwitansi );
+        if(!empty($_SESSION['DataCetak'])){
+            if($_SESSION['DataCetak']['no_kwitansi']===$no_kwitansi){
+                $dataCetak = $_SESSION['DataCetak'];
+            }
+        }
         $id_cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
         $kasirname = $this->_modelUser->getKasirName( $id_cabang );
         $data[ 'realname' ] = $kasirname[ 'realname' ];
+        unset($_SESSION['DataCetak']);
         require APP_MODUL . '/pembayaran/view/Cetakkwitansi.phtml';
     }
 
