@@ -44,7 +44,7 @@
                         <tbody>
                             <tr>
                                 <td colspan="4">
-                                        <table width="100%">
+                                    <table width="100%"   border='1'>
                                         <tr>
                                             <td>No</td>
                                             <td widht="10%">No Kontrak</td>
@@ -55,12 +55,11 @@
                                         </tr>
                                         
                                         <tr>
-                                        <?php  $no=0;?>     
+                                        <?php $no=0;?>     
                                         <?php $totalDebit = 0;?>    
                                         <?php $totalKredit = 0;?>    
                                          
                                         <?php foreach ($dataCetak as $key=>$val):$no++?>
-                                            <?php // if($key['lama_angsuran'])?>
                                             <td><?php echo $no?></td>
                                             <td><?php echo $val['no_kontrak']?></td>
                                             <td><?php echo $val['nama']?></td>
@@ -81,7 +80,25 @@
                              <tr>
                                 <td colspan="4"><hr></td>
                             </tr>
-                                                        
+                                        
+                             <tr>
+                                <td colspan="4">
+                                    <table width="100%">
+                                        
+                                        <tr align="center">
+                                            <td width="50%">Akuntasi</td>
+                                            <td widht='50%'>Pimpinan</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" height="90">&nbsp;</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><?php echo $_SESSION['dataLogin']['realname']; ?></td>
+                                            <td><?php echo $_SESSION['dataLogin']['kepala_cabang']; ?></td>
+                                        </tr >
+                                    </table>
+                                </td>
+                            </tr>
                             <tr valign="bottom">
                                 <td colspan="4" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
                             </tr>
