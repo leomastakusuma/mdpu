@@ -76,5 +76,12 @@ class Mydb_Db_Pinjaman extends Mydb_Db_Abstract{
         return $this->getAdapter()->fetchRow($query);
         
     }
-    
+    public function getByidCostumer($nik_costumer){
+        $select = $this->select();
+        $select->from(array('pinj' => 'pinjaman'), array('*'));
+        $select->setIntegrityCheck(false);
+        $select->join(array('cos' => 'costumer'), 'cos.nik_costumer=pinj.nik_costumer', array('nama'));
+        $select->where('pinj.nik_costumer = ?',$nik_costumer);
+        return $this->getAdapterSelect()->fetchAll($select);
+    }
 }
