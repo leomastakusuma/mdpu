@@ -1,0 +1,23 @@
+2015-08-06T23:51:39+07:00 INFO (6): Array
+(
+    [id_user] => 28
+    [id_cabang] => 001
+    [realname] => Sisca
+    [username] => akuntansi
+    [password] => 81f66b30d3445399cdf8cd10072467c94351abb2
+    [create_at] => 2015-08-03
+    [level] => akuntan
+    [id_login] => 7
+    [last_login] => 2015-08-06 22:25:26
+    [login_time] => 2015-08-06 23:51:38
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => Subaidi
+    [provinsi] => Lampung
+    [kota] => Bandar Lampung
+    [kecamatan] => Kedamaian
+    [alamat] => Jl. Pangeran Antasari No. 1
+    [kode_pos] => 35133
+)
+

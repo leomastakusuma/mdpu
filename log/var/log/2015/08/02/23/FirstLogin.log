@@ -1,0 +1,23 @@
+2015-08-02T23:18:12+07:00 INFO (6): Array
+(
+    [id_user] => 21
+    [id_cabang] => 032
+    [realname] => qwe
+    [username] => qwe
+    [password] => 056eafe7cf52220de2df36845b8ed170c67e23e3
+    [create_at] => 2015-08-02
+    [level] => admin
+    [id_login] => 13
+    [last_login] => 2015-08-02 23:18:12
+    [login_time] => 2015-08-02 23:18:12
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => erw
+    [kepala_cabang] => rwer
+    [provinsi] => wer
+    [kota] => werwe
+    [kecamatan] => rwer
+    [alamat] => werw
+    [kode_pos] => erwer
+)
+

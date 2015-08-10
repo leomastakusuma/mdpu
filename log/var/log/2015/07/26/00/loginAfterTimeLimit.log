@@ -1,0 +1,46 @@
+2015-07-26T00:12:40+07:00 INFO (6): Array
+(
+    [id_user] => 19
+    [id_cabang] => 29
+    [realname] => Sri Rohayati
+    [username] => akuntan
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-07-25
+    [level] => akuntan
+    [id_login] => 11
+    [last_login] => 2015-07-25 22:36:16
+    [login_time] => 2015-07-26 00:12:40
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => SRI ROHAYATI, S.Kom, Mp.di
+    [provinsi] => Lampung
+    [kota] => Antasari
+    [kecamatan] => Waru
+    [alamat] => Jl Pangen Antasari No 20
+    [kode_pos] => 12310 
+)
+
+2015-07-26T00:42:25+07:00 INFO (6): Array
+(
+    [id_user] => 18
+    [id_cabang] => 29
+    [realname] => Kasir Natar
+    [username] => kasir
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => kasir
+    [id_login] => 10
+    [last_login] => 2015-07-25 22:45:16
+    [login_time] => 2015-07-26 00:42:25
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => SRI ROHAYATI, S.Kom, Mp.di
+    [provinsi] => Lampung
+    [kota] => Antasari
+    [kecamatan] => Waru
+    [alamat] => Jl Pangen Antasari No 20
+    [kode_pos] => 12310 
+)
+

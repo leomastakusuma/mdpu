@@ -1,0 +1,573 @@
+2015-08-06T18:28:17+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-08-06T18:28:17+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: UPDATE `user_login` SET `status` = ? WHERE (id_user ='')
+Params: {"1":0}
+
+2015-08-06T18:28:33+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-08-06T18:28:33+07:00 INFO (6): 
+Elapsed Secs: 0.00049
+Query: DESCRIBE `user`
+Params: []
+
+2015-08-06T18:28:33+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-08-06T18:28:33+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: SELECT `user`.*, `cabang`.* FROM `user`
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.username = 'akuntansi') AND (user.password = '81f66b30d3445399cdf8cd10072467c94351abb2')
+Params: []
+
+2015-08-06T18:28:33+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '28')
+Params: []
+
+2015-08-06T18:28:33+07:00 INFO (6): 
+Elapsed Secs: 0.11731
+Query: UPDATE `user_login` SET `status` = ?, `login_time` = NOW(), `ip_login` = ?, `last_login` = ? WHERE (id_user = '28')
+Params: {"1":1,"2":"127.0.0.1","3":"2015-08-06 17:25:32"}
+
+2015-08-06T18:28:33+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: SELECT `user`.*, `user_login`.*, `cabang`.* FROM `user`
+ INNER JOIN `user_login` ON user_login.id_user = user.id_user
+ INNER JOIN `cabang` ON cabang.id_cabang = user.id_cabang WHERE (user.id_user = '28')
+Params: []
+
+2015-08-06T18:28:43+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: connect
+Params: []
+
+2015-08-06T18:28:43+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:28:43+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-08-06T18:28:43+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:29:16+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-08-06T18:29:16+07:00 INFO (6): 
+Elapsed Secs: 0.00056
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:29:16+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-08-06T18:29:16+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:30:20+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-08-06T18:30:20+07:00 INFO (6): 
+Elapsed Secs: 0.00048
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:30:20+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: connect
+Params: []
+
+2015-08-06T18:30:20+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:30:49+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-08-06T18:30:49+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:30:49+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-08-06T18:30:49+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:31:54+07:00 INFO (6): 
+Elapsed Secs: 0.00027
+Query: connect
+Params: []
+
+2015-08-06T18:31:54+07:00 INFO (6): 
+Elapsed Secs: 0.00051
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:31:54+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-08-06T18:31:54+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-08-06T18:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.0005
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: connect
+Params: []
+
+2015-08-06T18:31:58+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-08-06T18:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00065
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-08-06T18:33:23+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:35:18+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-08-06T18:35:18+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:35:18+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-08-06T18:35:25+07:00 INFO (6): 
+Elapsed Secs: 0.00112
+Query: connect
+Params: []
+
+2015-08-06T18:35:25+07:00 INFO (6): 
+Elapsed Secs: 0.00047
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:35:25+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-08-06T18:35:25+07:00 INFO (6): 
+Elapsed Secs: 0.00015
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:36:07+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-08-06T18:36:07+07:00 INFO (6): 
+Elapsed Secs: 0.00066
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:36:07+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-08-06T18:36:07+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:36:21+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-08-06T18:36:21+07:00 INFO (6): 
+Elapsed Secs: 0.00063
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:36:21+07:00 INFO (6): 
+Elapsed Secs: 0.00014
+Query: connect
+Params: []
+
+2015-08-06T18:36:21+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:36:50+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-08-06T18:36:50+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:36:50+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: connect
+Params: []
+
+2015-08-06T18:36:50+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:37:09+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-08-06T18:37:09+07:00 INFO (6): 
+Elapsed Secs: 0.00058
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:37:09+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: connect
+Params: []
+
+2015-08-06T18:37:09+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:37:15+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-08-06T18:37:15+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:37:15+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-08-06T18:37:15+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:37:22+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-08-06T18:37:22+07:00 INFO (6): 
+Elapsed Secs: 0.00081
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:37:22+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-08-06T18:37:22+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:37:40+07:00 INFO (6): 
+Elapsed Secs: 0.00041
+Query: connect
+Params: []
+
+2015-08-06T18:37:40+07:00 INFO (6): 
+Elapsed Secs: 0.00105
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:37:40+07:00 INFO (6): 
+Elapsed Secs: 0.00039
+Query: connect
+Params: []
+
+2015-08-06T18:37:40+07:00 INFO (6): 
+Elapsed Secs: 0.00029
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:37:50+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-08-06T18:37:50+07:00 INFO (6): 
+Elapsed Secs: 0.00057
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:37:50+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-08-06T18:37:50+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:38:00+07:00 INFO (6): 
+Elapsed Secs: 0.00125
+Query: connect
+Params: []
+
+2015-08-06T18:38:00+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:38:00+07:00 INFO (6): 
+Elapsed Secs: 0.00022
+Query: connect
+Params: []
+
+2015-08-06T18:38:00+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:38:20+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-08-06T18:38:20+07:00 INFO (6): 
+Elapsed Secs: 0.00052
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:38:20+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: connect
+Params: []
+
+2015-08-06T18:38:20+07:00 INFO (6): 
+Elapsed Secs: 0.00016
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:38:22+07:00 INFO (6): 
+Elapsed Secs: 0.00108
+Query: connect
+Params: []
+
+2015-08-06T18:38:22+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:38:22+07:00 INFO (6): 
+Elapsed Secs: 0.00017
+Query: connect
+Params: []
+
+2015-08-06T18:38:22+07:00 INFO (6): 
+Elapsed Secs: 0.00018
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal > '2015-07-30') AND (bbp.tanggal < '2015-08-28')
+Params: []
+
+2015-08-06T18:39:42+07:00 INFO (6): 
+Elapsed Secs: 0.00139
+Query: connect
+Params: []
+
+2015-08-06T18:39:42+07:00 INFO (6): 
+Elapsed Secs: 0.00068
+Query: DESCRIBE `bb_penerimaan_kas`
+Params: []
+
+2015-08-06T18:39:42+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-08-06T18:39:42+07:00 INFO (6): 
+Elapsed Secs: 0.00035
+Query: SELECT `bbpk`.*, `cos`.`nama` FROM `bb_penerimaan_kas` AS `bbpk`
+ INNER JOIN `pinjaman` AS `pin` ON pin.no_kontrak = bbpk.no_kontrak 
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer= pin.nik_costumer  WHERE (bbpk.tgl_bayar >= '2015-08-01') AND (bbpk.tgl_bayar <= '2015-08-15')
+Params: []
+
+2015-08-06T18:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00123
+Query: connect
+Params: []
+
+2015-08-06T18:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00055
+Query: DESCRIBE `bb_penerimaan_kas`
+Params: []
+
+2015-08-06T18:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-08-06T18:39:54+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: SELECT `bbpk`.*, `cos`.`nama` FROM `bb_penerimaan_kas` AS `bbpk`
+ INNER JOIN `pinjaman` AS `pin` ON pin.no_kontrak = bbpk.no_kontrak 
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer= pin.nik_costumer  WHERE (bbpk.tgl_bayar >= '2015-08-03') AND (bbpk.tgl_bayar <= '2015-08-03')
+Params: []
+
+2015-08-06T18:40:28+07:00 INFO (6): 
+Elapsed Secs: 0.00111
+Query: connect
+Params: []
+
+2015-08-06T18:40:28+07:00 INFO (6): 
+Elapsed Secs: 0.0006
+Query: DESCRIBE `bb_penerimaan_kas`
+Params: []
+
+2015-08-06T18:40:28+07:00 INFO (6): 
+Elapsed Secs: 0.00019
+Query: connect
+Params: []
+
+2015-08-06T18:40:28+07:00 INFO (6): 
+Elapsed Secs: 0.00031
+Query: SELECT `bbpk`.*, `cos`.`nama` FROM `bb_penerimaan_kas` AS `bbpk`
+ INNER JOIN `pinjaman` AS `pin` ON pin.no_kontrak = bbpk.no_kontrak 
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer= pin.nik_costumer  WHERE (bbpk.tgl_bayar >= '2015-08-03') AND (bbpk.tgl_bayar <= '2015-08-03')
+Params: []
+
+2015-08-06T18:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-08-06T18:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00054
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.00024
+Query: connect
+Params: []
+
+2015-08-06T18:41:34+07:00 INFO (6): 
+Elapsed Secs: 0.0002
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal >= '2015-08-03') AND (bbp.tanggal <= '2015-08-03')
+Params: []
+
+2015-08-06T18:41:52+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: connect
+Params: []
+
+2015-08-06T18:41:52+07:00 INFO (6): 
+Elapsed Secs: 0.00069
+Query: DESCRIBE `bb_penerimaan_kas`
+Params: []
+
+2015-08-06T18:41:52+07:00 INFO (6): 
+Elapsed Secs: 0.00023
+Query: connect
+Params: []
+
+2015-08-06T18:41:52+07:00 INFO (6): 
+Elapsed Secs: 0.00032
+Query: SELECT `bbpk`.*, `cos`.`nama` FROM `bb_penerimaan_kas` AS `bbpk`
+ INNER JOIN `pinjaman` AS `pin` ON pin.no_kontrak = bbpk.no_kontrak 
+ INNER JOIN `costumer` AS `cos` ON cos.nik_costumer= pin.nik_costumer  WHERE (bbpk.tgl_bayar >= '2015-08-06') AND (bbpk.tgl_bayar <= '2015-08-06')
+Params: []
+
+2015-08-06T18:42:00+07:00 INFO (6): 
+Elapsed Secs: 0.00026
+Query: connect
+Params: []
+
+2015-08-06T18:42:00+07:00 INFO (6): 
+Elapsed Secs: 0.00064
+Query: DESCRIBE `bb_piutang`
+Params: []
+
+2015-08-06T18:42:00+07:00 INFO (6): 
+Elapsed Secs: 0.00025
+Query: connect
+Params: []
+
+2015-08-06T18:42:00+07:00 INFO (6): 
+Elapsed Secs: 0.00021
+Query: SELECT `bbp`.* FROM `bb_piutang` AS `bbp` WHERE (bbp.tanggal >= '2015-08-06') AND (bbp.tanggal <= '2015-08-06')
+Params: []
+

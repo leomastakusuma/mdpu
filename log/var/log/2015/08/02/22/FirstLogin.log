@@ -1,0 +1,23 @@
+2015-08-02T22:52:04+07:00 INFO (6): Array
+(
+    [id_user] => 20
+    [id_cabang] => 030
+    [realname] => Sri Rohayati
+    [username] => kotabumi
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-08-02
+    [level] => admin
+    [id_login] => 12
+    [last_login] => 2015-08-02 22:52:04
+    [login_time] => 2015-08-02 22:52:04
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Kota Bumi
+    [kepala_cabang] => Kota Bumi
+    [provinsi] => Kota Bumi
+    [kota] => Kota Bumi
+    [kecamatan] => Kota Bumi
+    [alamat] => Kota Bumi
+    [kode_pos] => 1234
+)
+

@@ -240,24 +240,17 @@ class IndexController extends Controller {
             $this->_modelBBPenerimaanKas->insert( $dataBBKas );
 
             /* Field For Insert Into BB Piutang */
-            $dataBBPiutang[ 'debit' ] = $this->_modelKartuPiutang->getSumTotalAngsuran( $form[ 'no_kontrak' ] );
-
-            $debit = 0;
-            foreach ( $dataBBPiutang[ 'debit' ] as $k => $v ) {
-                $debit +=isFloatNum( $v[ 'pembayaran' ] );
-            }
+                       
+            #Cari Di Pijaman Berdasarkan No Kontrak;
             $where = $this->_modelPinjaman->getAdapter()->quoteInto( 'no_kontrak = ?', $form[ 'no_kontrak' ] );
             $totalPinjaman = $this->_modelPinjaman->fetchRow( $where );
-            $totalDebit = isFloatNum( $totalPinjaman[ 'nilai_pinjaman' ] ) - $debit;
+            
+            #Cari Total Pembayaran Dikartu Piutang
+            $Debit = $this->_modelKartuPiutang->getSumTotalAngsuran( $form[ 'no_kontrak' ] );
+            
+            #Jumlahkan Total Debit/Saldo Berdasarkan Costumer;
+            $totalDebit = ($totalPinjaman->lama_angsuran * isFloatNum($totalPinjaman->angsuran_perbulan)) - $Debit['total_pembayaran'];
 
-            $getSaldo = $this->_modelBBPiutang->getSumTotalSaldo( $form[ 'no_kontrak' ] );
-            if ( !empty( $getSaldo ) ) {
-//                $totalSaldo = isFloatNum($getSaldo[ 'saldo' ]) + $totalDebit;
-                $totalSaldo = $debit;
-            } else {
-//                $totalSaldo = $totalDebit;
-                $totalSaldo = $debit;
-            }
             $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
             $dataBBPiutang[ 'debit' ] = rupiah( $totalDebit );
             #$dataBBPiutang[ 'saldo' ] = rupiah( $totalSaldo );

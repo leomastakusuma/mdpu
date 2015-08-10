@@ -114,7 +114,7 @@ class indexcontroller extends Controller {
         }
         $where = $this->_modelCostumer->getAdapter()->quoteInto('nik_costumer = ?', $id);
         $data = $this->_modelCostumer->fetchRow($where);
-        pr($data->toArray());
+        
         if (empty($data)) {
             $this->redirect('error');
         }

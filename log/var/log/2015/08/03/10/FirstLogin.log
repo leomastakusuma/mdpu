@@ -1,0 +1,23 @@
+2015-08-03T10:52:38+07:00 INFO (6): Array
+(
+    [id_user] => 22
+    [id_cabang] => 031
+    [realname] => Admin Kota Bumi
+    [username] => adminkotabumi
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-08-03
+    [level] => admin
+    [id_login] => 14
+    [last_login] => 2015-08-03 10:52:38
+    [login_time] => 2015-08-03 10:52:38
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Kota Bumi
+    [kepala_cabang] => Kota Bumi
+    [provinsi] => Kota Bumi
+    [kota] => Kota Bumi
+    [kecamatan] => Kota Bumi
+    [alamat] => Kota Bumi
+    [kode_pos] => 1234
+)
+

@@ -86,7 +86,12 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         $select->columns(array('alamat_tempat_kerja'),'cos');
         $select->columns(array('hp'),'cos');
         $select->columns(array('telpon'),'cos');      
-        
+        $select->columns(array('npwp'),'cos');
+	$select->columns(array('kota'),'cos');
+	$select->columns(array('provinsi'),'cos');
+	$select->columns(array('kode_pos'),'cos');
+	$select->columns(array('penghasilan_perbulan'),'cos');
+	$select->columns(array('jumlah_tanggungan'),'cos');
         $select->join(array('us'=>'user'), 'cos.id_user=us.id_user',array('realname'));
         $select->join(array('cb'=>'cabang'), 'us.id_cabang = cb.id_cabang',array('cabang'));
         
