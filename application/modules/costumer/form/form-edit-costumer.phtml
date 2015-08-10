@@ -195,36 +195,33 @@
                         <div class="form-group">
                             <label for="Kota" class="col-sm-2 control-label">Kota</label>
                                <div class="col-sm-3">
-                                   <input type="text" class="form-control" id="hp" placeholder="Kota" name="kota" value="<?php echo (!empty($data->kota) ? $data->kota : !empty($form['kota']) ? $form['kota'] : null); ?>" >
-                               </div>
+                                   <input type="text" class="form-control" id="hp" placeholder="Kota" name="kota" value="<?php echo (!empty($data->kota) ? $data->kota : (!empty($form['kota']) ? $form['kota'] : null)); ?>" >                               </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Provinsi" class="col-sm-2 control-label">Provinsi</label>
                                <div class="col-sm-3">
-                                   <input type="text" class="form-control" id="hp" placeholder="Provinsi" name="provinsi" value="<?php echo (!empty($data->provinsi) ? $data->provinsi : !empty($form['provinsi']) ? $form['provinsi'] : null); ?>" >
+                                   <input type="text" class="form-control" id="hp" placeholder="Provinsi" name="provinsi" value="<?php echo (!empty($data->provinsi) ? $data->provinsi :(!empty($form['provinsi']) ? $form['provinsi'] : null)); ?>" >
                                </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Kode Pos" class="col-sm-2 control-label">Kode Pos</label>
                                <div class="col-sm-3">
-                                   <input type="text" class="form-control" id="hp" placeholder="Kode Pos" name="kode_pos" value="<?php echo (!empty($data->kode_pos) ? $data->kode_pos : !empty($form['kode_pos']) ? $form['kode_pos'] : null ) ?>" >
-                               </div>
+                                   <input type="text" class="form-control" id="hp" placeholder="Kode Pos" name="kode_pos" value="<?php echo (!empty($data->kode_pos) ? $data->kode_pos : (!empty($form['kode_pos']) ? $form['kode_pos'] : null)) ?>" >                              </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Penghasilan Perbulan" class="col-sm-2 control-label">Penghasilan Perbulan</label>
                                <div class="col-sm-3">
-                                   <input type="text" class="form-control" id="hp" placeholder="Penghasilan Perbulan" name="penghasilan_perbulan" value="<?php echo (!empty($data->penghasilan_perbulan) ? $data->penghasilan_perbulan : !empty($form['penghasilan_perbulan']) ? $form['penghasilan_perbulan'] : null) ?>" >
+                                   <input type="text" class="form-control" id="hp" placeholder="Penghasilan Perbulan" name="penghasilan_perbulan" value="<?php echo (!empty($data->penghasilan_perbulan) ? $data->penghasilan_perbulan : (!empty($form['penghasilan_perbulan']) ? $form['penghasilan_perbulan'] : null)) ?>" >
                                </div>
                         </div>   
                         
                         <div class="form-group">
                             <label for="Jumlah Tanggungan" class="col-sm-2 control-label">Jumlah Tanggungan</label>
                                <div class="col-sm-3">
-                                   <input type="text" class="form-control" id="hp" placeholder="Jumlah Tanggungan" name="jumlah_tanggungan" value="<?php echo (!empty($data->jumlah_tanggungan) ? $data->jumlah_tanggunga : !empty($form['jumlah_tanggunga']) ? $form['jumlah_tanggunga'] :null); ?>"  >
-                               </div>
+                                 <input type="text" class="form-control" id="hp" placeholder="Jumlah Tanggungan" name="jumlah_tanggungan" value="<?php echo (!empty($data->jumlah_tanggungan) ? $data->jumlah_tanggungan : (!empty($form['jumlah_tanggungan']) ? $form['jumlah_tanggungan'] :null)); ?>"  >                              </div>
                         </div>  
 
                         <div class="form-group">

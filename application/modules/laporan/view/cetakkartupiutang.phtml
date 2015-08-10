@@ -146,7 +146,7 @@
                                         <?php endfor;?>
                                         <?php $total = isFloatNum($dataCetak[0]['tagihan']) * $jumlahAngsuran;?>         
                                         <?php $sisa = 0;?>
-                                        <?php $sisa = isFloatNum($dataCetak[0]['nilai_pinjaman']) - $total  ?>
+                                        <?php $sisa =$total - $pembayaran;  ?>
                                         <tr><tr>
                                             <td> Total Bayar &nbsp;</td>
                                             <td>&nbsp;</td>
