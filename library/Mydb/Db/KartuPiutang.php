@@ -20,12 +20,18 @@ class Mydb_Db_KartuPiutang extends Mydb_Db_Abstract {
         $select->order( 'id_piutang desc' );
         return $this->getAdapterSelect()->fetchRow( $select );
     }
-
+    
+    /**
+     * 
+     * @param type $no_kontrak
+     * @return type array of total debit 
+     */
     public function getSumTotalAngsuran( $no_kontrak ) {
         $select = $this->select();
-        $select->from( array( 'kp' => 'kartu_piutang' ), array( 'kp.pembayaran' ) );
+        #$select->from( array( 'kp' => 'kartu_piutang' ), array( 'kp.pembayaran' ) );
+        $select->from( array( 'kp' => 'kartu_piutang' ), array(new Zend_Db_Expr("SUM(REPLACE(FORMAT(kp.pembayaran,3),'.','')) AS  total_pembayaran")) );
         $select->where( 'kp.no_kontrak = ?', $no_kontrak );
-        return $this->getAdapterSelect()->fetchAll( $select );
+        return $this->getAdapterSelect()->fetchRow( $select );
     }
 
 
