@@ -1,0 +1,46 @@
+2015-08-03T11:12:49+07:00 INFO (6): Array
+(
+    [id_user] => 23
+    [id_cabang] => 031
+    [realname] => kasirkotabumi
+    [username] => kasirkotabumi
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-08-03
+    [level] => kasir
+    [id_login] => 15
+    [last_login] => 2015-08-03 11:12:49
+    [login_time] => 2015-08-03 11:12:49
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Kota Bumi
+    [kepala_cabang] => Kota Bumi
+    [provinsi] => Kota Bumi
+    [kota] => Kota Bumi
+    [kecamatan] => Kota Bumi
+    [alamat] => Kota Bumi
+    [kode_pos] => 1234
+)
+
+2015-08-03T11:54:30+07:00 INFO (6): Array
+(
+    [id_user] => 16
+    [id_cabang] => 029
+    [realname] => Sri Rohayati
+    [username] => admin
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => superadmin
+    [id_login] => 1
+    [last_login] => 2015-08-03 11:54:30
+    [login_time] => 2015-08-03 11:54:30
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => SRI ROHAYATI, S.Kom, Mp.di
+    [provinsi] => Lampung
+    [kota] => Antasari
+    [kecamatan] => Waru
+    [alamat] => Jl Pangen Antasari No 20
+    [kode_pos] => 12310 
+)
+

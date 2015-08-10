@@ -1,0 +1,23 @@
+2015-08-06T19:59:39+07:00 INFO (6): Array
+(
+    [id_user] => 24
+    [id_cabang] => 001
+    [realname] => Ega Obellia
+    [username] => kasirantasari
+    [password] => 978582b03b3e7d6f786e2821a7f67090fe09b58c
+    [create_at] => 2015-08-03
+    [level] => kasir
+    [id_login] => 5
+    [last_login] => 2015-08-06 17:40:29
+    [login_time] => 2015-08-06 19:59:39
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => Subaidi
+    [provinsi] => Lampung
+    [kota] => Bandar Lampung
+    [kecamatan] => Kedamaian
+    [alamat] => Jl. Pangeran Antasari No. 1
+    [kode_pos] => 35133
+)
+

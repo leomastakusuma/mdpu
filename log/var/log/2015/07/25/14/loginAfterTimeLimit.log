@@ -1,0 +1,46 @@
+2015-07-25T14:09:46+07:00 INFO (6): Array
+(
+    [id_user] => 17
+    [id_cabang] => 30
+    [realname] => Rendi Proyoga
+    [username] => rendi
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => admin
+    [id_login] => 7
+    [last_login] => 2015-07-16 21:28:17
+    [login_time] => 2015-07-25 14:09:46
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Natar
+    [kepala_cabang] => Raka
+    [provinsi] => Lampung
+    [kota] => Lampung Selatan
+    [kecamatan] => Natar
+    [alamat] => Jl Panjang Lampung km 21 
+    [kode_pos] => 23112  
+)
+
+2015-07-25T14:09:58+07:00 INFO (6): Array
+(
+    [id_user] => 18
+    [id_cabang] => 30
+    [realname] => Kasir Natar
+    [username] => kasir
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => kasir
+    [id_login] => 10
+    [last_login] => 2015-07-25 11:35:00
+    [login_time] => 2015-07-25 14:09:58
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Natar
+    [kepala_cabang] => Raka
+    [provinsi] => Lampung
+    [kota] => Lampung Selatan
+    [kecamatan] => Natar
+    [alamat] => Jl Panjang Lampung km 21 
+    [kode_pos] => 23112  
+)
+
