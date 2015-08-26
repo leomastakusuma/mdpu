@@ -4,91 +4,260 @@
             window.close();
     };
 </script>
+                            <div class="panel-body">
                     <br/>
-                    <table width="100%" align="center" >
+                    <table width="90%" align="center" >
                         <thead>
-                             <tr>
+                            <tr>
                                 <td rowspan="1" align="center" width="20%">
                                     <img src="<?php echo URL?>public/images/logo.png" height="80">
                                 </td>
-                                <td  align="left" colspan="2"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Surat Perintah Bayar</td>
+                                <td  align="left" colspan="7"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Surat Perintah Bayar</td>
                             </tr>
                             <tr>
-                                <td colspan="3"><hr></td>
+                                <td colspan="8"><hr></td>
                             </tr>
+
                         </thead>
                         <tbody>
                             <tr>
-                                <td width="30%" align="left" colspan="2">No Kontrak </td>
-                                <td>&nbsp; : &nbsp;<?php echo $data['no_kontrak'] ?></td>
+                                
+                                <td width="10%" align="left" colspan="2">No Kontrak </td>
+                                <td width="2%" align="left">:</td>
+                                <td width="20%"><?php echo $data['no_kontrak'] ?></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td width="30%" align="left" colspan="2">Nama </td>
-                                <td>&nbsp; : &nbsp;<?php echo $data['nama'] ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">No Polisi </td>
-                                <td>&nbsp; : &nbsp;<?php echo $data['no_polisi'] ?></td>
+                                <td width="30%" align="left" colspan="2">Nama Nasabah </td>
+                                <td widht="2%">:</td>
+                                <td><?php echo $data['nama'] ?></td>
+                               <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Merk/Type </td>
-                                <td>&nbsp; : &nbsp;<?php echo $data['merk'] ?></td>
+                                <td widht="2%">:</td>
+                                <td><?php echo $data['merk'] ?></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
+
                             </tr>
+                            
                             <tr>
                                 <td width="30%" align="left" colspan="2">Tahun / Warna </td>
-                                <td>&nbsp; : &nbsp;<?php echo $data['tahun_pembuatan'] . '&nbsp/&nbsp' . $data['warna']; ?></td>
+                                <td widht="2%">:</td>
+                                <td><?php echo date('Y',  strtotime($data['tahun_pembuatan'])) . '&nbsp / &nbsp' . $data['warna']; ?></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
                             </tr>
+                            
                             <tr>
-                                <td width="30%" align="left" colspan="2">Nama BPKB   </td>
-                                <td>&nbsp; : &nbsp;<?php echo $data['nama_bpkb'] ?></td>
+                                <td width="30%" align="left" colspan="2">BPKB a/n   </td>
+                                <td widht="2%">:</td>
+                                <td><?php echo $data['nama_bpkb'] ?></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">&nbsp;</td>
                             </tr>
+                            
+ 
                             <tr>
                                 <td width="30%" align="left" colspan="2">Nilai Pinjaman  </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah(isFloatNum($data['nilai_pinjaman'])) ?></td>
+                                <td widht="2%">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.' . rupiah(isFloatNum($data['nilai_pinjaman']))  ?></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">Angsuran / Bln</td>
+                                <td width="5px">:</td>
+                                <td width="30%" style="text-align: right"><text style="text-align: right"><?php echo 'Rp.' . rupiah(isFloatNum($data['nilai_pinjaman']))?> </td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Angsuran/Bulan  </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.' . rupiah(isFloatNum($data['angsuran_perbulan'])) ?></td>
+                                <td widht="2%">:</td>
+                                <td  style="text-align: right"><?php echo 'Rp.' . rupiah(isFloatNum($data['angsuran_perbulan'])) ?></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">Tgl Jt Tempo</td>
+                                <td width="2%">:</td>
+                                <td width="20%" style="text-align: right"><?php echo $data['tanggal_jatuh_tempo']; ?></td>
                             </tr>
                             <tr>
-                                <td width="30%" align="left" colspan="2">Lama Angsuran  </td>
-                                <td>&nbsp; : &nbsp;<?php echo $data['lama_angsuran'] ?> &nbsp; Bulan</td>
+                                <td width="30%" align="left" colspan="2">Potongan ADM </td>
+                                <td widht="2%">:</td>
+                                <td style="text-align: right">Rp.0</td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">Cek Berkas</td>
+                                <td width="2%">:</td>
+                                <td width="20%">Lengkap / TDK Lengkap</td>
                             </tr>
+                            
                             <tr>
-                                <td width="30%" align="left" colspan="2">Tanggal Jatuh Tempo  </td>
-                                <td>&nbsp; : &nbsp;Setiap Tanggal <?php echo $data['tanggal_jatuh_tempo'] ?> &nbsp;</td>
+                                <td width="30%" align="left" colspan="2">Tanggal STNK </td>
+                                <td widht="2%">:</td>
+                                <td ><?php echo date('d/m/Y',  strtotime($data['tgl_stnk']))?></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="20%">No Polisi</td>
+                                <td width="2%">:</td>
+                                <td width="20%"><?php echo $data['no_polisi']; ?></td>
                             </tr>
-
+                     
+                      
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="3"><hr></td>
+                                <td colspan="8"><hr></td>
                             </tr>
 
                             <tr>
-                                <td colspan="3">
-                                    <table width="100%">
+                                <td colspan="8">
+                                    <table width="100%" >
                                         <tr>
-                                            <td colspan="3">Bandar Lampung , <?php echo date('d') . ' / ' . date('M') . ' / ' . date('Y'); ?></td>
+                                            <td colspan="3">Bandar Lampung , <?php echo date('d') . ' / ' . date('m') . ' / ' . date('Y'); ?></td>
                                         </tr>
                                         <tr align="left">
-                                            <td>Pimpinan</td>
-                                            <td>Kasir</td>
-                                            <td>Costumer</td>
+                                            <td width="35%">Yang Memberi Perintah</td>
+                                            <td width="30%">&nbsp;</td>
+                                            <td width="30%">&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="3" height="90">&nbsp;</td>
+                                            <td colspan="5" height="90">&nbsp;</td>
                                         </tr>
-                                        <tr align="left" class="small">
-                                            <td><?php echo $data['kepala_cabang']; ?></td>
-                                            <td><?php echo $data['realname']; ?></td>
-                                            <td><?php echo $data['nama']; ?></td>
+                                        <tr align="left">
+                                            <td><?php echo $data['kepala_cabang']; ?><br/>KACAB</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
                                         </tr >
                                     </table>
                                 </td>
-                            </tr>                       
+                            </tr>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <tr>
+                                <td colspan="8">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="8">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="8">&nbsp;</td>
+                            </tr>
+                        <div class="clearfix"></div>
+                            <tr>
+                                <td colspan="8">
+                                    <table width="60%" >
+                                        <tr>
+                                            <td colspan="4"><strong>TANDA TERIMA UANG & RINCIAN PENCAIRAN</strong></td>
+                                        </tr>
+                                         <tr>
+                                            <td colspan="4"><hr></td>
+                                        </tr>
+                                        <tr>
+                                            <td  width="30%">Telah Diterima Dari</td>
+                                            <td width="5%"> : </td>
+                                            <td colspan="2" style="text-align: left">PT. MITRA DANA PUTRA UTAMA FINANCE</td>
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td>Nilai Pinjaman</td>
+                                            <td>:</td>
+                                            <td width="25%"style="text-align: right"><?php echo 'Rp.' . rupiah(isFloatNum($data['nilai_pinjaman']))  ?></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Potongan ADM</td>
+                                            <td>:</td>
+                                            <td width="25%"style="text-align: right"><?php echo 'Rp.' . rupiah('00')?></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>Potongan Ang 1</td>
+                                           <td>:</td>
+                                            <td width="25%"style="text-align: right"><?php echo 'Rp.' . rupiah('00')  ?></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Potongan Pelunasan</td>
+                                            <td>:</td>
+                                            <td width="25%"style="text-align: right"><?php echo 'Rp.' . rupiah('00');  ?></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Potongan STNK</td>
+                                            <td>:</td>
+                                            <td width="25%"style="text-align: right"><?php echo 'Rp.' . $potonganSTNK = !empty($data['potonganSTNK']) ? rupiah($data['potonganSTNK']):rupiah('00')  ?></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Potongan KTP</td>
+                                            <td>:</td>
+                                            <td width="25%"style="text-align: right"><?php echo 'Rp.' . rupiah('00')  ?></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Biaya Survey</td>
+                                            <td >:</td>
+                                            <td width="25%"style="text-align: right;text-decoration: underline"><?php echo 'Rp.'.  rupiah('150000')  ?></td>
+                                            <td>&nbsp;+</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pencairan</td>
+                                            <td>:</td>
+                                            <?php $pencairan = isFloatNum( $data['nilai_pinjaman']) + 150000 + $potonganSTNK;?>
+                                            <td width="25%"style="text-align: right "><?php echo 'Rp.' . rupiah($pencairan)  ?></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                           <tr>
+                                <td colspan="8">&nbsp;</td>
+                            </tr>
+                             <tr>
+                                <td colspan="8">
+                                    <table width="100%" >
+                                        <tr>
+                                            <td colspan="3">Lampung , <?php echo date('d') . ' / ' . date('m') . ' / ' . date('Y'); ?></td>
+                                        </tr>
+                                        <tr align="left">
+                                            <td width="35%">Dibayarkan Oleh</td>
+                                            <td width="30%">Diterima dan Disetujui Oleh</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" height="90">&nbsp;</td>
+                                        </tr>
+                                        <tr align="left">
+                                            
+                                            <td><?php echo $data['realname']; ?><br>KASIR</td>
+                                            <td><?php echo $data['nama']; ?><br/>NASABAH</td>
+                                        </tr >
+                                    </table>
+                                </td>
+                            </tr>
+                           
+                            
+                            
+                            
+                            <tr valign="bottom">
+                                <td colspan="8" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
+                            </tr>
+                        
                         </tfoot>
                     </table>
-                    
-                    
-
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
