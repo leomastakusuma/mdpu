@@ -142,6 +142,7 @@ class IndexController extends Controller {
         if ( empty( $data ) ) {
             $this->redirect( 'error' );
         }
+      
         $id_pinjaman = $data[ 'id_pinjaman' ];
         unset( $data[ 'id_pinjaman' ] );
         unset( $data[ 'nilai_pinjaman' ] );
@@ -172,6 +173,10 @@ class IndexController extends Controller {
         $data = $this->_modelPinjaman->cetakSPB( $id_pinjaman );
         $data[ 'kepala_cabang' ] = $_SESSION[ 'dataLogin' ][ 'kepala_cabang' ];
         $data[ 'realname' ] = $kasirname[ 'realname' ];
+        
+        if($data['tgl_stnk'] > date('Y-m-d')){
+            $data['potonganSTNK']=300000;
+        } 
         require APP_MODUL . '/pinjaman/view/spb.phtml';
         require UD . 'footer.html';
     }

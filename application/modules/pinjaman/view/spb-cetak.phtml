@@ -212,7 +212,7 @@
                                         <tr>
                                             <td>Pencairan</td>
                                             <td>:</td>
-                                            <?php $pencairan = isFloatNum( $data['nilai_pinjaman']) + 150000 + $potonganSTNK;?>
+                                            <?php $pencairan = isFloatNum( $data['nilai_pinjaman']) + (150000 + isFloatNum($potonganSTNK));?>
                                             <td width="25%"style="text-align: right "><?php echo 'Rp.' . rupiah($pencairan)  ?></td>
                                             <td>&nbsp;</td>
                                         </tr>
@@ -243,14 +243,6 @@
                                     </table>
                                 </td>
                             </tr>
-                           
-                            
-                            
-                            
-                            <tr valign="bottom">
-                                <td colspan="8" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
-                            </tr>
-                        
                         </tfoot>
                     </table>
                     <br>
