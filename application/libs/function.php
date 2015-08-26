@@ -44,7 +44,7 @@ function generateNoKontrak($cabang,$last, $length = 5) {
  * @param type $length
  * @return string
  */
-function generateKwintansi($last, $length = 5) {
+function generateKwintansi($last, $length = 6) {
     $characters =(!empty($last)? $last : 1);
     
     $charLength     = $length - strlen($characters);
@@ -54,8 +54,9 @@ function generateKwintansi($last, $length = 5) {
            $nol .='0';
         }    
     };
-    $randomString = 'KW-';
-    $randomString .=$nol.$characters.'-' . date('m').'-'.date('y');
+//    #$randomString = 'KW-';
+    $randomString = '';
+    $randomString .=$nol.$characters;
     return $randomString;
 }
 

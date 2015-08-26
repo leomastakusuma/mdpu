@@ -33,70 +33,82 @@
                                 <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Kwitansi Pembayaran</td>
                             </tr>
                             <tr>
-                                <td colspan="4"><hr></td>
+                                <td colspan="6"><hr></td>
                             </tr>
 
                         </thead>
                         <tbody>
                             <tr>
-                                <td width="30%" align="left" colspan="2">No Kwitansi </td>
-                                <td>&nbsp; : &nbsp;<?php echo  $dataCetak['no_kwitansi'] ?></td>
+                                <td width="35%" align="left" colspan="2">No Kwitansi </td>
+                                <td width=3%">:</td>
+                                <td><?php echo  $dataCetak['no_kwitansi'] ?></td>
                                 <td>Bandar Lampung,<?php echo date('Y/m/d');?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">No Kontrak </td>
-                                <td>&nbsp; : &nbsp;<?php echo  $dataCetak['no_kontrak'] ?></td>
+                                <td width="1">:</td>
+                                <td><?php echo  $dataCetak['no_kontrak'] ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Nama </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['nama'] ?></td>
+                                <td width="1">:</td>
+                                <td><?php echo $dataCetak['nama'] ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">No Polisi </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['no_polisi'] ?></td>
+                                <td width="1">:</td>
+                                <td><?php echo $dataCetak['no_polisi'] ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Angsuran Ke </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['angsuran_ke'].' x' ?></td>
+                                <td width="1">:</td>
+                                <td><?php echo $dataCetak['angsuran_ke'].' x' ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Jumlah Angsuran </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['jumlah_angsuran'] ?></td>
+                                <td width="1">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['jumlah_angsuran'] ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Jumlah Potongan  </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['potongan'] ?></td>
+                                <td width="1">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['potongan'] ?></td>
                             </tr>
                             
                             <tr>
                                 <td width="30%" align="left" colspan="2">Jumlah Denda   </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda'].'</p>' ?></td>
+                                <td width="1">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda'].'</p>' ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Denda Sebelumnya    </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda_sebelumnya'].'</p>' ?></td>
+                                <td width="1">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda_sebelumnya'].'</p>' ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Denda Total    </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda_total'].'</p>' ?></td>
+                                <td width="1">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda_total'].'</p>' ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Denda Dibayar   </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda_dibayar'].'</p>' ?></td>
+                                <td width="1">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda_dibayar'].'</p>' ?></td>
                             </tr>
                             <tr>
                                 <td width="30%" align="left" colspan="2">Total Bayar   </td>
-                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['total_bayar'].'</p>' ?></td>
+                                <td width="1">:</td>
+                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['total_bayar'].'</p>' ?></td>
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4"><hr></td>
+                                <td colspan="6"><hr></td>
                             </tr>
 
                             <tr>
-                                <td colspan="4">
+                                <td colspan="6">
                                     <table width="100%">
                                         
                                         <tr align="center">
@@ -115,7 +127,7 @@
                             </tr>
                             
                             <tr valign="bottom">
-                                <td colspan="4" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
+                                <td colspan="6" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
                             </tr>
                         
                         </tfoot>

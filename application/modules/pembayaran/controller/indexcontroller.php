@@ -233,7 +233,7 @@ class IndexController extends Controller {
 
         try {
             #Insert Into Table Pembayaran
-            $this->_modelPembayaran->insert( $form );
+           $this->_modelPembayaran->insert( $form );
             #Insert Into Table Kartu Piutang
             $this->_modelKartuPiutang->insert( $dataKP );
             #insert Into Table BB Penerimaan Kas
