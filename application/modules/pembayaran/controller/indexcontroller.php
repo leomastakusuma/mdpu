@@ -92,7 +92,7 @@ class IndexController extends Controller {
                     if ( date( 'm' ) > $lastAngsuran ) {
                         if ( date( 'd' ) > $data[ 'tanggal_jatuh_tempo' ] ) {
                             $totaldate = date( 'd' ) - $data[ 'tanggal_jatuh_tempo' ];
-                            $data[ 'denda' ] = $totaldate * (isFloatNum( $data[ 'angsuran_perbulan' ] ) * 0.1);
+                            $data[ 'denda' ] = $totaldate * (isFloatNum( $data[ 'angsuran_perbulan' ] ) * 0.006);
                             $data[ 'potongan' ] = "00";
                             #$data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ] +  $data[ 'denda' ];
                             $data[ 'total_bayar' ] = isFloatNum( $data[ 'angsuran_perbulan' ] );
@@ -114,7 +114,7 @@ class IndexController extends Controller {
                 #Cek Kena denda
                 elseif ( date( 'd' ) > $data[ 'tanggal_jatuh_tempo' ] ) {
                     $totaldate = date( 'd' ) - $data[ 'tanggal_jatuh_tempo' ];
-                    $data[ 'denda' ] = $totaldate * ($data[ 'angsuran_perbulan' ] * 0.1);
+                    $data[ 'denda' ] = $totaldate * ($data[ 'angsuran_perbulan' ] * 0.006);
                     $data[ 'potongan' ] = 0;
                     #$data[ 'total_bayar' ] = $data[ 'angsuran_perbulan' ] +  $data[ 'denda' ];
                     $data[ 'total_bayar' ] = isFloatNum( $data[ 'angsuran_perbulan' ] );
@@ -279,7 +279,7 @@ class IndexController extends Controller {
                 }
                 /* Jika Pembayaran Tidak Dibulan Yang Sama Maka Insert */
 //                $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
-//                $this->_modelBBPiutang->insert( $dataBBPiutang );
+//                this->_modelBBPiutang->insert( $dataBBPiutang );
             } else {
                 $this->_modelBBPiutang->insert( $dataBBPiutang );
             }

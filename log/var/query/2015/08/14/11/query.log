@@ -1,0 +1,34 @@
+2015-08-14T11:13:33+07:00 INFO (6): 
+Elapsed Secs: 0.0003
+Query: connect
+Params: []
+
+2015-08-14T11:13:33+07:00 INFO (6): 
+Elapsed Secs: 0.00142
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-08-14T11:13:33+07:00 INFO (6): 
+Elapsed Secs: 0.00036
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_cabang = '001')
+Params: []
+
+2015-08-14T11:13:53+07:00 INFO (6): 
+Elapsed Secs: 0.00028
+Query: connect
+Params: []
+
+2015-08-14T11:13:53+07:00 INFO (6): 
+Elapsed Secs: 0.00156
+Query: DESCRIBE `costumer`
+Params: []
+
+2015-08-14T11:13:53+07:00 INFO (6): 
+Elapsed Secs: 0.00033
+Query: SELECT `cos`.`nik_costumer`, `cos`.`nama`, `cos`.`alamat`, `cos`.`jenis_kelamin`, `cos`.`tempat_lahir`, `cos`.`tanggal_lahir`, `cos`.`nama_ibu`, `cos`.`agama`, `cos`.`status`, `cos`.`pekerjaan`, `cos`.`alamat_tempat_kerja`, `cos`.`hp`, `cos`.`telpon`, `us`.`realname` FROM `costumer` AS `cos`
+ INNER JOIN `user` AS `us` ON cos.id_user=us.id_user
+ INNER JOIN `cabang` AS `cb` ON us.id_cabang = cb.id_cabang WHERE (cos.id_cabang = '001')
+Params: []
+

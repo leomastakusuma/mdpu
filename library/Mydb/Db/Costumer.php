@@ -43,6 +43,15 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         return $this->getAdapter()->fetchAll($select);
        
     }
+	
+	public function getCetakKostumer(){
+	     $select = $this->select();
+		 $select->from($this->_name,array('*'));
+		 return $this->getAdapter()->fetchAll($select);
+	
+	}
+	
+	
     public function getAllCostumer(){
         $select = $this->select();
         $select->from(array('cos'=>$this->_name),array());
@@ -131,6 +140,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract{
         }
         $select->columns(array('no_kontrak'),'pinj');
         $select->columns(array('lama_angsuran'),'pinj');
+		$select->group('pinj.no_kontrak');
         return $this->getAdapterSelect()->fetchAll($select);
     }
     

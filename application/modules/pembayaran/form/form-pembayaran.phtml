@@ -120,7 +120,7 @@
                             <label for="Jumlah Angsuran" class="col-sm-3 control-label">Jumlah Angsuran</label>
                             <div class="input-group col-sm-3">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="angsuran_perbulan" required="true" id="currency" readonly="true" value="<?php echo (!empty( $data[ 'angsuran_perbulan' ] ) ? rupiah( $data[ 'angsuran_perbulan' ] ) : null) ?>">
+                                <input type="text" class="form-control text-right" name="angsuran_perbulan" required="true" id="currency" readonly="true" value="<?php echo (!empty( $data[ 'angsuran_perbulan' ] ) ? rupiah( $data[ 'angsuran_perbulan' ] ) : null) ?>">
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
@@ -129,7 +129,7 @@
                             <label for="Jumlah Potongan" class="col-sm-3 control-label">Jumlah Potongan</label>
                             <div class="input-group col-sm-3">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="potongan"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'potongan' ] ) ? rupiah( $data[ 'potongan' ] ) : '0,00') ?>">
+                                <input type="text" class="form-control text-right" name="potongan"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'potongan' ] ) ? rupiah( $data[ 'potongan' ] ) : '0,00') ?>">
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
@@ -138,7 +138,7 @@
                             <label for="Jumlah Denda Sebelumnya" class="col-sm-3 control-label">Jumlah Denda Sebelumnya </label>
                             <div class="input-group col-sm-3">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="denda_sebelumnya"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda_sebelumnya' ] ) ? rupiah( $data[ 'denda_sebelumnya' ] ) : '0,00') ?>">
+                                <input type="text" class="form-control text-right" name="denda_sebelumnya"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda_sebelumnya' ] ) ? rupiah( $data[ 'denda_sebelumnya' ] ) : '0,00') ?>">
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
@@ -155,7 +155,7 @@
                             <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Denda </label>
                             <div class="input-group col-sm-3">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="jumlah_denda"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda' ] ) ? rupiah( $data[ 'denda' ] ) : '0,00') ?>">
+                                <input type="text" class="form-control text-right" name="jumlah_denda"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda' ] ) ? rupiah( $data[ 'denda' ] ) : '0,00') ?>">
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
@@ -164,7 +164,7 @@
                             <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Denda Terhitung </label>
                             <div class="input-group col-sm-3">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="denda_total"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda_terhitung' ] ) ? rupiah( $data[ 'denda_terhitung' ] ) : '0,00') ?>">
+                                <input type="text" class="form-control text-right" name="denda_total"  required="true" readonly="true" value="<?php echo (!empty( $data[ 'denda_terhitung' ] ) ? rupiah( $data[ 'denda_terhitung' ] ) : '0,00') ?>">
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
@@ -173,7 +173,7 @@
                             <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Bayar Denda </label>
                             <div class="input-group col-sm-3 ">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="denda_dibayar" id="denda"onkeyup="isiDenda()" >
+                                <input type="text" class="form-control text-right" name="denda_dibayar" id="denda"onkeyup="isiDenda()" >
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
@@ -182,7 +182,7 @@
                             <label for="Total Bayar" class="col-sm-3 control-label">Total Bayar</label>
                             <div class="input-group col-sm-3">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="total_bayar"  id="total_bayar" required="true" readonly="true" value="<?php echo (!empty( $data[ 'total_bayar' ] ) ? rupiah( $data[ 'total_bayar' ] ) : '00') ?>">
+                                <input type="text" class="form-control text-right" name="total_bayar"  id="total_bayar" required="true" readonly="true" value="<?php echo (!empty( $data[ 'total_bayar' ] ) ? rupiah( $data[ 'total_bayar' ] ) : '00') ?>">
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>  
@@ -190,7 +190,7 @@
                             <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Uang  Dibayar </label>
                             <div class="input-group col-sm-3 ">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="bayar" id="bayar" onkeyup="isiBayar()" >
+                                <input type="text" class="form-control text-right" name="bayar" id="bayar" onkeyup="isiBayar()" >
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   
@@ -198,7 +198,7 @@
                             <label for="Jumlah Denda" class="col-sm-3 control-label">Jumlah Kembalian  </label>
                             <div class="input-group col-sm-3 ">
                                 <span class="input-group-addon">Rp</span>
-                                <input type="text" class="form-control" name="kembalian" id="kembalian"  readonly="true">
+                                <input type="text" class="form-control text-right" name="kembalian" id="kembalian"  readonly="true">
                                 <!--<span class="input-group-addon">.00</span>-->
                             </div>
                         </div>   

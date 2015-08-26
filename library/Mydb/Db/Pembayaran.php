@@ -43,7 +43,7 @@ class Mydb_Db_Pembayaran extends Mydb_Db_Abstract {
 
         $select->order('pemb.angsuran_ke desc');
         $select->group('pemb.no_kontrak');
-
+		
         return $this->getAdapter()->fetchAll($select);
     }
 

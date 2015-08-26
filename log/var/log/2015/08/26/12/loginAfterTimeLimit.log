@@ -1,0 +1,23 @@
+2015-08-26T12:26:32+07:00 INFO (6): Array
+(
+    [id_user] => 16
+    [id_cabang] => 001
+    [realname] => Sri Rohayati
+    [username] => admin
+    [password] => d033e22ae348aeb5660fc2140aec35850c4da997
+    [create_at] => 2015-06-19
+    [level] => superadmin
+    [id_login] => 3
+    [last_login] => 2015-08-26 10:48:32
+    [login_time] => 2015-08-26 12:26:31
+    [ip_login] => 127.0.0.1
+    [status] => 1
+    [cabang] => Antasari
+    [kepala_cabang] => Subaidi
+    [provinsi] => Lampung
+    [kota] => Bandar Lampung
+    [kecamatan] => Kedamaian
+    [alamat] => Jl. Pangeran Antasari No. 1
+    [kode_pos] => 35133
+)
+

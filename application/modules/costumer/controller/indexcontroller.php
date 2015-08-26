@@ -124,7 +124,12 @@ class indexcontroller extends Controller {
         require APP_MODUL . '/costumer/form/form-edit-costumer.phtml';
         require UD . 'footer.html';
     }
-
+    public function cetakCostumer(){
+		require UD . 'header.html';
+        $data = $this->_modelCostumer->getCetakKostumer();
+		require APP_MODUL . '/costumer/view/cetakCostumer.phtml';
+        require UD . 'footer.html';
+	} 
     public function saveedit() {
         if ($_SESSION['level'] != 'superadmin') {
             $this->redirect('error/index/notAllowed');
@@ -143,5 +148,4 @@ class indexcontroller extends Controller {
             require UD . 'footer.html';
         }
     }
-
 }
