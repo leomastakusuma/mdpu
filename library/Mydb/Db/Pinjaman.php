@@ -62,6 +62,7 @@ class Mydb_Db_Pinjaman extends Mydb_Db_Abstract{
         $query->columns(array('no_kontrak'),'pin');
         $query->columns(array('nama'),'cos');
         $query->columns(array('no_polisi'),'ken');
+        $query->columns(array('tgl_stnk'),'ken');
         $query->columns(array('merk'),'ken');
         $query->columns(array('tahun_pembuatan'),'ken');
         $query->columns(array('warna'),'ken');
