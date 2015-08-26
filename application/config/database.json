@@ -6,7 +6,7 @@
                "params" : {
                    "host" : "localhost",
                    "username" : "root",
-                   "password" : "root",
+                   "password" : "",
                    "dbname" : "mdpu_finance",
                    "profiler" : {
                        "enabled" : true,
@@ -20,7 +20,7 @@
                "params" : {
                    "host" : "localhost",
                    "username" : "root",
-                   "password" : "root",
+                   "password" : "",
                    "dbname" : "mdpu_finance",
                    "profiler" : {
                        "enabled" : true,
