@@ -61,7 +61,7 @@
                  <div class="form-group">
                         <label for="Nama" class="col-sm-2 control-label">Sisa Pinjaman</label>
                         <div class="input-group col-sm-2">
-                            <input type="text" class="form-control" id="nama" placeholder="Sisa Pinjaman" name="Sisa Pinjaman" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_pinjaman'])? 'Rp.'.rupiah($detailCostumer['sisa_pinjaman']) : 'Lunas');?>">
+                            <input type="text" class="form-control text-right" id="nama" placeholder="Sisa Pinjaman" name="Sisa Pinjaman" readonly="true" required="true" value="<?php echo (!empty($detailCostumer['sisa_pinjaman'])? 'Rp.'.rupiah($detailCostumer['sisa_pinjaman']) : 'Lunas');?>">
                         </div>
                     </div>   
             </form>
@@ -87,12 +87,12 @@
                             <td><?php echo $val['no_kwitansi'] ?></td>
                             <td><?php echo $val['tanggal_bayar_angsuran'] ?></td>
                             <td><?php echo $val['angsuran_ke'] ?></td>
-                            <td><?php echo 'Rp.'.$val['angsuran_perbulan'] ?></td>
-                            <td><?php echo 'Rp.'.$val['denda_terhitung']; ?></td>
-                            <td><?php echo 'Rp.'.$val['denda_dibayar']; ?></td>
+                            <td style="text-align: right"><?php echo 'Rp.'.$val['angsuran_perbulan'] ?></td>
+                            <td style="text-align: right"><?php echo 'Rp.'.$val['denda_terhitung']; ?></td>
+                            <td style="text-align: right"><?php echo 'Rp.'.$val['denda_dibayar']; ?></td>
                             <!--<td><?php //echo 'Rp.'.$val['sisa_denda']; ?></td>-->
-                            <td><?php echo 'Rp.'.$val['potongan']; ?></td>
-                            <td><?php echo 'Rp.'.$val['total_bayar']; ?></td>
+                            <td style="text-align: right"><?php echo 'Rp.'.$val['potongan']; ?></td>
+                            <td style="text-align: right"><?php echo 'Rp.'.$val['total_bayar']; ?></td>
                             
 
                         </tr>
