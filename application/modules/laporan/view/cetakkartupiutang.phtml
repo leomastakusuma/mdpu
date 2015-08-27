@@ -1,15 +1,12 @@
 <script>
     window.print();
     window.onfocus = function(){
-            window.close();              
+        
+            window.close();
+        
+        
     };
 </script>
-           
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                               
                 <div class="panel-body">
                     <br/>
                     <table width="90%" align="center"  border="0"  >
@@ -18,7 +15,19 @@
                                 <td rowspan="1" align="center" width="20%">
                                     <img src="<?php echo URL?>public/images/logo.png" height="80">
                                 </td>
-                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</strong><br/>Kartu Piutang <br/>Pertanggal <?php echo date('Y/m/d');?></td>
+                                <td  align="left" colspan="2"><strong><font size="4">PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</font></strong><br/><b><font size="2">Kartu Piutang</font></b> <br/><b>Per tanggal</b> : &nbsp; <?php echo date('d/m/Y');?></td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>No Rek. Va</td>
+                                            <td>&nbsp;:</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Rek Va</td>
+                                            <td>&nbsp;:</td>
+                                        </tr>
+                                    </table>
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="4"><hr></td>
@@ -51,29 +60,28 @@
                             </tr>
                             <tr>
                                 <td width="15%" align="left" >Tanggal Jual </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['tanggal']?></td>
+                                <td>&nbsp; : &nbsp;<?php echo date('d/m/Y',  strtotime($dataCetak[0]['tanggal']));?></td>
                                 <td width="15%" align="left">Warna / Tahun  </td>
                                 <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['warna'].'/'.$dataCetak[0]['tahun_pembuatan'] ?></td>
                             </tr>
                             <tr>
                                 <td width="15%" align="left">Telp/Hp   </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['telpon'] ?></td>
-                                <td width="15%" align="left">Telp/Hp   </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['telpon'] ?></td>
-                            </tr>
-                            
-                            <tr>
-                                <td width="15%" align="left">No Rangka / Mesin  </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_rangka'] ?></td>
+                                <td>&nbsp; : &nbsp;<?php echo !empty($dataCetak[0]['telpon']) ? $dataCetak[0]['telpon'].'/' : null ; echo $dataCetak[0]['hp'];?></td>
                                 <td width="15%" align="left">Tanggal STNK </td>
                                 <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['tgl_stnk'] ?></td>
                             </tr>
                             
                             <tr>
-                                <td width="10%" align="left" >Alamat BPKB  </td>
-                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['alamatbpkb'] ?></td>
+                                <td width="15%" align="left">No Rangka / Mesin  </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_rangka'] ?></td>
                                 <td width="15%" align="left">No / Nama BPKB </td>
                                 <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['no_bpkb'].'/'.$dataCetak[0]['nama_bpkb'] ?></td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="10%" align="left" >Alamat BPKB  </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak[0]['alamatbpkb'] ?></td>
+                                
                             </tr>
                             
 
@@ -84,7 +92,7 @@
                             </tr>
                             <tr>
                                 <td colspan="4">
-                                    <table width="100%">
+                                    <table width="100%" border='0'>
                                         <tr>
                                         <td>Ang KE</td>
                                         <td>Tgl Jatuh Tempo</td>
@@ -99,7 +107,7 @@
                                         <td>No Kwitansi</td>
                                         </tr>
                                         
-                                       <tr>
+                                        <tr>
                                         <?php $i=0;?>    
                                         <?php $total = 0;?>    
                                         <?php $pembayaran = 0;?>    
@@ -118,12 +126,13 @@
                                                 <td style="text-align: right"><?php echo $dataCetak[$i]['tagihan']?></td>
                                                 <td style="text-align: right"><?php echo $dataCetak[$i]['pembayaran']?></td>
                                                 <td style="text-align: right"><?php echo $dataCetak[$i]['potongan']?></td>
-                                                <td style="text-align: right"><?php echo $dataCetak[$i]['telat']?></td>
+                                                <td style="text-align: center"><?php echo $dataCetak[$i]['telat']?></td>
                                                 <td style="text-align: right"><?php echo $dataCetak[$i]['denda_terhitung']?></td>
                                                 <td style="text-align: right"><?php echo $dataCetak[$i]['denda_dibayar']?></td>
-                                                <td><?php echo $dataCetak[$i]['tanggal_bayar_angsuran']?></td>
-                                                <td><?php echo $dataCetak[$i]['tanggal_bayar_denda']?></td>
+                                                <td style="text-align: right"><?php echo date('d/m/Y',  strtotime($dataCetak[$i]['tanggal_bayar_angsuran']));?></td>
+                                                <td style="text-align: center"><?php echo ($dataCetak[$i]['tanggal_bayar_denda'] !='-' ) ?  date('d/m/Y', strtotime($dataCetak[$i]['tanggal_bayar_denda'])) : '-';?></td>
                                                 <td><?php echo $dataCetak[$i]['no_kwitansi']?></td>
+                                                
                                                 <?php $pembayaran += isFloatNum($dataCetak[$i]['pembayaran']);?>
                                                 <?php $potongan += isFloatNum($dataCetak[$i]['potongan']);?>
                                                 <?php $telat += isFloatNum($dataCetak[$i]['telat']);?>
@@ -135,60 +144,56 @@
                                                 <td style="text-align: right"><?php echo $dataCetak[0]['tagihan']?></td>
                                                 <td style="text-align: right">0,00</td>
                                                 <td style="text-align: right">0,00</td>
-                                                <td>-</td>
+                                                <td style="text-align: center">-</td>
                                                 <td style="text-align: right">0,00</td>
                                                 <td style="text-align: right">0,00</td>
-                                                <td>-/-/-</td>
-                                                <td>-/-/-</td>
-                                                <td>-</td>
+                                                <td style="text-align: center">-/-/-</td>
+                                                <td style="text-align: center">-/-/-</td>
+                                                <td style="text-align: center">-</td>
                                             <?php endif;?>
                                                 <tr/>
                                         <?php endfor;?>
-                                        <?php $total = isFloatNum($dataCetak[0]['tagihan']) * $jumlahAngsuran;?>         
                                         <?php $sisa = 0;?>
+                                        <?php $total = isFloatNum($dataCetak[0]['tagihan']) * $jumlahAngsuran;?>        
                                         <?php $sisa =$total - $pembayaran;  ?>
-                                        <tr>
-                                        <tr>
-                                            <td colspan="6" style="text-decoration: underline"></td>
+                                         <tr>
+                                             <td colspan="11" style="text-decoration: underline"><hr></td>
                                         </tr>
-                                        <tr>
+					 <tr>
                                             <td> Total Bayar &nbsp;</td>
                                             <td>&nbsp;</td>
-                                            <td><?php echo  !empty($total) ? rupiah($total) : '0,00'?></td>
-                                            <td><?php echo  !empty($pembayaran) ? rupiah($pembayaran) : '0,00'?></td>
-                                            <td><?php echo  !empty($potongan) ? rupiah($potongan) : '0,00'?></td>
-                                            <td><?php echo $telat?></td>
-                                            <td><?php echo !empty($denda) ? rupiah($denda) : '0,00'?></td>
-                                            <td><?php echo  !empty($dendadibayar) ? rupiah($dendadibayar) : '0,00'?></td>
-                                            <td colspan="2" align="right">Sisa Hutang</td>
-                                            <td>&nbsp;<?php echo  !empty($sisa) ? rupiah($sisa) : '0,00'?></td>
-                                        </tr>             
+                                            <td style="text-align: right"><?php echo  !empty($total) ? rupiah($total) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo  !empty($pembayaran) ? rupiah($pembayaran) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo  !empty($potongan) ? rupiah($potongan) : '0,00'?></td>
+                                            <td style="text-align: center"><?php echo $telat?></td>
+                                            <td style="text-align: right"><?php echo !empty($denda) ? rupiah($denda) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo  !empty($dendadibayar) ? rupiah($dendadibayar) : '0,00'?></td>
+                                            <td colspan="2" align="right">Sisa Hutang :</td>
+                                            <td style="text-align: right">&nbsp;<?php echo  !empty($sisa) ? rupiah($sisa) : '0,00'?></td>
+                                        </tr>         
+                                        <tr>
+                                            <td colspan="2">Total Bayar Bo :</td>
+                                            <td style="text-align: right">0</td>
+                                           
+                                           <td>&nbsp;</td>
+                                           <td colspan="2"> &nbsp;Total Bayar BTB :</td>
+                                           <td style="text-align:right">0</td>
+                                           
+                                           <td>&nbsp;</td>
+                                           
+                                           
+                                           
+                                           <td colspan="2"style="text-align:right" >Tunggakan Biaya Tagih :</td>
+                                           <td style="text-align:right" >0</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Titipan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
+                                            <td style="text-align: right">0</td>
+                                        </tr>   
+                                        
                                     </table>
                                 </td>
                             </tr>
                              <tr>
-                                <td colspan="4"><hr></td>
+                                <td colspan="10"><hr></td>
                             </tr>
-                           
-                        
-                        </tfoot>
-                    </table>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    var cetak = function(){
-        var params = [
-                        'height='+screen.height,
-                        'width='+screen.width/2,
-                        'fullscreen=yes' // only works in IE, but here for completeness
-                    ].join(',');
-        window.open('<?php echo URL.'pembayaran/index/cetakKwitansi/'.$dataCetak[0]['no_kwitansi'];?>','',params);// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
-    };
-</script>
