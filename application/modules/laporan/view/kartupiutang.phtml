@@ -148,8 +148,8 @@
                                                 <td style="text-align: center"><?php echo $dataCetak[$i]['telat']?></td>
                                                 <td style="text-align: right"><?php echo $dataCetak[$i]['denda_terhitung']?></td>
                                                 <td style="text-align: right"><?php echo $dataCetak[$i]['denda_dibayar']?></td>
-                                                <td style="text-align: right"><?php echo $dataCetak[$i]['tanggal_bayar_angsuran']?></td>
-                                                <td style="text-align: center"><?php echo $dataCetak[$i]['tanggal_bayar_denda']?></td>
+                                                <td style="text-align: right"><?php echo date('d/m/Y',  strtotime($dataCetak[$i]['tanggal_bayar_angsuran']));?></td>
+                                                <td style="text-align: center"><?php echo ($dataCetak[$i]['tanggal_bayar_denda'] !='-' ) ?  date('d/m/Y', strtotime($dataCetak[$i]['tanggal_bayar_denda'])) : '-';?></td>
                                                 <td><?php echo $dataCetak[$i]['no_kwitansi']?></td>
                                                 
                                                 <?php $pembayaran += isFloatNum($dataCetak[$i]['pembayaran']);?>
