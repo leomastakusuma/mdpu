@@ -115,12 +115,12 @@
                                             <?php if(!empty($dataCetak[$i])): ?>
                                                 <td><?php echo $dataCetak[$i]['angsuran_ke']?></td>
                                                 <td><?php echo $dataCetak[$i]['tanggal_jatuh_tempo'].'-'.$tgl2;?></td>
-                                                <td><?php echo $dataCetak[$i]['tagihan']?></td>
-                                                <td><?php echo $dataCetak[$i]['pembayaran']?></td>
-                                                <td><?php echo $dataCetak[$i]['potongan']?></td>
-                                                <td><?php echo $dataCetak[$i]['telat']?></td>
-                                                <td><?php echo $dataCetak[$i]['denda_terhitung']?></td>
-                                                <td><?php echo $dataCetak[$i]['denda_dibayar']?></td>
+                                                <td style="text-align: right"><?php echo $dataCetak[$i]['tagihan']?></td>
+                                                <td style="text-align: right"><?php echo $dataCetak[$i]['pembayaran']?></td>
+                                                <td style="text-align: right"><?php echo $dataCetak[$i]['potongan']?></td>
+                                                <td style="text-align: right"><?php echo $dataCetak[$i]['telat']?></td>
+                                                <td style="text-align: right"><?php echo $dataCetak[$i]['denda_terhitung']?></td>
+                                                <td style="text-align: right"><?php echo $dataCetak[$i]['denda_dibayar']?></td>
                                                 <td><?php echo $dataCetak[$i]['tanggal_bayar_angsuran']?></td>
                                                 <td><?php echo $dataCetak[$i]['tanggal_bayar_denda']?></td>
                                                 <td><?php echo $dataCetak[$i]['no_kwitansi']?></td>
@@ -132,12 +132,12 @@
                                             <?php else :?>
                                                 <td><?php echo $i;?></td>
                                                 <td><?php echo $dataCetak[0]['tanggal_jatuh_tempo'].'-'.$tgl2;?></td>
-                                                <td><?php echo $dataCetak[0]['tagihan']?></td>
-                                                <td>0,00</td>
-                                                <td>0,00</td>
+                                                <td style="text-align: right"><?php echo $dataCetak[0]['tagihan']?></td>
+                                                <td style="text-align: right">0,00</td>
+                                                <td style="text-align: right">0,00</td>
                                                 <td>-</td>
-                                                <td>0,00</td>
-                                                <td>0,00</td>
+                                                <td style="text-align: right">0,00</td>
+                                                <td style="text-align: right">0,00</td>
                                                 <td>-/-/-</td>
                                                 <td>-/-/-</td>
                                                 <td>-</td>
@@ -147,7 +147,11 @@
                                         <?php $total = isFloatNum($dataCetak[0]['tagihan']) * $jumlahAngsuran;?>         
                                         <?php $sisa = 0;?>
                                         <?php $sisa =$total - $pembayaran;  ?>
-                                        <tr><tr>
+                                        <tr>
+                                        <tr>
+                                            <td colspan="6" style="text-decoration: underline"></td>
+                                        </tr>
+                                        <tr>
                                             <td> Total Bayar &nbsp;</td>
                                             <td>&nbsp;</td>
                                             <td><?php echo  !empty($total) ? rupiah($total) : '0,00'?></td>
