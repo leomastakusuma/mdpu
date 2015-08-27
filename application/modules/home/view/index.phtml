@@ -14,7 +14,13 @@
     <div class="row">
         <div class="col-lg-12">
     <br/>
-    <h1 class="text-yellow" align="center"> <p align='justify'><img src="<?php echo URL?>public/images/logo.png" height="80">Welcome to Dashboard MDPU - FINANCE</p></h1>
+    <div class="text-center">
+               <h1 class="text-yellow">Welcome to Dashboard MDPU - FINANCE</p></h1>
+               <h1 class="text-yellow"><?php echo strtoupper($_SESSION['dataLogin']['level']).'-'.$_SESSION['dataLogin']['cabang']?></h1>
+               <img src="<?php echo URL?>public/images/banner.jpg" height="300px" width="800px"class="img-thumbnail">
+               
+               
+    </div>
 	 
         </div>
     </div>

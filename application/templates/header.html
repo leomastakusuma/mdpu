@@ -54,14 +54,14 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?php echo URL?>public/AdminLTE-2.1.1/dist/img/avatar2.png" class="user-image" alt="User Image"/>
+                  <img src="<?php echo URL?>public/images/listuser.png" class="user-image" alt="User Image"/>
                   
                   <span class="hidden-xs"><?php echo $_SESSION['dataLogin']['realname'];?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <!--<img src="<?php echo URL?>public/AdminLTE-2.1.1/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />-->
+                    <img src="<?php echo URL?>public/images/listuser.png" class="img-circle" alt="User Image" />
                     <p>
                      <?php echo strtoupper($_SESSION['level']).','.$_SESSION['dataLogin']['realname'];?>
                       <small>Member since <?php echo $_SESSION['dataLogin']['create_at'];?></small>
