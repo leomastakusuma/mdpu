@@ -76,14 +76,14 @@
                                             <td><?php echo $val['no_kontrak']?></td>
                                             <td><?php echo $val['nama']?></td>
                                             <td align="center"><?php echo $val['angsuran_ke']?></td>
-                                            <td><?php echo $val['angsuran']?></td>
-                                            <td><?php echo $val['denda']?></td>
-                                            <td><?php echo $val['biaya_tagih']?></td>
+                                            <td style="text-align: right"><?php echo $val['angsuran']?></td>
+                                            <td style="text-align: right"><?php echo $val['denda']?></td>
+                                            <td style="text-align: right"><?php echo $val['biaya_tagih']?></td>
                                             <td><?php echo $val['bo']?></td>
-                                            <td><?php echo $val['discount']?></td>
-                                            <td><?php echo $val['total']?></td>
+                                            <td style="text-align: right"><?php echo $val['discount']?></td>
+                                            <td style="text-align: right"><?php echo $val['total']?></td>
                                             <td><?php echo $val['no_kwitansi']?></td>
-                                            <td><?php echo $val['tgl_bayar']?></td>
+                                            <td><?php echo date('d/m/Y',  strtotime($val['tgl_bayar']));?></td>
                                             <td><?php echo $val['keterangan']?></td>
                                             <?php $totalangsuran += isFloatNum($val['angsuran']);?>
                                             <?php $totaldenda += isFloatNum($val['denda']);?>
@@ -97,12 +97,12 @@
                                         <tr>
                                             <td colspan="3"> Sub Total &nbsp;</td>
                                             <td>&nbsp;</td>
-                                            <td><?php echo  !empty($totalangsuran) ? rupiah($totalangsuran) : '0,00'?></td>
-                                            <td><?php echo  !empty($totaldenda) ? rupiah($totaldenda) : '0,00'?></td>
-                                            <td><?php echo  !empty($totalbiayatagh) ? rupiah($totalbiayatagh) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo  !empty($totalangsuran) ? rupiah($totalangsuran) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo  !empty($totaldenda) ? rupiah($totaldenda) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo  !empty($totalbiayatagh) ? rupiah($totalbiayatagh) : '0,00'?></td>
                                             <td>&nbsp;</td>
-                                            <td><?php echo !empty($totaldicount) ? rupiah($totaldicount) : '0,00'?></td>
-                                            <td><?php echo  !empty($totalbayar) ? rupiah($totalbayar) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo !empty($totaldicount) ? rupiah($totaldicount) : '0,00'?></td>
+                                            <td style="text-align: right"><?php echo  !empty($totalbayar) ? rupiah($totalbayar) : '0,00'?></td>
                                             <td colspan="2" align="right">&nbsp;</td>
                                             <td>&nbsp;</td>
                                         </tr>                                       
