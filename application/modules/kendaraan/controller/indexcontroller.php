@@ -109,6 +109,8 @@ class indexcontroller extends Controller {
             $this->redirect('error/index/notAllowed');
         }
         $form = $this->getPost();
+        $form['tahun_pembuatan']=  date('Y-m-d', strtotime($form['tahun_pembuatan']));
+        $form['tgl_stnk']=  date('Y-m-d', strtotime($form['tgl_stnk']));
         $form['status'] = 'new';
         $nik = $form['nik_costumer'];
         $where = $this->_modelCostumer->getAdapter()->quoteInto('nik_costumer =?', $nik);
@@ -140,7 +142,6 @@ class indexcontroller extends Controller {
         if (!isset($data)) {
             $this->redirect('error');
         }
-          
         require UD . 'header.html';
         require APP_MODUL . '/kendaraan/form/form-edit-kendaraan.phtml';
         require UD . 'footer.html';
@@ -148,11 +149,13 @@ class indexcontroller extends Controller {
     
     public function saveedit(){
         $form = $this->getPost();
+        $form['tahun_pembuatan']=  date('Y-m-d', strtotime($form['tahun_pembuatan']));
+        $form['tgl_stnk']=  date('Y-m-d', strtotime($form['tgl_stnk']));
         try {
             $where = array();
             $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $form['nik_costumer']);
             $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('id_kendaraan = ?', $form['id_kendaraan']);
-            
+            unset($form['nik_costumer']);
             $this->_modelKendaraan->update($form, $where);
             $this->redirect('kendaraan');
             

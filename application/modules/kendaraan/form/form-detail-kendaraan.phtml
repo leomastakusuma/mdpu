@@ -109,7 +109,7 @@
                             <label for="Tahun Pembuatan" class="col-sm-2 control-label">Tahun Pembuatan</label>
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" id="tahun_pembuatan" placeholder="Tahun Pembuatan" name="tahun_pembuatan" 
-                                        required="true"readonly="true" value="<?php echo (!empty($data->tahun_pembuatan) ? $data->tahun_pembuatan : null)?>" >
+                                       required="true"readonly="true" value="<?php echo (!empty($data->tahun_pembuatan) ? date('d/m/Y',strtotime($data->tahun_pembuatan)) : null)?>" >
                             </div>
                         </div>   
                         
@@ -124,8 +124,8 @@
                         <div class="form-group">
                             <label for="Tanggal STNK" class="col-sm-2 control-label">Tanggal STNK</label>
                             <div class="col-sm-2" id="sd">
-                                <input type="text" class="datepicker form-control input-append date" id="tgl_stnk" data-date-format="yyyy/mm/dd" placeholder="Tanggal STNK" name="tgl_stnk" 
-                                       required="true" readonly="true" value="<?php echo (!empty($data->tgl_stnk) ? $data->tgl_stnk : null)?>" >
+                                <input type="text" class="datepicker form-control input-append date" id="tgl_stnk"  placeholder="Tanggal STNK" name="tgl_stnk" 
+                                       required="true" readonly="true" value="<?php echo (!empty($data->tgl_stnk) ? date('d/m/Y',strtotime($data->tgl_stnk)) : null)?>" >
                                 <span class="add-on"><i class="icon-th"></i></span>
                             </div>
                         </div>   
