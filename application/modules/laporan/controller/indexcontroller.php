@@ -315,8 +315,8 @@ class IndexController extends Controller {
             $this->redirect( 'error/index/notAllowed' );
         }
         $form = $this->getPost();
-        $awal = $form[ 'Tanggal' ];
-        $akhir = $form[ 'Sampai' ];
+        $awal = date('Y-m-d',  strtotime($form[ 'Tanggal' ]));
+        $akhir = date('Y-m-d',  strtotime($form[ 'Sampai' ]));
         $dataCetak = $this->_modelBBPenerimaanKas->getPenerimaanKas( $awal, $akhir );
         if ( !empty( $dataCetak ) ) {
             require UD . 'header.html';
@@ -347,8 +347,9 @@ class IndexController extends Controller {
     
     public function cariPiutang(){
         $form = $this->getPost();
-        $awal = $form[ 'Tanggal' ];
-        $akhir = $form[ 'Sampai' ];
+        $awal = date('Y-m-d',  strtotime($form[ 'Tanggal' ]));
+        $akhir = date('Y-m-d',  strtotime($form[ 'Sampai' ]));
+        
         $dataCetak = $this->_modelBBPiutang->getBBPiutang( $awal, $akhir );
         if ( !empty( $dataCetak ) ) {
             require UD . 'header.html';
