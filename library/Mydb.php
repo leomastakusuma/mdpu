@@ -368,7 +368,7 @@ final class Mydb
      * @return Mydb_Db_Pinjaman
      */
     public static function getModelPinjaman() {
-        $key = 'Mydb_Db_Penjamin';
+        $key = 'Mydb_Db_Pinjamin';
         if (self::registry($key) === null) {
             self::register($key, new Mydb_Db_Pinjaman());
         }
