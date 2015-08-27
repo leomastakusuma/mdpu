@@ -210,7 +210,7 @@ class IndexController extends Controller {
         $getKeterangan = $this->_modelCostumer->getCabangCostumer( $dataKP[ 'no_kontrak' ] );
         if ( !empty( $getKeterangan ) ) {
             if ( $getKeterangan[ 'id_cabang' ] != $this->id_cabang ) {
-                $dataBBKas[ 'keterangan' ] = 'Cabang Lain';
+                $dataBBKas[ 'keterangan' ] = 'Cabang '.$_SESSION['dataLogin']['cabang'];
             } else {
                 $dataBBKas[ 'keterangan' ] = '-';
             }
