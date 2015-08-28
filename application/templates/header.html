@@ -63,7 +63,7 @@
                   <li class="user-header">
                     <img src="<?php echo URL?>public/images/listuser.png" class="img-circle" alt="User Image" />
                     <p>
-                     <?php echo strtoupper($_SESSION['level']).','.$_SESSION['dataLogin']['realname'];?>
+                     <?php echo strtoupper($_SESSION['dataLogin']['realname']);?>
                       <small>Member since <?php echo $_SESSION['dataLogin']['create_at'];?></small>
                     </p>
                   </li>
