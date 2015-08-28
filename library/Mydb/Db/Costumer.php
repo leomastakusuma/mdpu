@@ -221,18 +221,12 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         }
 
         /* End Kondisi */
-
         $select->order( 'cos.nik_costumer' );
         $select->group( 'cos.nik_costumer' );
 
+        return $this->getAdapterSelect()->fetchRow( $select );
 
 
-
-        echo $select;
-
-
-
-        return;
     }
 
 }
