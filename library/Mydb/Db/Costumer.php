@@ -122,22 +122,49 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
       return $this->getAdapterSelect()->fetchAll($select);
       }
      */
-
-    public function getNoKontrak( $laporan = false ) {
+    /**
+     * 
+     * @param type $laporan as status laporan
+     * @param type $cetakCostumer c
+     * @return type
+     */
+    public function getNoKontrak( $laporan = false,$cetakCostumer = false ) {
         $select = $this->select();
         $select->from( array( 'cos' => $this->_name ), array() );
         $select->setIntegrityCheck( false );
         $select->join( array( 'pinj' => 'pinjaman' ), 'pinj.nik_costumer =  cos.nik_costumer', array() );
-        $select->join( array( 'kend' => 'kendaraan' ), 'kend.no_polisi = pinj.no_polisi', array() );
+        $select->joinLeft( array( 'kend' => 'kendaraan' ), 'kend.no_polisi = pinj.no_polisi', array() );
         if ( $laporan ) {
             $select->join( array( 'pem' => 'pembayaran' ), 'pinj.no_kontrak = pem.no_kontrak', array() );
+        }if($cetakCostumer){
+            $select->joinLeft( array( 'penj' => 'penjamin' ), 'penj.nik_costumer =  cos.nik_costumer', array() );
+            $select->joinLeft( array( 'bb_kas' => 'bb_penerimaan_kas' ), 'bb_kas.no_kontrak = pinj.no_kontrak', array() );
+            $select->columns( array( 'no_kontrak' ), 'pinj' );
+        }else{
+          $select->columns( array( 'no_kontrak' ), 'pinj' );
+          $select->columns( array( 'lama_angsuran' ), 'pinj' );  
         }
-        $select->columns( array( 'no_kontrak' ), 'pinj' );
-        $select->columns( array( 'lama_angsuran' ), 'pinj' );
         $select->group( 'pinj.no_kontrak' );
         return $this->getAdapterSelect()->fetchAll( $select );
     }
+    
+  
+    public function getNikCostumer(){
+        $select = $this->select();
+        $select->from( array( 'cos' => $this->_name ), array() );
+        $select->setIntegrityCheck( false );
+        $select->joinLeft( array( 'penj' => 'penjamin' ), 'penj.nik_costumer =  cos.nik_costumer', array() );
+        $select->joinLeft( array( 'pinj' => 'pinjaman' ), 'pinj.nik_costumer =  cos.nik_costumer', array() );
+        $select->joinLeft( array( 'kend' => 'kendaraan' ), 'kend.no_polisi = pinj.no_polisi', array() );
+        $select->joinLeft( array( 'bb_kas' => 'bb_penerimaan_kas' ), 'bb_kas.no_kontrak = pinj.no_kontrak', array() );
+        $select->columns( array( 'nik_costumer' ), 'cos' );
+        $select->group('cos.nik_costumer');
+        return $this->getAdapterSelect()->fetchAll($select);
+        
+    }
 
+
+    
     public function getDetailPembayaran( $no_kontrak ) {
         $select = $this->select();
         $select->from( array( 'cos' => $this->_name ), array() );
@@ -167,19 +194,19 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         return $this->getAdapterSelect()->fetchRow( $select );
     }
 
-    public function geCetakksostumer( $cabang = false, $fields = array() ) {
+    public function getCetakDataCostumer( $cabang = false, $fields = array() ) {
         $select = $this->select();
         $select->from( array( 'cos' => 'costumer' ), array() );
         $select->setIntegrityCheck( false );
-        $select->join( array( 'penj' => 'penjamin' ), 'penj.nik_costumer = cos.nik_costumer', array() );
+        $select->joinLeft( array( 'penj' => 'penjamin' ), 'penj.nik_costumer = cos.nik_costumer', array() );
         $select->join( array( 'ken' => 'kendaraan' ), 'ken.nik_costumer = cos.nik_costumer', array() );
         $select->join( array( 'pinj' => 'pinjaman' ), 'pinj.nik_costumer = cos.nik_costumer', array() );
         $select->joinLeft( array( 'cab' => 'cabang' ), 'cab.id_cabang=cos.id_cabang', array() );
         $select->columns( array( 'nik_costumer' ), 'cos' );
-        $select->columns( array( 'nama' ), 'cos' );
+        $select->columns( array( 'nama_costumer'=>'nama' ), 'cos' );
         $select->columns( array( 'alamat' ), 'cos' );
         $select->columns( array( 'nik_penjamin' ), 'penj' );
-        $select->columns( array( 'nama' ), 'penj' );
+        $select->columns( array( 'nama_penjamin'=>'nama' ), 'penj' );
         $select->columns( array( 'no_polisi' ), 'ken' );
         $select->columns( array( 'merk' ), 'ken' );
         $select->columns( array( 'no_kontrak' ), 'pinj' );
@@ -223,8 +250,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         /* End Kondisi */
         $select->order( 'cos.nik_costumer' );
         $select->group( 'cos.nik_costumer' );
-
-        return $this->getAdapterSelect()->fetchRow( $select );
+        return $this->getAdapterSelect()->fetchAll( $select );
 
 
     }
