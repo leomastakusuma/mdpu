@@ -22,7 +22,7 @@
                 <ul class="treeview-menu">
                     <li><a href="<?php echo URL?>costumer"><i class="fa fa-circle-o"></i>Data Costumer</a></li>
                     <li><a href="<?php echo URL?>costumer/index/add"><i class="fa fa-circle-o"></i>ADD Costumer</a></li>
-                    <li><a href="<?php echo URL?>costumer/index/cetakcostumer"><i class="fa fa-circle-o"></i>Cetak Costumer</a></li>
+                    <li><a href="<?php echo URL?>costumer/index/caricostumer"><i class="fa fa-circle-o"></i>Cetak Costumer</a></li>
                 </ul>
             </li>
             
@@ -103,13 +103,16 @@
             </li>
             <?php endif;?>
             
-            <?php if($_SESSION['level']==='akuntan'): ?>
+           <?php if($_SESSION['level']==='akuntan' || $_SESSION['level']==='pimpinan'): ?>
             <li class=" treeview">
                 <a href="#">
                 <i class="fa fa-tree"></i> <span>Laporan</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                 <ul class="treeview-menu">
+                    <?php if($_SESSION['level']['pimpinan']):?>
+                    <li><a href="<?php echo URL?>costumer/index/caricostumer"><i class="fa fa-circle-o"></i>Costumer</a></li>
+                    <?php endif;?>
                     <li><a href="<?php echo URL?>laporan/index/kartupiutang"><i class="fa fa-circle-o"></i>Kartu Piutang</a></li>
                     <li><a href="<?php echo URL?>laporan/index/kas"><i class="fa fa-circle-o"></i>Buku Besar Penerimaan  Kas</a></li>
                     <li><a href="<?php echo URL?>laporan/index/piutang"><i class="fa fa-circle-o"></i>Buku Besar Piutang</a></li>
