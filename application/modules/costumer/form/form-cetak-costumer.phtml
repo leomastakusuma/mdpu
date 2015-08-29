@@ -1,0 +1,109 @@
+<?php
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    pinjaman
+ * @subpackage Form
+ * @filesource form-add-pinjaman.phtml
+ */
+?>
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>costumer">Data Costumer</a>
+                </li>
+                <li>
+                    Input Costumer
+                </li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Cetak Data Costumer</h3>
+                </div>
+                <?php if ( !empty( $error ) ): ?>
+                    <div class="alert alert-error alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><i class="icon fa fa-warning"></i> Alert!</strong><br/>
+                        <?php echo $error; ?>
+                    </div>
+                <?php endif; ?>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" action="<?php echo URL ?>costumer/index/cetakcostumer" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group ">
+                            <label for="Nik Costumer" class="col-sm-3 control-label">NIK Costumer</label>
+                            <div class="input-group col-sm-5">
+                                <select name="nik_costumer" id="nik_costumers" class="col-sm-5" >
+                                    <option value="">NIK Costumer</option>
+                                    <?php foreach ( $nik_costumer as $key => $val ): ?>
+                                            <option value="<?php echo $val[ 'nik_costumer' ]; ?>"><?php echo $val[ 'nik_costumer' ]; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="No Kotrak" class="col-sm-3 control-label">No Kontrak</label>
+                            <div class="input-group col-sm-5">
+                                <select name="no_kontrak" id="agama" class="col-sm-5" >
+                                    <option value="">NO Kontrak</option>
+                                    <?php foreach ( $no_kontrak as $key => $val ): ?>
+                                            <option value="<?php echo $val[ 'no_kontrak' ]; ?>"><?php echo $val[ 'no_kontrak' ]; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Nama" class="col-sm-3 control-label">Nilai Pinjaman </label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" class="form-control text-right" id="nilai_pinjaman_min" placeholder="Nilai Pinjaman Min" name="nilai_pinjaman_min">                
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label for="No Polisi" class="col-sm-3 control-label">Nilai Pinjaman Max</label>
+                            <div class="input-group col-sm-3">
+                                <input type="text" class="form-control text-right" id="nilai_pinjaman_max" placeholder="Nilai Pinjaman Max" name="nilai_pinjaman_max">                
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="No Polisi" class="col-sm-3 control-label">Jumlah Ang</label>
+                            <div class="input-group col-sm-2">
+                                <input type="text" class="form-control text-left" id="jumlah Ang" placeholder="Jumlah Ang" name="nilai_pinjaman_max">                
+                            </div>
+                        </div>
+                        
+                        <div class="form-group ">
+                            <label for="No Polisi" class="col-sm-3 control-label">Tanggal</label>
+                               <div class="input-group">
+                                <input type="text" class="form-control " id="tanggal" placeholder="Awal" name="awal"/>
+                                <span class="input-group-btn" style="width:23px;"></span>
+                                <input type="text" class="form-control " id="sampai" placeholder="Akhir" name="akhir" style="margin-left:-1px" />
+                              </div>
+                        </div>
+
+                <div class="form-group">
+                    <div class="input-group col-sm-offset-3 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Cari</button> &nbsp;
+                    </div>
+                </div>                               
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

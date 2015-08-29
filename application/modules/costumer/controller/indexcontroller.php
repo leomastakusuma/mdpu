@@ -135,12 +135,37 @@ class indexcontroller extends Controller {
         require UD . 'footer.html';
     }
 
-    public function cetakCostumer() {
+    public function cariCostumer() {
         require UD . 'header.html';
-        $data = $this->_modelCostumer->getCetakKostumer();
-        require APP_MODUL . '/costumer/view/cetakCostumer.phtml';
+        /*$data = $this->_modelCostumer->getCetakKostumer();
+        require APP_MODUL . '/costumer/view/cetakCostumer.phtml';*/
+        $nik_costumer = $this->_modelCostumer->getNikCostumer();
+        $no_kontrak = $this->_modelCostumer->getNoKontrak(FALSE,true);
+        require APP_MODUL . '/costumer/form/form-cetak-costumer.phtml';
         require UD . 'footer.html';
     }
+    
+    public function cetakCostumer(){
+        require UD.'header.html';
+        $form = $this->getPost();
+        $fields = array();
+        foreach ($form as $k=>$v){
+            if(!empty($v)){
+                $fields[$k] = $v;
+                if($k==='awal' || $k==='akhir'){
+                    $fields[]['priode'][$k]=$v;
+                }
+                if($k==='awal' || $k==='akhir'){
+                    unset($fields['awal']);
+                    unset($fields['akhir']);
+                }
+            }
+        }
+        $data = $this->_modelCostumer->getCetakDataCostumer(false,$fields);
+        pr($data);
+        require UD . 'footer.html';
+    }
+
 
     public function saveedit() {
         if ( $_SESSION[ 'level' ] != 'superadmin' ) {
