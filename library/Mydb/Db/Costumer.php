@@ -126,9 +126,10 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
      * 
      * @param type $laporan as status laporan
      * @param type $cetakCostumer c
+     * @param type $cabang as kondisi jika sebagai pimpinan maka tambah kondisi id_cabang
      * @return type
      */
-    public function getNoKontrak( $laporan = false,$cetakCostumer = false ) {
+    public function getNoKontrak( $laporan = false,$cetakCostumer = false ,$cabang = false ) {
         $select = $this->select();
         $select->from( array( 'cos' => $this->_name ), array() );
         $select->setIntegrityCheck( false );
@@ -143,6 +144,10 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         }else{
           $select->columns( array( 'no_kontrak' ), 'pinj' );
           $select->columns( array( 'lama_angsuran' ), 'pinj' );  
+        }
+        if($cabang){
+            $select->join( array( 'cab' => 'cabang' ), 'cab.id_cabang =  cos.id_cabang', array() );
+            $select->where('cos.id_cabang = ?',$cabang);
         }
         $select->group( 'pinj.no_kontrak' );
         return $this->getAdapterSelect()->fetchAll( $select );

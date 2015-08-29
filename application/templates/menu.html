@@ -110,7 +110,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                 <ul class="treeview-menu">
-                    <?php if($_SESSION['level']['pimpinan']):?>
+                    <?php if($_SESSION['level']==='pimpinan'):?>
                     <li><a href="<?php echo URL?>costumer/index/caricostumer"><i class="fa fa-circle-o"></i>Costumer</a></li>
                     <?php endif;?>
                     <li><a href="<?php echo URL?>laporan/index/kartupiutang"><i class="fa fa-circle-o"></i>Kartu Piutang</a></li>
