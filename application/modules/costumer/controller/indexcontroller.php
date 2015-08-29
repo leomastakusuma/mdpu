@@ -243,7 +243,7 @@ class indexcontroller extends Controller {
                 $value .= $row['merk'].',';
                 $value .= $row['no_kontrak'].',';
                 $value .= $row['nilai_pinjaman'].',';
-                $value .= $row['angsuran_perbulan'].',';
+                $value .= isFloatNum($row['angsuran_perbulan']).',';
                 $value .= $row['lama_angsuran'].',';
                 $value .= $row['total_ang'].',';
                 $value .= $row['cabang'].',';
