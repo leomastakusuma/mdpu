@@ -132,7 +132,7 @@ class indexcontroller extends Controller {
         }
         if ( $_SESSION[ 'level' ] === 'pimpinan' ) {
             require UD . 'headerDataTables.phtml';
-            $idcabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
+            $idcabang = (($_SESSION[ 'level' ] === 'pimpinan')||($_SESSION[ 'level' ] === 'admin')) ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
             $cabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'cabang' ] : false;
             $data = $this->_modelCostumer->getCetakDataCostumer( $idcabang, FALSE );
             require APP_MODUL . '/costumer/view/caridataCostumer.phtml';
@@ -171,6 +171,7 @@ class indexcontroller extends Controller {
             $fiedlsCetak = !empty( $_SESSION[ 'fields' ] ) ? $_SESSION[ 'fields' ] : null;
             $idcabang = ($_SESSION[ 'level' ] === 'admin') ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
             $dataCostumer = $this->_modelCostumer->getCetakDataCostumerAllFields( $idcabang, $fiedlsCetak );
+//            pr($dataCostumer);
             $this->cetakcsv($dataCostumer);
             unset( $_SESSION[ 'fields' ] );
         } else {
@@ -207,15 +208,18 @@ class indexcontroller extends Controller {
     }
     
     protected function cetakcsv($data){
+        $dataCostumer = $data;
         $headerFields = array_shift($data);
         $line = array();
         $dir = APP_DIR.'/download';
          if(!is_dir( $dir )){
              mkdir($dir, 7777);
          }
+
         $filenames = '/DataCostumer-'.date('d-m-Y H:i:s').'.csv';
         $files = $dir.$filenames;
         $file = fopen($files,"w");
+
         $header = '';
         $value = '';
         foreach ($headerFields as $k=>$v){
@@ -223,7 +227,7 @@ class indexcontroller extends Controller {
         }
         fwrite($file, "$header\n");
             $value = array();
-            foreach ($data as $row){
+            foreach ($dataCostumer as $key=>$row){
                 $value = $row['nik_costumer'].',';
                 $value .= $row['nama_costumer'].',';
                 $value .= $row['alamat'].',';
