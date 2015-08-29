@@ -130,12 +130,23 @@ class indexcontroller extends Controller {
         if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'admin') && ($_SESSION[ 'level' ] != 'pimpinan') ) {
             $this->redirect( 'error/index/notAllowed' );
         }
-        require UD . 'header.html';
-        $nik_costumer = $this->_modelCostumer->getNikCostumer();
+        if($_SESSION['level']==='pimpinan'){
+            require UD . 'headerDataTables.phtml';
+            $idcabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
+            $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['cabang']:false;
+            $data = $this->_modelCostumer->getCetakDataCostumer($idcabang,FALSE);
+            require APP_MODUL . '/costumer/view/caridataCostumer.phtml';
+            require UD . 'footerDataTables.phtml';
+        }
         
-        $no_kontrak = $this->_modelCostumer->getNoKontrak(FALSE,true);
-        require APP_MODUL . '/costumer/form/form-cetak-costumer.phtml';
-        require UD . 'footer.html';
+        else{
+            require UD . 'header.html';
+            $nik_costumer = $this->_modelCostumer->getNikCostumer();
+            $no_kontrak = $this->_modelCostumer->getNoKontrak(FALSE,true);
+            require APP_MODUL . '/costumer/form/form-cetak-costumer.phtml';
+            require UD . 'footer.html';
+        }
+
     }
     
     public function cetakCostumer(){
@@ -166,9 +177,9 @@ class indexcontroller extends Controller {
         require APP_MODUL . '/costumer/view/cetakCostumer.phtml';
         require UD . 'footer.html';
     }
-
-
-    public function saveedit() {
+    
+    
+        public function saveedit() {
         if ( $_SESSION[ 'level' ] != 'superadmin' ) {
             $this->redirect( 'error/index/notAllowed' );
         }

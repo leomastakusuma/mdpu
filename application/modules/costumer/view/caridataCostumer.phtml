@@ -1,0 +1,80 @@
+<?php
+/**
+ * MDPU Finance
+ * @category   Modules
+ * @package    Costumer
+ * @subpackage View
+ * @filesource dataCostumer.phtml
+ */
+?>
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> <a href="<?php echo URL ?>">Home</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>laporan/index/kartupiutang">Kartu Piutang</a>
+                </li>
+                <li>
+                    <i class="fa  fa-table"></i> <a href="<?php echo URL ?>laporan/index/kas">Buku Besar Penerimaan Kas</a>
+                </li>
+                <li>
+                    Data Costumer
+                </li>
+                 </ol>
+
+            </ol>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Data Costumer Cabang , &nbsp;<strong> <?php echo (!empty($cabang) ? $cabang : null);?></strong></h3>
+        </div>
+        <div class="box-body" > 
+            <table id="example1" class="table table-bordered table-striped" style="overflow-x: scroll;overflow-y: scroll">
+                <thead>
+                    <tr>
+                        <th>Nik Costumer</th>
+                        <th>Nama Costumer</th>
+                        <th>Alamat</th>
+                        <th>Nik Penjamin</th>
+                        <th>Nama Penjamin</th>
+                        <th>No Polisi</th>
+                        <th>Merk/Type</th>
+                        <th>No Kontrak</th>
+                        <th>Nilai Pinjaman</th>
+                        <th>Ang/Bln</th>
+                        <th>Jml Ang</th>
+                        <th>Total Ang</th>
+                        <th>Cabang</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                    <?php if (!empty($data)):  ?>                     
+                    <?php foreach ($data as $val):?>
+                        <tr>
+                            <td><?php echo $val['nik_costumer'];?></td>
+                            <td><?php echo $val['nama_costumer'];?></td>
+                            <td><?php echo $val['alamat'];?></td>
+                            <td><?php echo $val['nik_penjamin'];?></td>
+                            <td><?php echo $val['nama_penjamin'];?></td>
+                            <td><?php echo $val['no_polisi'];?></td>
+                            <td><?php echo $val['merk'];?></td>
+                            <td><?php echo $val['no_kontrak'];?></td>
+                            <td style="text-align: right"><?php echo $val['nilai_pinjaman'];?></td>
+                            <td style="text-align: right"><?php echo $val['angsuran_perbulan'];?></td>
+                            <td style="text-align: center"><?php echo $val['lama_angsuran'];?></td>
+                            <td style="text-align: center"><?php echo $val['total_ang'];?></td>
+                            <td><?php echo $val['cabang'];?></td>
+                        </tr>
+                    <?php endforeach; ?>  
+                    <?php endif;?>    
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
