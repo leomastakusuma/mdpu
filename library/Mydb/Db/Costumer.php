@@ -257,8 +257,81 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         $select->order( 'cos.nik_costumer' );
         $select->group( 'cos.nik_costumer' );
         return $this->getAdapterSelect()->fetchAll( $select );
+    }
+    
+    public function getCetakDataCostumerAllFields( $cabang = false, $fields = array() ) {
+        $select = $this->select();
+        $select->from( array( 'cos' => 'costumer' ), array() );
+        $select->setIntegrityCheck( false );
+        $select->joinLeft( array( 'penj' => 'penjamin' ), 'penj.nik_costumer = cos.nik_costumer', array() );
+        $select->join( array( 'ken' => 'kendaraan' ), 'ken.nik_costumer = cos.nik_costumer', array() );
+        $select->join( array( 'pinj' => 'pinjaman' ), 'pinj.nik_costumer = cos.nik_costumer', array() );
+        $select->joinLeft( array( 'cab' => 'cabang' ), 'cab.id_cabang=cos.id_cabang', array() );
+        $select->columns( array( 'nik_costumer' ), 'cos' );
+        $select->columns( array( 'nama_costumer'=>'nama' ), 'cos' );
+        $select->columns( array( 'alamat' ), 'cos' );
+        $select->columns( array( 'tempat_lahir' ), 'cos' );
+        $select->columns( array( 'tanggal_lahir' ), 'cos' );
+        $select->columns( array( 'nama_ibu' ), 'cos' );
+        $select->columns( array( 'jenis_kelamin' ), 'cos' );
+        $select->columns( array( 'agama' ), 'cos' );
+        $select->columns( array( 'pekerjaan' ), 'cos' );
+        $select->columns( array( 'hp' ), 'cos' );
+        $select->columns( array( 'telpon' ), 'cos' );
+        $select->columns( array( 'npwp' ), 'cos' );
+        $select->columns( array( 'penghasilan_perbulan' ), 'cos' );
+        $select->columns( array( 'jumlah_tanggungan' ), 'cos' );
+        
+        $select->columns( array( 'nik_penjamin' ), 'penj' );
+        $select->columns( array( 'nama_penjamin'=>'nama' ), 'penj' );
+        
+        
+        
+        $select->columns( array( 'no_polisi' ), 'ken' );
+        $select->columns( array( 'merk' ), 'ken' );
+        $select->columns( array( 'no_kontrak' ), 'pinj' );
+        $select->columns( array( 'nilai_pinjaman' ), 'pinj' );
+        $select->columns( array( 'angsuran_perbulan' ), 'pinj' );
+        $select->columns( array( 'lama_angsuran' ), 'pinj' );
+        $select->joinLeft( array( 'bb_kas' => 'bb_penerimaan_kas' ), 'bb_kas.no_kontrak =pinj.no_kontrak', array( new Zend_Db_Expr( 'count(bb_kas.no_kontrak) as total_ang' ) ) );
+        $select->columns( array( 'cabang' ), 'cab' );
 
+        /* Kondisi Inputan */
+        if ( !empty( $fields ) ) {
+            foreach ( $fields as $key => $row ) {
+                if ( !empty( $row ) ) {
+                    if ( !empty( $row[ 'priode' ] ) ) {
+                        foreach ( $row[ 'priode' ] as $k => $v ) {
+                            if ( !empty( $k === 'awal' ) && !empty( $k === 'akhir' )  ) {
+                                $select->where( 'pinj.tanggal >= ? ', $v );
+                                $select->where( 'pinj.tanggal <= ? ', $v );
+                            }if ( !empty( $k === 'awal' ) || !empty( $k === 'akhir' ) ) {
+                                $select->where( 'pinj.tanggal = ? ', $v );
+                            }
+                        }
+                    }if ( !empty( $key === 'nik_costumer' ) && !empty( $row ) ) {
+                        $select->where( 'cos.nik_costumer = ? ', $row );
+                    }if ( !empty( $key === 'no_kontrak' ) && !empty( $row ) ) {
+                        $select->where( 'pinj.no_kontrak= ? ', $row );
+                    }if ( !empty( $key === 'nilai_pinjaman_min' ) ) {
+                        $select->where( 'pinj.nilai_pinjaman >= ?', $row );
+                    }if ( !empty( $key === 'nilai_pinjaman_max' ) ) {
+                        $select->where( 'pinj.nilai_pinjaman <= ?', $row );
+                    }if ( !empty( $key === 'jumlah_ang' ) ) {
+                        $select->where( 'pinj.lama_angsuran = ?', $row );
+                    }
+                }
+            }
+        }
 
+        if ( $cabang ) {
+            $select->where( 'cos.id_cabang = ?',$cabang );
+        }
+
+        /* End Kondisi */
+        $select->order( 'cos.nik_costumer' );
+        $select->group( 'cos.nik_costumer' );
+        return $this->getAdapterSelect()->fetchAll( $select );
     }
 
 }

@@ -130,56 +130,63 @@ class indexcontroller extends Controller {
         if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'admin') && ($_SESSION[ 'level' ] != 'pimpinan') ) {
             $this->redirect( 'error/index/notAllowed' );
         }
-        if($_SESSION['level']==='pimpinan'){
+        if ( $_SESSION[ 'level' ] === 'pimpinan' ) {
             require UD . 'headerDataTables.phtml';
-            $idcabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
-            $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['cabang']:false;
-            $data = $this->_modelCostumer->getCetakDataCostumer($idcabang,FALSE);
+            $idcabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
+            $cabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'cabang' ] : false;
+            $data = $this->_modelCostumer->getCetakDataCostumer( $idcabang, FALSE );
             require APP_MODUL . '/costumer/view/caridataCostumer.phtml';
             require UD . 'footerDataTables.phtml';
-        }
-        
-        else{
+        } else {
             require UD . 'header.html';
             $nik_costumer = $this->_modelCostumer->getNikCostumer();
-            $no_kontrak = $this->_modelCostumer->getNoKontrak(FALSE,true);
+            $no_kontrak = $this->_modelCostumer->getNoKontrak( FALSE, true );
             require APP_MODUL . '/costumer/form/form-cetak-costumer.phtml';
             require UD . 'footer.html';
         }
-
     }
-    
-    public function cetakCostumer(){
+
+    public function cetakCostumer() {
         if ( ($_SESSION[ 'level' ] != 'superadmin') && ($_SESSION[ 'level' ] != 'admin') && ($_SESSION[ 'level' ] != 'pimpinan') ) {
             $this->redirect( 'error/index/notAllowed' );
         }
-        require UD.'header.html';
+
         $form = $this->getPost();
         $fields = array();
-        foreach ($form as $k=>$v){
-            if(!empty($v)){
-                $fields[$k] = $v;
-                if($k==='awal' || $k==='akhir'){
-                    $fields[]['priode'][$k]=date('Y-m-d',  strtotime($v));
+        foreach ( $form as $k => $v ) {
+            if ( !empty( $v ) ) {
+                $fields[ $k ] = $v;
+                if ( $k === 'awal' || $k === 'akhir' ) {
+                    $fields[][ 'priode' ][ $k ] = date( 'Y-m-d', strtotime( $v ) );
                 }
-                if($k==='awal' || $k==='akhir'){
-                    unset($fields['awal']);
-                    unset($fields['akhir']);
+                if ( $k === 'awal' || $k === 'akhir' ) {
+                    unset( $fields[ 'awal' ] );
+                    unset( $fields[ 'akhir' ] );
                 }
             }
         }
-        $idcabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
-        $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['cabang']:false;
-        $data = $this->_modelCostumer->getCetakDataCostumer($idcabang,$fields);
-        if(empty($data)){
-            $this->redirect( 'error' );
+        $request = $this->getRequest();
+        $params = (!empty( $request[ 'params' ] )) ? array_shift( $request[ 'params' ] ) : null;
+        if ( !empty( $params ) ) {
+            $fiedlsCetak = !empty( $_SESSION[ 'fields' ] ) ? $_SESSION[ 'fields' ] : null;
+            $dataCostumer = $this->_modelCostumer->getCetakDataCostumerAllFields( false, $fiedlsCetak );
+            $this->cetakcsv($dataCostumer);
+            unset( $_SESSION[ 'fields' ] );
+        } else {
+            require UD . 'header.html';
+            $idcabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
+            $cabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'cabang' ] : false;
+            $data = $this->_modelCostumer->getCetakDataCostumer( $idcabang, $fields );
+            if ( empty( $data ) ) {
+                $this->redirect( 'error' );
+            }
+            $_SESSION[ 'fields' ] = $fields;
+            require APP_MODUL . '/costumer/view/cetakCostumer.phtml';
+            require UD . 'footer.html';
         }
-        require APP_MODUL . '/costumer/view/cetakCostumer.phtml';
-        require UD . 'footer.html';
     }
-    
-    
-        public function saveedit() {
+
+    public function saveedit() {
         if ( $_SESSION[ 'level' ] != 'superadmin' ) {
             $this->redirect( 'error/index/notAllowed' );
         }
@@ -196,6 +203,61 @@ class indexcontroller extends Controller {
             require APP_MODUL . '/costumer/form/form-edit-costumer.phtml';
             require UD . 'footer.html';
         }
+    }
+    
+    protected function cetakcsv($data){
+        $headerFields = array_shift($data);
+        $line = array();
+        $dir = APP_DIR.'/download';
+         if(!is_dir( $dir )){
+             mkdir($dir, 7777);
+         }
+        $filenames = '/DataCostumer-'.date('d-m-Y H:i:s').'.csv';
+        $files = $dir.$filenames;
+        $file = fopen($files,"w");
+        $header = '';
+        $value = '';
+        foreach ($headerFields as $k=>$v){
+             $header .=strtoupper($k).',';
+        }
+        fwrite($file, "$header\n");
+            $value = array();
+            foreach ($data as $row){
+                $value = $row['nik_costumer'].',';
+                $value .= $row['nama_costumer'].',';
+                $value .= $row['alamat'].',';
+                $value .= $row['tempat_lahir'].',';
+                $value .= $row['tanggal_lahir'].',';
+                $value .= $row['nama_ibu'].',';
+                $value .= $row['jenis_kelamin'].',';
+                $value .= $row['agama'].',';
+                $value .= $row['pekerjaan'].',';
+                $value .= $row['hp'].',';
+                $value .= $row['telpon'].',';
+                $value .= $row['npwp'].',';
+                $value .= $row['penghasilan_perbulan'].',';
+                $value .= $row['jumlah_tanggungan'].',';
+                $value .= $row['nik_penjamin'].',';
+                $value .= $row['nama_penjamin'].',';
+                $value .= $row['no_polisi'].',';
+                $value .= $row['merk'].',';
+                $value .= $row['no_kontrak'].',';
+                $value .= $row['nilai_pinjaman'].',';
+                $value .= $row['angsuran_perbulan'].',';
+                $value .= $row['lama_angsuran'].',';
+                $value .= $row['total_ang'].',';
+                $value .= $row['cabang'].',';
+                fputcsv($file, explode(',',$value));
+
+            }
+
+        fclose($file);
+        header("Content-type: text/csv");
+        header("Content-Disposition: attachment; filename={$filenames}");
+        header("Pragma: no-cache");
+        header("Expires: 0");
+        header('Content-Length: '.filesize($files));
+        echo file_get_contents($files);
     }
 
 }
