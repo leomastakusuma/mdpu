@@ -237,7 +237,7 @@ class indexcontroller extends Controller {
                 $value .= $row['jenis_kelamin'].',';
                 $value .= $row['agama'].',';
                 $value .= $row['pekerjaan'].',';
-                $value .= $row['hp'].',';
+                $value .= isFloatNum($row['hp']).',';
                 $value .= $row['telpon'].',';
                 $value .= $row['npwp'].',';
                 $value .= $row['penghasilan_perbulan'].',';
