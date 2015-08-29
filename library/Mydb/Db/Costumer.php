@@ -227,10 +227,11 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
                 if ( !empty( $row ) ) {
                     if ( !empty( $row[ 'priode' ] ) ) {
                         foreach ( $row[ 'priode' ] as $k => $v ) {
-                            if ( !empty( $k === 'awal' ) ) {
+                            if ( !empty( $k === 'awal' ) && !empty( $k === 'akhir' )  ) {
                                 $select->where( 'pinj.tanggal >= ? ', $v );
-                            }if ( !empty( $k === 'akhir' ) ) {
                                 $select->where( 'pinj.tanggal <= ? ', $v );
+                            }if ( !empty( $k === 'awal' ) || !empty( $k === 'akhir' ) ) {
+                                $select->where( 'pinj.tanggal = ? ', $v );
                             }
                         }
                     }if ( !empty( $key === 'nik_costumer' ) && !empty( $row ) ) {
