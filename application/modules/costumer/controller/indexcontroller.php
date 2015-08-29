@@ -170,7 +170,7 @@ class indexcontroller extends Controller {
         if ( !empty( $params ) ) {
             $fiedlsCetak = !empty( $_SESSION[ 'fields' ] ) ? $_SESSION[ 'fields' ] : null;
             $idcabang = ($_SESSION[ 'level' ] === 'admin') ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
-            $dataCostumer = $this->_modelCostumer->getCetakDataCostumerAllFields( false, $fiedlsCetak );
+            $dataCostumer = $this->_modelCostumer->getCetakDataCostumerAllFields( $idcabang, $fiedlsCetak );
             $this->cetakcsv($dataCostumer);
             unset( $_SESSION[ 'fields' ] );
         } else {
