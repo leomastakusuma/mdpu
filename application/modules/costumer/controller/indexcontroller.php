@@ -25,15 +25,6 @@ class indexcontroller extends Controller {
             $this->redirect( 'error/index/notAllowed' );
         }
 
-        $fields = array( 
-            array('priode'=>array('awal' => '2015-08-01','akhir' => '2015-08-30')),
-            'nik_costumer' => null,
-            'no_kontrak' => null,
-            'cabang' => 'antasari',
-            'nilai_pinjaman_min' => null,'nilai_pinjaman_max' => null,'jumlah_ang'=>2 );
-        $data = $this->_modelCostumer->geCetakksostumer(1, $fields);
-        
-
         require UD . 'headerDataTables.phtml';
         $cabang = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
         $data = $this->_modelCostumer->getAllCostumerByCabang( $cabang, null );
@@ -140,8 +131,6 @@ class indexcontroller extends Controller {
             $this->redirect( 'error/index/notAllowed' );
         }
         require UD . 'header.html';
-        /*$data = $this->_modelCostumer->getCetakKostumer();
-        require APP_MODUL . '/costumer/view/cetakCostumer.phtml';*/
         $nik_costumer = $this->_modelCostumer->getNikCostumer();
         
         $no_kontrak = $this->_modelCostumer->getNoKontrak(FALSE,true);
@@ -160,7 +149,7 @@ class indexcontroller extends Controller {
             if(!empty($v)){
                 $fields[$k] = $v;
                 if($k==='awal' || $k==='akhir'){
-                    $fields[]['priode'][$k]=$v;
+                    $fields[]['priode'][$k]=date('Y-m-d',  strtotime($v));
                 }
                 if($k==='awal' || $k==='akhir'){
                     unset($fields['awal']);
@@ -168,8 +157,13 @@ class indexcontroller extends Controller {
                 }
             }
         }
-        $data = $this->_modelCostumer->getCetakDataCostumer(false,$fields);
-        pr($data);
+        $idcabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
+        $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['cabang']:false;
+        $data = $this->_modelCostumer->getCetakDataCostumer($idcabang,$fields);
+        if(empty($data)){
+            $this->redirect( 'error' );
+        }
+        require APP_MODUL . '/costumer/view/cetakCostumer.phtml';
         require UD . 'footer.html';
     }
 

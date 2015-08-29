@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
     <br/>
     <div class="row">
@@ -35,7 +34,7 @@
                                 <td rowspan="1" align="center" width="20%">
                                     <img src="<?php echo URL?>public/images/logo.png" height="80">
                                 </td>
-                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</strong><br/>Data Costumer <br/>Pertanggal <?php echo date('Y/m/d');?></td>
+                                <td  align="left" colspan="3"><font size="4"><strong>PT MITRA DANA PUTRA UTAMA FINANCE LAMPUNG</strong></font><br/><font size="3"><b>Data Costumer </b> <?php echo (!empty($cabang) ? ' : '.$cabang : null)?></font></td>
                             </tr>
                            
 
@@ -46,46 +45,45 @@
                                 <td colspan="4"><hr></td>
                             </tr>
                             <tr>
-                                <td colspan="4">
-                                    <table width="100%">
+                                <td colspan="4" style="overflow: scroll">
+                                    <table width="100%" border='0' cellspacing='0' class="table-responsive">
                                         <tr>
-                                        <td>Nik Costumer</td>
-										<td>Nama</td>
-										<td>Alamat</td>
-										<td>Tempat Tgl Lahir</td>
-										<td>Nama Ibu</td>
-										<td>Jenis Kelamin</td>
-										<td>Agama</td>
-										<td>Status</td>
-										<td>Pekerjaan</td>
-										<td>Hp</td>
-										<td>Telpon</td>
-										<td>Npwp</td>
-										<td>Penghasilan</td>
-										<td>Jumlah Tanggungan</td>
-									
+                                        <th>Nik Costumer</th>
+                                        <th>Nama Costumer</th>
+                                        <th>Alamat</th>
+                                        <th>Nik Penjamin</th>
+                                        <th>Nama Penjamin</th>
+                                        <th>No Polisi</th>
+                                        <th>Merk/Type</th>
+                                        <th>No Kontrak</th>
+                                        <th>Nilai Pinjaman</th>
+                                        <th>Ang/Bln</th>
+                                        <th>Jml Ang</th>
+                                        <th>Total Ang</th>
+                                        <th>Cabang</th>
                                         </tr>
-                                        
+                                        <tr>
+                                            <td colspan="13"><hr></td>
+                                        </tr>
                                        
-											<?php if(!empty($data)):?>
-											<?php foreach($data as $val):?>
-												 <tr>
-												<td><?php echo $val['nik_costumer'];?></td>
-												<td><?php echo $val['nama'];?></td>
-												<td><?php echo $val['alamat'];?></td>
-												<td><?php echo $val['tempat_lahir'].','.$val['tanggal_lahir'];?></td>
-												<td><?php echo $val['nama_ibu'];?></td>
-												<td><?php echo $val['jenis_kelamin'];?></td>
-												<td><?php echo $val['agama'];?></td>
-												<td><?php echo $val['status'];?></td>
-												<td><?php echo $val['pekerjaan'];?></td>
-													<td><?php echo $val['hp'];?></td>
-														<td><?php echo $val['telpon'];?></td>
-															<td><?php echo $val['npwp'];?></td>
-															<td><?php echo $val['penghasilan_perbulan'];?></td>
-															<td><?php echo $val['jumlah_tanggungan'];?></td>
-											<?php endforeach; ?>
-											<?php endif;?>
+                                        <?php if(!empty($data)):?>
+                                        <?php foreach($data as $val):?>
+                                                 <tr>
+                                                <td><?php echo $val['nik_costumer'];?></td>
+                                                <td><?php echo $val['nama_costumer'];?></td>
+                                                <td><?php echo $val['alamat'];?></td>
+                                                <td><?php echo $val['nik_penjamin'];?></td>
+                                                <td><?php echo $val['nama_penjamin'];?></td>
+                                                <td><?php echo $val['no_polisi'];?></td>
+                                                <td><?php echo $val['merk'];?></td>
+                                                <td><?php echo $val['no_kontrak'];?></td>
+                                                <td style="text-align: right"><?php echo $val['nilai_pinjaman'];?></td>
+                                                <td style="text-align: right"><?php echo $val['angsuran_perbulan'];?></td>
+                                                <td style="text-align: center"><?php echo $val['lama_angsuran'];?></td>
+                                                <td style="text-align: center"><?php echo $val['total_ang'];?></td>
+                                                <td><?php echo $val['cabang'];?></td>
+                                        <?php endforeach; ?>
+                                        <?php endif;?>
                                         </tr>   
                                        
                                     </table>
@@ -94,11 +92,11 @@
                              <tr>
                                 <td colspan="4"><hr></td>
                             </tr>
-                             <!--                           
+                            <?php if($_SESSION['level']==='admin' || $_SESSION['level'] ==='superadmin'):?>                           
                             <tr valign="bottom">
                                 <td colspan="4" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
-                            </tr>-->
-                        
+                            </tr>
+                            <?php endif;?>
                         </tfoot>
                     </table>
                     <br>
@@ -117,6 +115,6 @@
                         'width='+screen.width/2,
                         'fullscreen=yes' // only works in IE, but here for completeness
                     ].join(',');
-        window.open('<?php echo URL.'laporan/index/cetaKP/'.$dataCetak[0]['no_kontrak'];?>');// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
+        window.open('<?php echo URL.'costumer/index/cetadatacostumer/';?>');// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
     };
 </script>
