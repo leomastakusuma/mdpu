@@ -169,12 +169,13 @@ class indexcontroller extends Controller {
         $params = (!empty( $request[ 'params' ] )) ? array_shift( $request[ 'params' ] ) : null;
         if ( !empty( $params ) ) {
             $fiedlsCetak = !empty( $_SESSION[ 'fields' ] ) ? $_SESSION[ 'fields' ] : null;
+            $idcabang = ($_SESSION[ 'level' ] === 'admin') ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
             $dataCostumer = $this->_modelCostumer->getCetakDataCostumerAllFields( false, $fiedlsCetak );
             $this->cetakcsv($dataCostumer);
             unset( $_SESSION[ 'fields' ] );
         } else {
             require UD . 'header.html';
-            $idcabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
+            $idcabang = (($_SESSION[ 'level' ] === 'pimpinan') || ($_SESSION[ 'level' ] === 'admin')) ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
             $cabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'cabang' ] : false;
             $data = $this->_modelCostumer->getCetakDataCostumer( $idcabang, $fields );
             if ( empty( $data ) ) {
