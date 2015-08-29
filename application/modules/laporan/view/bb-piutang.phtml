@@ -111,9 +111,11 @@
                                     </table>
                                 </td>
                             </tr>
-                            <tr valign="bottom">
-                                <td colspan="4" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
-                            </tr>
+                            <?php if($_SESSION['level']==='akuntan'):?>
+                                <tr valign="bottom">
+                                    <td colspan="4" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
+                                </tr>
+                            <?php endif;?>    
                         </tbody>
                         <tfoot>
                         </tfoot>

@@ -259,11 +259,11 @@ class IndexController extends Controller {
     }
 
     public function KartuPiutang( $nopos = null ) {
-        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
+        if ( $_SESSION[ 'level' ] != 'akuntan' && $_SESSION['level'] != 'pimpinan' ) {
             $this->redirect( 'error/index/notAllowed' );
         }
-
-        $no_kontrak = $this->_modelCostumer->getNoKontrak(true);
+        $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
+        $no_kontrak = $this->_modelCostumer->getNoKontrak(true,false,$cabang);
         $params = $this->getRequest();
         if ( !empty( $params[ 'params' ] ) ) {
             $nokontrak = array_shift( $params[ 'params' ] );
