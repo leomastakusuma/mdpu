@@ -210,6 +210,16 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         $select->columns( array( 'nik_costumer' ), 'cos' );
         $select->columns( array( 'nama_costumer'=>'nama' ), 'cos' );
         $select->columns( array( 'alamat' ), 'cos' );
+        $select->columns( array( 'tempat_lahir' ), 'cos' );
+        $select->columns( array( 'tanggal_lahir' ), 'cos' );
+        $select->columns( array( 'nama_ibu' ), 'cos' );
+        $select->columns( array( 'jenis_kelamin' ), 'cos' );
+        $select->columns( array( 'agama' ), 'cos' );
+        $select->columns( array( 'status' ), 'cos' );
+        $select->columns( array( 'pekerjaan' ), 'cos' );
+        $select->columns( array( 'alamat_tempat_kerja' ), 'cos' );
+        $select->columns( array( 'hp' ), 'cos' );
+        $select->columns( array( 'telpon' ), 'cos' );
         $select->columns( array( 'nik_penjamin' ), 'penj' );
         $select->columns( array( 'nama_penjamin'=>'nama' ), 'penj' );
         $select->columns( array( 'no_polisi' ), 'ken' );
