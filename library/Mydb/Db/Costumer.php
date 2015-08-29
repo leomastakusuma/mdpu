@@ -245,6 +245,9 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
                     }if ( !empty( $key === 'jumlah_ang' ) ) {
                         $select->where( 'pinj.lama_angsuran = ?', $row );
                     }
+                    if ( !empty( $key === 'jenis_kelamin' ) ) {
+                        $select->where( 'cos.jenis_kelamin = ?', $row );
+                    }
                 }
             }
         }
