@@ -46,12 +46,12 @@
                                 <td colspan="4">
                                     <table width="100%"   border='1' cellpading="1" cellspacing="1">
                                         <tr>
-                                            <td>No</td>
-                                            <td widht="10%">No Kontrak</td>
-                                            <td widht="15%" >Nama Costumer</td>
-                                            <td widht="20%">Debit</td>
-                                            <td widht="15%">Kredit</td>
-                                            <td widht="20%">Saldo</td>
+                                            <th>No</th>
+                                            <th widht="10%">No Kontrak</th>
+                                            <th widht="15%" >Nama Costumer</th>
+                                            <th widht="20%" style="text-align: right">Debit</th>
+                                            <th widht="15%" style="text-align: center">Kredit</th>
+                                            <th widht="20%" style="text-align: right">Saldo</th>
                                         </tr>
 
                                         <tr>
@@ -69,9 +69,9 @@
                                                 <td style="text-align: right"><?php echo $val[ 'debit' ] ?></td>
                                                 <td style="text-align: right"><?php echo $val[ 'kredit' ] ?></td>
                                                 <?php if ( $key == '0' ): ?>
-                                                    <td><?php echo $val[ 'saldo' ] ?></td>
+                                                <td style="text-align: right"><?php echo $val[ 'saldo' ] ?></td>
                                                 <?php else : ?>
-                                                    <td><?php echo rupiah( $saldo ) ?></td>
+                                                <td style="text-align: right"><?php echo rupiah( $saldo ) ?></td>
                                                 <?php endif; ?>
                                                 <?php $totalDebit += isFloatNum( $val[ 'debit' ] ); ?>
                                                 <?php $totalKredit += isFloatNum( $val[ 'saldo' ] ); ?>

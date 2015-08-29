@@ -302,7 +302,7 @@ class IndexController extends Controller {
     }
 
     public function kas() {
-        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
+        if ( $_SESSION[ 'level' ] != 'akuntan' && $_SESSION['level'] != 'pimpinan') {
             $this->redirect( 'error/index/notAllowed' );
         }
         require UD . 'header.html';
@@ -311,13 +311,14 @@ class IndexController extends Controller {
     }
 
     public function cariKas() {
-        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
+        if ( $_SESSION[ 'level' ] != 'akuntan' && $_SESSION['level'] != 'pimpinan') {
             $this->redirect( 'error/index/notAllowed' );
         }
         $form = $this->getPost();
+        $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
         $awal = date('Y-m-d',  strtotime($form[ 'Tanggal' ]));
         $akhir = date('Y-m-d',  strtotime($form[ 'Sampai' ]));
-        $dataCetak = $this->_modelBBPenerimaanKas->getPenerimaanKas( $awal, $akhir );
+        $dataCetak = $this->_modelBBPenerimaanKas->getPenerimaanKas( $awal, $akhir ,$cabang );
         if ( !empty( $dataCetak ) ) {
             require UD . 'header.html';
             require APP_MODUL . '/laporan/view/penerimaan-kas.phtml';
@@ -336,7 +337,7 @@ class IndexController extends Controller {
     }
 
     public function piutang() {
-        if ( $_SESSION[ 'level' ] != 'akuntan' ) {
+        if ( $_SESSION[ 'level' ] != 'akuntan' && $_SESSION['level'] !='pimpinan' ) {
             $this->redirect( 'error/index/notAllowed' );
         }
         require UD . 'header.html';
@@ -349,8 +350,8 @@ class IndexController extends Controller {
         $form = $this->getPost();
         $awal = date('Y-m-d',  strtotime($form[ 'Tanggal' ]));
         $akhir = date('Y-m-d',  strtotime($form[ 'Sampai' ]));
-        
-        $dataCetak = $this->_modelBBPiutang->getBBPiutang( $awal, $akhir );
+        $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
+        $dataCetak = $this->_modelBBPiutang->getBBPiutang( $awal, $akhir,$cabang );
         if ( !empty( $dataCetak ) ) {
             require UD . 'header.html';
             require APP_MODUL . '/laporan/view/bb-piutang.phtml';
