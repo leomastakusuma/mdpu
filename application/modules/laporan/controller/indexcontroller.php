@@ -316,8 +316,8 @@ class IndexController extends Controller {
         }
         $form = $this->getPost();
         $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
-        $awal = date('Y-m-d',  strtotime($form[ 'Tanggal' ]));
-        $akhir = date('Y-m-d',  strtotime($form[ 'Sampai' ]));
+        $awal = date('Y-m-d',  strtotime(str_replace('/', '-',$form[ 'Tanggal' ])));
+        $akhir = date('Y-m-d',  strtotime(str_replace('/', '-',$form[ 'Sampai' ])));
         $dataCetak = $this->_modelBBPenerimaanKas->getPenerimaanKas( $awal, $akhir ,$cabang );
         if ( !empty( $dataCetak ) ) {
             require UD . 'header.html';
@@ -348,8 +348,9 @@ class IndexController extends Controller {
     
     public function cariPiutang(){
         $form = $this->getPost();
-        $awal = date('Y-m-d',  strtotime($form[ 'Tanggal' ]));
-        $akhir = date('Y-m-d',  strtotime($form[ 'Sampai' ]));
+        $awal = date('Y-m-d',  strtotime(str_replace('/', '-',$form[ 'Tanggal' ])));
+        $akhir = date('Y-m-d',  strtotime(str_replace('/', '-',$form[ 'Sampai' ])));
+                
         $cabang = ($_SESSION['level']==='pimpinan') ? $_SESSION['dataLogin']['id_cabang'] : false;
         $dataCetak = $this->_modelBBPiutang->getBBPiutang( $awal, $akhir,$cabang );
         if ( !empty( $dataCetak ) ) {

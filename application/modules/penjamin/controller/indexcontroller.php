@@ -107,7 +107,7 @@ class indexcontroller extends Controller {
             $this->redirect('error/index/notAllowed');
         }
         $form = $this->getPost();
-        $form['tanggal_lahir']= date('Y-m-d',  strtotime($form['tanggal_lahir']));
+        $form['tanggal_lahir']= date('Y-m-d',  strtotime(str_replace('/','-',$form['tanggal_lahir'])));
         try {
             $this->_modelPenjamin->insert($form);
             $this->redirect('costumer/index/detail/' . $form['nik_costumer']);
@@ -124,7 +124,7 @@ class indexcontroller extends Controller {
             $this->redirect('error/index/notAllowed');
         }
         $form = $this->getPost();
-        $form['tanggal_lahir']=date('Y-m-d',  strtotime($form['tanggal_lahir']));
+        $form['tanggal_lahir']=date('Y-m-d',  strtotime(str_replace('/','-',$form['tanggal_lahir'])));
         $where = $this->_modelPenjamin->getAdapter()->quoteInto('id_penjamin = ?', $form['id_penjamin']);
         try {
             unset($form['id_penjamin']);

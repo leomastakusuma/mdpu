@@ -109,8 +109,8 @@ class indexcontroller extends Controller {
             $this->redirect('error/index/notAllowed');
         }
         $form = $this->getPost();
-        $form['tahun_pembuatan']=  date('Y-m-d', strtotime($form['tahun_pembuatan']));
-        $form['tgl_stnk']=  date('Y-m-d', strtotime($form['tgl_stnk']));
+        $form['tahun_pembuatan']=  date('Y-m-d', strtotime(str_replace('/','-', $form['tahun_pembuatan'])));
+        $form['tgl_stnk']=  date('Y-m-d', strtotime(str_replace('/','-', $form['tgl_stnk'])));
         $form['status'] = 'new';
         $nik = $form['nik_costumer'];
         $where = $this->_modelCostumer->getAdapter()->quoteInto('nik_costumer =?', $nik);
@@ -149,8 +149,8 @@ class indexcontroller extends Controller {
     
     public function saveedit(){
         $form = $this->getPost();
-        $form['tahun_pembuatan']=  date('Y-m-d', strtotime($form['tahun_pembuatan']));
-        $form['tgl_stnk']=  date('Y-m-d', strtotime($form['tgl_stnk']));
+        $form['tahun_pembuatan']=  date('Y-m-d', strtotime(str_replace('/','-', $form['tahun_pembuatan'])));
+        $form['tgl_stnk']=  date('Y-m-d', strtotime(str_replace('/','-', $form['tgl_stnk'])));
         try {
             $where = array();
             $where[] = $this->_modelKendaraan->getAdapter()->quoteInto('nik_costumer = ?', $form['nik_costumer']);

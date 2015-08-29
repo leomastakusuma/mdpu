@@ -60,6 +60,8 @@ class indexcontroller extends Controller {
         $form = $this->getPost();
         $form[ 'id_user' ] = $_SESSION[ 'dataLogin' ][ 'id_user' ];
         $form[ 'id_cabang' ] = $_SESSION[ 'dataLogin' ][ 'id_cabang' ];
+        $form['tanggal_lahir']= date('Y-m-d',  strtotime(str_replace('/','-', $form['tanggal_lahir'])));
+        
         try {
             $this->_modelCostumer->insert( $form );
             $this->redirect( 'costumer' );
@@ -193,6 +195,8 @@ class indexcontroller extends Controller {
             $this->redirect( 'error/index/notAllowed' );
         }
         $form = $this->getPost();
+        $form['tanggal_lahir']= date('Y-m-d',  strtotime(str_replace('/','-', $form['tanggal_lahir'])));
+        
         $where = $this->_modelCostumer->getAdapter()->quoteInto( 'id_costumer = ?', $form[ 'id_costumer' ] );
         try {
             $this->_modelCostumer->update( $form, $where );
