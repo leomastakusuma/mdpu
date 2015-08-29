@@ -83,7 +83,7 @@
                                                 <td><?php echo $val['nama_costumer'];?></td>
                                                 <td><?php echo $val['alamat'];?></td>
                                                 <td><?php echo $val['tempat_lahir'];?></td>
-                                                <td><?php echo $val['tanggal_lahir']?></td>
+                                                <td><?php echo date('d/m/Y',  strtolower($val['tanggal_lahir']))?></td>
                                                 <td><?php echo $val['nama_ibu'];?></td>
                                                 <td><?php echo $val['jenis_kelamin'];?></td>
                                                 <td><?php echo $val['agama'];?></td>
