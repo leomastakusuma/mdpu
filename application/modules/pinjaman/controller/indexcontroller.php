@@ -174,9 +174,9 @@ class IndexController extends Controller {
         $data[ 'kepala_cabang' ] = $_SESSION[ 'dataLogin' ][ 'kepala_cabang' ];
         $data[ 'realname' ] = $kasirname[ 'realname' ];
         
-        if($data['tgl_stnk'] > date('Y-m-d')){
+        if(date('Y-m-d') > $data['tgl_stnk'] ){
             $data['potonganSTNK']=300000;
-        } 
+        }        
         require APP_MODUL . '/pinjaman/view/spb.phtml';
         require UD . 'footer.html';
     }
