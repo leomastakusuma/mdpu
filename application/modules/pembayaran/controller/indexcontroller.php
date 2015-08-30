@@ -343,7 +343,6 @@ class IndexController extends Controller {
         $pinjaman =  isFloatNum( $detailCostumer[ 'angsuran_perbulan' ] ) * isFloatNum( $detailCostumer[ 'lama_angsuran' ] );
         #$detailCostumer[ 'sisa_pinjaman' ] = isFloatNum( $detailCostumer[ 'nilai_pinjaman' ] ) - ($detailCostumer[ 'angsuran_ke' ] * isFloatNum( $detailCostumer[ 'angsuran_perbulan' ] ));
         $detailCostumer[ 'sisa_pinjaman' ] = $pinjaman - ($detailCostumer[ 'angsuran_ke' ] * isFloatNum( $detailCostumer[ 'angsuran_perbulan' ] ));
-        pr($detailCostumer);
         require APP_MODUL . '/pembayaran/view/dataDetailPembayaran.phtml';
         require UD . 'footerDataTables.phtml';
     }   
