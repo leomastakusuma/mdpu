@@ -253,7 +253,7 @@ class indexcontroller extends Controller {
                 $value .= $row['warna']. ',' ;
                 $value .= $row['no_mesin']. ',' ;
                 $value .= $row['no_rangka']. ',' ;
-                $value .= $row['tahun_pembuatan']. ',' ;
+                $value .= date('d/m/Y',  strtotime($row['tahun_pembuatan'])). ',' ;
                 $value .= $row['isi_silinder']. ',' ;
 
                 $value .= $row['no_kontrak' ]. ',' ;
