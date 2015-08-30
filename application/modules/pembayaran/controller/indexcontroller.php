@@ -234,11 +234,11 @@ class IndexController extends Controller {
 
         try {
             #Insert Into Table Pembayaran
-            #$this->_modelPembayaran->insert( $form );
+            $this->_modelPembayaran->insert( $form );
             #Insert Into Table Kartu Piutang
-            #$this->_modelKartuPiutang->insert( $dataKP );
+            $this->_modelKartuPiutang->insert( $dataKP );
             #insert Into Table BB Penerimaan Kas
-           #$this->_modelBBPenerimaanKas->insert( $dataBBKas );
+            $this->_modelBBPenerimaanKas->insert( $dataBBKas );
 
             /* Field For Insert Into BB Piutang */
                        
@@ -272,17 +272,17 @@ class IndexController extends Controller {
                         $where[] = $this->_modelBBPiutang->getAdapter()->quoteInto( 'no_kontrak = ?', $form[ 'no_kontrak' ] );
                         $where[] = $this->_modelBBPiutang->getAdapter()->quoteInto( 'tanggal = ?', $v[ 'tanggal' ] );
                         unset( $dataBBPiutang[ 'no_kontrak' ] );
-                        #$this->_modelBBPiutang->update( $dataBBPiutang, $where );
+                        $this->_modelBBPiutang->update( $dataBBPiutang, $where );
                     } else {
                         $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
-                        #$this->_modelBBPiutang->insert( $dataBBPiutang );
+                        $this->_modelBBPiutang->insert( $dataBBPiutang );
                     }
                 }
                 /* Jika Pembayaran Tidak Dibulan Yang Sama Maka Insert */
 //                $dataBBPiutang[ 'no_kontrak' ] = $form[ 'no_kontrak' ];
 //                this->_modelBBPiutang->insert( $dataBBPiutang );
             } else {
-                #$this->_modelBBPiutang->insert( $dataBBPiutang );
+               $this->_modelBBPiutang->insert( $dataBBPiutang );
             }
 
 
