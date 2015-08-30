@@ -1,3 +1,22 @@
+<style>
+.kotak {
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 0;
+}
+.kotak-kecil {
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 0 1% 1% 0;
+    display: inline-block;
+    /*float: left;*/
+}
+
+</style>
 <div class="container-fluid">
     <br/>
     <div class="row">
@@ -21,115 +40,213 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-archive fa-fw"></i> Form Cetak Kwitansi</h3>
                 </div>
-                
+
                 <div class="panel-body">
                     <br/>
-                    <table width="70%" align="center"   >
+                    <table width="70%" align="center" border="0"  cellspacing="5">
                         <thead>
                             <tr>
-                                <td rowspan="1" align="center" width="20%">
-                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                <td rowspan="5" align="center" width="20%">
+                                    <img src="<?php echo URL ?>public/images/logo.png" height="80">
                                 </td>
-                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Kwitansi Pembayaran</td>
                             </tr>
                             <tr>
-                                <td colspan="6"><hr></td>
-                            </tr>
-
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td width="35%" align="left" colspan="2">No Kwitansi </td>
-                                <td width=3%">:</td>
-                                <td><?php echo  $dataCetak['no_kwitansi'] ?></td>
-                                <td>Bandar Lampung,<?php echo date('Y/m/d');?></td>
+                                <td colspan="3" style="text-align: center ;font-size: 14px"><b>MDPU FINANCE</b></td>
+                                <td rowspan="3" style="text-align: center ;font-size: 15px" valign="middle" ><?php echo $dataCetak[ 'no_kwitansi' ] ?></td>
                             </tr>
                             <tr>
-                                <td width="30%" align="left" colspan="2">No Kontrak </td>
-                                <td width="1">:</td>
-                                <td><?php echo  $dataCetak['no_kontrak'] ?></td>
+                                <td  align="left" colspan="3" style="text-align: center ;font-size: 13px"><strong>(PT MITRA DANA PUTRA UTAMA FINANCE)</strong></td>
                             </tr>
                             <tr>
-                                <td width="30%" align="left" colspan="2">Nama </td>
-                                <td width="1">:</td>
-                                <td><?php echo $dataCetak['nama'] ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">No Polisi </td>
-                                <td width="1">:</td>
-                                <td><?php echo $dataCetak['no_polisi'] ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Angsuran Ke </td>
-                                <td width="1">:</td>
-                                <td><?php echo $dataCetak['angsuran_ke'].' x' ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Jumlah Angsuran </td>
-                                <td width="1">:</td>
-                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['jumlah_angsuran'] ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Jumlah Potongan  </td>
-                                <td width="1">:</td>
-                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['potongan'] ?></td>
-                            </tr>
-                            
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Jumlah Denda   </td>
-                                <td width="1">:</td>
-                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda'].'</p>' ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Denda Sebelumnya    </td>
-                                <td width="1">:</td>
-                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda_sebelumnya'].'</p>' ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Denda Total    </td>
-                                <td width="1">:</td>
-                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda_total'].'</p>' ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Denda Dibayar   </td>
-                                <td width="1">:</td>
-                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['denda_dibayar'].'</p>' ?></td>
-                            </tr>
-                            <tr>
-                                <td width="30%" align="left" colspan="2">Total Bayar   </td>
-                                <td width="1">:</td>
-                                <td style="text-align: right"><?php echo 'Rp.'.$dataCetak['total_bayar'].'</p>' ?></td>
-                            </tr>
-
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="6"><hr></td>
-                            </tr>
-
-                            <tr>
-                                <td colspan="6">
-                                    <table width="100%">
-                                        
-                                        <tr align="center">
-                                            <td width="30%">Kasir</td>
-                                            <td>Costumer</td>
+                                <td colspan="3">
+                                    <table width="100%" border="0">
+                                        <tr>
+                                            <td style="text-align: center ;font-size: 12px">
+                                                Jl Gajah Mada Komplek Duta Merlia Blok D No 3-4-5-6,Jakarta Pusat
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="3" height="90">&nbsp;</td>
+                                            <td style="text-align: center ;font-size: 12px">
+                                                Tel : (62-21)63866017,63866018 (hunting) 6341784, 6341760, 6341752
+                                            </td>
                                         </tr>
-                                        <tr align="center">
-                                            <td><?php echo $data['realname']; ?></td>
-                                            <td><?php echo $dataCetak['nama']; ?></td>
-                                        </tr >
+                                        <tr>
+                                            <td style="text-align: center ;font-size: 12px">
+                                                6324406, 6324384, Fax(62-21) 6306880, 6307278, 6431752
+                                            </td>
+                                        </tr>
                                     </table>
                                 </td>
                             </tr>
-                            
+                            <tr>
+                                <td colspan="3" style="text-align: center">
+                                    <table width="100%" boder="0">
+                                        <tr>
+                                            <td style="text-align: center ;font-size: 14px"><u><b>TANDA TERIMA RESMI</u></b></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center ;font-size: 14px"><b>OFFICIAL RECEIPT</b></td>
+                                            </tr>
+                                    </table>
+                                </td>
+                                <td rowspan="1">
+                                    <table>
+                                        <tr>
+                                            <td style="text-decoration-line: underline  ;font-size: 12px"><b>Tanggal</b></td>
+                                            <td>&nbsp;:&nbsp; </td>
+                                            <td><?php echo date( 'd/m/Y' ); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Date</b></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="6"><hr></td>
+                            </tr>
+                                                        
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6">
+                                    <table width="100%" border="1" style="font-size:11px">
+                                        <tr>
+                                            <td colspan="5">    
+                                                <table width="100%" border="0" >
+                                                    <td width="20%"><u>Telah Terima Dari  </u>:&nbsp;<?php echo $dataCetak['nama'];?><br><i>Recive  From</i></td>
+                                                <td align="right"><u>Kontrak  </u>:&nbsp;&nbsp;<br><i>Contract</i>&nbsp;&nbsp;</td>
+                                                <td colspan="3" width="30%" valign="center">
+                                                    <table border="1" width="100%" cellpadding="5">
+                                                            <tr align="center">
+                                                                <?php $n_kontrak = explode( '-',$dataCetak['no_kontrak'])?>
+                                                                <td width="25%"><?php echo $n_kontrak[0]?></td>
+                                                                <td width="20%"><?php echo $n_kontrak[1]?></td>
+                                                                <td width="35%"><?php echo $n_kontrak[2]?></td>
+                                                                <td width="20%"><?php echo $n_kontrak[3]?></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </table>
+                                            </td>   
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" align="center">
+                                                UNTUK PEMBAYARAN / IN PAYMENT OF
+                                            </td>
+                                            <td colspan="2" align="center"><u>JUMLAH</u><br><i>Amount</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" align="center">
+                                                <table width="100%" style="font-size: 11px">
+                                                    <tr valign="center" >
+                                                        <td><u>Pembayaran Bulanan   </u>:<br><i>Monthly Payment</i> </td>
+                                                        <td align="left" >.........<?php echo $dataCetak['angsuran_ke']?>.........</td>
+                                                        <td><u>Periode   </u>:<br><i>Period</i> </td>
+                                                        <td align="left">.......................</td>
+                                                        <td><u>Untuk Bulan   </u>:<br><i>For the month of</i> </td>
+                                                        <td align="left">........................</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td width="10"></td>
+                                        </tr>
+                                        <tr style="font-size: 11px">
+                                            <td colspan="3" align="left">
+                                        <u>Denda Keterlambatan Bulanan  </u>:<br>
+                                        <i>Penalty fee for delay payment</i>
+                                            </td>
+                                            <td style="text-align: right">Rp.<?php echo $dataCetak['jumlah_angsuran']?></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" align="center" height="30">
+                                                POTONGAN
+                                            </td>
+                                            <td style="text-align: right">Rp,<?php echo $dataCetak['potongan']?></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" align="center" height="30">
+                                                DENDA
+                                            </td>
+                                            <td style="text-align: right">Rp,<?php echo $dataCetak['denda_dibayar']?></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" align="center" height="30">
+                                                PEMBAYARAN CABANG, <?php echo strtoupper($dataBBKas[ 'bo' ])?>
+                                            </td>
+                                            <td style="text-align: right">Rp.<?php echo $dataCetak['total_bayar']?></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <table width="100%" style="font-size: 11px">
+                                                    <tr >
+                                                        <td valign="top" rowspan="2" width="100"><u>Dibayar dengan  </u>:<br>Payment by</td>
+                                                        <td width="6">
+                                                            <div class="kotak"></div>
+                                                        </td>
+                                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;<u>Check  </u><br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;Cheque</td>
+                                                        <td>No : .......................</td>
+                                                        <td>Bank : .....................</td>
+                                                        <td><u>Cabang </u><br><i>Branch</i></td>
+                                                        <td>Bank : .....................</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="6">
+                                                            <div class="kotak"></div>
+                                                        </td>
+                                                        <td colspan="5" align="left">&nbsp;&nbsp;&nbsp;&nbsp;<u>Tunai  </u><br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;Cash</td>
+                                                      
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3" width="215">
+                                                            <p align="justify">
+                                                                Apabila Pembayaran dengan Check Bilyet giro,
+                                                                pembayaran ini akan di anggap sah apabila Check Bilyet
+                                                    <u>Giro tersebut telah ada penetapan diterima oleh bank</u><br>
+                                                    <i>If payment is made by cheque, this receipt will be valid
+                                                                when the cheque in honoured by bank
+                                                            </i>
+                                                    </p
+                                                        </td>
+                                                        <td colspan="4" valign="center">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>&nbsp;&nbsp;</td>
+                                                                    <td><?php echo $_SESSION['dataLogin']['realname']?><br>Kasir/<i>Cashier</i></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="font-size:11px">
+                                            <td colspan="6">
+                                                F105<br>
+                                                Asli Costumer Copy I Kasir Copy II Colection
+                                            </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
                             <tr valign="bottom">
                                 <td colspan="6" align="right" height="50"><a  onclick="cetak()" class="btn btn-primary" role="button">Cetak</a></td>
                             </tr>
-                        
+
                         </tfoot>
                     </table>
                     <br>
@@ -142,12 +259,11 @@
     </div>
 </div>
 <script>
-    var cetak = function(){
+    var cetak = function () {
         var params = [
-                        'height='+screen.height,
-                        'width='+screen.width/2,
-                        'fullscreen=yes' // only works in IE, but here for completeness
-                    ].join(',');
-        window.open('<?php echo URL.'pembayaran/index/cetakKwitansi/'.$dataCetak['no_kwitansi'];?>','',params);// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
+            'fullscreen=yes' // only works in IE, but here for completeness
+        ].join(',');
+        window.open('<?php echo URL . 'pembayaran/index/cetakKwitansi/' . $dataCetak[ 'no_kwitansi' ]; ?>', '', params);// 'toolbar=no, scrollbars=no, resizable=no,fullscreen=1');
     };
+    
 </script>

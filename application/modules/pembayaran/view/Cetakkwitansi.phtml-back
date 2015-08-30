@@ -1,0 +1,107 @@
+<script>
+    window.print();
+    window.onfocus = function(){
+        var count =3;
+        if(count > 3){
+            window.close();
+        }
+        
+    };
+</script>
+                    <br/>
+                    <table width="95%" align="center"  >
+                        <thead>
+                            <tr>
+                                <td rowspan="1" align="center" width="20%">
+                                    <img src="<?php echo URL?>public/images/logo.png" height="80">
+                                </td>
+                                <td  align="left" colspan="3"><strong>PT MITRA DANA PUTRA UTAMA FINANCE</strong><br/>Kwitansi Pembayaran</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Kwitansi </td>
+                                <td>&nbsp; : &nbsp;<?php echo  $dataCetak['no_kwitansi'] ?></td>
+                                <td>Bandar Lampung,<?php echo date('Y/m/d');?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Kontrak </td>
+                                <td>&nbsp; : &nbsp;<?php echo  $dataCetak['no_kontrak'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Nama </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['nama'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">No Polisi </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['no_polisi'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Angsuran Ke </td>
+                                <td>&nbsp; : &nbsp;<?php echo $dataCetak['angsuran_ke'].' x' ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Jumlah Angsuran </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['jumlah_angsuran'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Jumlah Potongan  </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['potongan'] ?></td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Jumlah Denda   </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Denda Sebelumnya    </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda_sebelumnya'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Denda Total    </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda_total'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Denda Dibayar   </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['denda_dibayar'] ?></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="left" colspan="2">Total Bayar   </td>
+                                <td>&nbsp; : &nbsp;<?php echo 'Rp.'.$dataCetak['total_bayar'] ?></td>
+                            </tr>
+
+                            
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"><hr></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="4">
+                                    <table width="100%">
+                                        
+                                        <tr align="center">
+                                            <td width="30%">Kasir</td>
+                                            <td>Costumer</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" height="90">&nbsp;</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><?php echo $data['realname']; ?></td>
+                                            <td><?php echo $dataCetak['nama']; ?></td>
+                                        </tr >
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                           
+                        
+                        </tfoot>
+                    </table>
