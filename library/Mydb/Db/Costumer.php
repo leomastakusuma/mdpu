@@ -222,11 +222,20 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         $select->columns( array( 'telpon' ), 'cos' );
         $select->columns( array( 'nik_penjamin' ), 'penj' );
         $select->columns( array( 'nama_penjamin'=>'nama' ), 'penj' );
+        
         $select->columns( array( 'no_polisi' ), 'ken' );
+        $select->columns( array( 'no_bpkb' ), 'ken' );
         $select->columns( array( 'merk' ), 'ken' );
+        $select->columns( array( 'warna' ), 'ken' );
+        $select->columns( array( 'no_mesin' ), 'ken' );
+        $select->columns( array( 'no_rangka' ), 'ken' );
+        $select->columns( array( 'tahun_pembuatan' ), 'ken' );
+        $select->columns( array( 'isi_silinder' ), 'ken' );
+        
         $select->columns( array( 'no_kontrak' ), 'pinj' );
         $select->columns( array( 'nilai_pinjaman' ), 'pinj' );
         $select->columns( array( 'angsuran_perbulan' ), 'pinj' );
+        $select->columns( array( 'tanggal_jatuh_tempo' ), 'pinj' );
         $select->columns( array( 'lama_angsuran' ), 'pinj' );
         $select->joinLeft( array( 'bb_kas' => 'bb_penerimaan_kas' ), 'bb_kas.no_kontrak =pinj.no_kontrak', array( new Zend_Db_Expr( 'count(bb_kas.no_kontrak) as total_ang' ) ) );
         $select->columns( array( 'cabang' ), 'cab' );
@@ -273,7 +282,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
     }
     
     public function getCetakDataCostumerAllFields( $cabang = false, $fields = array() ) {
-        $select = $this->select();
+        /*$select = $this->select();
         $select->from( array( 'cos' => 'costumer' ), array() );
         $select->setIntegrityCheck( false );
         $select->joinLeft( array( 'penj' => 'penjamin' ), 'penj.nik_costumer = cos.nik_costumer', array() );
@@ -305,6 +314,46 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         $select->columns( array( 'no_kontrak' ), 'pinj' );
         $select->columns( array( 'nilai_pinjaman' ), 'pinj' );
         $select->columns( array( 'angsuran_perbulan' ), 'pinj' );
+        $select->columns( array( 'lama_angsuran' ), 'pinj' );
+        $select->joinLeft( array( 'bb_kas' => 'bb_penerimaan_kas' ), 'bb_kas.no_kontrak =pinj.no_kontrak', array( new Zend_Db_Expr( 'count(bb_kas.no_kontrak) as total_ang' ) ) );
+        $select->columns( array( 'cabang' ), 'cab' );*/
+        
+        $select = $this->select();
+        $select->from( array( 'cos' => 'costumer' ), array() );
+        $select->setIntegrityCheck( false );
+        $select->joinLeft( array( 'penj' => 'penjamin' ), 'penj.nik_costumer = cos.nik_costumer', array() );
+        $select->join( array( 'ken' => 'kendaraan' ), 'ken.nik_costumer = cos.nik_costumer', array() );
+        $select->join( array( 'pinj' => 'pinjaman' ), 'pinj.nik_costumer = cos.nik_costumer', array() );
+        $select->joinLeft( array( 'cab' => 'cabang' ), 'cab.id_cabang=cos.id_cabang', array() );
+        $select->columns( array( 'nik_costumer' ), 'cos' );
+        $select->columns( array( 'nama_costumer'=>'nama' ), 'cos' );
+        $select->columns( array( 'alamat' ), 'cos' );
+        $select->columns( array( 'tempat_lahir' ), 'cos' );
+        $select->columns( array( 'tanggal_lahir' ), 'cos' );
+        $select->columns( array( 'nama_ibu' ), 'cos' );
+        $select->columns( array( 'jenis_kelamin' ), 'cos' );
+        $select->columns( array( 'agama' ), 'cos' );
+        $select->columns( array( 'status' ), 'cos' );
+        $select->columns( array( 'pekerjaan' ), 'cos' );
+        $select->columns( array( 'alamat_tempat_kerja' ), 'cos' );
+        $select->columns( array( 'hp' ), 'cos' );
+        $select->columns( array( 'telpon' ), 'cos' );
+        $select->columns( array( 'nik_penjamin' ), 'penj' );
+        $select->columns( array( 'nama_penjamin'=>'nama' ), 'penj' );
+        
+        $select->columns( array( 'no_polisi' ), 'ken' );
+        $select->columns( array( 'no_bpkb' ), 'ken' );
+        $select->columns( array( 'merk' ), 'ken' );
+        $select->columns( array( 'warna' ), 'ken' );
+        $select->columns( array( 'no_mesin' ), 'ken' );
+        $select->columns( array( 'no_rangka' ), 'ken' );
+        $select->columns( array( 'tahun_pembuatan' ), 'ken' );
+        $select->columns( array( 'isi_silinder' ), 'ken' );
+        
+        $select->columns( array( 'no_kontrak' ), 'pinj' );
+        $select->columns( array( 'nilai_pinjaman' ), 'pinj' );
+        $select->columns( array( 'angsuran_perbulan' ), 'pinj' );
+        $select->columns( array( 'tanggal_jatuh_tempo' ), 'pinj' );
         $select->columns( array( 'lama_angsuran' ), 'pinj' );
         $select->joinLeft( array( 'bb_kas' => 'bb_penerimaan_kas' ), 'bb_kas.no_kontrak =pinj.no_kontrak', array( new Zend_Db_Expr( 'count(bb_kas.no_kontrak) as total_ang' ) ) );
         $select->columns( array( 'cabang' ), 'cab' );
