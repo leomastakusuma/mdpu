@@ -177,7 +177,7 @@ class indexcontroller extends Controller {
             $this->cetakcsv($dataCostumer);
             unset( $_SESSION[ 'fields' ] );
         } else {
-            require UD . 'header.html';
+//            require UD . 'header.html';
             $idcabang = (($_SESSION[ 'level' ] === 'pimpinan') || ($_SESSION[ 'level' ] === 'admin')) ? $_SESSION[ 'dataLogin' ][ 'id_cabang' ] : false;
             $cabang = ($_SESSION[ 'level' ] === 'pimpinan') ? $_SESSION[ 'dataLogin' ][ 'cabang' ] : false;
             $data = $this->_modelCostumer->getCetakDataCostumer( $idcabang, $fields );
@@ -186,7 +186,7 @@ class indexcontroller extends Controller {
             }
             $_SESSION[ 'fields' ] = $fields;
             require APP_MODUL . '/costumer/view/cetakCostumer.phtml';
-            require UD . 'footer.html';
+//            require UD . 'footer.html';
         }
     }
 
@@ -234,28 +234,35 @@ class indexcontroller extends Controller {
             foreach ($dataCostumer as $key=>$row){
                 $value = $row['nik_costumer'].',';
                 $value .= $row['nama_costumer'].',';
-                $value .= $row['alamat'].',';
-                $value .= $row['tempat_lahir'].',';
-                $value .= $row['tanggal_lahir'].',';
-                $value .= $row['nama_ibu'].',';
-                $value .= $row['jenis_kelamin'].',';
-                $value .= $row['agama'].',';
-                $value .= $row['pekerjaan'].',';
-                $value .= isFloatNum($row['hp']).',';
-                $value .= $row['telpon'].',';
-                $value .= $row['npwp'].',';
-                $value .= $row['penghasilan_perbulan'].',';
-                $value .= $row['jumlah_tanggungan'].',';
-                $value .= $row['nik_penjamin'].',';
-                $value .= $row['nama_penjamin'].',';
-                $value .= $row['no_polisi'].',';
-                $value .= $row['merk'].',';
-                $value .= $row['no_kontrak'].',';
-                $value .= isFloatNum($row['nilai_pinjaman']).',';
-                $value .= isFloatNum($row['angsuran_perbulan']).',';
-                $value .= $row['lama_angsuran'].',';
-                $value .= $row['total_ang'].',';
-                $value .= $row['cabang'].',';
+                $value .= $row['alamat' ]. ',' ;
+                $value .= $row['tempat_lahir' ]. ',' ;
+                $value .= $row['tanggal_lahir' ]. ',' ;
+                $value .= $row['nama_ibu' ]. ',' ;
+                $value .= $row['jenis_kelamin' ]. ',' ;
+                $value .= $row['agama' ]. ',' ;
+                $value .= $row['status' ]. ',' ;
+                $value .= $row['pekerjaan' ]. ',' ;
+                $value .= $row['alamat_tempat_kerja' ]. ',' ;
+                $value .= $row['hp' ]. ',' ;
+                $value .= $row['telpon' ]. ',' ;
+                $value .= $row['nik_penjamin' ]. ',' ;
+                $value .= $row['nama_penjamin']. ',' ;
+                $value .= $row['no_polisi']. ',' ;
+                $value .= $row['no_bpkb']. ',' ;
+                $value .= $row['merk']. ',' ;
+                $value .= $row['warna']. ',' ;
+                $value .= $row['no_mesin']. ',' ;
+                $value .= $row['no_rangka']. ',' ;
+                $value .= $row['tahun_pembuatan']. ',' ;
+                $value .= $row['isi_silinder']. ',' ;
+
+                $value .= $row['no_kontrak' ]. ',' ;
+                $value .= isFloatNum($row['nilai_pinjaman' ]). ',' ;
+                $value .= isFloatNum($row['angsuran_perbulan' ]). ',' ;
+                $value .= $row['tanggal_jatuh_tempo' ]. ',' ;
+                $value .= $row['lama_angsuran' ]. ',' ;
+                $value .= $row['total_ang']. ',' ;
+                $value .= $row['cabang']. ',' ;
                 fputcsv($file, explode(',',$value));
 
             }

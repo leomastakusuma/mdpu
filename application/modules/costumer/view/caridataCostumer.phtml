@@ -40,13 +40,29 @@
                         <th>Nik Costumer</th>
                         <th>Nama Costumer</th>
                         <th>Alamat</th>
+                        <th>Tmpt / Tgl Lahir</th>
+                        <th>Nama Ibu</th>
+                        <th>JK</th>
+                        <th>Agama</th>
+                        <th>Status</th>
+                        <th>Pekerjaan</th>
+                        <th>Hp</th>
+                        <th>Telpon</th>
                         <th>Nik Penjamin</th>
                         <th>Nama Penjamin</th>
                         <th>No Polisi</th>
+                        <th>No BPKB</th>
                         <th>Merk/Type</th>
+                        <th>Warna</th>
+                        <th>No Mesin</th>
+                        <th>No Rangka</th>
+                        <th>Thn Pembuatan</th>
+                        <th>Isi Silinder</th>
+                        
                         <th>No Kontrak</th>
                         <th>Nilai Pinjaman</th>
                         <th>Ang/Bln</th>
+                        <th>Tgl Jth Tmpo</th>
                         <th>Jml Ang</th>
                         <th>Total Ang</th>
                         <th>Cabang</th>
@@ -59,13 +75,29 @@
                             <td><?php echo $val['nik_costumer'];?></td>
                             <td><?php echo $val['nama_costumer'];?></td>
                             <td><?php echo $val['alamat'];?></td>
+                            <td><?php echo $val['tempat_lahir'].' , '.date('d/m/Y',  strtotime($val['tanggal_lahir']))?></td>
+                            <td><?php echo $val['nama_ibu']?></td>
+                            <td><?php echo strtoupper($val['jenis_kelamin'])?></td>
+                            <td><?php echo $val['agama']?></td>
+                            <td><?php echo $val['status']?></td>
+                            <td><?php echo $val['pekerjaan']?></td>
+                            <td><?php echo $val['hp']?></td>
+                            <td><?php echo $val['telpon']?></td>
                             <td><?php echo $val['nik_penjamin'];?></td>
                             <td><?php echo $val['nama_penjamin'];?></td>
                             <td><?php echo $val['no_polisi'];?></td>
+                            
+                            <td><?php echo $val['no_bpkb'];?></td>
                             <td><?php echo $val['merk'];?></td>
+                            <td><?php echo $val['warna'];?></td>
+                            <td><?php echo $val['no_mesin'];?></td>
+                            <td><?php echo $val['no_rangka'];?></td>
+                            <td><?php echo date('d/m/Y',  strtotime($val['tahun_pembuatan']));?></td>
+                            <td><?php echo $val['isi_silinder'];?></td>
                             <td><?php echo $val['no_kontrak'];?></td>
                             <td style="text-align: right"><?php echo $val['nilai_pinjaman'];?></td>
                             <td style="text-align: right"><?php echo $val['angsuran_perbulan'];?></td>
+                            <td style="text-align: center"><?php echo $val['tanggal_jatuh_tempo'];?></td>
                             <td style="text-align: center"><?php echo $val['lama_angsuran'];?></td>
                             <td style="text-align: center"><?php echo $val['total_ang'];?></td>
                             <td><?php echo $val['cabang'];?></td>
