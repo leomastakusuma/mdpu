@@ -27,6 +27,7 @@ class indexcontroller extends Controller {
         }
         $id_user = $_SESSION['dataLogin']['id_user'];
         $id_cabang = $_SESSION['dataLogin']['id_cabang'];
+        $cabang = $_SESSION['dataLogin']['cabang'];
         $data = $this->_modelPenjamin->getPenjaminByCabang(null, $id_cabang);
         require UD . 'headerDataTables.phtml';
         require APP_MODUL . '/penjamin/view/dataPenjamin.phtml';
