@@ -338,6 +338,7 @@ class Mydb_Db_Costumer extends Mydb_Db_Abstract {
         $select->columns( array( 'alamat_tempat_kerja' ), 'cos' );
         $select->columns( array( 'hp' ), 'cos' );
         $select->columns( array( 'telpon' ), 'cos' );
+        
         $select->columns( array( 'nik_penjamin' ), 'penj' );
         $select->columns( array( 'nama_penjamin'=>'nama' ), 'penj' );
         
